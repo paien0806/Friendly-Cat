@@ -4,17 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NzButtonModule } from 'ng-zorro-antd/button';  // 如果需要按鈕模組
+
 import { SearchFoodModule } from './search-food/search-food.module';
-import { DisplayComponent } from './searchfood/new-search/display/display.component';
 @NgModule({
   declarations: [
-    AppComponent,
-    DisplayComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SearchFoodModule
+    SearchFoodModule,
+    NzButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-search.component.scss']
 })
 export class NewSearchComponent implements OnInit {
+  postalCode: string = '200';
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

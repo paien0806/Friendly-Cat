@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-display',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display.component.scss']
 })
 export class DisplayComponent implements OnInit {
+
+  @Input() postalCode: string = '';  // 接收來自父組件的郵遞區號
 
   constructor() { }
 
