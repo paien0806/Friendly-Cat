@@ -1,4 +1,41 @@
 <div>
   <h1>Search</h1>
-  <app-display [postalCode]="postalCode"></app-display>
+  <div class="mat-row" style="display: flex; justify-content: space-between;">
+    <!-- 縣市選單 -->
+    <div class="mat-col" style="flex: 1; margin-right: 10px;">
+      <mat-form-field appearance="fill" class="example-form-field">
+        <mat-label>縣市</mat-label>
+        <mat-select
+          [(ngModel)]="selectedCity"
+          (selectionChange)="onCityChange($event.value)"
+          placeholder="請選擇縣市"
+        >
+          <mat-option *ngFor="let city of cities" [value]="city">{{ city }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- 行政區選單 -->
+    <div class="mat-col" style="flex: 1;">
+      <mat-form-field appearance="fill" class="example-form-field">
+        <mat-label>行政區</mat-label>
+        <mat-select
+          [(ngModel)]="selectedDistrict"
+          (selectionChange)="onDistrictChange($event.value)"
+          [disabled]="!selectedCity"
+          placeholder="請選擇行政區"
+        >
+          <mat-option
+            *ngFor="let district of filteredDistricts"
+            [value]="district.zipcode"
+          >
+            {{ district.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- 顯示結果 -->
+  <app-display [postalCode]="selectedZipcode ? selectedZipcode : ''"></app-display>
 </div>

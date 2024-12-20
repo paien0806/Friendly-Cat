@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false, 
+  familyMartUrl: {
+    base: 'https://stamp.family.com.tw/api/maps',
+    endpoint: {
+      mapClassificationInfo: '/MapClassificationInfo',
+      mapProductInfo: '/MapProductInfo'
+    }
+  }
 };
 
 /*
