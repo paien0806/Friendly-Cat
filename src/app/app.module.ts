@@ -4,13 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { SearchFoodModule } from './search-food/search-food.module';
+import { DisplayComponent } from './searchfood/new-search/display/display.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SearchFoodModule
   ],
   providers: [],
   bootstrap: [AppComponent]
