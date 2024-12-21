@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { GeolocationService } from 'src/app/services/geolocation.service';
+
 @Component({
   selector: 'app-new-search',
   templateUrl: './new-search.component.html',
@@ -16,7 +18,14 @@ export class NewSearchComponent implements OnInit {
   selectedDistrict: string | null = null; // 選擇的行政區
   selectedZipcode: string | null = null; // 對應的郵遞區號
 
-  constructor(private http: HttpClient) {}
+  latitude?: number;
+  longitude?: number;
+  errorMessage?: string;
+
+  constructor(
+    private http: HttpClient,
+    private geolocationService: GeolocationService
+  ) {}
 
   ngOnInit(): void {
     // 從 API 獲取資料
@@ -39,5 +48,31 @@ export class NewSearchComponent implements OnInit {
   onDistrictChange(zipcode: string): void {
     // 更新選擇的郵遞區號
     this.selectedZipcode = zipcode;
+  }
+
+  getLocation() {
+    this.geolocationService
+      .getCurrentPosition()
+      .then((position) => {
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+        this.errorMessage = undefined;
+      })
+      .catch((error) => {
+        this.errorMessage = this.handleError(error);
+      });
+  }
+
+  handleError(error: GeolocationPositionError): string {
+    switch (error.code) {
+      case 1:
+        return '使用者拒絕位置存取';
+      case 2:
+        return '無法取得位置資訊';
+      case 3:
+        return '位置請求逾時';
+      default:
+        return '未知錯誤';
+    }
   }
 }

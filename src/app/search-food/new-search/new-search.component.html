@@ -36,6 +36,12 @@
     </div>
   </div>
 
+  <div>
+    <button (click)="getLocation()">取得位置</button>
+    <p *ngIf="latitude && longitude">緯度: {{ latitude }}, 經度: {{ longitude }}</p>
+    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+
   <!-- 顯示結果 -->
   <app-display [postalCode]="selectedZipcode ? selectedZipcode : ''"></app-display>
 </div>
