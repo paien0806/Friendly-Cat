@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { GeolocationService } from 'src/app/services/geolocation.service';
-
+import { SevenElevenRequestService } from './services/seven-eleven-request.service';
 @Component({
   selector: 'app-new-search',
   templateUrl: './new-search.component.html',
   styleUrls: ['./new-search.component.scss']
 })
 export class NewSearchComponent implements OnInit {
-  apiUrl = 'https://demeter.5fpro.com/tw/zipcodes.json'; // API URL
   zipcodes: any[] = []; // 原始 API 資料
   cities: string[] = []; // 縣市清單
   filteredDistricts: any[] = []; // 篩選後的行政區列表
@@ -22,14 +21,23 @@ export class NewSearchComponent implements OnInit {
   longitude?: number;
   errorMessage?: string;
 
+  test = ''
+
   constructor(
     private http: HttpClient,
-    private geolocationService: GeolocationService
+    private geolocationService: GeolocationService,
+    private sevenElevenService: SevenElevenRequestService
   ) {}
 
   ngOnInit(): void {
-    // 從 API 獲取資料
-    this.http.get<any[]>(this.apiUrl).subscribe((data) => {
+    this.getCityName();
+    this.get711AccessToken();
+  }
+
+  getCityName() {
+    // 從縣市名稱 API 獲取資料
+    const apiUrl = 'https://demeter.5fpro.com/tw/zipcodes.json'; // API URL
+    this.http.get<any[]>(apiUrl).subscribe((data) => {
       this.zipcodes = data;
       // 提取不重複的縣市
       this.cities = [...new Set(data.map((item) => item.city_name))];
@@ -74,5 +82,22 @@ export class NewSearchComponent implements OnInit {
       default:
         return '未知錯誤';
     }
+  }
+
+  get711AccessToken() {
+    this.sevenElevenService.getAccessToken().subscribe((data) => {
+      if(data && data.element) {
+        console.log(data.element)
+        sessionStorage.setItem('711Token', data.element);
+      }
+    })
+  }
+
+  get711StoreByString() {
+
+  }
+
+  get711NearByStoreList() {
+
   }
 }

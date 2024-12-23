@@ -3,12 +3,23 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false, 
+  production: false,
   familyMartUrl: {
     base: 'https://stamp.family.com.tw/api/maps',
     endpoint: {
       mapClassificationInfo: '/MapClassificationInfo',
       mapProductInfo: '/MapProductInfo'
+    }
+  },
+  sevenElevenUrl: {
+    base: 'https://lovefood.openpoint.com.tw/LoveFood/api/',
+    endpoint: {
+      accessToken: 'Auth/FrontendAuth/AccessToken',
+      getListIcon: 'Master/FrontendItemCategory/GetList',
+      getStoreByAddress: 'Master/FrontendStore/GetStoreByAddress'
+    },
+    params: {
+      mid_v: 'W0_DiF4DlgU5OeQoRswrRcaaNHMWOL7K3ra3389ocJQv-rdOWS6Zu4AtGa7-7pjiccl0C5gm0u5UNONXuVUXcJCidRjIv9dsUd8PocNr5moiuJJ8hZla5iV0H3-8dZfASc7GgEm74679LYK2hBB-Sam6D0LAnYK9Lb0DZjaSctnHS5yYugtrYNdWoWk'
     }
   }
 };
