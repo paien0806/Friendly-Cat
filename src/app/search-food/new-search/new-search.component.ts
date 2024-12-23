@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
+import { FoodCategory, LocationData, StoreStockItem } from '../model/seven-eleven.model'
+
 @Component({
   selector: 'app-new-search',
   templateUrl: './new-search.component.html',
@@ -17,11 +19,13 @@ export class NewSearchComponent implements OnInit {
   selectedDistrict: string | null = null; // 選擇的行政區
   selectedZipcode: string | null = null; // 對應的郵遞區號
 
-  latitude?: number;
-  longitude?: number;
+  latitude!: number;
+  longitude!: number;
   errorMessage?: string;
 
-  test = ''
+  foodCategories: FoodCategory[] = [];
+
+  nearbyStores: StoreStockItem[] = []; // 儲存從 API 獲得的商店列表
 
   constructor(
     private http: HttpClient,
@@ -32,6 +36,7 @@ export class NewSearchComponent implements OnInit {
   ngOnInit(): void {
     this.getCityName();
     this.get711AccessToken();
+    this.get711FoodCategory();
   }
 
   getCityName() {
@@ -58,19 +63,6 @@ export class NewSearchComponent implements OnInit {
     this.selectedZipcode = zipcode;
   }
 
-  getLocation() {
-    this.geolocationService
-      .getCurrentPosition()
-      .then((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.errorMessage = undefined;
-      })
-      .catch((error) => {
-        this.errorMessage = this.handleError(error);
-      });
-  }
-
   handleError(error: GeolocationPositionError): string {
     switch (error.code) {
       case 1:
@@ -93,11 +85,70 @@ export class NewSearchComponent implements OnInit {
     })
   }
 
-  get711StoreByString() {
-
+  get711FoodCategory() {
+    this.sevenElevenService.getFoodCategory().subscribe((data) => {
+      if(data) {
+        this.foodCategories = data.element
+      }
+    });
   }
 
   get711NearByStoreList() {
+    this.geolocationService.getCurrentPosition()
+      .then((position) => {
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+        this.errorMessage = undefined;
+        const locationData: LocationData = {
+          CurrentLocation: {
+            Latitude: this.latitude,
+            Longitude: this.longitude
+          },
+          SearchLocation: {
+            Latitude: this.latitude,
+            Longitude: this.longitude
+          }
+        };
+    
+        this.sevenElevenService.getNearByStoreList(locationData).subscribe((data) => {
+          if (data && data.element && data.element.StoreStockItemList) {
+            this.nearbyStores = data.element.StoreStockItemList.sort(
+              (a: StoreStockItem, b: StoreStockItem) => a.Distance - b.Distance
+            );
+          }
+        });
+      })
+      .catch((error) => {
+        this.errorMessage = this.handleError(error);
+      });
+  }
 
+  getFoodSubCategoryImage(nodeID: number): string | null {
+    // 查找匹配的子分類
+    for (let category of this.foodCategories) {
+      const subCategory = category.Children.find(child => child.ID === nodeID);
+      if (subCategory) {
+        // 找到對應的子分類並返回其對應的分類圖片 URL
+        return category.ImageUrl;
+      }
+    }
+    // 如果沒有找到對應的子分類，返回 null
+    return null;
+  }
+
+  getSubCategoryTotalQty(store: StoreStockItem, category: FoodCategory): number {
+    let totalQty = 0;
+    
+    // 遍歷商店中的所有商品，檢查是否屬於當前分類及子分類
+    for (const stockItem of store.CategoryStockItems) {
+      // 遍歷每個分類的子項目，檢查是否屬於這個 category
+      for (const child of category.Children) {
+        if (stockItem.NodeID === child.ID) {
+          totalQty += stockItem.RemainingQty;
+        }
+      }
+    }
+  
+    return totalQty;
   }
 }
