@@ -1,22 +1,23 @@
-<div *ngIf="category && store" class="sub-category-container">
-  <h3 class="text-lg font-semibold">{{ category.Name }} - 子分類詳情</h3>
-  <p class="text-sm text-gray-600">商店: {{ store.StoreName }}</p>
+<div *ngIf="subCategories.length > 0">
+  <h3>{{ category.Name }} - 子分類詳情</h3>
 
-  <div *ngIf="subCategories.length > 0" class="sub-category-list mt-4">
-    <div class="grid grid-cols-4 gap-4">
-      <!-- 顯示每個子分類的名稱及數量 -->
-      <div *ngFor="let subCategory of subCategories" class="sub-category-item border p-3 mb-2 rounded-lg">
-        <h4 class="font-medium">{{ subCategory.Name }}</h4>
-        <p class="text-xs">數量: {{ getSubCategoryQty(subCategory.Name) }}</p>
-      </div>
+  <div *ngFor="let subCategory of subCategories" class="sub-category-item border p-3 mb-4 rounded-lg">
+    <h4>{{ subCategory.Name }}</h4>
+    <p>數量: {{ getSubCategoryQty(subCategory.Name) }}</p>
+
+    <div *ngIf="itemsBySubCategory[subCategory.Name]!.length > 0">
+      <ul>
+        <li *ngFor="let item of itemsBySubCategory[subCategory.Name]!">
+          {{ item.ItemName }} - 剩餘數量: {{ item.RemainingQty }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="itemsBySubCategory[subCategory.Name]?.length === 0">
+      <p>此子分類無商品資料。</p>
     </div>
   </div>
 
-  <div *ngIf="subCategories.length === 0" class="no-sub-categories text-center">
-    <p class="text-sm text-gray-500">此分類暫無子分類。</p>
-  </div>
-
-  <div *ngIf="totalSubCategoryQty > 0" class="total-quantity mt-4">
-    <p class="font-semibold">累計子分類數量: {{ totalSubCategoryQty }}</p>
+  <div *ngIf="totalSubCategoryQty > 0">
+    <p>累計數量: {{ totalSubCategoryQty }}</p>
   </div>
 </div>

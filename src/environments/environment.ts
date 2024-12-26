@@ -17,7 +17,8 @@ export const environment = {
       accessToken: 'Auth/FrontendAuth/AccessToken',
       getList: 'Master/FrontendItemCategory/GetList',
       getStoreByAddress: 'Master/FrontendStore/GetStoreByAddress',
-      getNearbyStoreList: 'Search/FrontendStoreItemStock/GetNearbyStoreList'
+      getNearbyStoreList: 'Search/FrontendStoreItemStock/GetNearbyStoreList',
+      getStoreDetail: 'Search/FrontendStoreItemStock/GetStoreDetail'
     },
     params: {
       mid_v: 'W0_DiF4DlgU5OeQoRswrRcaaNHMWOL7K3ra3389ocJQv-rdOWS6Zu4AtGa7-7pjiccl0C5gm0u5UNONXuVUXcJCidRjIv9dsUd8PocNr5moiuJJ8hZla5iV0H3-8dZfASc7GgEm74679LYK2hBB-Sam6D0LAnYK9Lb0DZjaSctnHS5yYugtrYNdWoWk'

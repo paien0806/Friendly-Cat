@@ -5,6 +5,8 @@ import { environment } from 'src/environments/environment';
 import { RequestService } from 'src/app/services/request.service'
 import { LocationData } from '../../model/seven-eleven.model';
 
+import { Location } from '../../model/seven-eleven.model';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -37,5 +39,20 @@ export class SevenElevenRequestService {
       'token': sessionStorage.getItem('711Token')
     };
     return this.requestService.post(url, params)
+  }
+
+  getItemsByStoreNo(storeNo: string): Observable<any> {
+    const url = this.baseUrl + environment.sevenElevenUrl.endpoint.getStoreDetail;
+    const params = {
+      'token': sessionStorage.getItem('711Token'),
+    };
+    const body = {
+      storeNo: storeNo,
+      CurrentLocation: {
+        Latitude: 25.0375197,
+        Longitude: 121.5636704
+      }
+    };
+    return this.requestService.post(url, params, body)
   }
 }
