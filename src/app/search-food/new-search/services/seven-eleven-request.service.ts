@@ -55,4 +55,9 @@ export class SevenElevenRequestService {
     };
     return this.requestService.post(url, params, body)
   }
+
+  getFoodDetails(): Observable<any> {
+    const url = 'assets/seven_eleven_products.json'
+    return this.requestService.get(url)
+  }
 }

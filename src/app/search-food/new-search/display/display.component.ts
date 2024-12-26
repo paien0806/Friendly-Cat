@@ -1,13 +1,14 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, OnInit } from '@angular/core';
 import { StoreStockItem, FoodCategory, FoodSubCategory, Item, CategoryStockItem } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
 import { SevenElevenRequestService } from '../services/seven-eleven-request.service';  // 確保這個服務有方法可以查詢商店商品數量
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.scss']
 })
-export class DisplayComponent implements OnChanges {
+export class DisplayComponent implements OnChanges, OnInit {
   @Input() store!: StoreStockItem;  // 接收父組件傳遞的 store
   @Input() category!: FoodCategory;  // 接收父組件傳遞的 category
 
@@ -15,7 +16,19 @@ export class DisplayComponent implements OnChanges {
   totalSubCategoryQty: number = 0;
   itemsBySubCategory: { [key: string]: Item[] } = {};  // 儲存每個子分類的商品列表
 
-  constructor(private sevenElevenRequestService: SevenElevenRequestService) {}
+  FoodPrices: any = [];
+
+  constructor(
+    private sevenElevenRequestService: SevenElevenRequestService,
+    private http: HttpClient
+  ) {}
+
+  ngOnInit() {
+    this.sevenElevenRequestService.getFoodDetails().subscribe((data) => {
+      this.FoodPrices = data;
+      console.log(this.FoodPrices);
+    })
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['category'] || changes['store']) {
