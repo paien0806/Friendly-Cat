@@ -10,7 +10,7 @@ import { switchMap, from, of, catchError } from 'rxjs';
 @Component({
   selector: 'app-new-search',
   templateUrl: './new-search.component.html',
-  styleUrls: ['./new-search.component.scss']
+  styleUrls: ['./new-search.component.scss'],
 })
 export class NewSearchComponent implements OnInit {
   zipcodes: any[] = []; // 原始 API 資料
@@ -28,6 +28,9 @@ export class NewSearchComponent implements OnInit {
   foodCategories: FoodCategory[] = [];
 
   nearbyStores: StoreStockItem[] = []; // 儲存從 API 獲得的商店列表
+
+  selectedCategory?: FoodCategory;
+  selectedStore?: StoreStockItem;
 
   constructor(
     private http: HttpClient,
@@ -80,6 +83,8 @@ export class NewSearchComponent implements OnInit {
 
   init() {
     // 使用 from 將 Promise 轉換為 Observable
+    this.getCityName();
+
     from(this.geolocationService.getCurrentPosition()).pipe(
       switchMap((position) => {
         const lat = position.coords.latitude;
@@ -170,4 +175,11 @@ export class NewSearchComponent implements OnInit {
 
     return totalQty;
   }
+
+  // 當用戶點擊某個分類時，切換選中的分類與店鋪
+  toggleSubCategoryDetails(store: StoreStockItem, category: FoodCategory): void {
+    this.selectedCategory = category;
+    this.selectedStore = store;
+  }
+
 }
