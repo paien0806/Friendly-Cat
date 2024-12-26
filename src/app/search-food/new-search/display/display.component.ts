@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { StoreStockItem, FoodCategory, FoodSubCategory, Item } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
+import { StoreStockItem, FoodCategory, FoodSubCategory, Item, CategoryStockItem } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
 import { SevenElevenRequestService } from '../services/seven-eleven-request.service';  // 確保這個服務有方法可以查詢商店商品數量
 
 @Component({
@@ -33,27 +33,24 @@ export class DisplayComponent implements OnChanges {
 
   loadItemsBySubCategory() {
     if (this.store) {
-      // 根據 storeNo 查詢商品資料
       this.sevenElevenRequestService.getItemsByStoreNo(this.store.StoreNo).subscribe(response => {
-        if (response.isSuccess && response.element.StoreStockItemList) {
-          // 處理返回的數據並分類
+        if (response.isSuccess && response.element.StoreStockItem) {
+          const categoryStockItems: CategoryStockItem[] = response.element.StoreStockItem.CategoryStockItems;
+
           this.subCategories.forEach(subCategory => {
             const items: Item[] = [];
 
-            // 循環所有商店的庫存項目，根據子分類名稱過濾
-            response.element.StoreStockItemList.forEach((storeItem: StoreStockItem) => {  // 顯式聲明 storeItem 類型
-              storeItem.CategoryStockItems.forEach(category => {
-                if (category.Name === subCategory.Name) {
-                  // 合併所有對應的商品
-                  items.push(...category.ItemList);
-                }
-              });
+            // 遍歷 CategoryStockItems，根據子分類名稱過濾並提取 ItemList
+            categoryStockItems.forEach(category => {
+              if (category.Name === subCategory.Name) {
+                items.push(...category.ItemList);
+              }
             });
 
-            // 把每個子分類的商品資料保存到 itemsBySubCategory
-            this.itemsBySubCategory[subCategory.Name] = items;
+            // 把結果保存到 itemsBySubCategory
+            this.itemsBySubCategory[subCategory.Name] = items || [];
           });
-          this.calculateTotalQty();  // 重新計算累計數量
+          this.calculateTotalQty(); // 更新總數量
         }
       });
     }
