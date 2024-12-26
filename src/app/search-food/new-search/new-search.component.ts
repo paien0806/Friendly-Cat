@@ -5,6 +5,8 @@ import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
 import { FoodCategory, LocationData, StoreStockItem } from '../model/seven-eleven.model'
 
+import { switchMap, from, of, catchError } from 'rxjs';
+
 @Component({
   selector: 'app-new-search',
   templateUrl: './new-search.component.html',
@@ -30,13 +32,11 @@ export class NewSearchComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private geolocationService: GeolocationService,
-    private sevenElevenService: SevenElevenRequestService
+    private sevenElevenService: SevenElevenRequestService,
   ) {}
 
   ngOnInit(): void {
-    this.getCityName();
-    this.get711AccessToken();
-    this.get711FoodCategory();
+    this.init();
   }
 
   getCityName() {
@@ -76,51 +76,70 @@ export class NewSearchComponent implements OnInit {
     }
   }
 
-  get711AccessToken() {
-    this.sevenElevenService.getAccessToken().subscribe((data) => {
-      if(data && data.element) {
-        console.log(data.element)
-        sessionStorage.setItem('711Token', data.element);
+
+
+  init() {
+    // 使用 from 將 Promise 轉換為 Observable
+    from(this.geolocationService.getCurrentPosition()).pipe(
+      switchMap((position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+        console.log('Latitude:', lat, 'Longitude:', lng);
+        this.latitude = lat;
+        this.longitude = lng;
+
+        // 繼續發送 getAccessToken 請求
+        return this.sevenElevenService.getAccessToken();
+      }),
+      switchMap((token: any) => {
+        if (token && token.element) {
+          sessionStorage.setItem('711Token', token.element);
+          console.log('Stored 711Token:', sessionStorage.getItem('711Token'));
+          // 如果 token 儲存成功，發送 getFoodCategory 請求
+          return this.sevenElevenService.getFoodCategory();
+        } else {
+          // 如果 token 沒有成功返回，返回空陣列
+          return of([]);
+        }
+      }),
+      catchError((error) => {
+        // 錯誤處理邏輯
+        console.error('Error:', error);
+        return of([]); // 在出錯時返回空陣列，防止應用崩潰
+      })
+    ).subscribe(
+      (res) => {
+        if (res && res.element) {
+          this.foodCategories = res.element;
+          console.log('Food Categories:', this.foodCategories);
+          this.get711NearByStoreList();
+        } else {
+          console.error('Failed to fetch food categories');
+        }
       }
-    })
+    );
   }
 
-  get711FoodCategory() {
-    this.sevenElevenService.getFoodCategory().subscribe((data) => {
-      if(data) {
-        this.foodCategories = data.element
-      }
-    });
-  }
 
   get711NearByStoreList() {
-    this.geolocationService.getCurrentPosition()
-      .then((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.errorMessage = undefined;
-        const locationData: LocationData = {
-          CurrentLocation: {
-            Latitude: this.latitude,
-            Longitude: this.longitude
-          },
-          SearchLocation: {
-            Latitude: this.latitude,
-            Longitude: this.longitude
-          }
-        };
-    
-        this.sevenElevenService.getNearByStoreList(locationData).subscribe((data) => {
-          if (data && data.element && data.element.StoreStockItemList) {
-            this.nearbyStores = data.element.StoreStockItemList.sort(
-              (a: StoreStockItem, b: StoreStockItem) => a.Distance - b.Distance
-            );
-          }
-        });
-      })
-      .catch((error) => {
-        this.errorMessage = this.handleError(error);
-      });
+    const locationData: LocationData = {
+      CurrentLocation: {
+        Latitude: this.latitude,
+        Longitude: this.longitude
+      },
+      SearchLocation: {
+        Latitude: this.latitude,
+        Longitude: this.longitude
+      }
+    };
+
+    this.sevenElevenService.getNearByStoreList(locationData).subscribe((data) => {
+      if (data && data.element && data.element.StoreStockItemList) {
+        this.nearbyStores = data.element.StoreStockItemList.sort(
+          (a: StoreStockItem, b: StoreStockItem) => a.Distance - b.Distance
+        );
+      }
+    });
   }
 
   getFoodSubCategoryImage(nodeID: number): string | null {
@@ -138,7 +157,7 @@ export class NewSearchComponent implements OnInit {
 
   getSubCategoryTotalQty(store: StoreStockItem, category: FoodCategory): number {
     let totalQty = 0;
-    
+
     // 遍歷商店中的所有商品，檢查是否屬於當前分類及子分類
     for (const stockItem of store.CategoryStockItems) {
       // 遍歷每個分類的子項目，檢查是否屬於這個 category
@@ -148,7 +167,7 @@ export class NewSearchComponent implements OnInit {
         }
       }
     }
-  
+
     return totalQty;
   }
 }
