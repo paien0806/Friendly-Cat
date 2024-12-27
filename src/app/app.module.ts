@@ -11,9 +11,11 @@ import { MatOptionModule } from '@angular/material/core';
 
 import { SearchFoodModule } from './search-food/search-food.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EmptyInfoPipe } from './pipes/empty-info.pipe';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatOptionModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

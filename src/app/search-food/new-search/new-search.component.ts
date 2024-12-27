@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormGroup, FormControl } from '@angular/forms';
 
 import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
-import { FoodCategory, LocationData, StoreStockItem } from '../model/seven-eleven.model'
+import { FoodCategory, LocationData, StoreStockItem, Store } from '../model/seven-eleven.model'
+
+import { environment } from 'src/environments/environment';
 
 import { switchMap, from, of, catchError } from 'rxjs';
 
@@ -13,6 +16,16 @@ import { switchMap, from, of, catchError } from 'rxjs';
   styleUrls: ['./new-search.component.scss'],
 })
 export class NewSearchComponent implements OnInit {
+  searchForm: FormGroup; // 表單
+  isLoading: boolean = false;
+  selectedStoreName='';
+  dropDown711List: any[] = [
+    { StoreNo: '1', StoreName: '測試商店' },
+    { StoreNo: '2', StoreName: '示範商店' }
+  ];
+
+  sevenElevenIconUrl = environment.sevenElevenUrl.icon;
+
   zipcodes: any[] = []; // 原始 API 資料
   cities: string[] = []; // 縣市清單
   filteredDistricts: any[] = []; // 篩選後的行政區列表
@@ -36,7 +49,11 @@ export class NewSearchComponent implements OnInit {
     private http: HttpClient,
     private geolocationService: GeolocationService,
     private sevenElevenService: SevenElevenRequestService,
-  ) {}
+  ) {
+    this.searchForm = new FormGroup({
+      selectedStoreName: new FormControl(''), // 控制選中的商店
+    });
+  }
 
   ngOnInit(): void {
     this.init();

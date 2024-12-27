@@ -25,6 +25,15 @@ export class SevenElevenRequestService {
     return this.requestService.post(url, params);
   }
 
+  getStoreByAddress(keyword: string): Observable<any> {
+    const url = this.baseUrl + environment.sevenElevenUrl.endpoint.getStoreByAddress;
+    const params = {
+      'token': sessionStorage.getItem('711Token'),
+      'keyword': keyword
+    };
+    return this.requestService.post(url, params);
+  }
+
   getNearByStoreList(location: LocationData): Observable<any> {
     const url = this.baseUrl + environment.sevenElevenUrl.endpoint.getNearbyStoreList;
     const params = {

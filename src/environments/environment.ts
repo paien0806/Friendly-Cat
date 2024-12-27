@@ -12,6 +12,7 @@ export const environment = {
     }
   },
   sevenElevenUrl: {
+    icon: 'https://www.7-11.com.tw/favicon.ico',
     base: 'https://lovefood.openpoint.com.tw/LoveFood/api/',
     endpoint: {
       accessToken: 'Auth/FrontendAuth/AccessToken',

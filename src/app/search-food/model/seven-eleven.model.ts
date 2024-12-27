@@ -53,3 +53,30 @@ export interface FoodSubCategory {
   IsEnabled: boolean;             // 是否啟用
   PCSCCategeroyNo: string[];      // 子分類編號
 }
+
+export interface FoodDetail {
+  name: string;
+  category: string;
+  content: string;
+  image: string;
+  kcal: string;
+  new: string;
+  price: string;
+  special_sale: string;
+  originalPrice?: string; // 新增原價屬性
+  discountedPrice?: string; // 新增折扣後價格屬性
+}
+
+export interface Store {
+  StoreNo: string; // 商店編號
+  StoreName: string; // 商店名稱
+  StoreShortName: string; // 商店簡稱
+  IsEnabled: boolean; // 商店是否啟用
+  Latitude: number; // 緯度
+  Longitude: number; // 經度
+  Address: string; // 地址
+  IsXStore: boolean; // 是否是 X Store
+  IsOperateTime: boolean; // 是否有營業時間
+  HasStock: boolean; // 是否有庫存
+  Distance: number | null; // 距離，可能為 null
+}

@@ -1,7 +1,9 @@
 import { Component, Input, OnChanges, SimpleChanges, OnInit } from '@angular/core';
-import { StoreStockItem, FoodCategory, FoodSubCategory, Item, CategoryStockItem } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
+import { StoreStockItem, FoodCategory, FoodSubCategory, Item, CategoryStockItem, FoodDetail  } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
 import { SevenElevenRequestService } from '../services/seven-eleven-request.service';  // 確保這個服務有方法可以查詢商店商品數量
 import { HttpClient } from '@angular/common/http';
+
+import Fuse from 'fuse.js';
 
 @Component({
   selector: 'app-display',
@@ -16,7 +18,7 @@ export class DisplayComponent implements OnChanges, OnInit {
   totalSubCategoryQty: number = 0;
   itemsBySubCategory: { [key: string]: Item[] } = {};  // 儲存每個子分類的商品列表
 
-  FoodPrices: any = [];
+  foodDetails: FoodDetail[] = [];
 
   constructor(
     private sevenElevenRequestService: SevenElevenRequestService,
@@ -25,8 +27,8 @@ export class DisplayComponent implements OnChanges, OnInit {
 
   ngOnInit() {
     this.sevenElevenRequestService.getFoodDetails().subscribe((data) => {
-      this.FoodPrices = data;
-      console.log(this.FoodPrices);
+      this.foodDetails = data;
+      console.log(this.foodDetails);
     })
   }
 
@@ -90,5 +92,58 @@ export class DisplayComponent implements OnChanges, OnInit {
       });
     }
     return qty;
+  }
+
+  getDiscountedPrice(originalPrice: string): string {
+    // 解析原價
+    const price = parseFloat(originalPrice.replace('NT$', '').trim());
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+
+    let discountedPrice = price;
+
+    // 設定折扣邏輯
+    if (currentHour >= 19 && currentHour < 20) {
+      discountedPrice *= 0.8; // 19:00~19:59 八折
+    } else if ((currentHour >= 10 && currentHour < 18) || (currentHour >= 20 || currentHour < 3)) {
+      discountedPrice *= 0.65; // 10:00~17:59 以及 20:00~03:00 六五折
+    }
+    return discountedPrice.toString();
+  }
+
+  getFoodDetail(item: Item): FoodDetail {
+    // 設置 Fuse.js 配置選項
+    const options = {
+      includeScore: true, // 需要包含匹配度分數
+      threshold: 0.3, // 設置模糊搜尋的閾值，0.3 表示較為寬鬆的匹配
+      keys: ['name'] // 搜尋的欄位是 'name'
+    };
+
+    // 初始化 Fuse 進行模糊搜尋
+    const fuse = new Fuse(this.foodDetails, options);
+
+    // 查找最匹配的項目
+    const result = fuse.search(item.ItemName);
+
+    // 如果找到匹配項，則返回最相似的那個
+    const foodDetail = result.length > 0 ? result[0].item : {
+      category: '',
+      content: '',
+      image: 'assets/此商品暫無圖片.png', // 默認圖片
+      kcal: '',
+      name: '',
+      new: 'False',
+      price: '',
+      special_sale: 'False'
+    };
+
+    // 計算折扣後的價格
+    const discountedPrice = this.getDiscountedPrice(foodDetail.price);
+
+    // 將計算結果新增到 foodDetail 物件中
+    foodDetail['discountedPrice'] = discountedPrice;
+    foodDetail['originalPrice'] = foodDetail.price; // 原價
+
+    return foodDetail;
   }
 }
