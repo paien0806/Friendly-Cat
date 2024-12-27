@@ -40,6 +40,11 @@
   <!-- 輸入搜尋 -->
   <ng-container class="flex flex-col items-center">
     <h1 class="text-2xl font-bold text-center mb-6">店名地址查詢</h1>
+    <!-- 提示訊息區域 -->
+    <div class="text-sm text-red-600 mb-4">
+      <p>* 預設顯示目前所在位置附近商店</p>
+      <p>* 全家便利商店未提供詳細商品資訊，因此僅顯示商品與數量</p>
+    </div>
     <form (ngSubmit)="onSubmit()" class="w-full">
       <div class="flex justify-center gap-4 w-full items-center">
         <mat-icon matSuffix class="text-gray-500 flex">search</mat-icon>

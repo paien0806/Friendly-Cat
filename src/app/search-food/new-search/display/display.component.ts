@@ -108,6 +108,10 @@ export class DisplayComponent implements OnChanges, OnInit {
     } else if ((currentHour >= 10 && currentHour < 18) || (currentHour >= 20 || currentHour < 3)) {
       discountedPrice *= 0.65; // 10:00~17:59 以及 20:00~03:00 六五折
     }
+    else {
+      // 待查清其餘時段是幾折==，目前假設八折
+      discountedPrice *= 0.8;
+    }
     return discountedPrice.toString();
   }
 
