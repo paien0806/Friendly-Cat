@@ -5,8 +5,6 @@ import { environment } from 'src/environments/environment';
 import { RequestService } from 'src/app/services/request.service'
 import { LocationData } from '../../model/seven-eleven.model';
 
-import { Location } from '../../model/seven-eleven.model';
-
 @Injectable({
   providedIn: 'root'
 })

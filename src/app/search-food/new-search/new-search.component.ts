@@ -4,11 +4,14 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
+import { FamilyMartRequestService } from './services/family-mart-request.service';
+
 import { FoodCategory, LocationData, StoreStockItem, Store } from '../model/seven-eleven.model'
+import { fStore } from '../model/family-mart.model';
 
 import { environment } from 'src/environments/environment';
 
-import { switchMap, from, of, catchError } from 'rxjs';
+import { switchMap, from, of, catchError, Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-new-search',
@@ -17,18 +20,21 @@ import { switchMap, from, of, catchError } from 'rxjs';
 })
 export class NewSearchComponent implements OnInit {
   searchForm: FormGroup; // 表單
-  isLoading: boolean = false;
+  searchTerm: string = '';
   selectedStoreName='';
-  dropDown711List: any[] = [
-    { StoreNo: '1', StoreName: '測試商店' },
-    { StoreNo: '2', StoreName: '示範商店' }
-  ];
+
+  dropDown711List: Store[] = [];
+  dropDownFamilyMartList: fStore[] = [];
+  unifiedDropDownList: any[] = [];
+
 
   sevenElevenIconUrl = environment.sevenElevenUrl.icon;
+  familyMartIconUrl = environment.familyMartUrl.icon;
 
   zipcodes: any[] = []; // 原始 API 資料
   cities: string[] = []; // 縣市清單
   filteredDistricts: any[] = []; // 篩選後的行政區列表
+  zipcodeList: string[] = [];
 
   selectedCity: string | null = null; // 選擇的縣市
   selectedDistrict: string | null = null; // 選擇的行政區
@@ -49,6 +55,7 @@ export class NewSearchComponent implements OnInit {
     private http: HttpClient,
     private geolocationService: GeolocationService,
     private sevenElevenService: SevenElevenRequestService,
+    private familyMartService: FamilyMartRequestService,
   ) {
     this.searchForm = new FormGroup({
       selectedStoreName: new FormControl(''), // 控制選中的商店
@@ -59,14 +66,15 @@ export class NewSearchComponent implements OnInit {
     this.init();
   }
 
-  getCityName() {
-    // 從縣市名稱 API 獲取資料
+  getCityName(): Observable<any[]> {
     const apiUrl = 'https://demeter.5fpro.com/tw/zipcodes.json'; // API URL
-    this.http.get<any[]>(apiUrl).subscribe((data) => {
-      this.zipcodes = data;
-      // 提取不重複的縣市
-      this.cities = [...new Set(data.map((item) => item.city_name))];
-    });
+    return this.http.get<any[]>(apiUrl).pipe(
+      tap((data) => {
+        this.zipcodes = data;
+        this.cities = [...new Set(data.map((item) => item.city_name))];
+        this.zipcodeList = [...new Set(data.map((item) => item.zipcode))];
+      })
+    );
   }
 
   // 當縣市選擇改變時
@@ -96,11 +104,12 @@ export class NewSearchComponent implements OnInit {
     }
   }
 
-
-
   init() {
     // 使用 from 將 Promise 轉換為 Observable
     this.getCityName();
+
+    //取得所有全家商店名稱資訊
+    this.getFamilyMartAllStore();
 
     from(this.geolocationService.getCurrentPosition()).pipe(
       switchMap((position) => {
@@ -140,6 +149,14 @@ export class NewSearchComponent implements OnInit {
         }
       }
     );
+  }
+
+  getFamilyMartAllStore() {
+    this.familyMartService.getStores().subscribe((data) => {
+      if(data.length > 0) {
+        this.dropDownFamilyMartList = data;
+      }
+    })
   }
 
 
@@ -199,4 +216,63 @@ export class NewSearchComponent implements OnInit {
     this.selectedStore = store;
   }
 
+  onSearch(event: Event): void {
+    const input = (event.target as HTMLInputElement).value;  // 確保這裡的值是有效的
+    console.log('輸入的值:', input);  // 確認輸入的值是否正確
+
+    if (input.length >= 2) {
+      // 假設這是你的API調用邏輯
+      this.sevenElevenService.getStoreByAddress(input).subscribe(
+        (data) => {
+          if (data && data.isSuccess) {
+            this.dropDown711List = data.element;
+
+            // 刪掉全家兩個字以免使用者誤搜，篩選 unifiedDropDownList，篩選條件是 Name 和 addr 都包含 input
+            const filteredDropDownFamilyMartList = this.dropDownFamilyMartList
+              .map(item => ({
+                ...item,
+                Name: item.Name.replace('全家', '')  // 去除 "全家" 字串
+              }))
+              .filter(item =>
+                item.Name.includes(input) || item.addr.includes(input)
+              );
+
+            // 統一兩個列表的名稱欄位
+            const normalizedFamilyMartList = filteredDropDownFamilyMartList.map(item => ({
+              name: item.Name,  // 統一名稱欄位
+              addr: item.addr,
+              label: '全家',
+            }));
+
+            const normalized711List = this.dropDown711List.map(item => ({
+              name: item.StoreName,  // 統一名稱欄位
+              addr: item.Address,
+              label: '7-11',
+            }));
+
+            normalized711List.forEach(item => {
+              if (!this.unifiedDropDownList.some(existingItem => existingItem.name === item.name && existingItem.addr === item.addr)) {
+                this.unifiedDropDownList.push(item);  // 同樣的檢查，防止重複
+              }
+            });
+
+            normalizedFamilyMartList.forEach(item => {
+              if (!this.unifiedDropDownList.some(existingItem => existingItem.name === item.name && existingItem.addr === item.addr)) {
+                this.unifiedDropDownList.push(item);  // 只有當 unifedDropDownList 中沒有該元素時才添加
+              }
+            });
+          }
+        },
+        (error) => {
+          console.error('API 請求錯誤:', error);
+        }
+      );
+    } else {
+      this.unifiedDropDownList = [];
+    }
+  }
+
+  onSubmit(): void {
+    console.log('提交的搜索內容:', this.searchTerm);
+  }
 }

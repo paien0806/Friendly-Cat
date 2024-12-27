@@ -42,3 +42,13 @@ export interface ProductModel {
     name: string;
     qty: number;
 }
+
+export interface fStore {
+  Name: string;           // 店名
+  Tel: string;            // 電話
+  addr: string;           // 地址
+  pkeynew: string;        // 新的 PKey
+  px_wgs84: string;       // 經度
+  py_wgs84: string;       // 緯度
+  serid: string;
+}

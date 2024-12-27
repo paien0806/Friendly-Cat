@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   familyMartUrl: {
+    icon: 'https://www.family.com.tw/NewEnterprise/CSR/images/favicon.ico',
     base: 'https://stamp.family.com.tw/api/maps',
+    storeQuery: 'https://family.map.com.tw/famiport/api/dropdownlist/Select_StoreName',
     endpoint: {
       mapClassificationInfo: '/MapClassificationInfo',
       mapProductInfo: '/MapProductInfo'

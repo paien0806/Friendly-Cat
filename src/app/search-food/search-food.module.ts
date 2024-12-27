@@ -6,11 +6,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 // 导入 Angular Material 模块
 import { MatFormFieldModule } from '@angular/material/form-field';  // 用于 form-field
 import { MatSelectModule } from '@angular/material/select';  // 用于下拉選單
-import { NzSelectModule } from 'ng-zorro-antd/select';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzSpinModule } from 'ng-zorro-antd/spin'; // 加載的 spinner
+import { MatOptionModule } from '@angular/material/core';  // 用于 mat-option
+import { MatInputModule } from '@angular/material/input';  // 用于 mat-label 和其他输入框功能
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatAutocompleteModule } from '@angular/material/autocomplete'; // 用於 mat-autocomplete
+import { MatButtonModule } from '@angular/material/button'; // 用於 mat-button
+import { MatIconModule } from '@angular/material/icon';
 
 import { RoundPipe } from '../pipes/round.pipe';
 import { EmptyInfoPipe } from '../pipes/empty-info.pipe';
@@ -30,12 +31,13 @@ import { NewSearchComponent } from './new-search/new-search.component';
     FormsModule, // 支援 [(ngModel)]
     MatFormFieldModule,  // 新增
     MatSelectModule,     // 新增
+    MatOptionModule,     // 新增
+    MatInputModule,       // 新增
+    MatProgressSpinnerModule,
     ReactiveFormsModule,
-    NzSelectModule,
-    NzButtonModule,
-    NzFormModule,
-    NzInputModule,
-    NzSpinModule
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class SearchFoodModule { }
