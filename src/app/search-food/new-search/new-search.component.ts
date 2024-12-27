@@ -6,7 +6,7 @@ import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
 import { FamilyMartRequestService } from './services/family-mart-request.service';
 
-import { FoodCategory, LocationData, StoreStockItem, Store, Location } from '../model/seven-eleven.model'
+import { FoodCategory, LocationData, StoreStockItem, Store, Location, CategoryStockItem } from '../model/seven-eleven.model'
 import { fStore, StoreModel, ProductCategoryModel } from '../model/family-mart.model';
 
 import { environment } from 'src/environments/environment';
@@ -52,8 +52,8 @@ export class NewSearchComponent implements OnInit {
   totalStoresShowList: any[] = []; //為了方便顯示所以統一
   filteredStoresList: any[] = [];  // 用來儲存篩選後的商店列表
 
-  selectedCategory?: FoodCategory | ProductCategoryModel;
   selectedStore?: any;
+  selectedCategory?: any;
 
   constructor(
     private http: HttpClient,

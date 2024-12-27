@@ -1,59 +1,129 @@
+<!-- 子類別分類有東西才顯示 -->
 <div *ngIf="subCategories.length > 0">
-  <h2 class="text-2xl font-bold mb-4">{{ category.Name }}</h2>
-  <ng-container *ngFor="let subCategory of subCategories">
-    <div *ngIf="itemsBySubCategory[subCategory.Name] && itemsBySubCategory[subCategory.Name].length > 0"
-         class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
-      <div class="mb-4">
-        <h3 class="text-2xl font-bold text-gray-800">
-          {{ subCategory.Name }}
-        </h3>
-        <!-- <h4 class="text-lg text-gray-600 mt-2">數量: <span class="font-semibold">{{ getSubCategoryQty(subCategory.Name) }}</span></h4> -->
-      </div>
 
-      <ul class="space-y-6">
-        <li *ngFor="let item of itemsBySubCategory[subCategory.Name]">
-          <div class="food-item flex items-start p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <img [src]="getFoodDetail(item).image" [alt]="getFoodDetail(item).name"
-              class="object-contain rounded-lg mr-6 shadow-md w-40 h-40">
-            <div class="flex-1">
-              <!-- 商品名稱 -->
-              <h3 class="text-xl font-semibold text-gray-800">
-                {{ item.ItemName }}
-                <!-- 剩餘數量顯示 -->
-                <div class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
-                  剩餘數量: {{ item.RemainingQty }}
+  <!-- 7-11顯示區塊 -->
+  <ng-container *ngIf="category.Name">
+    <h2 class="text-2xl font-bold mb-4">{{ category.Name }}</h2>
+    <ng-container *ngFor="let subCategory of subCategories">
+      <div *ngIf="itemsBySubCategory[subCategory.Name] && itemsBySubCategory[subCategory.Name].length > 0"
+          class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold text-gray-800">
+            {{ subCategory.Name }}
+          </h3>
+          <!-- <h4 class="text-lg text-gray-600 mt-2">數量: <span class="font-semibold">{{ getSubCategoryQty(subCategory.Name) }}</span></h4> -->
+        </div>
+
+        <!-- 7-11顯示的子分類商品內容區塊 -->
+        <ul class="space-y-6">
+          <li *ngFor="let item of itemsBySubCategory[subCategory.Name]">
+            <div class="food-item flex items-start p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <img [src]="getFoodDetail(item).image" [alt]="getFoodDetail(item).name"
+                class="object-contain rounded-lg mr-6 shadow-md w-40 h-40">
+              <div class="flex-1">
+                <!-- 商品名稱 -->
+                <h3 class="text-xl font-semibold text-gray-800">
+                  {{ item.ItemName }}
+                  <!-- 剩餘數量顯示 -->
+                  <div class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    剩餘數量: {{ item.RemainingQty }}
+                  </div>
+                </h3>
+                <div class="flex space-x-2 mb-2">
+                  <div *ngIf="getFoodDetail(item).new === 'True'"
+                      class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    新品
+                  </div>
+                  <div *ngIf="getFoodDetail(item).special_sale === 'True'"
+                      class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    特價中
+                  </div>
                 </div>
-              </h3>
-              <div class="flex space-x-2 mb-2">
-                <div *ngIf="getFoodDetail(item).new === 'True'"
-                     class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">
-                  新品
-                </div>
-                <div *ngIf="getFoodDetail(item).special_sale === 'True'"
-                     class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
-                  特價中
-                </div>
+                <ng-container *ngIf="getFoodDetail(item).name else noNameTemplate">
+                  <div class="text-base font-semibold text-gray-800 mb-3">
+                    <span class="text-gray-800">價格(NT$): </span>
+                    <span class="line-through text-gray-500">{{ getFoodDetail(item).originalPrice }}</span>
+                    <span class="text-red-600 mx-2">→</span>
+                    <span class="text-red-600">
+                      {{ getFoodDetail(item).discountedPrice | round:0 }}
+                    </span>
+                  </div>
+                  <p class="text-sm text-gray-500 mb-2">商品描述: {{ getFoodDetail(item).content | emptyInfo}}</p>
+                  <p class="text-sm text-gray-500 mb-2">卡路里(kcal): {{ getFoodDetail(item).kcal | emptyInfo}}</p>
+                </ng-container>
+
+                <ng-template #noNameTemplate>
+                  <p class="text-sm text-gray-500 mb-2">此商品無相關資訊</p>
+                </ng-template>
               </div>
-              <ng-container *ngIf="getFoodDetail(item).name else noNameTemplate">
-                <div class="text-base font-semibold text-gray-800 mb-3">
-                  <span class="text-gray-800">價格(NT$): </span>
-                  <span class="line-through text-gray-500">{{ getFoodDetail(item).originalPrice }}</span>
-                  <span class="text-red-600 mx-2">→</span>
-                  <span class="text-red-600">
-                    {{ getFoodDetail(item).discountedPrice | round:0 }}
-                  </span>
-                </div>
-                <p class="text-sm text-gray-500 mb-2">商品描述: {{ getFoodDetail(item).content | emptyInfo}}</p>
-                <p class="text-sm text-gray-500 mb-2">卡路里(kcal): {{ getFoodDetail(item).kcal | emptyInfo}}</p>
-              </ng-container>
-
-              <ng-template #noNameTemplate>
-                <p class="text-sm text-gray-500 mb-2">此商品無相關資訊</p>
-              </ng-template>
             </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <!-- 全家顯示區塊 -->
+  <ng-container *ngIf="category.name">
+    <h2 class="text-2xl font-bold mb-4">{{ category.name }}</h2>
+    <ng-container *ngFor="let subCategory of subCategories">
+      <div *ngIf="itemsBySubCategory[subCategory.name] && itemsBySubCategory[subCategory.name].length > 0"
+          class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold text-gray-800">
+            {{ subCategory.name }}
+          </h3>
+          <!-- <h4 class="text-lg text-gray-600 mt-2">數量: <span class="font-semibold">{{ getSubCategoryQty(subCategory.Name) }}</span></h4> -->
+        </div>
+
+        <!-- 全家顯示的子分類商品內容區塊 -->
+        <ul class="space-y-6">
+          <li *ngFor="let item of itemsBySubCategory[subCategory.name]">
+            <div class="food-item flex items-start p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <!-- 全家目前沒圖片 -->
+              <!-- <img [src]="getFoodDetail(item).image" [alt]="getFoodDetail(item).name"
+                class="object-contain rounded-lg mr-6 shadow-md w-40 h-40"> -->
+              <div class="flex-1">
+                <!-- 商品名稱 -->
+                <h3 class="text-xl font-semibold text-gray-800">
+                  {{ item.ItemName }}
+                  <!-- 剩餘數量顯示 -->
+                  <div class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    剩餘數量: {{ item.RemainingQty }}
+                  </div>
+                </h3>
+                <!-- 全家目前無任何商品資訊 -->
+                <!-- <div class="flex space-x-2 mb-2">
+                  <div *ngIf="getFoodDetail(item).new === 'True'"
+                      class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    新品
+                  </div>
+                  <div *ngIf="getFoodDetail(item).special_sale === 'True'"
+                      class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    特價中
+                  </div>
+                </div>
+                <ng-container *ngIf="getFoodDetail(item).name else noNameTemplate">
+                  <div class="text-base font-semibold text-gray-800 mb-3">
+                    <span class="text-gray-800">價格(NT$): </span>
+                    <span class="line-through text-gray-500">{{ getFoodDetail(item).originalPrice }}</span>
+                    <span class="text-red-600 mx-2">→</span>
+                    <span class="text-red-600">
+                      {{ getFoodDetail(item).discountedPrice | round:0 }}
+                    </span>
+                  </div>
+                  <p class="text-sm text-gray-500 mb-2">商品描述: {{ getFoodDetail(item).content | emptyInfo}}</p>
+                  <p class="text-sm text-gray-500 mb-2">卡路里(kcal): {{ getFoodDetail(item).kcal | emptyInfo}}</p>
+                </ng-container>
+
+                <ng-template #noNameTemplate>
+                  <p class="text-sm text-gray-500 mb-2">此商品無相關資訊</p>
+                </ng-template> -->
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
   </ng-container>
 </div>

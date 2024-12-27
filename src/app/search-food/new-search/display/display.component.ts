@@ -1,10 +1,11 @@
 import { Component, Input, OnChanges, SimpleChanges, OnInit } from '@angular/core';
-import { StoreStockItem, FoodCategory, FoodSubCategory, Item, CategoryStockItem, FoodDetail  } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
+
+import { FoodSubCategory, Item, CategoryStockItem, FoodDetail  } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
+import { ProductModel } from '../../model/family-mart.model'
+
 import { SevenElevenRequestService } from '../services/seven-eleven-request.service';  // 確保這個服務有方法可以查詢商店商品數量
-import { HttpClient } from '@angular/common/http';
 
 import Fuse from 'fuse.js';
-import { StoreModel } from '../../model/family-mart.model';
 
 @Component({
   selector: 'app-display',
@@ -12,21 +13,20 @@ import { StoreModel } from '../../model/family-mart.model';
   styleUrls: ['./display.component.scss']
 })
 export class DisplayComponent implements OnChanges, OnInit {
-  @Input() store!: StoreStockItem;  // 接收父組件傳遞的 store
+  @Input() store!: any;  // 接收父組件傳遞的 store
   @Input() category!: any;  // 接收父組件傳遞的 category
 
-  subCategories: FoodSubCategory[] = [];
-  totalSubCategoryQty: number = 0;
+  subCategories: any[] = [];
   itemsBySubCategory: { [key: string]: Item[] } = {};  // 儲存每個子分類的商品列表
 
   foodDetails: FoodDetail[] = [];
 
   constructor(
     private sevenElevenRequestService: SevenElevenRequestService,
-    private http: HttpClient
   ) {}
 
   ngOnInit() {
+    // 初始化的時候讀取存在.json的7-11商品細節
     this.sevenElevenRequestService.getFoodDetails().subscribe((data) => {
       this.foodDetails = data;
       console.log(this.foodDetails);
@@ -34,6 +34,7 @@ export class DisplayComponent implements OnChanges, OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    // 若組件輸入有變化時，重新載入子商品列表
     if (changes['category'] || changes['store']) {
       this.loadSubCategories();  // 重新加載子分類資料
     }
@@ -41,9 +42,28 @@ export class DisplayComponent implements OnChanges, OnInit {
 
   loadSubCategories() {
     if (this.store && this.category) {
-      this.subCategories = this.category.Children;  // 更新子分類列表
-      this.calculateTotalQty();  // 重新計算子分類的數量
-      this.loadItemsBySubCategory();  // 載入子分類下的所有商品資料
+      if (this.store.StoreName) {
+        this.subCategories = this.category.Children;  // 更新子分類列表
+        console.log('subCategories', this.subCategories);
+        this.loadItemsBySubCategory();  // 載入子分類下的所有商品資料
+      }
+      else if (this.store.name) {
+        this.subCategories = this.category.categories
+        console.log('subCategories', this.subCategories);
+        // 全家直接把商品丟進itemsBySubCategory
+        const items: Item[] = [];
+        this.subCategories.forEach((cat) => {
+          console.log('cat', cat)
+          items.push(
+            ...cat.products.map((product: ProductModel) => ({
+              ItemName: product.name,       // 映射到 ItemName
+              RemainingQty: product.qty,    // 映射到 RemainingQty
+            }))
+          );
+          this.itemsBySubCategory[cat.name] = items || [];
+        });
+        console.log('itemsBySubCategory', this.itemsBySubCategory)
+      }
     }
   }
 
@@ -66,34 +86,22 @@ export class DisplayComponent implements OnChanges, OnInit {
             // 把結果保存到 itemsBySubCategory
             this.itemsBySubCategory[subCategory.Name] = items || [];
           });
-          this.calculateTotalQty(); // 更新總數量
         }
+        console.log('itemsBySubCategory', this.itemsBySubCategory)
       });
     }
   }
 
-  calculateTotalQty() {
-    this.totalSubCategoryQty = 0;
-    this.subCategories.forEach(subCategory => {
-      const items = this.itemsBySubCategory[subCategory.Name];
-      if (items) {
-        items.forEach(item => {
-          this.totalSubCategoryQty += item.RemainingQty;
-        });
-      }
-    });
-  }
-
-  getSubCategoryQty(subCategoryName: string): number {
-    let qty = 0;
-    const items = this.itemsBySubCategory[subCategoryName];
-    if (items) {
-      items.forEach(item => {
-        qty += item.RemainingQty;
-      });
-    }
-    return qty;
-  }
+  // getSubCategoryQty(subCategoryName: string): number {
+  //   let qty = 0;
+  //   const items = this.itemsBySubCategory[subCategoryName];
+  //   if (items) {
+  //     items.forEach(item => {
+  //       qty += item.RemainingQty;
+  //     });
+  //   }
+  //   return qty;
+  // }
 
   getDiscountedPrice(originalPrice: string): string {
     // 解析原價
