@@ -4,6 +4,7 @@ import { SevenElevenRequestService } from '../services/seven-eleven-request.serv
 import { HttpClient } from '@angular/common/http';
 
 import Fuse from 'fuse.js';
+import { StoreModel } from '../../model/family-mart.model';
 
 @Component({
   selector: 'app-display',
@@ -12,7 +13,7 @@ import Fuse from 'fuse.js';
 })
 export class DisplayComponent implements OnChanges, OnInit {
   @Input() store!: StoreStockItem;  // 接收父組件傳遞的 store
-  @Input() category!: FoodCategory;  // 接收父組件傳遞的 category
+  @Input() category!: any;  // 接收父組件傳遞的 category
 
   subCategories: FoodSubCategory[] = [];
   totalSubCategoryQty: number = 0;

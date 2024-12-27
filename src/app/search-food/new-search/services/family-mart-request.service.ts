@@ -3,7 +3,9 @@ import { Observable } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
 import { RequestService } from 'src/app/services/request.service'
-import { LocationData } from '../../model/seven-eleven.model';
+
+import { Location } from '../../model/seven-eleven.model'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,5 +20,17 @@ export class FamilyMartRequestService {
     getStores(): Observable<any> {
       const url = 'assets/family_mart_stores.json'
       return this.requestService.get(url)
+    }
+
+    getNearByStoreList(location: Location): Observable<any> {
+      const url = this.baseUrl + environment.familyMartUrl.endpoint.mapProductInfo
+      const body = {
+        "ProjectCode": "202106302",
+        "OldPKeys": [],
+        "PostInfo": "",
+        "Latitude": location.Latitude,
+        "Longitude": location.Longitude
+      }
+      return this.requestService.post(url, null, body)
     }
 }

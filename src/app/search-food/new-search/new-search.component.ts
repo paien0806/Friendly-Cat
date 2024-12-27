@@ -6,12 +6,12 @@ import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
 import { FamilyMartRequestService } from './services/family-mart-request.service';
 
-import { FoodCategory, LocationData, StoreStockItem, Store } from '../model/seven-eleven.model'
-import { fStore } from '../model/family-mart.model';
+import { FoodCategory, LocationData, StoreStockItem, Store, Location } from '../model/seven-eleven.model'
+import { fStore, StoreModel, ProductCategoryModel } from '../model/family-mart.model';
 
 import { environment } from 'src/environments/environment';
 
-import { switchMap, from, of, catchError, Observable, tap } from 'rxjs';
+import { switchMap, from, of, catchError, Observable, tap, forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-new-search',
@@ -22,6 +22,8 @@ export class NewSearchComponent implements OnInit {
   searchForm: FormGroup; // 表單
   searchTerm: string = '';
   selectedStoreName='';
+
+  storeFilter: string = 'all';
 
   dropDown711List: Store[] = [];
   dropDownFamilyMartList: fStore[] = [];
@@ -42,14 +44,16 @@ export class NewSearchComponent implements OnInit {
 
   latitude!: number;
   longitude!: number;
-  errorMessage?: string;
 
   foodCategories: FoodCategory[] = [];
 
-  nearbyStores: StoreStockItem[] = []; // 儲存從 API 獲得的商店列表
+  nearby711Stores: StoreStockItem[] = []; // 儲存用現在位置找到的711
+  nearbyFamilyMartStores: StoreModel[] = []; // 儲存用現在位置找到的全家
+  totalStoresShowList: any[] = []; //為了方便顯示所以統一
+  filteredStoresList: any[] = [];  // 用來儲存篩選後的商店列表
 
-  selectedCategory?: FoodCategory;
-  selectedStore?: StoreStockItem;
+  selectedCategory?: FoodCategory | ProductCategoryModel;
+  selectedStore?: any;
 
   constructor(
     private http: HttpClient,
@@ -105,21 +109,14 @@ export class NewSearchComponent implements OnInit {
   }
 
   init() {
-    // 使用 from 將 Promise 轉換為 Observable
-    this.getCityName();
+    // // 使用 from 將 Promise 轉換為 Observable
+    // this.getCityName();
 
     //取得所有全家商店名稱資訊
     this.getFamilyMartAllStore();
 
-    from(this.geolocationService.getCurrentPosition()).pipe(
-      switchMap((position) => {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-        console.log('Latitude:', lat, 'Longitude:', lng);
-        this.latitude = lat;
-        this.longitude = lng;
-
-        // 繼續發送 getAccessToken 請求
+    of(true).pipe(
+      switchMap(() => {
         return this.sevenElevenService.getAccessToken();
       }),
       switchMap((token: any) => {
@@ -143,7 +140,6 @@ export class NewSearchComponent implements OnInit {
         if (res && res.element) {
           this.foodCategories = res.element;
           console.log('Food Categories:', this.foodCategories);
-          this.get711NearByStoreList();
         } else {
           console.error('Failed to fetch food categories');
         }
@@ -159,28 +155,6 @@ export class NewSearchComponent implements OnInit {
     })
   }
 
-
-  get711NearByStoreList() {
-    const locationData: LocationData = {
-      CurrentLocation: {
-        Latitude: this.latitude,
-        Longitude: this.longitude
-      },
-      SearchLocation: {
-        Latitude: this.latitude,
-        Longitude: this.longitude
-      }
-    };
-
-    this.sevenElevenService.getNearByStoreList(locationData).subscribe((data) => {
-      if (data && data.element && data.element.StoreStockItemList) {
-        this.nearbyStores = data.element.StoreStockItemList.sort(
-          (a: StoreStockItem, b: StoreStockItem) => a.Distance - b.Distance
-        );
-      }
-    });
-  }
-
   getFoodSubCategoryImage(nodeID: number): string | null {
     // 查找匹配的子分類
     for (let category of this.foodCategories) {
@@ -194,7 +168,7 @@ export class NewSearchComponent implements OnInit {
     return null;
   }
 
-  getSubCategoryTotalQty(store: StoreStockItem, category: FoodCategory): number {
+  getSubCategoryTotalQty(store: any, category: any): number {
     let totalQty = 0;
 
     // 遍歷商店中的所有商品，檢查是否屬於當前分類及子分類
@@ -211,12 +185,12 @@ export class NewSearchComponent implements OnInit {
   }
 
   // 當用戶點擊某個分類時，切換選中的分類與店鋪
-  toggleSubCategoryDetails(store: StoreStockItem, category: FoodCategory): void {
+  toggleSubCategoryDetails(store: any, category: any): void {
     this.selectedCategory = category;
     this.selectedStore = store;
   }
 
-  onSearch(event: Event): void {
+  onSearchStore(event: Event): void {
     const input = (event.target as HTMLInputElement).value;  // 確保這裡的值是有效的
     console.log('輸入的值:', input);  // 確認輸入的值是否正確
 
@@ -274,5 +248,146 @@ export class NewSearchComponent implements OnInit {
 
   onSubmit(): void {
     console.log('提交的搜索內容:', this.searchTerm);
+  }
+
+  onUseCurrentLocation(): void {
+    from(this.geolocationService.getCurrentPosition())
+      .pipe(
+        switchMap((position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          console.log('Latitude:', lat, 'Longitude:', lng);
+  
+          this.latitude = lat;
+          this.longitude = lng;
+  
+          console.log('已取得位置');
+
+          return of([]);
+        }),
+        switchMap((res) => {
+          if(res) {
+            return this.sevenElevenService.getAccessToken();
+          }
+          else{
+            return [];
+          }
+        }),
+        switchMap((token: any) => {
+          if (token && token.element) {
+            sessionStorage.setItem('711Token', token.element);
+            console.log('Stored 711Token:', sessionStorage.getItem('711Token'));
+            // 如果 token 儲存成功，發送 getFoodCategory 請求
+            return this.sevenElevenService.getFoodCategory();
+          } else {
+            // 如果 token 沒有成功返回，返回空陣列
+            return of([]);
+          }
+        })
+      ).subscribe(
+        (res) => {
+          if (res) {
+            this.combineAndTransformStores();
+          } else {
+            console.error('Failed to fetch food categories');
+          }
+        }
+      );
+  }
+
+  transformFStyleTo711(): void {
+    // 清空統一列表，避免重複累加
+    this.totalStoresShowList = [];
+    
+    // 處理 7-11 商店
+    this.nearby711Stores.forEach((store) => {
+      const transformedStore = {
+        ...store,
+        label: '7-11',
+        distance: store.Distance // 統一使用 `distance` 字段
+      };
+      this.totalStoresShowList.push(transformedStore); // 推入統一列表
+    });
+    
+    // 處理全家商店
+    this.nearbyFamilyMartStores.forEach((store) => {
+      const transformedStore = {
+        ...store,
+        label: '全家', // 加上來源標籤
+        distance: store.distance // 統一使用 `distance` 字段
+      };
+      this.totalStoresShowList.push(transformedStore); // 推入統一列表
+    });
+  
+    // 根據距離排序
+    this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
+  
+    console.log('totalStoresShowList', this.totalStoresShowList);
+  }
+
+  combineAndTransformStores(): void {
+    const locationData711: LocationData = {
+      CurrentLocation: {
+        Latitude: this.latitude,
+        Longitude: this.longitude
+      },
+      SearchLocation: {
+        Latitude: this.latitude,
+        Longitude: this.longitude
+      }
+    };
+  
+    const locationFamilyMart: Location = {
+      Latitude: this.latitude,
+      Longitude: this.longitude
+    };
+  
+    // 結合兩個 API 請求
+    forkJoin({
+      sevenEleven: this.sevenElevenService.getNearByStoreList(locationData711),
+      familyMart: this.familyMartService.getNearByStoreList(locationFamilyMart)
+    }).subscribe(
+      ({ sevenEleven, familyMart }) => {
+        // 處理 7-11 資料
+        if (sevenEleven && sevenEleven.element && sevenEleven.element.StoreStockItemList) {
+          this.nearby711Stores = sevenEleven.element.StoreStockItemList.sort(
+            (a: StoreStockItem, b: StoreStockItem) => a.Distance - b.Distance
+          );
+        }
+  
+        // 處理全家資料
+        if (familyMart && familyMart.code === 1) {
+          this.nearbyFamilyMartStores = familyMart.data.sort(
+            (a: StoreModel, b: StoreModel) => a.distance - b.distance
+          );
+        }
+  
+        // 等兩者完成後合併資料
+        this.transformFStyleTo711();
+      },
+      (error) => {
+        console.error('Error fetching store data:', error);
+      }
+    );
+  }
+
+  getFStoreQty(store: StoreModel): number {
+    var totalQty: number = 0;
+    store.info.forEach((cat) => {
+      totalQty += cat.qty;
+    })
+    return totalQty;
+  }
+
+  getFUrl(cat: any): string {
+    return cat.iconURL;
+  }
+
+  getFCatName(cat: any): string {
+    return cat.name;
+  }
+
+  getFSubCategoryQty(store: StoreModel, cat: any): number {
+    return cat.qty;
   }
 }
