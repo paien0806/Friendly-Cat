@@ -1,11 +1,15 @@
 <div class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg max-w-4xl">
   <ng-container class="flex flex-col items-center">
-    <h1 class="text-2xl font-bold text-center mb-6">超商店名地址查詢</h1>
-
+    <div class="flex items-center justify-center mb-6 h-24">
+      <img src="assets/S__222224406.jpg" alt="Friendly Superhero" class="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full">
+      <h5 class="text-xl sm:text-2xl font-bold ml-4 py-2 px-4 border-2 border-gray-300 rounded-full bg-white inline-block">
+        看看附近有啥好吃的吧！
+      </h5>
+    </div>    
     <!-- 提示訊息區域 -->
-    <div class="text-sm text-red-600 mb-4 text-center">
-      <p>* 預設顯示目前所在位置附近商店</p>
-      <p>* 全家便利商店未提供詳細商品資訊，因此僅顯示商品與數量</p>
+    <div class="text-xs sm:text-sm text-red-600 mb-4 text-center">
+      <p>* 未搜集全家商品資訊，因此僅顯示商品與數量</p>
+      <p>** 歡迎提供資料來源</p>
     </div>
 
     <form (ngSubmit)="onSubmit()" class="w-full">
@@ -18,7 +22,7 @@
             [matAutocomplete]="auto"
             [(ngModel)]="searchTerm"
             (input)="onSearchStore($event)"
-            placeholder="此功能施工中⋯⋯⋯⋯⋯⋯"
+            placeholder="關鍵字搜尋功能施工中⋯⋯⋯敬請期待"
             [disabled]="true"
             name="searchTerm"
             class="p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -36,7 +40,7 @@
                   class="w-4 h-4"
                 />
                 <span>{{ store.name }}門市</span>
-                <span class="text-sm text-gray-500">{{ store.addr }}</span>
+                <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
               </div>
               <div *ngIf="store.label === '全家'" class="flex items-center gap-2">
                 <img
@@ -45,7 +49,7 @@
                   class="w-4 h-4"
                 />
                 <span>{{ store.name }}</span>
-                <span class="text-sm text-gray-500">{{ store.addr }}</span>
+                <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
               </div>
             </mat-option>
           </mat-autocomplete>
@@ -57,10 +61,10 @@
           disabled="true"
           mat-raised-button
           color="primary"
-          class="ml-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-sm md:text-base"
+          class="ml-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-xs sm:text-sm md:text-base"
         >
           <mat-icon class="text-sm">search</mat-icon>
-          關鍵字查詢施工
+          關鍵字查詢施工中
         </button>
         <!-- 第二個按鈕：使用目前位置 -->
         <button
@@ -68,7 +72,7 @@
           mat-raised-button
           color="warn"
           (click)="onUseCurrentLocation()"
-          class="ml-4 px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-sm md:text-base"
+          class="ml-4 px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-xs sm:text-sm md:text-base"
         >
           <mat-icon class="text-sm">location_on</mat-icon>
           使用目前位置
@@ -92,30 +96,34 @@
     <ng-container *ngIf="store.label === '7-11'">
       <div class="store-icon flex items-center mb-4">
         <img [src]="sevenElevenIconUrl" alt="Store Icon" class="w-6 h-6 mr-2" />
-        <h2 class="text-lg font-semibold">7-11{{ store.StoreName }}門市</h2>
+        <h2 class="text-lg sm:text-xl font-semibold">7-11{{ store.StoreName }}門市</h2>
       </div>
-      <h3 class="text-sm">距離: {{ store.distance | round:1 }} 公尺</h3>
-      <h3 class="text-sm">是否營業: {{ store.IsOperateTime ? '是' : '否' }}</h3>
-      <h3 class="text-sm">總剩餘數量: {{ store.RemainingQty }}</h3>
-
+      <div class="store-icon flex items-center mb-4 text-lg sm:text-xl">
+        距離: {{ store.distance | round:1 }} 公尺
+      </div>
+      <div class="inline-block bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full" [ngClass]="store.IsOperateTime ? 'text-green-600' : 'text-red-600'">
+          {{ store.IsOperateTime ? '營業中' : '休息中' }}
+      </div>
       <div class="food-categories mt-4">
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-          <div
-            *ngFor="let category of foodCategories | slice:0:10; let i = index"
-            class="category border p-4 rounded-lg text-center cursor-pointer"
-            (click)="toggleSubCategoryDetails(store, category)"
-            [class.pointer-events-none]="getSubCategoryTotalQty(store, category) === 0"
-            [ngClass]="{'bg-blue-100': selectedCategory === category && selectedStore === store}"
-          >
-            <img
-              [src]="category.ImageUrl"
-              alt="{{ category.Name }}"
-              class="w-16 h-16 mx-auto mb-2 object-cover"
-              [ngStyle]="{'opacity': getSubCategoryTotalQty(store, category) === 0 ? 0.3 : 1}"
-            />
-            <h3 class="text-sm font-medium">{{ category.Name }}</h3>
-            <h4 class="text-xs">數量: {{ getSubCategoryTotalQty(store, category) }}</h4>
-          </div>
+          <ng-container *ngFor="let category of foodCategories | slice:0:10; let i = index">
+            <div
+              *ngIf="getSubCategoryTotalQty(store, category) > 0"
+              class="category border p-4 rounded-lg text-center cursor-pointer"
+              (click)="toggleSubCategoryDetails(store, category)"
+              [class.pointer-events-none]="getSubCategoryTotalQty(store, category) === 0"
+              [ngClass]="{'bg-blue-100': selectedCategory === category && selectedStore === store}"
+            >
+              <img
+                [src]="category.ImageUrl"
+                alt="{{ category.Name }}"
+                class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 object-cover"
+                [ngStyle]="{'opacity': getSubCategoryTotalQty(store, category) === 0 ? 0.3 : 1}"
+              />
+              <h3 class="text-xs sm:text-sm font-medium">{{ category.Name }}</h3>
+              <h4 class="text-xs">數量: {{ getSubCategoryTotalQty(store, category) }}</h4>
+            </div>
+          </ng-container>
         </div>
         <div *ngIf="selectedCategory && selectedStore === store" class="sub-category-details mt-4">
           <app-display [store]="selectedStore" [category]="selectedCategory"></app-display>
@@ -127,12 +135,13 @@
     <ng-container *ngIf="store.label === '全家'">
       <div class="store-icon flex items-center mb-4">
         <img [src]="familyMartIconUrl" alt="Store Icon" class="w-6 h-6 mr-2" />
-        <h2 class="text-lg font-semibold">{{ store.name }}</h2>
+        <h2 class="text-lg sm:text-xl font-semibold">{{ store.name }}</h2>
       </div>
-      <h3 class="text-sm">距離: {{ store.distance | round:1 }} 公尺</h3>
-      <h3 class="text-sm">總剩餘數量: {{ getFStoreQty(store) }}</h3>
+      <div class="store-icon flex items-center mb-4 text-lg sm:text-xl">
+        距離: {{ store.distance | round:1 }} 公尺
+      </div>
 
-      <div class="food-categories mt-4">
+      <div class="food-categories mt-4 border-gray-700">
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           <div
             *ngFor="let category of store.info | slice:0:10; let i = index"
@@ -144,15 +153,15 @@
             <img
               [src]="getFUrl(category)"
               alt="{{ getFCatName(category) }}"
-              class="w-16 h-16 mx-auto mb-2 object-cover"
+              class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 object-cover"
               [ngStyle]="{'opacity': getFSubCategoryQty(store, category) === 0 ? 0.3 : 1}"
             />
-            <h3 class="text-sm font-medium">{{ getFCatName(category) }}</h3>
+            <h3 class="text-xs sm:text-sm font-medium">{{ getFCatName(category) }}</h3>
             <h4 class="text-xs">數量: {{ getFSubCategoryQty(store, category) }}</h4>
           </div>
         </div>
-        <div *ngIf="selectedCategory && selectedStore === store" class="sub-category-details mt-4">
-          <app-display [store]="selectedStore" [category]="selectedCategory"></app-display>
+        <div *ngIf="selectedCategory && selectedStore === store" class="sub-category-details mt-4 border-gray-700">
+          <app-display [store]="selectedStore" [category]="selectedCategory" class="border-gray-700"></app-display>
         </div>
       </div>
     </ng-container>

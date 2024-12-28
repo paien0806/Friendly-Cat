@@ -12,6 +12,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatAutocompleteModule } from '@angular/material/autocomplete'; // 用於 mat-autocomplete
 import { MatButtonModule } from '@angular/material/button'; // 用於 mat-button
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 import { RoundPipe } from '../pipes/round.pipe';
 import { EmptyInfoPipe } from '../pipes/empty-info.pipe';
@@ -37,7 +38,8 @@ import { NewSearchComponent } from './new-search/new-search.component';
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ]
 })
 export class SearchFoodModule { }

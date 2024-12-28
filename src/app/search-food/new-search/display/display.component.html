@@ -1,11 +1,10 @@
-<div *ngIf="subCategories.length > 0">
-
+<mat-card *ngIf="subCategories.length > 0" class="border-gray-300">
   <!-- 7-11顯示區塊 -->
   <ng-container *ngIf="category.Name">
     <h2 class="text-2xl font-bold mb-4">{{ category.Name }}</h2>
     <ng-container *ngFor="let subCategory of subCategories">
       <div *ngIf="itemsBySubCategory[subCategory.Name] && itemsBySubCategory[subCategory.Name].length > 0"
-          class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
+           class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
         <div class="mb-4">
           <h3 class="text-2xl font-bold text-gray-800">
             {{ subCategory.Name }}
@@ -13,19 +12,19 @@
         </div>
 
         <!-- 7-11顯示的子分類商品內容區塊 -->
-        <ul class="space-y-6">
+        <ul class="space-y-6 sm:space-y-4">
           <li *ngFor="let item of itemsBySubCategory[subCategory.Name]">
             <div class="food-item flex flex-col sm:flex-row items-start p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <img [src]="getFoodDetail(item).image" [alt]="getFoodDetail(item).name"
-                class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32">
+                   class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32">
 
               <div class="flex-1">
                 <!-- 商品名稱與標籤 -->
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                  <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+                  <h3 class="text-sm sm:text-lg font-semibold text-gray-800">
                     {{ item.ItemName }}
                   </h3>
-                  <div class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                  <div class="inline-block bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
                     剩餘數量: {{ item.RemainingQty }}
                   </div>
                 </div>
@@ -33,11 +32,11 @@
                 <!-- 商品標籤 -->
                 <div class="flex space-x-2 mb-2">
                   <div *ngIf="getFoodDetail(item).new === 'True'"
-                      class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">
+                       class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">
                     新品
                   </div>
                   <div *ngIf="getFoodDetail(item).special_sale === 'True'"
-                      class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
+                       class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">
                     特價中
                   </div>
                 </div>
@@ -68,7 +67,7 @@
     <h2 class="text-2xl font-bold mb-4">{{ category.name }}</h2>
     <ng-container *ngFor="let subCategory of subCategories">
       <div *ngIf="itemsBySubCategory[subCategory.name] && itemsBySubCategory[subCategory.name].length > 0"
-          class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
+           class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
         <div class="mb-4">
           <h3 class="text-2xl font-bold text-gray-800">
             {{ subCategory.name }}
@@ -76,15 +75,15 @@
         </div>
 
         <!-- 全家顯示的子分類商品內容區塊 -->
-        <ul class="space-y-6">
+        <ul class="space-y-6 sm:space-y-4">
           <li *ngFor="let item of itemsBySubCategory[subCategory.name]">
             <div class="food-item flex flex-col sm:flex-row items-start p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div class="flex-1">
                 <!-- 商品名稱 -->
-                <h3 class="text-lg sm:text-xl font-semibold text-gray-800">
+                <h3 class="text-sm sm:text-lg font-semibold text-gray-800">
                   {{ item.ItemName }}
                 </h3>
-                <div class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                <div class="inline-block bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
                   剩餘數量: {{ item.RemainingQty }}
                 </div>
               </div>
@@ -94,4 +93,4 @@
       </div>
     </ng-container>
   </ng-container>
-</div>
+</mat-card>
