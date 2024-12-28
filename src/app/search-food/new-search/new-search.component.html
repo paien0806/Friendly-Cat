@@ -73,6 +73,10 @@
           <mat-icon class="text-sm">location_on</mat-icon>
           使用目前位置
         </button>
+        <mat-progress-spinner *ngIf="loadingService.loading$ | async" 
+                      mode="indeterminate" 
+                      diameter="20">
+        </mat-progress-spinner>
       </div>
     </form>
   </ng-container>

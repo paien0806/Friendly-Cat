@@ -5,6 +5,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
 import { FamilyMartRequestService } from './services/family-mart-request.service';
+import { LoadingService } from '../../services/loading.service'
 
 import { FoodCategory, LocationData, StoreStockItem, Store, Location, CategoryStockItem } from '../model/seven-eleven.model'
 import { fStore, StoreModel, ProductCategoryModel } from '../model/family-mart.model';
@@ -60,6 +61,7 @@ export class NewSearchComponent implements OnInit {
     private geolocationService: GeolocationService,
     private sevenElevenService: SevenElevenRequestService,
     private familyMartService: FamilyMartRequestService,
+    public loadingService: LoadingService,
   ) {
     this.searchForm = new FormGroup({
       selectedStoreName: new FormControl(''), // 控制選中的商店
@@ -112,6 +114,8 @@ export class NewSearchComponent implements OnInit {
     // // 使用 from 將 Promise 轉換為 Observable
     // this.getCityName();
 
+    this.loadingService.show();  // 显示加载动画
+
     //取得所有全家商店名稱資訊
     this.getFamilyMartAllStore();
 
@@ -140,8 +144,10 @@ export class NewSearchComponent implements OnInit {
         if (res && res.element) {
           this.foodCategories = res.element;
           console.log('Food Categories:', this.foodCategories);
+          this.loadingService.hide();
         } else {
           console.error('Failed to fetch food categories');
+          this.loadingService.hide();
         }
       }
     );
@@ -251,6 +257,7 @@ export class NewSearchComponent implements OnInit {
   }
 
   onUseCurrentLocation(): void {
+    this.loadingService.show()
     from(this.geolocationService.getCurrentPosition())
       .pipe(
         switchMap((position) => {
@@ -288,8 +295,10 @@ export class NewSearchComponent implements OnInit {
         (res) => {
           if (res) {
             this.combineAndTransformStores();
+            this.loadingService.hide();
           } else {
             console.error('Failed to fetch food categories');
+            this.loadingService.hide();
           }
         }
       );
