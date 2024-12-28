@@ -304,7 +304,7 @@ export class NewSearchComponent implements OnInit {
       );
   }
 
-  transformFStyleTo711(): void {
+  combineStoreList(): void {
     // 清空統一列表，避免重複累加
     this.totalStoresShowList = [];
     
@@ -372,7 +372,7 @@ export class NewSearchComponent implements OnInit {
         }
   
         // 等兩者完成後合併資料
-        this.transformFStyleTo711();
+        this.combineStoreList();
       },
       (error) => {
         console.error('Error fetching store data:', error);
