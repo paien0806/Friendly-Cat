@@ -27,7 +27,7 @@ jobs:
 
     - name: Run Python script to generate JSON
       run: |
-        python crawer.py  # 执行 Python 脚本，生成 output.json 文件
+        python crawer.py  # 执行 Python 脚本，生成 JSON 文件
 
     - name: Commit and push changes
       run: |
@@ -35,11 +35,11 @@ jobs:
         git config user.email "github-actions@github.com"
         
         # 将生成的 JSON 文件添加到 Git
-        git add src/assets/seven_eleven_products.json
-        git add src/assets/family_mart_stores.json
+        git add doc/assets/seven_eleven_products.json
+        git add doc/assets/family_mart_stores.json
 
         # 提交更改
-        git commit -m "Add generated JSON files"
+        git commit -m "Add generated JSON files to doc/assets"
 
         # 推送更改到仓库
         git push origin HEAD:main  # 将更改推送到主分支，调整为你的分支名称（如有必要）
