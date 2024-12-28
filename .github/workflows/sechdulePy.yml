@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: '00 04 * * *'  # 对应台北时间00:00
   workflow_dispatch:
+  push:
+    branches:
+      - master  # 仅在 master 分支触发工作流
+
 
 permissions:
   contents: write  # 需要写权限，才能提交更改
