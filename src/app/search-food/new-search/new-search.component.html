@@ -1,24 +1,25 @@
 <div class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg max-w-4xl">
   <ng-container class="flex flex-col items-center">
-    <h1 class="text-2xl font-bold text-center mb-6">店名地址查詢</h1>
+    <h1 class="text-2xl font-bold text-center mb-6">超商店名地址查詢</h1>
 
     <!-- 提示訊息區域 -->
-    <div class="text-sm text-red-600 mb-4">
+    <div class="text-sm text-red-600 mb-4 text-center">
       <p>* 預設顯示目前所在位置附近商店</p>
       <p>* 全家便利商店未提供詳細商品資訊，因此僅顯示商品與數量</p>
     </div>
 
     <form (ngSubmit)="onSubmit()" class="w-full">
-      <div class="flex justify-center gap-4 w-full items-center">
+      <div class="flex flex-wrap justify-center gap-4 w-full items-center">
         <!-- 輸入框 -->
-        <mat-form-field class="w-3/4 sm:w-1/2">
+        <mat-form-field class="w-full sm:w-3/4 lg:w-1/2">
           <mat-icon matSuffix class="text-gray-500">search</mat-icon>
           <input
             matInput
             [matAutocomplete]="auto"
             [(ngModel)]="searchTerm"
             (input)="onSearchStore($event)"
-            placeholder="請輸入兩個字以上之店名或地址"
+            placeholder="此功能施工中⋯⋯⋯⋯⋯⋯"
+            [disabled]="true"
             name="searchTerm"
             class="p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -56,7 +57,7 @@
           disabled="true"
           mat-raised-button
           color="primary"
-          class="ml-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-base md:text-sm"
+          class="ml-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-sm md:text-base"
         >
           <mat-icon class="text-sm">search</mat-icon>
           關鍵字查詢施工
@@ -67,7 +68,7 @@
           mat-raised-button
           color="warn"
           (click)="onUseCurrentLocation()"
-          class="ml-4 px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-base md:text-sm"
+          class="ml-4 px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-sm md:text-base"
         >
           <mat-icon class="text-sm">location_on</mat-icon>
           使用目前位置
@@ -77,103 +78,77 @@
   </ng-container>
 </div>
 
-
 <!-- 711與全家的商品詳細頁面 -->
-
-<!-- 切分成711與全家的區塊，透過ngIf判斷顯示哪個 -->
 <div *ngIf="totalStoresShowList.length > 0">
-  <div *ngFor="let store of totalStoresShowList" class="store p-4 border border-gray-300 rounded-lg shadow-md mb-6">
-    
+  <div
+    *ngFor="let store of totalStoresShowList"
+    class="store p-4 border border-gray-300 rounded-lg shadow-md mb-6"
+  >
     <!-- 711區塊 -->
     <ng-container *ngIf="store.label === '7-11'">
-      <!-- 商店圖標 -->
-      <div class="store-icon mr-4">
-        <h2 class="text-lg font-semibold flex items-center">
-          <!-- 圖片設置寬高，並與文字在同一行顯示 -->
-          <img [src]="sevenElevenIconUrl" alt="Store Icon" class="object-cover mr-2" />
-            7-11{{ store.StoreName }}門市
-        </h2>
+      <div class="store-icon flex items-center mb-4">
+        <img [src]="sevenElevenIconUrl" alt="Store Icon" class="w-6 h-6 mr-2" />
+        <h2 class="text-lg font-semibold">7-11{{ store.StoreName }}門市</h2>
       </div>
-      <h3>距離: {{ store.distance | round:1 }} 公尺</h3>
-      <h3>是否營業: {{ store.IsOperateTime ? '是' : '否' }}</h3>
-      <h3>總剩餘數量: {{ store.RemainingQty }}</h3>
+      <h3 class="text-sm">距離: {{ store.distance | round:1 }} 公尺</h3>
+      <h3 class="text-sm">是否營業: {{ store.IsOperateTime ? '是' : '否' }}</h3>
+      <h3 class="text-sm">總剩餘數量: {{ store.RemainingQty }}</h3>
 
       <div class="food-categories mt-4">
-        <div class="grid grid-cols-5 gap-4">
-          <!-- 顯示每個 FoodCategory 的名稱、圖片及其累計的子分類數量 -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           <div
             *ngFor="let category of foodCategories | slice:0:10; let i = index"
             class="category border p-4 rounded-lg text-center cursor-pointer"
             (click)="toggleSubCategoryDetails(store, category)"
             [class.pointer-events-none]="getSubCategoryTotalQty(store, category) === 0"
           >
-            <!-- 圖片透明度調整 -->
-          <img [src]="category.ImageUrl"
-                  alt="{{ category.Name }}"
-                  class="w-16 h-16 mx-auto mb-2 object-cover"
-                  [ngStyle]="{'opacity': getSubCategoryTotalQty(store, category) === 0 ? 0.3 : 1}"/>
-
+            <img
+              [src]="category.ImageUrl"
+              alt="{{ category.Name }}"
+              class="w-16 h-16 mx-auto mb-2 object-cover"
+              [ngStyle]="{'opacity': getSubCategoryTotalQty(store, category) === 0 ? 0.3 : 1}"
+            />
             <h3 class="text-sm font-medium">{{ category.Name }}</h3>
             <h4 class="text-xs">數量: {{ getSubCategoryTotalQty(store, category) }}</h4>
           </div>
         </div>
-        <!-- 顯示子分類詳細內容 -->
         <div *ngIf="selectedCategory && selectedStore === store" class="sub-category-details mt-4">
-          <app-display
-            [store]="selectedStore"
-            [category]="selectedCategory">
-          </app-display>
+          <app-display [store]="selectedStore" [category]="selectedCategory"></app-display>
         </div>
       </div>
     </ng-container>
 
     <!-- 全家區塊 -->
     <ng-container *ngIf="store.label === '全家'">
-      <!-- 商店圖標 -->
-      <div class="store-icon mr-4">
-        <h2 class="text-lg font-semibold flex items-center">
-          <!-- 圖片設置寬高，並與文字在同一行顯示 -->
-          <img [src]="familyMartIconUrl" alt="Store Icon" class="object-cover mr-2" />
-          {{ store.name }}
-        </h2>
+      <div class="store-icon flex items-center mb-4">
+        <img [src]="familyMartIconUrl" alt="Store Icon" class="w-6 h-6 mr-2" />
+        <h2 class="text-lg font-semibold">{{ store.name }}</h2>
       </div>
-      <h3>距離: {{ store.distance | round:1 }} 公尺</h3>
-      <!-- 全家無提供此資訊 -->
-      <!-- <h3>是否營業: {{ store.IsOperateTime ? '是' : '否' }}</h3> -->
-      <h3>總剩餘數量: {{ getFStoreQty(store) }}</h3>
+      <h3 class="text-sm">距離: {{ store.distance | round:1 }} 公尺</h3>
+      <h3 class="text-sm">總剩餘數量: {{ getFStoreQty(store) }}</h3>
 
       <div class="food-categories mt-4">
-        <div class="grid grid-cols-5 gap-4">
-          <!-- 顯示每個 FoodCategory 的名稱、圖片及其累計的子分類數量 -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           <div
             *ngFor="let category of store.info | slice:0:10; let i = index"
             class="category border p-4 rounded-lg text-center cursor-pointer"
             (click)="toggleSubCategoryDetails(store, category)"
             [class.pointer-events-none]="getFSubCategoryQty(store, category) === 0"
           >
-            <!-- 圖片透明度調整 -->
-          <img [src]="getFUrl(category)"
-                  alt="{{ getFCatName(category) }}"
-                  class="w-16 h-16 mx-auto mb-2 object-cover"
-                  [ngStyle]="{'opacity': getFSubCategoryQty(store, category) === 0 ? 0.3 : 1}"/>
-
+            <img
+              [src]="getFUrl(category)"
+              alt="{{ getFCatName(category) }}"
+              class="w-16 h-16 mx-auto mb-2 object-cover"
+              [ngStyle]="{'opacity': getFSubCategoryQty(store, category) === 0 ? 0.3 : 1}"
+            />
             <h3 class="text-sm font-medium">{{ getFCatName(category) }}</h3>
             <h4 class="text-xs">數量: {{ getFSubCategoryQty(store, category) }}</h4>
           </div>
         </div>
-        <!-- 顯示子分類詳細內容 -->
         <div *ngIf="selectedCategory && selectedStore === store" class="sub-category-details mt-4">
-          <app-display
-            [store]="selectedStore"
-            [category]="selectedCategory">
-          </app-display>
+          <app-display [store]="selectedStore" [category]="selectedCategory"></app-display>
         </div>
       </div>
     </ng-container>
-
   </div>
 </div>
-
-
-
-
