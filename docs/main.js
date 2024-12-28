@@ -19,9 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', redirectTo: '/search', pathMatch: 'full' },
-    { path: 'search', component: _search_food_new_search_new_search_component__WEBPACK_IMPORTED_MODULE_0__.NewSearchComponent },
-    { path: '**', redirectTo: '/search' }, // 所有其他路径都重定向到 /search
+    { path: '**', component: _search_food_new_search_new_search_component__WEBPACK_IMPORTED_MODULE_0__.NewSearchComponent }, // 所有其他路径都重定向到 /search
 ];
 class AppRoutingModule {
 }
@@ -1263,10 +1261,10 @@ NewSearchComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9
       _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](5, " \u770B\u770B\u9644\u8FD1\u6709\u5565\u597D\u5403\u7684\u5427\uFF01 ");
       _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]()();
       _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](6, "div", 5)(7, "p");
-      _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](8, "* \u672A\u641C\u96C6\u5168\u5BB6\u5546\u54C1\u8CC7\u8A0A\uFF0C\u56E0\u6B64\u50C5\u986F\u793A\u5546\u54C1\u8207\u6578\u91CF");
+      _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](8, "* \u5168\u5BB6\u5546\u54C1\u76EE\u524D\u50C5\u986F\u793A\u5546\u54C1\u8207\u6578\u91CF");
       _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](9, "p");
-      _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](10, "** \u6B61\u8FCE\u63D0\u4F9B\u8CC7\u6599\u4F86\u6E90");
+      _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtext"](10, "* \u6B61\u8FCE\u63D0\u4F9B\u8CC7\u6599\u4F86\u6E90");
       _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]()();
       _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](11, "form", 6);
       _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵlistener"]("ngSubmit", function NewSearchComponent_Template_form_ngSubmit_11_listener() {
