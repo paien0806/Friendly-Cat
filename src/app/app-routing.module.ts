@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewSearchComponent } from './search-food/new-search/new-search.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/search', pathMatch: 'full' },  // 設置默認路由
-  { path: 'search', component: NewSearchComponent },  // 配置導航到 StockListComponent
-  // 如果有其他路由，可以繼續加上
+  { path: '', redirectTo: '/search', pathMatch: 'full' },  // 默认重定向到 /search
+  { path: 'search', component: NewSearchComponent },  // 导航到 NewSearchComponent
+  { path: '**', redirectTo: '/search' },  // 所有其他路径都重定向到 /search
 ];
 
 @NgModule({
