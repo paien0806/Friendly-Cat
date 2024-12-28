@@ -42,7 +42,7 @@
                 </div>
 
                 <!-- 商品描述 -->
-                <div>
+                <div *ngIf="getFoodDetail(item).image !== 'assets/此商品暫無圖片.png'">
                   <div class="text-sm sm:text-base font-semibold text-gray-800 mb-2">
                     <span class="text-gray-800">價格(NT$): </span>
                     <span class="line-through text-gray-500">{{ getFoodDetail(item).originalPrice }}</span>
@@ -53,6 +53,12 @@
                   </div>
                   <p class="text-xs sm:text-sm text-gray-500 mb-1">商品描述: {{ getFoodDetail(item).content | emptyInfo}}</p>
                   <p class="text-xs sm:text-sm text-gray-500 mb-1">卡路里(kcal): {{ getFoodDetail(item).kcal | emptyInfo}}</p>
+                </div>
+                <!-- 商品沒資訊的話 -->
+                <div *ngIf="getFoodDetail(item).image === 'assets/此商品暫無圖片.png'">
+                  <div class="text-sm sm:text-base font-semibold text-gray-800 mb-2">
+                    <p class="text-xs sm:text-sm text-gray-500 mb-1">商品描述: 暫無此商品資訊</p>
+                  </div>
                 </div>
               </div>
             </div>
