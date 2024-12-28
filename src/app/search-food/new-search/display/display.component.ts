@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 import { FoodSubCategory, Item, CategoryStockItem, FoodDetail  } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
 import { ProductModel } from '../../model/family-mart.model'
@@ -51,7 +51,7 @@ export class DisplayComponent implements OnChanges, OnInit {
         this.subCategories = this.category.categories
         console.log('subCategories', this.subCategories);
         // 全家直接把商品丟進itemsBySubCategory
-        const items: Item[] = [];
+        var items: Item[] = [];
         this.subCategories.forEach((cat) => {
           console.log('cat', cat)
           items.push(
@@ -61,6 +61,7 @@ export class DisplayComponent implements OnChanges, OnInit {
             }))
           );
           this.itemsBySubCategory[cat.name] = items || [];
+          items = [];
         });
         console.log('itemsBySubCategory', this.itemsBySubCategory)
       }

@@ -423,7 +423,7 @@ class DisplayComponent {
                 this.subCategories = this.category.categories;
                 console.log('subCategories', this.subCategories);
                 // 全家直接把商品丟進itemsBySubCategory
-                const items = [];
+                var items = [];
                 this.subCategories.forEach((cat) => {
                     console.log('cat', cat);
                     items.push(...cat.products.map((product) => ({
@@ -431,6 +431,7 @@ class DisplayComponent {
                         RemainingQty: product.qty, // 映射到 RemainingQty
                     })));
                     this.itemsBySubCategory[cat.name] = items || [];
+                    items = [];
                 });
                 console.log('itemsBySubCategory', this.itemsBySubCategory);
             }
