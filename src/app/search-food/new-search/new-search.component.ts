@@ -14,6 +14,8 @@ import { environment } from 'src/environments/environment';
 
 import { switchMap, from, of, catchError, Observable, tap, forkJoin } from 'rxjs';
 
+import { getDistance } from 'geolib';
+
 @Component({
   selector: 'app-new-search',
   templateUrl: './new-search.component.html',
@@ -196,14 +198,119 @@ export class NewSearchComponent implements OnInit {
     this.selectedStore = store;
   }
 
-  onSearchStore(event: Event): void {
+  // 這寫的真他媽醜到爆
+  onInput(event: Event): void {
     const input = (event.target as HTMLInputElement).value;  // 確保這裡的值是有效的
-    console.log('輸入的值:', input);  // 確認輸入的值是否正確
 
     if (input.length >= 2) {
-      // 假設這是你的API調用邏輯
-      this.sevenElevenService.getStoreByAddress(input).subscribe(
-        (data) => {
+      this.loadingService.show();
+
+      // 要先取得所在位置用於後續下拉選單搜尋排序
+      if (!this.latitude && !this.longitude) {
+        from(this.geolocationService.getCurrentPosition())
+          .pipe(
+            switchMap((position) => {
+              const lat = position.coords.latitude;
+              const lng = position.coords.longitude;
+              console.log('Latitude:', lat, 'Longitude:', lng);
+      
+              this.latitude = lat;
+              this.longitude = lng;
+      
+              console.log('已取得位置');
+
+              return of([]);
+            }),
+            switchMap(() => {
+              return this.sevenElevenService.getAccessToken();
+            }),
+            switchMap((token) => {
+              if (token && token.element) {
+                sessionStorage.setItem('711Token', token.element);
+                return  this.sevenElevenService.getStoreByAddress(input);
+              }
+              else{
+                return [];
+              }
+            })
+          ).subscribe((data) => {
+            if(data && data.isSuccess){
+              this.dropDown711List = data.element;
+
+              // 刪掉全家兩個字以免使用者誤搜，篩選 unifiedDropDownList，篩選條件是 Name 和 addr 都包含 input
+              const filteredDropDownFamilyMartList = this.dropDownFamilyMartList
+              .map(item => ({
+                ...item,
+                Name: item.Name.replace('全家', '')  // 去除 "全家" 字串
+              }))
+              .filter(item =>
+                item.Name.includes(input) || item.addr.includes(input)
+              );
+
+              // 統一兩個列表的名稱欄位
+              const normalizedFamilyMartList = filteredDropDownFamilyMartList.map(item => ({
+                name: item.Name,  // 統一名稱欄位
+                addr: item.addr,
+                label: '全家',
+                longitude: item.px_wgs84,
+                latitude: item.py_wgs84
+              }));
+
+              const normalized711List = this.dropDown711List.map(item => ({
+                name: item.StoreName,  // 統一名稱欄位
+                addr: item.Address,
+                label: '7-11',
+                longitude: item.Longitude,
+                latitude: item.Latitude
+              }));
+
+              normalized711List.forEach(item => {
+                if (!this.unifiedDropDownList.some(existingItem => existingItem.name === item.name && existingItem.addr === item.addr)) {
+                  this.unifiedDropDownList.push(item);  // 只有當 unifedDropDownList 中沒有該元素時才添加
+                }
+              });
+  
+              normalizedFamilyMartList.forEach(item => {
+                if (!this.unifiedDropDownList.some(existingItem => existingItem.name === item.name && existingItem.addr === item.addr)) {
+                  this.unifiedDropDownList.push(item);  // 只有當 unifedDropDownList 中沒有該元素時才添加
+                }
+              });
+
+              // 按照經緯度算出距離排序unifiedDropDownList
+              this.unifiedDropDownList.sort((a, b) => {
+                const distanceA = getDistance(
+                  { latitude: this.latitude, longitude: this.longitude },
+                  { latitude: a.latitude, longitude: a.longitude }
+                );
+                const distanceB = getDistance(
+                  { latitude: this.latitude, longitude: this.longitude },
+                  { latitude: b.latitude, longitude: b.longitude }
+                );
+                return distanceA - distanceB; // 按照距离升序排列
+              });
+            }
+          },
+          (error) => {
+            console.error('API 請求錯誤:', error);
+          }
+        );
+        this.loadingService.hide();
+      }
+      else {
+        of(true).pipe(
+          switchMap(() => {
+            return this.sevenElevenService.getAccessToken();
+          }),
+          switchMap((token) => {
+            if (token && token.element) {
+              sessionStorage.setItem('711Token', token.element);
+              return this.sevenElevenService.getStoreByAddress(input)
+            }
+            else {
+              return of([])
+            }
+          })
+        ).subscribe((data) => {
           if (data && data.isSuccess) {
             this.dropDown711List = data.element;
 
@@ -222,17 +329,21 @@ export class NewSearchComponent implements OnInit {
               name: item.Name,  // 統一名稱欄位
               addr: item.addr,
               label: '全家',
+              longitude: item.px_wgs84,
+              latitude: item.py_wgs84
             }));
 
             const normalized711List = this.dropDown711List.map(item => ({
               name: item.StoreName,  // 統一名稱欄位
               addr: item.Address,
               label: '7-11',
+              longitude: item.Longitude,
+              latitude: item.Latitude
             }));
 
             normalized711List.forEach(item => {
               if (!this.unifiedDropDownList.some(existingItem => existingItem.name === item.name && existingItem.addr === item.addr)) {
-                this.unifiedDropDownList.push(item);  // 同樣的檢查，防止重複
+                this.unifiedDropDownList.push(item);  // 只有當 unifedDropDownList 中沒有該元素時才添加
               }
             });
 
@@ -241,19 +352,34 @@ export class NewSearchComponent implements OnInit {
                 this.unifiedDropDownList.push(item);  // 只有當 unifedDropDownList 中沒有該元素時才添加
               }
             });
+
+            // 按照經緯度算出距離排序unifiedDropDownList
+            this.unifiedDropDownList.sort((a, b) => {
+              const distanceA = getDistance(
+                { latitude: this.latitude, longitude: this.longitude },
+                { latitude: a.latitude, longitude: a.longitude }
+              );
+              const distanceB = getDistance(
+                { latitude: this.latitude, longitude: this.longitude },
+                { latitude: b.latitude, longitude: b.longitude }
+              );
+              return distanceA - distanceB; // 按照距离升序排列
+            });
           }
         },
         (error) => {
           console.error('API 請求錯誤:', error);
-        }
-      );
+        });
+      }
+      this.loadingService.hide();
     } else {
       this.unifiedDropDownList = [];
     }
   }
 
   onSubmit(): void {
-    console.log('提交的搜索內容:', this.searchTerm);
+    console.log('搜尋店家:', this.searchTerm);
+    alert('此功能將於近期開放！')
   }
 
   onUseCurrentLocation(): void {
