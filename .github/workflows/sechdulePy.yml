@@ -2,12 +2,11 @@ name: py爬蟲自動更新
 
 on:
   schedule:
-    - cron: '00 04 * * *'  # 对应台北时间00:00
+    - cron: '00 04 * * *'  # 每天凌晨更新一次
   workflow_dispatch:
-  push:
-    branches:
-      - master  # 仅在 master 分支触发工作流
-
+  repository_dispatch:
+    types:
+      - trigger-python-update  # 觸發事件才更新
 
 permissions:
   contents: write  # 需要写权限，才能提交更改
@@ -39,7 +38,7 @@ jobs:
         git config user.email "github-actions@github.com"
         
         git add docs/assets/seven_eleven_products.json docs/assets/family_mart_stores.json
-        git diff --cached --exit-code || git commit -m "Add generated JSON files to docs/assets"
+        git diff --cached --exit-code || git commit -m "CI: 爬蟲靜態資源更新 - $(date '+%Y-%m-%d %H:%M:%S')"
         git push origin HEAD:main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token 来认证
