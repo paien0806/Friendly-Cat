@@ -891,7 +891,7 @@ function NewSearchComponent_div_28_ng_container_1_div_2_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" \u8DDD\u96E2: ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind2"](9, 6, store_r10.distance, 1), " \u516C\u5C3A ");
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpropertyInterpolate1"]("href", "https://www.google.com/maps/search/\u5168\u5BB6\u4FBF\u5229\u5546\u5E97", store_r10.name, "\u5E97", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpropertyInterpolate1"]("href", "https://www.google.com/maps/search/\u5168\u5BB6\u4FBF\u5229\u5546\u5E97", ctx_r12.fStoreName(store_r10.name), "", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind3"](14, 9, store_r10.info, 0, 10));
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](2);
@@ -1377,6 +1377,10 @@ class NewSearchComponent {
 
   getFSubCategoryQty(store, cat) {
     return cat.qty;
+  }
+
+  fStoreName(storeName) {
+    return storeName ? storeName.replace('全家', '') : '';
   }
 
 }
