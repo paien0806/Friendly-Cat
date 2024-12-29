@@ -20,9 +20,8 @@
             matInput
             [matAutocomplete]="auto"
             [(ngModel)]="searchTerm"
-            (input)="onSearchStore($event)"
+            (input)="onInput($event)"
             placeholder="關鍵字搜尋功能施工中⋯⋯⋯敬請期待QQ"
-            [disabled]="true"
             name="searchTerm"
             class="p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -57,13 +56,12 @@
         <!-- 第一個按鈕：查詢 -->
         <button
           type="submit"
-          disabled="true"
           mat-raised-button
           color="primary"
           class="ml-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-xs sm:text-sm md:text-base"
         >
           <mat-icon class="text-sm">search</mat-icon>
-          關鍵字查詢施工中
+          送出關鍵字
         </button>
         <!-- 第二個按鈕：使用目前位置 -->
         <button
