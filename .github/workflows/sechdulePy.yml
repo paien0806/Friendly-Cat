@@ -38,14 +38,8 @@ jobs:
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
         
-        # 将生成的 JSON 文件添加到 Git
-        git add docs/assets/seven_eleven_products.json
-        git add docs/assets/family_mart_stores.json
-
-        # 提交更改
-        git commit -m "Add generated JSON files to docs/assets"
-
-        # 推送更改到仓库
-        git push origin HEAD:main  # 将更改推送到主分支，调整为你的分支名称（如有必要）
+        git add docs/assets/seven_eleven_products.json docs/assets/family_mart_stores.json
+        git diff --cached --exit-code || git commit -m "Add generated JSON files to docs/assets"
+        git push origin HEAD:main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token 来认证
