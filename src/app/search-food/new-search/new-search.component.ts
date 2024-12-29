@@ -525,4 +525,8 @@ export class NewSearchComponent implements OnInit {
   getFSubCategoryQty(store: StoreModel, cat: any): number {
     return cat.qty;
   }
+
+  fStoreName(storeName: string): string {
+    return storeName ? storeName.replace('全家', '') : ''
+  }
 }

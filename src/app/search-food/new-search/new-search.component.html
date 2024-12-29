@@ -156,7 +156,7 @@
           <h4 class="lg:text-lg sm:text-xl text-gray-500">
             距離: {{ store.distance | round:1 }} 公尺
             <a 
-              href="https://www.google.com/maps/search/全家便利商店{{ store.name }}店" 
+              href="https://www.google.com/maps/search/全家便利商店{{ fStoreName(store.name) }}" 
               target="_blank" 
               class="ml-2">
               <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
