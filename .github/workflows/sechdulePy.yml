@@ -1,4 +1,4 @@
-name: 自動更新
+name: py爬蟲自動更新
 
 on:
   schedule:
