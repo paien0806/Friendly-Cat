@@ -49,7 +49,7 @@ for index, category in enumerate(categories):
     else:
         print(f"分類 {category} 請求失敗，狀態碼: {response.status_code}")
 
-# 將資料儲存為 JSON 檔案，修改路徑到 doc/assets/
+# 將資料儲存為 JSON 檔案，修改路徑到 docs/assets/
 output_file = os.path.join(os.getcwd(), 'docs', 'assets', "seven_eleven_products.json")
 with open(output_file, "w", encoding="utf-8") as json_file:
     json.dump(data, json_file, ensure_ascii=False, indent=4)
@@ -73,7 +73,7 @@ response = requests.post(url, json=post_data)
 if response.status_code == 200:
     data = response.json()  # 取得 JSON 格式的資料
 
-    # 設定儲存的路徑，修改為 doc/assets/
+    # 設定儲存的路徑，修改為 docs/assets/
     file_path = os.path.join(os.getcwd(), 'docs', 'assets', 'family_mart_stores.json')
 
     # 確保路徑存在
