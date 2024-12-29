@@ -37,7 +37,7 @@ jobs:
           git config user.email "actions@github.com"
           git add docs/
           git commit -m "CI: 自動打包 - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
-          git push origin main
+          git push origin HEAD:main
 
       # 觸發 Python 爬蟲工作流
       - name: Trigger Python Crawler Workflow
