@@ -8,8 +8,7 @@
     </div>    
     <!-- 提示訊息區域 -->
     <div class="text-xs sm:text-sm text-red-600 mb-4 text-center">
-      <p>* 全家商品目前僅顯示商品與數量</p>
-      <p>* 歡迎提供資料來源</p>
+      <p>* 資訊僅供參考，請以店內商品為準</p>
     </div>
 
     <form (ngSubmit)="onSubmit()" class="w-full">
@@ -100,8 +99,15 @@
           <h2 class="text-lg sm:text-xl font-semibold">7-11{{ store.StoreName }}門市</h2>
         </div>
         <div class="store-icon flex flex-col text-lg sm:text-xl">
-          <!-- <h3 class="lg:text-lg sm:text-xl text-gray-500"> {{ get711StoreAddr(store.StoreNo) }} </h3> -->
-          <h4 class="lg:text-lg sm:text-xl text-gray-500">距離: {{ store.distance | round:1 }} 公尺</h4>
+          <h4 class="lg:text-lg sm:text-xl text-gray-500">
+            距離: {{ store.distance | round:1 }} 公尺
+            <a 
+              href="https://www.google.com/maps/search/7-ELEVEN{{ store.StoreName }}門市" 
+              target="_blank" 
+              class="ml-2">
+              <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
+            </a>
+          </h4>
         </div>
         <!-- <div class="inline-block text-xs sm:text-sm font-semibold px-4 py-2 rounded-full" [ngClass]="store.IsOperateTime ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'">
             {{ store.IsOperateTime ? '營業中' : '休息中' }}
@@ -149,8 +155,15 @@
           <h2 class="text-lg sm:text-xl font-semibold">{{ store.name }}</h2>
         </div>
         <div class="store-icon flex flex-col text-lg sm:text-xl">
-          <!-- <h3 class="lg:text-lg sm:text-xl text-gray-500"> {{ store.address }} </h3> -->
-          <h4 class="lg:text-lg sm:text-xl text-gray-500">距離: {{ store.distance | round:1 }} 公尺</h4>
+          <h4 class="lg:text-lg sm:text-xl text-gray-500">
+            距離: {{ store.distance | round:1 }} 公尺
+            <a 
+              href="https://www.google.com/maps/search/全家便利商店{{ store.name }}店" 
+              target="_blank" 
+              class="ml-2">
+              <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
+            </a>
+          </h4>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-0">
             <div
