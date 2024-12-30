@@ -15,6 +15,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      TZ: Asia/Taipei
+
     steps:
     - uses: actions/checkout@v3  # 检出代码
 
@@ -36,7 +39,7 @@ jobs:
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
-        
+
         git add docs/assets/seven_eleven_products.json docs/assets/family_mart_stores.json
         git diff --cached --exit-code || git commit -m "CI: 爬蟲靜態資源更新 - $(date '+%Y-%m-%d %H:%M:%S')"
         git push origin HEAD:main
