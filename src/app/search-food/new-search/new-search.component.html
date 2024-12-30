@@ -1,9 +1,15 @@
 <div class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg max-w-4xl">
   <ng-container class="flex flex-col items-center">
     <div class="flex items-center justify-center mb-6 h-24">
-      <img src="assets/S__222224406.jpg" alt="Friendly Superhero" class="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full">
-      <h5 class="text-xl sm:text-2xl font-bold ml-4 py-2 px-4 border-2 border-gray-300 rounded-full bg-white inline-block">
-        看看附近有啥好吃的吧！
+      <img src="assets/S__222224406.jpg" alt="Friendly Superhero" class="w-24 h-24 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full">
+      <h5 class="text-xl sm:text-xl font-bold ml-4 py-2 px-4 border-2 border-gray-300 rounded-full bg-white inline-block">
+        <div *ngIf="(loadingService.loading$ | async) === false">
+          看看附近有啥好吃的吧！
+        </div>
+        <mat-progress-spinner *ngIf="loadingService.loading$ | async"
+                      mode="indeterminate"
+                      diameter="20">
+        </mat-progress-spinner>
       </h5>
     </div>
     <!-- 提示訊息區域 -->
@@ -25,10 +31,13 @@
             name="searchTerm"
             class="p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <mat-autocomplete #auto="matAutocomplete">
+          <mat-autocomplete
+            #auto="matAutocomplete"
+            (optionSelected)="onOptionSelect($event)"
+          >
             <mat-option
               *ngFor="let store of unifiedDropDownList"
-              [value]="store.label + store.name + '門市'"
+              [value]="store"
               class="p-2 hover:bg-blue-100 focus:bg-blue-200"
             >
               <div *ngIf="store.label === '7-11'" class="flex items-center gap-2">
@@ -46,7 +55,7 @@
                   alt="FamilyMart Icon"
                   class="w-4 h-4"
                 />
-                <span>{{ store.name }}</span>
+                <span>{{ store.name.replace('店', '') }}門市</span>
                 <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
               </div>
             </mat-option>
@@ -54,15 +63,21 @@
         </mat-form-field>
 
         <!-- 第一個按鈕：查詢 -->
-        <button
+        <!-- <button
           type="submit"
           mat-raised-button
           color="primary"
           class="ml-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-xs sm:text-sm md:text-base"
+          [disabled]="!searchSelectedStore"
         >
           <mat-icon class="text-sm">search</mat-icon>
-          送出關鍵字
-        </button>
+          <ng-container *ngIf="searchSelectedStore; else noStoreSelected">
+            查詢{{ searchSelectedStore }}
+          </ng-container>
+          <ng-template #noStoreSelected>
+            請先選擇店家
+          </ng-template>
+        </button> -->
         <!-- 第二個按鈕：使用目前位置 -->
         <button
           type="button"
@@ -74,10 +89,6 @@
           <mat-icon class="text-sm">location_on</mat-icon>
           使用目前位置
         </button>
-        <mat-progress-spinner *ngIf="loadingService.loading$ | async"
-                      mode="indeterminate"
-                      diameter="20">
-        </mat-progress-spinner>
       </div>
     </form>
   </ng-container>
