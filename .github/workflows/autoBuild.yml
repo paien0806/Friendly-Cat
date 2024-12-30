@@ -12,6 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      TZ: Asia/Taipei
+
     steps:
       # 檢出程式碼
       - name: Checkout code
