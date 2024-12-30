@@ -13,6 +13,12 @@ export class RoundPipe implements PipeTransform {
     if (isNaN(numericValue)) {
       return value; // 如果不是有效的數字，返回原始輸入
     }
+
+    if(precision === -1){
+      const factor = Math.pow(10, precision); // 計算小數位數
+      const roundedValue = Math.round(numericValue * factor) / factor; // 四捨五入到指定精度
+      return `${roundedValue} 元`;
+    }
   
     // 判斷數值是否小於 1000
     if (numericValue < 1000) {

@@ -48,7 +48,7 @@
                     <span class="line-through text-gray-500">{{ getFoodDetail711(item).originalPrice }}</span>
                     <span class="text-red-600 mx-2">→</span>
                     <span class="text-red-600">
-                      {{ getFoodDetail711(item).discountedPrice | round:0 }}
+                      {{ getFoodDetail711(item).discountedPrice | round:-1 }}
                     </span>
                   </div>
                   <p class="text-xs sm:text-sm text-gray-500 mb-1">商品描述: {{ getFoodDetail711(item).content | emptyInfo}}</p>
