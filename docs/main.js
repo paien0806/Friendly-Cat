@@ -164,6 +164,11 @@ class RoundPipe {
         if (isNaN(numericValue)) {
             return value; // 如果不是有效的數字，返回原始輸入
         }
+        if (precision === -1) {
+            const factor = Math.pow(10, precision); // 計算小數位數
+            const roundedValue = Math.round(numericValue * factor) / factor; // 四捨五入到指定精度
+            return `${roundedValue} 元`;
+        }
         // 判斷數值是否小於 1000
         if (numericValue < 1000) {
             const factor = Math.pow(10, precision); // 計算小數位數
@@ -246,7 +251,7 @@ function DisplayComponent_mat_card_0_ng_container_1_ng_container_3_div_1_li_5_di
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](ctx_r10.getFoodDetail711(item_r7).originalPrice);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind2"](10, 4, ctx_r10.getFoodDetail711(item_r7).discountedPrice, 0), " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind2"](10, 4, ctx_r10.getFoodDetail711(item_r7).discountedPrice, -1), " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"]("\u5546\u54C1\u63CF\u8FF0: ", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](13, 7, ctx_r10.getFoodDetail711(item_r7).content), "");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
