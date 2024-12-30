@@ -301,17 +301,36 @@ export class NewSearchComponent implements OnInit {
               });
 
               // 按照經緯度算出距離排序unifiedDropDownList
-              this.unifiedDropDownList.sort((a, b) => {
-                const distanceA = getDistance(
-                  { latitude: this.latitude, longitude: this.longitude },
-                  { latitude: a.latitude, longitude: a.longitude }
-                );
-                const distanceB = getDistance(
-                  { latitude: this.latitude, longitude: this.longitude },
-                  { latitude: b.latitude, longitude: b.longitude }
-                );
-                return distanceA - distanceB; // 按照距离升序排列
-              });
+              const nameGroup = this.unifiedDropDownList
+                .filter(item => item.name.includes(input)) // 篩選 name 包含 input 的元素
+                .sort((a, b) => {
+                  const distanceA = getDistance(
+                    { latitude: this.latitude, longitude: this.longitude },
+                    { latitude: a.latitude, longitude: a.longitude }
+                  );
+                  const distanceB = getDistance(
+                    { latitude: this.latitude, longitude: this.longitude },
+                    { latitude: b.latitude, longitude: b.longitude }
+                  );
+                  return distanceA - distanceB; // 按距離升序排序
+                });
+
+              const addrGroup = this.unifiedDropDownList
+                .filter(item => item.addr.includes(input) && !nameGroup.includes(item)) // 篩選 addr 包含 input 的元素，排除已在 nameGroup 的元素
+                .sort((a, b) => {
+                  const distanceA = getDistance(
+                    { latitude: this.latitude, longitude: this.longitude },
+                    { latitude: a.latitude, longitude: a.longitude }
+                  );
+                  const distanceB = getDistance(
+                    { latitude: this.latitude, longitude: this.longitude },
+                    { latitude: b.latitude, longitude: b.longitude }
+                  );
+                  return distanceA - distanceB; // 按距離升序排序
+                });
+
+              this.unifiedDropDownList = [...nameGroup, ...addrGroup];
+
 
               this.loadingService.hide();
             }
@@ -389,18 +408,35 @@ export class NewSearchComponent implements OnInit {
               }
             });
 
-            // 按照經緯度算出距離排序unifiedDropDownList
-            this.unifiedDropDownList.sort((a, b) => {
-              const distanceA = getDistance(
-                { latitude: this.latitude, longitude: this.longitude },
-                { latitude: a.latitude, longitude: a.longitude }
-              );
-              const distanceB = getDistance(
-                { latitude: this.latitude, longitude: this.longitude },
-                { latitude: b.latitude, longitude: b.longitude }
-              );
-              return distanceA - distanceB; // 按照距离升序排列
-            });
+            const nameGroup = this.unifiedDropDownList
+              .filter(item => item.name.includes(input)) // 篩選 name 包含 input 的元素
+              .sort((a, b) => {
+                const distanceA = getDistance(
+                  { latitude: this.latitude, longitude: this.longitude },
+                  { latitude: a.latitude, longitude: a.longitude }
+                );
+                const distanceB = getDistance(
+                  { latitude: this.latitude, longitude: this.longitude },
+                  { latitude: b.latitude, longitude: b.longitude }
+                );
+                return distanceA - distanceB; // 按距離升序排序
+              });
+
+            const addrGroup = this.unifiedDropDownList
+              .filter(item => item.addr.includes(input) && !nameGroup.includes(item)) // 篩選 addr 包含 input 的元素，排除已在 nameGroup 的元素
+              .sort((a, b) => {
+                const distanceA = getDistance(
+                  { latitude: this.latitude, longitude: this.longitude },
+                  { latitude: a.latitude, longitude: a.longitude }
+                );
+                const distanceB = getDistance(
+                  { latitude: this.latitude, longitude: this.longitude },
+                  { latitude: b.latitude, longitude: b.longitude }
+                );
+                return distanceA - distanceB; // 按距離升序排序
+              });
+
+            this.unifiedDropDownList = [...nameGroup, ...addrGroup];
 
             this.loadingService.hide();
           }
@@ -528,69 +564,62 @@ export class NewSearchComponent implements OnInit {
       );
   }
 
-  combineStoreList(latitude?: number, longitude?: number): void {
+  combineStoreList(storeLatitude?: number, storeLongitude?: number): void {
     // 清空統一列表，避免重複累加
     this.totalStoresShowList = [];
 
-
-    // TODO:修正距離計算邏輯，以店家搜尋時以店家中心點為出發，找附近的商店因此711也要重算。
-
-    // 處理 7-11 商店
+    // 處理7-11商店
     this.nearby711Stores.forEach((store) => {
       const transformedStore = {
         ...store,
         label: '7-11',
-        distance: store.Distance // 統一使用 `distance` 字段
+        distance: store.Distance, // 統一使用 `distance` 字段
+        remainingQty: store.RemainingQty,
+        showDistance: true
       };
       this.totalStoresShowList.push(transformedStore); // 推入統一列表
     });
 
     // 處理全家商店
-    // 檢查是否有提供經緯度
-    if (latitude && longitude) {
-      this.nearbyFamilyMartStores.forEach((store) => {
-        // 使用 geolib 的 getDistance 函數計算距離
-        const distance = getDistance(
-          { latitude, longitude },  // 用戶的經緯度
-          { latitude: store.latitude, longitude: store.longitude }  // 商店的經緯度
-        );
+    this.nearbyFamilyMartStores.forEach((store) => {
+      const transformedStore = {
+        ...store,
+        label: '全家',
+        distance: store.distance,
+        showDistance: true 
+      };
+      this.totalStoresShowList.push(transformedStore);  // 推入統一列表
+    });
 
-        // 轉換商店信息，並將距離賦值
-        const transformedStore = {
-          ...store,
-          label: '全家',  // 加上來源標籤
-          distance: distance
-        };
-        this.totalStoresShowList.push(transformedStore);  // 推入統一列表
-      });
-
-      // 根據距離排序（以公里為單位）
+    if (storeLatitude && storeLongitude) {
       this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
-    } else {
-      // 如果沒有經緯度，則按現有邏輯處理
-      this.nearbyFamilyMartStores.forEach((store) => {
-        const transformedStore = {
-          ...store,
-          label: '全家',  // 加上來源標籤
-          distance: store.distance // 使用現有的距離
-        };
-        this.totalStoresShowList.push(transformedStore);  // 推入統一列表
-      });
-
-      // 根據距離排序
-      this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
+      if(this.totalStoresShowList[0].distance > 1 || this.totalStoresShowList[0].remainingQty === 0){
+        alert('您所搜尋的店家目前無商品，請重新搜尋')
+        this.totalStoresShowList = [];
+        return;
+      }
+      this.totalStoresShowList = [
+        {
+          ...this.totalStoresShowList[0],
+          showDistance: false
+        }
+      ];
+    }
+    else{
+    // 根據距離排序
+    this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
     }
   }
 
-  searchCombineAndTransformStores(latitude?: number, longitude?: number): void {
+  searchCombineAndTransformStores(storeLatitude?: number, storeLongitude?: number): void {
     // 如果没有參數就用默認的定位值
-    const finalLatitude = latitude || this.latitude;
-    const finalLongitude = longitude || this.longitude;
+    const finalLatitude = storeLatitude || this.latitude;
+    const finalLongitude = storeLongitude || this.longitude;
 
     const locationData711: LocationData = {
       CurrentLocation: {
-        Latitude: this.latitude,
-        Longitude: this.longitude
+        Latitude: finalLatitude,
+        Longitude: finalLongitude
       },
       SearchLocation: {
         Latitude: finalLatitude,
@@ -626,8 +655,8 @@ export class NewSearchComponent implements OnInit {
         }
 
         // 等兩者完成後合併資料
-        if (latitude && longitude) {
-          this.combineStoreList(latitude, longitude);
+        if (storeLatitude && storeLongitude) {
+          this.combineStoreList(storeLatitude, storeLongitude);
         }
         else{
           this.combineStoreList();

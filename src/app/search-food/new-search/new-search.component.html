@@ -27,7 +27,7 @@
             [matAutocomplete]="auto"
             [(ngModel)]="searchTerm"
             (input)="onInput($event)"
-            placeholder="關鍵字搜尋功能施工中⋯⋯⋯敬請期待QQ"
+            placeholder="輸入店名或地址搜尋"
             name="searchTerm"
             class="p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -108,8 +108,9 @@
           <h2 class="text-lg sm:text-xl font-semibold">7-11{{ store.StoreName }}門市</h2>
         </div>
         <div class="store-icon flex flex-col text-lg sm:text-xl">
-          <h4 class="lg:text-lg sm:text-xl text-gray-500">
-            距離: {{ store.distance | round:1 }} 公尺
+          <h4 class="lg:text-lg sm:text-xl text-gray-600">
+            <span *ngIf="store.showDistance">距離您: {{ store.distance | round:1 }}</span>
+            <span *ngIf="!store.showDistance">可查看地圖：</span>
             <a
               href="https://www.google.com/maps/search/7-ELEVEN{{ store.StoreName }}門市"
               target="_blank"
@@ -169,8 +170,9 @@
           <h2 class="text-lg sm:text-xl font-semibold">{{ store.name }}</h2>
         </div>
         <div class="store-icon flex flex-col text-lg sm:text-xl">
-          <h4 class="lg:text-lg sm:text-xl text-gray-500">
-            距離: {{ store.distance | round:1 }} 公尺
+          <h4 class="lg:text-lg sm:text-xl text-gray-600">
+            <span *ngIf="store.showDistance">距離您: {{ store.distance | round:1 }}</span>
+            <span *ngIf="!store.showDistance">可查看地圖：</span>
             <a
               href="https://www.google.com/maps/search/全家便利商店{{ store.name }}店"
               target="_blank"
