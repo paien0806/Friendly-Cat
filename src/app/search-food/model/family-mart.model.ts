@@ -52,3 +52,14 @@ export interface fStore {
   py_wgs84: string;       // 緯度
   serid: string;
 }
+
+export interface FoodDetailFamilyMart {
+  category: string; // 類別
+  title: string; // 商品名稱
+  picture_url: string; // 商品圖片連結
+  Protein: number; // 蛋白質 (g)
+  Carb: number; // 碳水化合物 (g)
+  Calories: number; // 熱量 (kcal)
+  Fat: number; // 脂肪 (g)
+  Description: string; // 商品描述
+}

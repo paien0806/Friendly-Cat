@@ -54,7 +54,7 @@ export interface FoodSubCategory {
   PCSCCategeroyNo: string[];      // 子分類編號
 }
 
-export interface FoodDetail {
+export interface FoodDetail711 {
   name: string;
   category: string;
   content: string;

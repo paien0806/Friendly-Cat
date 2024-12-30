@@ -7,8 +7,8 @@ import { SevenElevenRequestService } from './services/seven-eleven-request.servi
 import { FamilyMartRequestService } from './services/family-mart-request.service';
 import { LoadingService } from '../../services/loading.service'
 
-import { FoodCategory, LocationData, StoreStockItem, Store, Location, CategoryStockItem } from '../model/seven-eleven.model'
-import { fStore, StoreModel, ProductCategoryModel } from '../model/family-mart.model';
+import { FoodCategory, LocationData, StoreStockItem, Store, Location, FoodDetail711 } from '../model/seven-eleven.model'
+import { fStore, StoreModel, FoodDetailFamilyMart } from '../model/family-mart.model';
 
 import { environment } from 'src/environments/environment';
 
@@ -25,6 +25,9 @@ export class NewSearchComponent implements OnInit {
   searchForm: FormGroup; // 表單
   searchTerm: string = '';
   selectedStoreName='';
+
+  foodDetails711: FoodDetail711[] = [];
+  foodDetailsFamilyMart: FoodDetailFamilyMart[] = [];
 
   storeFilter: string = 'all';
 
@@ -118,6 +121,15 @@ export class NewSearchComponent implements OnInit {
 
     this.loadingService.show();  // 显示加载动画
 
+    // 取得711跟全家的商品詳細資訊
+    this.sevenElevenService.getFoodDetails().subscribe((data) => {
+      this.foodDetails711 = data;
+    });
+
+    this.familyMartService.getFoodDetails().subscribe((data) => {
+      this.foodDetailsFamilyMart = data;
+    });
+
     //取得所有全家商店名稱資訊
     this.getFamilyMartAllStore();
 
@@ -128,7 +140,7 @@ export class NewSearchComponent implements OnInit {
       switchMap((token: any) => {
         if (token && token.element) {
           sessionStorage.setItem('711Token', token.element);
-          console.log('Stored 711Token:', sessionStorage.getItem('711Token'));
+          console.log('Stored 711Token');
           // 如果 token 儲存成功，發送 getFoodCategory 請求
           return this.sevenElevenService.getFoodCategory();
         } else {
@@ -145,7 +157,6 @@ export class NewSearchComponent implements OnInit {
       (res) => {
         if (res && res.element) {
           this.foodCategories = res.element;
-          console.log('Food Categories:', this.foodCategories);
           this.loadingService.hide();
         } else {
           console.error('Failed to fetch food categories');
@@ -212,11 +223,10 @@ export class NewSearchComponent implements OnInit {
             switchMap((position) => {
               const lat = position.coords.latitude;
               const lng = position.coords.longitude;
-              console.log('Latitude:', lat, 'Longitude:', lng);
-      
+
               this.latitude = lat;
               this.longitude = lng;
-      
+
               console.log('已取得位置');
 
               return of([]);
@@ -269,7 +279,7 @@ export class NewSearchComponent implements OnInit {
                   this.unifiedDropDownList.push(item);  // 只有當 unifedDropDownList 中沒有該元素時才添加
                 }
               });
-  
+
               normalizedFamilyMartList.forEach(item => {
                 if (!this.unifiedDropDownList.some(existingItem => existingItem.name === item.name && existingItem.addr === item.addr)) {
                   this.unifiedDropDownList.push(item);  // 只有當 unifedDropDownList 中沒有該元素時才添加
@@ -389,11 +399,10 @@ export class NewSearchComponent implements OnInit {
         switchMap((position) => {
           const lat = position.coords.latitude;
           const lng = position.coords.longitude;
-          console.log('Latitude:', lat, 'Longitude:', lng);
-  
+
           this.latitude = lat;
           this.longitude = lng;
-  
+
           console.log('已取得位置');
 
           return of([]);
@@ -409,7 +418,7 @@ export class NewSearchComponent implements OnInit {
         switchMap((token: any) => {
           if (token && token.element) {
             sessionStorage.setItem('711Token', token.element);
-            console.log('Stored 711Token:', sessionStorage.getItem('711Token'));
+            console.log('Stored 711Token');
             // 如果 token 儲存成功，發送 getFoodCategory 請求
             return this.sevenElevenService.getFoodCategory();
           } else {
@@ -433,7 +442,7 @@ export class NewSearchComponent implements OnInit {
   combineStoreList(): void {
     // 清空統一列表，避免重複累加
     this.totalStoresShowList = [];
-    
+
     // 處理 7-11 商店
     this.nearby711Stores.forEach((store) => {
       const transformedStore = {
@@ -443,7 +452,7 @@ export class NewSearchComponent implements OnInit {
       };
       this.totalStoresShowList.push(transformedStore); // 推入統一列表
     });
-    
+
     // 處理全家商店
     this.nearbyFamilyMartStores.forEach((store) => {
       const transformedStore = {
@@ -453,11 +462,9 @@ export class NewSearchComponent implements OnInit {
       };
       this.totalStoresShowList.push(transformedStore); // 推入統一列表
     });
-  
+
     // 根據距離排序
     this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
-  
-    console.log('totalStoresShowList', this.totalStoresShowList);
   }
 
   combineAndTransformStores(): void {
@@ -471,12 +478,12 @@ export class NewSearchComponent implements OnInit {
         Longitude: this.longitude
       }
     };
-  
+
     const locationFamilyMart: Location = {
       Latitude: this.latitude,
       Longitude: this.longitude
     };
-  
+
     // 結合兩個 API 請求
     forkJoin({
       sevenEleven: this.sevenElevenService.getNearByStoreList(locationData711),
@@ -489,14 +496,14 @@ export class NewSearchComponent implements OnInit {
             (a: StoreStockItem, b: StoreStockItem) => a.Distance - b.Distance
           );
         }
-  
+
         // 處理全家資料
         if (familyMart && familyMart.code === 1) {
           this.nearbyFamilyMartStores = familyMart.data.sort(
             (a: StoreModel, b: StoreModel) => a.distance - b.distance
           );
         }
-  
+
         // 等兩者完成後合併資料
         this.combineStoreList();
       },
