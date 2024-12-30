@@ -2,6 +2,8 @@ import requests
 from xml.etree import ElementTree
 import json
 import os
+import pandas as pd
+import re
 
 # 目標 API 基本 URL
 base_url = "https://www.7-11.com.tw/freshfoods/Read_Food_xml_hot.aspx"
@@ -13,9 +15,9 @@ headers = {
 
 # 商品分類參數
 categories = [
-    "19_star", "1_Ricerolls", "16_sandwich", "2_Light", "3_Cuisine", 
+    "19_star", "1_Ricerolls", "16_sandwich", "2_Light", "3_Cuisine",
     "4_Snacks", "5_ForeignDishes", "6_Noodles", "7_Oden", "8_Bigbite",
-    "9_Icecream", "10_Slurpee", "11_bread", "hot", "12_steam", 
+    "9_Icecream", "10_Slurpee", "11_bread", "hot", "12_steam",
     "13_luwei", "15_health", "17_ohlala", "18_veg", "20_panini", "21_ice", "22_ice"
 ]
 
@@ -31,7 +33,7 @@ for index, category in enumerate(categories):
         # 解析 XML 資料
         try:
             root = ElementTree.fromstring(response.content)
-            
+
             # 抓取商品資料
             for item in root.findall(".//Item"):
                 data.append({
@@ -86,3 +88,48 @@ if response.status_code == 200:
     print(f"資料已儲存到 {file_path}")
 else:
     print("請求失敗，無法取得資料")
+
+
+
+
+# 網頁 URL
+fUrl = "https://famihealth.family.com.tw/Calculator"
+
+# 發送 GET 請求
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+}
+response = requests.get(fUrl, headers=headers)
+
+df = pd.DataFrame()
+# 確保請求成功
+if response.status_code == 200:
+    # 使用正則表達式提取 categories 變數的內容
+    match = re.search(r'var categories = (\[.*?\]);', response.text, re.S)
+    if match:
+        # 解析為 Python 字典
+        categories_data = json.loads(match.group(1))
+
+        # 存儲結果
+        results = []
+        for category in categories_data:
+            for product in category.get("products", []):
+                results.append({
+                    "category": category.get("name"),
+                    "title": product.get("name"),
+                    "picture_url": product.get("imgurl"),
+                    "Protein (g)": product.get("protein", 0),
+                    "Carb (g)": product.get("carb", 0),
+                    "Calories (kcal)": product.get("calo", 0),
+                    "Fat (g)": product.get("fat", 0),
+                    "Description": product.get("description", ""),
+                })
+
+        # 轉換為 DataFrame
+        df = pd.DataFrame(results)
+
+json_data = df.to_dict(orient='records')
+
+output_file = os.path.join(os.getcwd(), 'docs', 'assets', "family_mart_products.json")
+with open(output_file, "w", encoding="utf-8") as json_file:
+    json.dump(json_data, json_file, ensure_ascii=False, indent=4)
