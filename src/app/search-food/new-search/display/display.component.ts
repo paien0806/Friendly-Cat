@@ -1,9 +1,9 @@
 import { Component, Input, OnChanges, SimpleChanges, OnInit, ElementRef, ViewChild } from '@angular/core';
 
-import { FoodSubCategory, Item, CategoryStockItem, FoodDetail  } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
-import { ProductModel } from '../../model/family-mart.model'
+import { Item, CategoryStockItem, FoodDetail711  } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
+import { ProductModel, FoodDetailFamilyMart } from '../../model/family-mart.model'
 
-import { SevenElevenRequestService } from '../services/seven-eleven-request.service';  // 確保這個服務有方法可以查詢商店商品數量
+import { SevenElevenRequestService } from '../services/seven-eleven-request.service';
 
 import Fuse from 'fuse.js';
 
@@ -15,23 +15,16 @@ import Fuse from 'fuse.js';
 export class DisplayComponent implements OnChanges, OnInit {
   @Input() store!: any;  // 接收父組件傳遞的 store
   @Input() category!: any;  // 接收父組件傳遞的 category
+  @Input() foodDetails!: any[];
 
   subCategories: any[] = [];
   itemsBySubCategory: { [key: string]: Item[] } = {};  // 儲存每個子分類的商品列表
-
-  foodDetails: FoodDetail[] = [];
 
   constructor(
     private sevenElevenRequestService: SevenElevenRequestService,
   ) {}
 
-  ngOnInit() {
-    // 初始化的時候讀取存在.json的7-11商品細節
-    this.sevenElevenRequestService.getFoodDetails().subscribe((data) => {
-      this.foodDetails = data;
-      console.log(this.foodDetails);
-    })
-  }
+  ngOnInit() {}
 
   ngOnChanges(changes: SimpleChanges): void {
     // 若組件輸入有變化時，重新載入子商品列表
@@ -44,16 +37,13 @@ export class DisplayComponent implements OnChanges, OnInit {
     if (this.store && this.category) {
       if (this.store.StoreName) {
         this.subCategories = this.category.Children;  // 更新子分類列表
-        console.log('subCategories', this.subCategories);
         this.loadItemsBySubCategory();  // 載入子分類下的所有商品資料
       }
       else if (this.store.name) {
         this.subCategories = this.category.categories
-        console.log('subCategories', this.subCategories);
         // 全家直接把商品丟進itemsBySubCategory
         var items: Item[] = [];
         this.subCategories.forEach((cat) => {
-          console.log('cat', cat)
           items.push(
             ...cat.products.map((product: ProductModel) => ({
               ItemName: product.name,       // 映射到 ItemName
@@ -63,7 +53,6 @@ export class DisplayComponent implements OnChanges, OnInit {
           this.itemsBySubCategory[cat.name] = items || [];
           items = [];
         });
-        console.log('itemsBySubCategory', this.itemsBySubCategory)
       }
     }
   }
@@ -88,7 +77,6 @@ export class DisplayComponent implements OnChanges, OnInit {
             this.itemsBySubCategory[subCategory.Name] = items || [];
           });
         }
-        console.log('itemsBySubCategory', this.itemsBySubCategory)
       });
     }
   }
@@ -125,7 +113,7 @@ export class DisplayComponent implements OnChanges, OnInit {
     return discountedPrice.toString();
   }
 
-  getFoodDetail(item: Item): FoodDetail {
+  getFoodDetail711(item: Item): FoodDetail711 {
     // 設置 Fuse.js 配置選項
     const options = {
       includeScore: true, // 需要包含匹配度分數
@@ -158,6 +146,35 @@ export class DisplayComponent implements OnChanges, OnInit {
     foodDetail['discountedPrice'] = discountedPrice;
     foodDetail['originalPrice'] = foodDetail.price; // 原價
 
+    return foodDetail;
+  }
+
+  getFoodDetailFamilyMart(item: Item): FoodDetailFamilyMart {
+    // 設置 Fuse.js 配置選項
+    const options = {
+      includeScore: true,
+      threshold: 0.3,
+      keys: ['title']
+    };
+
+    // 初始化 Fuse 進行模糊搜尋
+    const fuse = new Fuse(this.foodDetails, options);
+
+    // 查找最匹配的項目
+    const result = fuse.search(item.ItemName);
+
+    // 如果找到匹配項，則返回最相似的那個
+    const foodDetail = result.length > 0 ? result[0].item :
+    {
+      "category": "",
+      "title": "",
+      "picture_url": "assets/此商品暫無圖片.png",
+      "Protein (g)": '',
+      "Carb (g)": '',
+      "Calories (kcal)": '',
+      "Fat (g)": '',
+      "Description": ""
+    };
     return foodDetail;
   }
 }

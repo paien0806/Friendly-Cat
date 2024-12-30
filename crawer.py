@@ -118,10 +118,10 @@ if response.status_code == 200:
                     "category": category.get("name"),
                     "title": product.get("name"),
                     "picture_url": product.get("imgurl"),
-                    "Protein (g)": product.get("protein", 0),
-                    "Carb (g)": product.get("carb", 0),
-                    "Calories (kcal)": product.get("calo", 0),
-                    "Fat (g)": product.get("fat", 0),
+                    "Protein": product.get("protein", 0),
+                    "Carb": product.get("carb", 0),
+                    "Calories": product.get("calo", 0),
+                    "Fat": product.get("fat", 0),
                     "Description": product.get("description", ""),
                 })
 

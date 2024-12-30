@@ -33,4 +33,9 @@ export class FamilyMartRequestService {
       }
       return this.requestService.post(url, null, body)
     }
+
+    getFoodDetails(): Observable<any> {
+      const url = 'assets/family_mart_products.json'
+      return this.requestService.get(url)
+    }
 }

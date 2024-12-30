@@ -5,7 +5,7 @@
       <h5 class="text-xl sm:text-2xl font-bold ml-4 py-2 px-4 border-2 border-gray-300 rounded-full bg-white inline-block">
         看看附近有啥好吃的吧！
       </h5>
-    </div>    
+    </div>
     <!-- 提示訊息區域 -->
     <div class="text-xs sm:text-sm text-red-600 mb-4 text-center">
       <p>* 資訊僅供參考，請以店內商品為準</p>
@@ -74,8 +74,8 @@
           <mat-icon class="text-sm">location_on</mat-icon>
           使用目前位置
         </button>
-        <mat-progress-spinner *ngIf="loadingService.loading$ | async" 
-                      mode="indeterminate" 
+        <mat-progress-spinner *ngIf="loadingService.loading$ | async"
+                      mode="indeterminate"
                       diameter="20">
         </mat-progress-spinner>
       </div>
@@ -99,9 +99,9 @@
         <div class="store-icon flex flex-col text-lg sm:text-xl">
           <h4 class="lg:text-lg sm:text-xl text-gray-500">
             距離: {{ store.distance | round:1 }} 公尺
-            <a 
-              href="https://www.google.com/maps/search/7-ELEVEN{{ store.StoreName }}門市" 
-              target="_blank" 
+            <a
+              href="https://www.google.com/maps/search/7-ELEVEN{{ store.StoreName }}門市"
+              target="_blank"
               class="ml-2">
               <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
             </a>
@@ -115,7 +115,7 @@
             <ng-container *ngFor="let category of foodCategories | slice:0:10; let i = index">
               <div
                 *ngIf="getSubCategoryTotalQty(store, category) > 0"
-                class="category border p-2 sm:p-3 md:p-4 rounded-lg text-center cursor-pointer w-full sm:w-full md:w-full 
+                class="category border p-2 sm:p-3 md:p-4 rounded-lg text-center cursor-pointer w-full sm:w-full md:w-full
                       {{ selectedCategory === category && selectedStore === store ? 'bg-blue-100' : '' }}"
                 (click)="toggleSubCategoryDetails(store, category)"
                 [class.pointer-events-none]="getSubCategoryTotalQty(store, category) === 0"
@@ -134,14 +134,19 @@
                 </div>
               </div>
             </ng-container>
-          </div>        
+          </div>
           <div *ngIf="selectedCategory && selectedStore === store" class="sub-category-details mt-4">
-            <app-display [store]="selectedStore" [category]="selectedCategory"></app-display>
+            <app-display
+             [store]="selectedStore"
+             [category]="selectedCategory"
+             [foodDetails]="foodDetails711"
+            >
+            </app-display>
           </div>
         </div>
       </ng-container>
     </div>
-  
+
     <!-- 全家區塊 -->
     <div
     class="store p-4 border border-gray-300 rounded-lg shadow-md mb-6"
@@ -155,9 +160,9 @@
         <div class="store-icon flex flex-col text-lg sm:text-xl">
           <h4 class="lg:text-lg sm:text-xl text-gray-500">
             距離: {{ store.distance | round:1 }} 公尺
-            <a 
-              href="https://www.google.com/maps/search/全家便利商店{{ store.name }}店" 
-              target="_blank" 
+            <a
+              href="https://www.google.com/maps/search/全家便利商店{{ store.name }}店"
+              target="_blank"
               class="ml-2">
               <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
             </a>
@@ -166,7 +171,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-0">
             <div
               *ngFor="let category of store.info | slice:0:10; let i = index"
-              class="category border p-2 sm:p-3 md:p-4 rounded-lg text-center cursor-pointer w-full sm:w-full md:w-full 
+              class="category border p-2 sm:p-3 md:p-4 rounded-lg text-center cursor-pointer w-full sm:w-full md:w-full
               {{ selectedCategory === category && selectedStore === store ? 'bg-blue-100' : '' }}"
               (click)="toggleSubCategoryDetails(store, category)"
               [class.pointer-events-none]="getFSubCategoryQty(store, category) === 0"
@@ -177,7 +182,7 @@
                 class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 mx-auto mb-2 object-cover"
                 [ngStyle]="{'opacity': getFSubCategoryQty(store, category) === 0 ? 0.3 : 1}"
               />
-              <div > 
+              <div >
                   <span class="block text-sm sm:text-base font-semibold">{{ getFCatName(category) }}</span>
                 <div class="inline-block text-xs bg-orange-200 text-orange-900 sm:text-sm font-semibold px-4 py-2 rounded-full">
                   {{ getFSubCategoryQty(store, category) }}
@@ -186,7 +191,12 @@
             </div>
         </div>
           <div *ngIf="selectedCategory && selectedStore === store" class="sub-category-details mt-4 border-gray-700">
-            <app-display [store]="selectedStore" [category]="selectedCategory" class="border-gray-700"></app-display>
+            <app-display
+              [store]="selectedStore"
+              [category]="selectedCategory"
+              [foodDetails]="foodDetailsFamilyMart"
+              class="border-gray-700">
+            </app-display>
           </div>
       </ng-container>
     </div>
