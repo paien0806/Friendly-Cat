@@ -25,14 +25,14 @@
 >
 > * 點選「使用目前位置」則以目前為中心搜尋附近店家，並顯示距離
 >
->![This is an alt text.](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/search.png?raw=true "搜尋頁面")
+>![友善黑貓搜尋頁](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/search.png?raw=true "搜尋頁面")
 >
 >
 >### 2. 商品列表
 >
 > - 點選食物分類，顯示該分類下各商品詳細資訊
 >
->![This is an alt text.](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/store_product.png?raw=true "搜尋頁面")
+>![友善黑貓商品業](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/store_product.png?raw=true "商品頁面")
 
 
 
