@@ -352,6 +352,11 @@ function DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_di
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"]("\u5361\u8DEF\u91CC(kcal): ", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](6, 4, ctx_r19.getFoodDetailFamilyMart(item_r18).Calories), "");
 } }
+function DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_div_10_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div")(1, "div", 21)(2, "p", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3, "\u5546\u54C1\u63CF\u8FF0: \u66AB\u7121\u6B64\u5546\u54C1\u8CC7\u8A0A");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
+} }
 function DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "li")(1, "div", 10);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](2, "img", 11);
@@ -362,6 +367,7 @@ function DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_Te
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](8);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](9, DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_div_9_Template, 7, 6, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](10, DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_div_10_Template, 4, 0, "div", 2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
 } if (rf & 2) {
     const item_r18 = ctx.$implicit;
@@ -374,13 +380,15 @@ function DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_Te
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" \u5269\u9918\u6578\u91CF: ", item_r18.RemainingQty, " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx_r17.getFoodDetailFamilyMart(item_r18).picture_url !== "assets/\u6B64\u5546\u54C1\u66AB\u7121\u5716\u7247.png");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx_r17.getFoodDetail711(item_r18).image === "assets/\u6B64\u5546\u54C1\u66AB\u7121\u5716\u7247.png");
 } }
 function DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 6)(1, "div", 7)(2, "h3", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "ul", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](5, DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_Template, 10, 5, "li", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](5, DisplayComponent_mat_card_0_ng_container_2_ng_container_3_div_1_li_5_Template, 11, 6, "li", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
 } if (rf & 2) {
     const subCategory_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]().$implicit;
@@ -542,7 +550,7 @@ class DisplayComponent {
         // 設置 Fuse.js 配置選項
         const options = {
             includeScore: true,
-            threshold: 0.3,
+            threshold: 0.2,
             keys: ['title']
         };
         // 初始化 Fuse 進行模糊搜尋
@@ -1401,12 +1409,12 @@ class NewSearchComponent {
     const label = event.option.value.label;
     const storeName = event.option.value.name;
     const storeLongitude = Number(event.option.value.longitude);
-    const storeLatitude = Number(event.option.value.latitude);
-    console.log('Store Type:', label);
-    console.log('Store Name:', storeName);
-    console.log('Store Longitude:', storeLongitude);
-    console.log('Store Latitude:', storeLatitude);
-    console.log('Selected Option:', event.option.value);
+    const storeLatitude = Number(event.option.value.latitude); // console.log('Store Type:', label);
+    // console.log('Store Name:', storeName);
+    // console.log('Store Longitude:', storeLongitude);
+    // console.log('Store Latitude:', storeLatitude);
+    // console.log('Selected Option:', event.option.value);
+
     this.loadingService.show();
     (0,rxjs__WEBPACK_IMPORTED_MODULE_14__.from)(this.geolocationService.getCurrentPosition()).pipe((0,rxjs__WEBPACK_IMPORTED_MODULE_12__.switchMap)(position => {
       const lat = position.coords.latitude;
@@ -1606,7 +1614,7 @@ NewSearchComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_8
   selectors: [["app-new-search"]],
   decls: 26,
   vars: 10,
-  consts: [[1, "container", "mx-auto", "my-8", "p-6", "bg-white", "shadow-lg", "rounded-lg", "max-w-4xl"], [1, "flex", "flex-col", "items-center"], [1, "flex", "items-center", "justify-center", "mb-6", "h-24"], ["src", "assets/S__222224406.jpg", "alt", "Friendly Superhero", 1, "w-24", "h-24", "sm:w-16", "sm:h-16", "md:w-24", "md:h-24", "rounded-full"], [1, "text-xl", "sm:text-xl", "font-bold", "ml-4", "py-2", "px-4", "border-2", "border-gray-300", "rounded-full", "bg-white", "inline-block"], [4, "ngIf"], ["mode", "indeterminate", "diameter", "20", 4, "ngIf"], [1, "text-xs", "sm:text-sm", "text-red-600", "mb-4", "text-center"], [1, "w-full", 3, "ngSubmit"], [1, "flex", "flex-wrap", "justify-center", "gap-4", "w-full", "items-center"], [1, "w-full", "sm:w-3/4", "lg:w-1/2"], ["matSuffix", "", 1, "text-gray-500"], ["matInput", "", "placeholder", "\u8F38\u5165\u5E97\u540D\u6216\u5730\u5740\u641C\u5C0B", "name", "searchTerm", 1, "p-3", "border-2", "border-gray-300", "rounded-md", "focus:outline-none", "focus:ring-2", "focus:ring-blue-500", 3, "matAutocomplete", "ngModel", "ngModelChange", "input"], [3, "optionSelected"], ["auto", "matAutocomplete"], ["class", "p-2 hover:bg-blue-100 focus:bg-blue-200", 3, "value", 4, "ngFor", "ngForOf"], ["type", "button", "mat-raised-button", "", "color", "warn", 1, "ml-4", "px-6", "py-3", "bg-red-500", "text-white", "rounded-md", "hover:bg-red-600", "focus:outline-none", "focus:ring-2", "focus:ring-blue-500", "flex", "items-center", "gap-2", "text-xs", "sm:text-sm", "md:text-base", 3, "click"], [1, "text-sm"], ["mode", "indeterminate", "diameter", "20"], [1, "p-2", "hover:bg-blue-100", "focus:bg-blue-200", 3, "value"], ["class", "flex items-center gap-2", 4, "ngIf"], [1, "flex", "items-center", "gap-2"], ["alt", "7-Eleven Icon", 1, "w-4", "h-4", 3, "src"], [1, "text-xs", "sm:text-sm", "text-gray-500"], ["alt", "FamilyMart Icon", 1, "w-4", "h-4", 3, "src"], [4, "ngFor", "ngForOf"], ["class", "store p-4 border border-gray-300 rounded-lg shadow-md mb-6", 4, "ngIf"], [1, "store", "p-4", "border", "border-gray-300", "rounded-lg", "shadow-md", "mb-6"], [1, "store-icon", "flex", "items-center", "mb-3"], ["alt", "Store Icon", 1, "w-6", "h-6", "mr-2", 3, "src"], [1, "text-lg", "sm:text-xl", "font-semibold"], [1, "store-icon", "flex", "flex-col", "text-lg", "sm:text-xl"], [1, "lg:text-lg", "sm:text-xl", "text-gray-600"], ["target", "_blank", 1, "ml-2", 3, "href"], ["src", "assets/GoogleMap_icon.png", "alt", "Google Maps", 1, "w-6", "h-6", "inline-block"], [1, "food-categories", "mt-4"], [1, "grid", "grid-cols-2", "sm:grid-cols-3", "md:grid-cols-4", "lg:grid-cols-4", "gap-0"], ["class", "sub-category-details mt-4", 4, "ngIf"], [3, "class", "pointer-events-none", "click", 4, "ngIf"], [3, "click"], [1, "w-12", "h-12", "sm:w-14", "sm:h-14", "md:w-16", "md:h-16", "lg:w-20", "lg:h-20", "mx-auto", "mb-2", "object-cover", 3, "src", "alt", "ngStyle"], [1, "block", "text-sm", "sm:text-base", "font-semibold"], [1, "inline-block", "text-xs", "bg-orange-200", "text-orange-900", "sm:text-sm", "font-semibold", "px-4", "py-2", "rounded-full"], [1, "sub-category-details", "mt-4"], [3, "store", "category", "foodDetails"], [3, "class", "pointer-events-none", "click", 4, "ngFor", "ngForOf"], ["class", "sub-category-details mt-4 border-gray-700", 4, "ngIf"], [1, "sub-category-details", "mt-4", "border-gray-700"], [1, "border-gray-700", 3, "store", "category", "foodDetails"]],
+  consts: [[1, "container", "mx-auto", "my-8", "p-6", "bg-white", "shadow-lg", "rounded-lg", "max-w-4xl"], [1, "flex", "flex-col", "items-center"], [1, "flex", "items-center", "justify-center", "mb-6", "h-24"], ["src", "assets/S__222224406.jpg", "alt", "Friendly Superhero", 1, "w-24", "h-24", "sm:w-16", "sm:h-16", "md:w-24", "md:h-24", "rounded-full"], [1, "text-xl", "sm:text-xl", "font-bold", "ml-4", "py-2", "px-4", "border-2", "border-gray-300", "rounded-full", "bg-white", "inline-block"], [4, "ngIf"], ["mode", "indeterminate", "diameter", "20", 4, "ngIf"], [1, "text-xs", "sm:text-sm", "text-red-600", "mb-4", "text-center"], [1, "w-full", 3, "ngSubmit"], [1, "flex", "flex-wrap", "justify-center", "gap-4", "w-full", "items-center"], [1, "w-full", "sm:w-3/4", "lg:w-1/2"], ["matSuffix", "", 1, "text-gray-500"], ["matInput", "", "placeholder", "\u8F38\u5165\u5E97\u540D\u6216\u5730\u5740\u641C\u5C0B", "name", "first", 1, "p-3", "border-2", "border-gray-300", "rounded-md", "focus:outline-none", "focus:ring-2", "focus:ring-blue-500", 3, "matAutocomplete", "ngModel", "ngModelChange", "input"], [3, "optionSelected"], ["auto", "matAutocomplete"], ["class", "p-2 hover:bg-blue-100 focus:bg-blue-200", 3, "value", 4, "ngFor", "ngForOf"], ["type", "button", "mat-raised-button", "", "color", "warn", 1, "ml-4", "px-6", "py-3", "bg-red-500", "text-white", "rounded-md", "hover:bg-red-600", "focus:outline-none", "focus:ring-2", "focus:ring-blue-500", "flex", "items-center", "gap-2", "text-xs", "sm:text-sm", "md:text-base", 3, "click"], [1, "text-sm"], ["mode", "indeterminate", "diameter", "20"], [1, "p-2", "hover:bg-blue-100", "focus:bg-blue-200", 3, "value"], ["class", "flex items-center gap-2", 4, "ngIf"], [1, "flex", "items-center", "gap-2"], ["alt", "7-Eleven Icon", 1, "w-4", "h-4", 3, "src"], [1, "text-xs", "sm:text-sm", "text-gray-500"], ["alt", "FamilyMart Icon", 1, "w-4", "h-4", 3, "src"], [4, "ngFor", "ngForOf"], ["class", "store p-4 border border-gray-300 rounded-lg shadow-md mb-6", 4, "ngIf"], [1, "store", "p-4", "border", "border-gray-300", "rounded-lg", "shadow-md", "mb-6"], [1, "store-icon", "flex", "items-center", "mb-3"], ["alt", "Store Icon", 1, "w-6", "h-6", "mr-2", 3, "src"], [1, "text-lg", "sm:text-xl", "font-semibold"], [1, "store-icon", "flex", "flex-col", "text-lg", "sm:text-xl"], [1, "lg:text-lg", "sm:text-xl", "text-gray-600"], ["target", "_blank", 1, "ml-2", 3, "href"], ["src", "assets/GoogleMap_icon.png", "alt", "Google Maps", 1, "w-6", "h-6", "inline-block"], [1, "food-categories", "mt-4"], [1, "grid", "grid-cols-2", "sm:grid-cols-3", "md:grid-cols-4", "lg:grid-cols-4", "gap-0"], ["class", "sub-category-details mt-4", 4, "ngIf"], [3, "class", "pointer-events-none", "click", 4, "ngIf"], [3, "click"], [1, "w-12", "h-12", "sm:w-14", "sm:h-14", "md:w-16", "md:h-16", "lg:w-20", "lg:h-20", "mx-auto", "mb-2", "object-cover", 3, "src", "alt", "ngStyle"], [1, "block", "text-sm", "sm:text-base", "font-semibold"], [1, "inline-block", "text-xs", "bg-orange-200", "text-orange-900", "sm:text-sm", "font-semibold", "px-4", "py-2", "rounded-full"], [1, "sub-category-details", "mt-4"], [3, "store", "category", "foodDetails"], [3, "class", "pointer-events-none", "click", 4, "ngFor", "ngForOf"], ["class", "sub-category-details mt-4 border-gray-700", 4, "ngIf"], [1, "sub-category-details", "mt-4", "border-gray-700"], [1, "border-gray-700", 3, "store", "category", "foodDetails"]],
   template: function NewSearchComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](0, "div", 0);
@@ -1699,7 +1707,7 @@ class FamilyMartRequestService {
         this.baseUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.familyMartUrl.base;
     }
     getStores() {
-        const url = 'assets/family_mart_stores.json';
+        const url = 'https://alan-cheng.github.io/friendly-time/assets/family_mart_stores.json';
         return this.requestService.get(url);
     }
     getNearByStoreList(location) {
@@ -1714,7 +1722,8 @@ class FamilyMartRequestService {
         return this.requestService.post(url, null, body);
     }
     getFoodDetails() {
-        const url = 'assets/family_mart_products.json';
+        // URL用github的取代，不拿資料夾內的靜態資源
+        const url = 'https://alan-cheng.github.io/friendly-time/assets/family_mart_products.json';
         return this.requestService.get(url);
     }
 }
@@ -1787,7 +1796,8 @@ class SevenElevenRequestService {
         return this.requestService.post(url, params, body);
     }
     getFoodDetails() {
-        const url = 'assets/seven_eleven_products.json';
+        // URL用github的取代，不拿資料夾內的靜態資源
+        const url = 'https://alan-cheng.github.io/friendly-time/assets/seven_eleven_products.json';
         return this.requestService.get(url);
     }
 }
