@@ -64,7 +64,8 @@ export class SevenElevenRequestService {
   }
 
   getFoodDetails(): Observable<any> {
-    const url = 'assets/seven_eleven_products.json'
+    // URL用github的取代，不拿資料夾內的靜態資源
+    const url = 'https://alan-cheng.github.io/friendly-time/assets/seven_eleven_products.json'
     return this.requestService.get(url)
   }
 }

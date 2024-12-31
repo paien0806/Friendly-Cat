@@ -454,17 +454,18 @@ export class NewSearchComponent implements OnInit {
   onOptionSelect(event: MatAutocompleteSelectedEvent): void {
     // 從選中的選項中獲取值
     this.searchSelectedStore = event.option.value.name;
+
     this.searchTerm =  event.option.value.label + event.option.value.name.replace('店', '') + '門市'
 
     const label = event.option.value.label;
     const storeName = event.option.value.name;
     const storeLongitude = Number(event.option.value.longitude);
     const storeLatitude = Number(event.option.value.latitude);
-    console.log('Store Type:', label);
-    console.log('Store Name:', storeName);
-    console.log('Store Longitude:', storeLongitude);
-    console.log('Store Latitude:', storeLatitude);
-    console.log('Selected Option:', event.option.value);
+    // console.log('Store Type:', label);
+    // console.log('Store Name:', storeName);
+    // console.log('Store Longitude:', storeLongitude);
+    // console.log('Store Latitude:', storeLatitude);
+    // console.log('Selected Option:', event.option.value);
 
     this.loadingService.show()
     from(this.geolocationService.getCurrentPosition())
@@ -586,7 +587,7 @@ export class NewSearchComponent implements OnInit {
         ...store,
         label: '全家',
         distance: store.distance,
-        showDistance: true 
+        showDistance: true
       };
       this.totalStoresShowList.push(transformedStore);  // 推入統一列表
     });

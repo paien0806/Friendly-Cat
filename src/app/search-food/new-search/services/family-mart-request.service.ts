@@ -18,7 +18,7 @@ export class FamilyMartRequestService {
     baseUrl = environment.familyMartUrl.base;
 
     getStores(): Observable<any> {
-      const url = 'assets/family_mart_stores.json'
+      const url = 'https://alan-cheng.github.io/friendly-time/assets/family_mart_stores.json'
       return this.requestService.get(url)
     }
 
@@ -35,7 +35,8 @@ export class FamilyMartRequestService {
     }
 
     getFoodDetails(): Observable<any> {
-      const url = 'assets/family_mart_products.json'
+      // URL用github的取代，不拿資料夾內的靜態資源
+      const url = 'https://alan-cheng.github.io/friendly-time/assets/family_mart_products.json'
       return this.requestService.get(url)
     }
 }
