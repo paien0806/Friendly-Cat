@@ -551,26 +551,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配典藏蜂蜜蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0025091.jpg",
-        "Protein": 3.8,
-        "Carb": 33.9,
-        "Calories": 180.0,
-        "Fat": 3.3,
-        "Description": "1. 選用進口龍眼蜜，風味香醇濃郁2. 紅外線烤爐搭配特製木框烤盤，口感綿密濕潤"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配杯子蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0025114.jpg",
-        "Protein": 1.8,
-        "Carb": 12.5,
-        "Calories": 100.0,
-        "Fat": 4.7,
-        "Description": "添加瑞穗鮮乳，奶香濃郁，營養滿分"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配起酥蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0065326.jpg",
         "Protein": 5.2,
@@ -871,12 +851,12 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配雙餡巧克力夾心蛋糕",
+        "title": "一配醇黑巧克力夾心蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0791860.jpg",
         "Protein": 5.9,
-        "Carb": 41.7,
-        "Calories": 356.0,
-        "Fat": 18.4,
+        "Carb": 41.0,
+        "Calories": 422.0,
+        "Fat": 26.0,
         "Description": "包裝內含脫氧包，請勿食用"
     },
     {
@@ -1951,16 +1931,6 @@
     },
     {
         "category": "三明治、漢堡",
-        "title": "羅勒菠菠豆纖堡",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0857593.jpg",
-        "Protein": 4.4,
-        "Carb": 33.9,
-        "Calories": 267.0,
-        "Fat": 12.6,
-        "Description": "羅勒菠菠豆纖堡"
-    },
-    {
-        "category": "三明治、漢堡",
         "title": "彩蔬洋芋三明治",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0857616.jpg",
         "Protein": 7.1,
@@ -2601,16 +2571,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "植蔬雙饗餐盒",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0852589.jpg",
-        "Protein": 17.9,
-        "Carb": 79.1,
-        "Calories": 530.0,
-        "Fat": 15.8,
-        "Description": "※本產品非素食專門產線生產※內含老薑粗纖維為原物料特性屬正常現象※蔬菜因氣候季節變化微調"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "秘傳醬汁日式炒麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0857052.jpg",
         "Protein": 17.8,
@@ -2638,26 +2598,6 @@
         "Calories": 428.0,
         "Fat": 13.6,
         "Description": "蒜辣燻火腿義大利麵"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "日式柴魚茶泡鰻魚飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0863241.jpg",
-        "Protein": 16.7,
-        "Carb": 62.8,
-        "Calories": 376.0,
-        "Fat": 6.4,
-        "Description": "小心魚刺"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "什錦海之味炊飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0863255.jpg",
-        "Protein": 15.2,
-        "Carb": 99.6,
-        "Calories": 506.0,
-        "Fat": 5.3,
-        "Description": "什錦海之味炊飯"
     },
     {
         "category": "飯麵粥品",
