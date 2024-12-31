@@ -34,7 +34,7 @@ jobs:
 
       # 執行打包
       - name: Build project
-        run: ng build --configuration=development --base-href /friendly-time/ --output-path=docs
+        run: ng build --configuration=production --base-href /friendly-time/ --output-path=docs --aot
 
       # 確保打包結果存入版本控制
       - name: Commit and push build output

@@ -8,4 +8,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Build
 
-打包在github-page上面的靜態資源 `ng build --configuration=development --base-href /friendly-time/ --output-path=docs`
+打包在github-page上面的靜態資源 `ng build --configuration=production --base-href /friendly-time/ --output-path=docs --aot`
