@@ -871,12 +871,12 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配雙餡巧克力夾心蛋糕",
+        "title": "一配醇黑巧克力夾心蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0791860.jpg",
         "Protein": 5.9,
-        "Carb": 41.7,
-        "Calories": 356.0,
-        "Fat": 18.4,
+        "Carb": 41.0,
+        "Calories": 422.0,
+        "Fat": 26.0,
         "Description": "包裝內含脫氧包，請勿食用"
     },
     {
@@ -2638,26 +2638,6 @@
         "Calories": 428.0,
         "Fat": 13.6,
         "Description": "蒜辣燻火腿義大利麵"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "日式柴魚茶泡鰻魚飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0863241.jpg",
-        "Protein": 16.7,
-        "Carb": 62.8,
-        "Calories": 376.0,
-        "Fat": 6.4,
-        "Description": "小心魚刺"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "什錦海之味炊飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0863255.jpg",
-        "Protein": 15.2,
-        "Carb": 99.6,
-        "Calories": 506.0,
-        "Fat": 5.3,
-        "Description": "什錦海之味炊飯"
     },
     {
         "category": "飯麵粥品",
