@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
+  content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
       colors: {
@@ -9,6 +11,8 @@ module.exports = {
           500: '#F97316',
           900: '#7C2D12',
         },
+        baseColor: '#F4EFE6',
+        noteColor: '#A18249'
       },
     },
   },
