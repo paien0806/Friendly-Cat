@@ -57,11 +57,11 @@
 > ## Local Build 指令
 >
 >- 輸出靜態資源於/docs，加上專案名稱前綴為GitHub-Pages存取路徑：
->>
+>
 >`ng build --configuration=production --base-href /friendly-time/ >--output-path=docs --aot`
 >
 >- 輸出於專案根目錄之/dict/<專案名稱>：
->>
+>
 >`ng build --configuration=production --aot`
 >
 
@@ -69,15 +69,15 @@
 >
 >
 > - 輸出靜態資源於專案根目錄之/dict：
->>
+>
 >`ng build --configuration=production --aot`
 >
 > - 將更新後的打包檔案同步至iOS專案資料夾：
->>
+>
 >`npx cap sync ios`
 >
 > - 開啟Xcode：
->>
+>
 >`npx cap open ios`
 >
 
