@@ -6,7 +6,7 @@ import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
 import { FamilyMartRequestService } from './services/family-mart-request.service';
 import { LoadingService } from '../../services/loading.service'
-
+import { MessageDialogComponent } from 'src/app/components/message-dialog/message-dialog.component';
 import { FoodCategory, LocationData, StoreStockItem, Store, Location, FoodDetail711 } from '../model/seven-eleven.model'
 import { fStore, StoreModel, FoodDetailFamilyMart } from '../model/family-mart.model';
 
@@ -15,6 +15,8 @@ import { environment } from 'src/environments/environment';
 import { switchMap, from, of, catchError, Observable, tap, forkJoin } from 'rxjs';
 
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { MatDialog } from '@angular/material/dialog';
+
 import { getDistance } from 'geolib';
 
 @Component({
@@ -69,6 +71,7 @@ export class NewSearchComponent implements OnInit {
     private sevenElevenService: SevenElevenRequestService,
     private familyMartService: FamilyMartRequestService,
     public loadingService: LoadingService,
+    public dialog: MatDialog
   ) {
     this.searchForm = new FormGroup({
       selectedStoreName: new FormControl(''), // 控制選中的商店
@@ -598,7 +601,15 @@ export class NewSearchComponent implements OnInit {
     if (storeLatitude && storeLongitude) {
       this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
       if(this.totalStoresShowList[0].distance > 1 || this.totalStoresShowList[0].remainingQty === 0){
-        alert('您所搜尋的店家目前無商品，請重新搜尋')
+        const dialogRef = this.dialog.open(MessageDialogComponent, {
+          data: {
+            message: '該門市無庫存，請重新搜尋。'
+          }
+        });
+        dialogRef.afterClosed().subscribe(result => {
+          this.totalStoresShowList = [];
+          this.searchTerm = '';
+        });
         this.totalStoresShowList = [];
         return;
       }
