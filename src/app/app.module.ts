@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,25 +17,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmptyInfoPipe } from './pipes/empty-info.pipe';
 import { MessageDialogComponent } from './components/message-dialog/message-dialog.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    MessageDialogComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SearchFoodModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatProgressSpinnerModule,
-    MatDialogModule,
-    MatButtonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        MessageDialogComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        SearchFoodModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatProgressSpinnerModule,
+        MatDialogModule,
+        MatButtonModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
