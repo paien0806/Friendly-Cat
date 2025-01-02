@@ -1,4 +1,4 @@
-<mat-card *ngIf="subCategories.length > 0" class="border border-primary-light">
+<div *ngIf="subCategories.length > 0">
   <!-- 7-11顯示區塊 -->
   <ng-container *ngIf="category.Name">
     <h2 class="text-2xl font-bold mb-4 text-primary-default">{{ category.Name }}</h2>
@@ -13,9 +13,9 @@
         </div>
 
         <!-- 7-11顯示的子分類商品內容區塊 -->
-        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
+        <ul class="space-y-6 sm:space-y-4">
           <li *ngFor="let item of itemsBySubCategory[subCategory.Name]">
-            <div class="food-item flex flex-col sm:flex-row items-start p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div class="border border-gray-300 flex flex-col sm:flex-row items-start p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <img [src]="getFoodDetail711(item).image" [alt]="getFoodDetail711(item).name"
                    class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32">
 
@@ -82,9 +82,9 @@
         </div>
 
         <!-- 全家顯示的子分類商品內容區塊 -->
-        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
+        <ul class="space-y-6 sm:space-y-4">
           <li *ngFor="let item of itemsBySubCategory[subCategory.name]">
-            <div class="food-item flex flex-col sm:flex-row items-start p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div class="border border-gray-300 food-item flex flex-col sm:flex-row items-start p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <img [src]="getFoodDetailFamilyMart(item).picture_url" [alt]="getFoodDetailFamilyMart(item).title"
                    class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32">
 
@@ -118,4 +118,4 @@
       </div>
     </ng-container>
   </ng-container>
-</mat-card>
+</div>
