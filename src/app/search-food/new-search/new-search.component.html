@@ -1,95 +1,104 @@
-<div class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg max-w-4xl">
-  <ng-container class="flex flex-col items-center">
-    <div class="flex items-center justify-center mb-6 h-24">
+<div class="container mx-auto my-3 p-6 bg-primary-white max-w-4xl">
+  <ng-container>
+    <div class="flex items-center bg-primary-white justify-center mb-6 h-24">
       <img src="assets/S__222224406.jpg" alt="Friendly Superhero" class="w-24 h-24 sm:w-16 sm:h-16 md:w-24 md:h-24">
-      <h5 class="text-xl sm:text-xl font-bold ml-4 py-2 px-4 border-2 border-gray-300 rounded-full bg-white inline-block">
+      <h5 class="text-primary-default sm:text-xl font-bold ml-4 py-1 px-3 border-2 border-primary-default rounded-full bg-primary-light inline-block">
         <div *ngIf="(loadingService.loading$ | async) === false">
           看看附近有啥好吃的吧！
         </div>
         <mat-progress-spinner *ngIf="loadingService.loading$ | async"
                       mode="indeterminate"
-                      diameter="20">
+                      diameter="20"
+                      class="text-primary-default">
         </mat-progress-spinner>
       </h5>
     </div>
     <!-- 提示訊息區域 -->
-    <div class="text-xs sm:text-sm text-red-600 mb-4 text-center">
+    <div class="text-xs sm:text-sm text-success mb-4 text-center">
       <p>* 資訊僅供參考，請以店內商品為準</p>
     </div>
 
     <form (ngSubmit)="onSubmit()" class="w-full">
-      <div class="flex flex-wrap justify-center gap-4 w-full items-center">
-        <!-- 輸入框 -->
-        <mat-form-field class="w-full sm:w-3/4 lg:w-1/2">
-          <mat-icon matSuffix class="text-gray-500">search</mat-icon>
-          <input
-            matInput
-            [matAutocomplete]="auto"
-            [(ngModel)]="searchTerm"
-            (input)="onInput($event)"
-            placeholder="輸入店名或地址搜尋"
-            name = 'first'
-            class="p-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <mat-autocomplete
-            #auto="matAutocomplete"
-            (optionSelected)="onOptionSelect($event)"
-          >
-            <mat-option
-              *ngFor="let store of unifiedDropDownList"
-              [value]="store"
-              class="p-2 hover:bg-blue-100 focus:bg-blue-200"
-            >
-              <div *ngIf="store.label === '7-11'" class="flex items-center gap-2">
-                <img
-                  src="{{ sevenElevenIconUrl }}"
-                  alt="7-Eleven Icon"
-                  class="w-4 h-4"
-                />
-                <span>{{ store.name }}門市</span>
-                <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
+      <!-- 輸入搜尋框開始 -->
+      <div class="flex justify-center w-full">
+        <div class="w-full px-4 py-3">
+          <label class="flex flex-col h-12 w-full">
+            <div class="flex w-full items-stretch rounded-lg h-full">
+              <!-- 搜尋框放大鏡icon -->
+              <div
+                class="text-primary-default flex border-none bg-primary-light items-center justify-center pl-4 rounded-l-lg border-r-0"
+                data-icon="MagnifyingGlass"
+                data-size="24px"
+                data-weight="regular"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                  ></path>
+                </svg>
               </div>
-              <div *ngIf="store.label === '全家'" class="flex items-center gap-2">
-                <img
-                  src="{{ familyMartIconUrl }}"
-                  alt="FamilyMart Icon"
-                  class="w-4 h-4"
-                />
-                <span>{{ store.name.replace('店', '') }}門市</span>
-                <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
-              </div>
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-
-        <!-- 第一個按鈕：查詢 -->
-        <!-- <button
-          type="submit"
-          mat-raised-button
-          color="primary"
-          class="ml-4 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-xs sm:text-sm md:text-base"
-          [disabled]="!searchSelectedStore"
+              <!-- input框 -->
+              <input
+                class="flex w-full flex-1 resize-none overflow-hidden rounded-lg text-primary-default focus:outline-none focus:ring-0 border-none bg-primary-light focus:border-transparent focus:bg-inherit h-full placeholder:text-primary-default px-4 rounded-l-none border-l-3 pl-2 text-base font-normal leading-normal"
+                [matAutocomplete]="auto"
+                [(ngModel)]="searchTerm"
+                (input)="onInput($event)"
+                placeholder="輸入店名或地址搜尋"
+                name="first"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+      <!-- 下拉選單 -->
+      <mat-autocomplete
+        #auto="matAutocomplete"
+        (optionSelected)="onOptionSelect($event)"
+      >
+        <mat-option
+          *ngFor="let store of unifiedDropDownList"
+          [value]="store"
+          class="p-2 hover:bg-primary-light focus:bg-primary-default"
         >
-          <mat-icon class="text-sm">search</mat-icon>
-          <ng-container *ngIf="searchSelectedStore; else noStoreSelected">
-            查詢{{ searchSelectedStore }}
-          </ng-container>
-          <ng-template #noStoreSelected>
-            請先選擇店家
-          </ng-template>
-        </button> -->
-        <!-- 第二個按鈕：使用目前位置 -->
+          <div *ngIf="store.label === '7-11'" class="flex items-center gap-2">
+            <img
+              src="{{ sevenElevenIconUrl }}"
+              alt="7-Eleven Icon"
+              class="w-4 h-4"
+            />
+            <span>{{ store.name }}門市</span>
+            <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
+          </div>
+          <div *ngIf="store.label === '全家'" class="flex items-center gap-2">
+            <img
+              src="{{ familyMartIconUrl }}"
+              alt="FamilyMart Icon"
+              class="w-4 h-4"
+            />
+            <span>{{ store.name.replace('店', '') }}門市</span>
+            <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
+          </div>
+        </mat-option>
+      </mat-autocomplete>
+
+      <!-- 使用目前位置按鈕開始 -->
+      <div class="flex px-4 py-3 justify-center items-center">
         <button
           type="button"
-          mat-raised-button
-          color="warn"
           (click)="onUseCurrentLocation()"
-          class="ml-4 px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 text-xs sm:text-sm md:text-base"
-        >
-          <mat-icon class="text-sm">location_on</mat-icon>
-          使用目前位置
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-success text-white gap-2 pl-4 text-sm font-bold leading-normal tracking-[0.015em] text-xs sm:text-sm md:text-base">
+            <div class="text-white" data-icon="MapPin" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z">
+                    </path>
+                </svg>
+            </div>
+            <span class="truncate">使用目前位置</span>
         </button>
       </div>
+      <!-- 使用目前位置按鈕結束 -->
     </form>
   </ng-container>
 </div>
@@ -97,38 +106,55 @@
 <!-- 711與全家店家頁面 -->
 <div *ngIf="totalStoresShowList.length > 0">
   <ng-container *ngFor = "let store of totalStoresShowList" >
+
+    <!-- 711區塊 -->
     <div
       *ngIf="store.RemainingQty > 0"
-      class="store p-4 border border-gray-300 rounded-lg shadow-md mb-6"
+      class="store p-4 border border-primary-light rounded-lg shadow-md mb-6"
     >
-      <!-- 711區塊 -->
       <ng-container *ngIf="store.label === '7-11' && store.RemainingQty > 0">
-        <div class="store-icon flex items-center mb-3">
-          <img [src]="sevenElevenIconUrl" alt="Store Icon" class="w-6 h-6 mr-2" />
-          <h2 class="text-lg sm:text-xl font-semibold">7-11{{ store.StoreName }}門市</h2>
+
+        <!-- 商店資訊開始 -->
+        <div class="flex items-center gap-4 bg-primary-white px-4 min-h-[72px] py-2 justify-between">
+          <div class="flex items-center gap-4">
+              <div
+                class="text-dark border border-gray-200 flex items-center justify-center rounded-lg bg-primary-light shrink-0 size-12"
+                style="padding:16px"
+                data-icon="Storefront" data-size="24px" data-weight="regular">
+                  <img [src]="
+                    sevenElevenIconUrl"
+                    alt="Store Icon"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                  />
+              </div>
+              <div class="flex flex-col justify-center text-lg sm:text-xl font-semibold">
+                  <p class="text-dark text-base font-medium leading-normal line-clamp-1">
+                    7-11{{ store.StoreName }}門市
+                    <a
+                      href="https://www.google.com/maps/search/7-ELEVEN{{ store.StoreName }}門市"
+                      target="_blank"
+                      class="ml-2">
+                      <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
+                    </a>
+                  </p>
+                  <p *ngIf="store.distance >= 1" class="text-success text-sm font-normal leading-normal line-clamp-2">
+                    距離您: {{ store.distance | round:1 }}
+                  </p>
+              </div>
+          </div>
         </div>
-        <div class="store-icon flex flex-col text-lg sm:text-xl">
-          <h4 class="lg:text-lg sm:text-xl text-gray-600">
-            <span *ngIf="store.showDistance">距離您: {{ store.distance | round:1 }}</span>
-            <span *ngIf="!store.showDistance">可查看地圖：</span>
-            <a
-              href="https://www.google.com/maps/search/7-ELEVEN{{ store.StoreName }}門市"
-              target="_blank"
-              class="ml-2">
-              <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
-            </a>
-          </h4>
-        </div>
-        <!-- <div class="inline-block text-xs sm:text-sm font-semibold px-4 py-2 rounded-full" [ngClass]="store.IsOperateTime ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'">
-            {{ store.IsOperateTime ? '營業中' : '休息中' }}
-        </div> -->
+        <!-- 商店資訊結束 -->
+
+        <!-- 食物分類區塊 -->
         <div class="food-categories mt-4">
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-0">
             <ng-container *ngFor="let category of foodCategories | slice:0:10; let i = index">
               <div
                 *ngIf="getSubCategoryTotalQty(store, category) > 0"
-                class="category border p-2 sm:p-3 md:p-4 rounded-lg text-center cursor-pointer w-full sm:w-full md:w-full
-                      {{ selectedCategory === category && selectedStore === store ? 'bg-blue-100' : '' }}"
+                class="border border-primary-light p-2 sm:p-3 md:p-4 rounded-lg text-center cursor-pointer w-full sm:w-full md:w-full
+                      {{ selectedCategory === category && selectedStore === store ? 'bg-primary-light' : '' }}"
                 (click)="toggleSubCategoryDetails(store, category)"
                 [class.pointer-events-none]="getSubCategoryTotalQty(store, category) === 0"
               >
@@ -147,6 +173,9 @@
               </div>
             </ng-container>
           </div>
+          <!-- 食物分類區塊結束 -->
+
+          <!-- 食品分類與子商品區塊 -->
           <div *ngIf="selectedCategory && selectedStore === store" class="sub-category-details mt-4">
             <app-display
              [store]="selectedStore"
@@ -156,36 +185,55 @@
             </app-display>
           </div>
         </div>
+        <!-- 食品分類與子商品區塊結束 -->
       </ng-container>
     </div>
 
     <!-- 全家區塊 -->
     <div
-    class="store p-4 border border-gray-300 rounded-lg shadow-md mb-6"
+    class="store p-4 border border-primary-light rounded-lg shadow-md mb-6"
     *ngIf="store.label === '全家'"
     >
       <ng-container>
-        <div class="store-icon flex items-center mb-3">
-          <img [src]="familyMartIconUrl" alt="Store Icon" class="w-6 h-6 mr-2" />
-          <h2 class="text-lg sm:text-xl font-semibold">{{ store.name }}</h2>
+
+        <!-- 商店資訊開始 -->
+        <div class="flex items-center gap-4 bg-primary-white px-4 min-h-[72px] py-2 justify-between">
+          <div class="flex items-center gap-4">
+              <div
+                class="text-dark border border-gray-200 flex items-center justify-center rounded-lg bg-primary-light shrink-0 size-12"
+                style="padding:16px"
+                data-icon="Storefront" data-size="24px" data-weight="regular">
+                  <img [src]="
+                    familyMartIconUrl"
+                    alt="Store Icon"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                  />
+              </div>
+              <div class="flex flex-col justify-center text-lg sm:text-xl font-semibold">
+                  <p class="text-dark text-base font-medium leading-normal line-clamp-1">
+                    {{ store.name }}
+                    <a
+                      href="https://www.google.com/maps/search/全家便利商店{{ fStoreName(store.name) }}"
+                      target="_blank"
+                      class="ml-2">
+                      <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
+                    </a>
+                  </p>
+                  <p *ngIf="store.distance >= 1" class="text-success text-sm font-normal leading-normal line-clamp-2">
+                    距離您: {{ store.distance | round:1 }}
+                  </p>
+              </div>
+          </div>
         </div>
-        <div class="store-icon flex flex-col text-lg sm:text-xl">
-          <h4 class="lg:text-lg sm:text-xl text-gray-600">
-            <span *ngIf="store.showDistance">距離您: {{ store.distance | round:1 }}</span>
-            <span *ngIf="!store.showDistance">可查看地圖：</span>
-            <a
-              href="https://www.google.com/maps/search/全家便利商店{{ fStoreName(store.name) }}"
-              target="_blank"
-              class="ml-2">
-              <img src="assets/GoogleMap_icon.png" alt="Google Maps" class="w-6 h-6 inline-block"/>
-            </a>
-          </h4>
-        </div>
+        <!-- 商店資訊結束 -->
+
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-0">
             <div
               *ngFor="let category of store.info | slice:0:10; let i = index"
-              class="category border p-2 sm:p-3 md:p-4 rounded-lg text-center cursor-pointer w-full sm:w-full md:w-full
-              {{ selectedCategory === category && selectedStore === store ? 'bg-blue-100' : '' }}"
+              class="border border-primary-light p-2 sm:p-3 md:p-4 rounded-lg text-center cursor-pointer w-full sm:w-full md:w-full
+              {{ selectedCategory === category && selectedStore === store ? 'bg-primary-light' : '' }}"
               (click)="toggleSubCategoryDetails(store, category)"
               [class.pointer-events-none]="getFSubCategoryQty(store, category) === 0"
             >
