@@ -1,30 +1,31 @@
-<mat-card *ngIf="subCategories.length > 0" class="border-gray-300">
+<mat-card *ngIf="subCategories.length > 0" class="border border-primary-light">
   <!-- 7-11顯示區塊 -->
   <ng-container *ngIf="category.Name">
-    <h2 class="text-2xl font-bold mb-4">{{ category.Name }}</h2>
+    <h2 class="text-2xl font-bold mb-4 text-primary-default">{{ category.Name }}</h2>
     <ng-container *ngFor="let subCategory of subCategories">
       <div *ngIf="itemsBySubCategory[subCategory.Name] && itemsBySubCategory[subCategory.Name].length > 0"
-           class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
+           class="sub-category-item bg-white border border-gray-100 p-6 mb-8 rounded-lg shadow-lg"
+      >
         <div class="mb-4">
-          <h3 class="text-2xl font-bold text-gray-800">
+          <h3 class="text-2xl font-bold text-primary-default text-primary-light">
             {{ subCategory.Name }}
           </h3>
         </div>
 
         <!-- 7-11顯示的子分類商品內容區塊 -->
-        <ul class="space-y-6 sm:space-y-4">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
           <li *ngFor="let item of itemsBySubCategory[subCategory.Name]">
-            <div class="food-item flex flex-col sm:flex-row items-start p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div class="food-item flex flex-col sm:flex-row items-start p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <img [src]="getFoodDetail711(item).image" [alt]="getFoodDetail711(item).name"
                    class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32">
 
               <div class="flex-1">
                 <!-- 商品名稱與標籤 -->
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                  <h3 class="text-sm sm:text-lg font-semibold text-gray-800">
+                  <h3 class="text-sm sm:text-lg font-semibold text-gray-600">
                     {{ item.ItemName }}
                   </h3>
-                  <div class="inline-block bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
+                  <div class="text-center inline-block bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
                     剩餘數量: {{ item.RemainingQty }}
                   </div>
                 </div>
@@ -70,20 +71,20 @@
 
   <!-- 全家顯示區塊 -->
   <ng-container *ngIf="category.name">
-    <h2 class="text-2xl font-bold mb-4">{{ category.name }}</h2>
+    <h2 class="text-2xl font-bold mb-4 text-primary-default">{{ category.name }}</h2>
     <ng-container *ngFor="let subCategory of subCategories">
       <div *ngIf="itemsBySubCategory[subCategory.name] && itemsBySubCategory[subCategory.name].length > 0"
-           class="sub-category-item bg-white border border-gray-300 p-6 mb-8 rounded-lg shadow-lg">
+           class="sub-category-item bg-white border border-gray-100 p-6 mb-8 rounded-lg shadow-lg">
         <div class="mb-4">
-          <h3 class="text-2xl font-bold text-gray-800">
+          <h3 class="text-2xl font-bold text-primary-default">
             {{ subCategory.name }}
           </h3>
         </div>
 
         <!-- 全家顯示的子分類商品內容區塊 -->
-        <ul class="space-y-6 sm:space-y-4">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
           <li *ngFor="let item of itemsBySubCategory[subCategory.name]">
-            <div class="food-item flex flex-col sm:flex-row items-start p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div class="food-item flex flex-col sm:flex-row items-start p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <img [src]="getFoodDetailFamilyMart(item).picture_url" [alt]="getFoodDetailFamilyMart(item).title"
                    class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32">
 
@@ -91,10 +92,10 @@
               <div class="flex-1">
                 <!-- 商品名稱與標籤 -->
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                  <h3 class="text-sm sm:text-lg font-semibold text-gray-800">
+                  <h3 class="text-sm sm:text-lg font-semibold text-gray-600">
                     {{ item.ItemName }}
                   </h3>
-                  <div class="inline-block bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
+                  <div class="text-center bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
                     剩餘數量: {{ item.RemainingQty }}
                   </div>
                 </div>

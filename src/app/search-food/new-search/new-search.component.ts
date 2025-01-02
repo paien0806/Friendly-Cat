@@ -518,6 +518,10 @@ export class NewSearchComponent implements OnInit {
   }
 
   onUseCurrentLocation(): void {
+    // 清除輸入的搜尋條件
+    this.unifiedDropDownList = [];
+    this.searchTerm = '';
+
     this.loadingService.show()
     from(this.geolocationService.getCurrentPosition())
       .pipe(
