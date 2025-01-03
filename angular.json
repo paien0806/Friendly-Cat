@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "friendly-time:build:production"
+              "buildTarget": "friendly-time:build:production"
             },
             "development": {
-              "browserTarget": "friendly-time:build:development"
+              "buildTarget": "friendly-time:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "friendly-time:build"
+            "buildTarget": "friendly-time:build"
           }
         },
         "test": {

@@ -9,6 +9,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class MessageDialogComponent implements OnInit {
 
   message: string;
+  imgPath: string;
 
   constructor(
     public dialogRef: MatDialogRef<MessageDialogComponent>,
@@ -16,6 +17,7 @@ export class MessageDialogComponent implements OnInit {
   ) {
     // 設置傳遞的訊息
     this.message = data.message || '請稍後再試';
+    this.imgPath = data.imgPath || '';
   }
 
   close(): void {

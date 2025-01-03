@@ -39,7 +39,7 @@ import { NewSearchComponent } from './new-search/new-search.component';
     MatAutocompleteModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
   ]
 })
 export class SearchFoodModule { }
