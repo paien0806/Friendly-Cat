@@ -26,6 +26,16 @@ export const environment = {
     params: {
       mid_v: 'W0_DiF4DlgU5OeQoRswrRcaaNHMWOL7K3ra3389ocJQv-rdOWS6Zu4AtGa7-7pjiccl0C5gm0u5UNONXuVUXcJCidRjIv9dsUd8PocNr5moiuJJ8hZla5iV0H3-8dZfASc7GgEm74679LYK2hBB-Sam6D0LAnYK9Lb0DZjaSctnHS5yYugtrYNdWoWk'
     }
+  },
+  firebaseConfig: {
+    apiKey: "AIzaSyA3i_YLXpXuHNrmrHULrqnsIj5Z919aCfw",
+    authDomain: "friendly-cat-for-you.firebaseapp.com",
+    databaseURL: "https://friendly-cat-for-you-default-rtdb.firebaseio.com",
+    projectId: "friendly-cat-for-you",
+    storageBucket: "friendly-cat-for-you.firebasestorage.app",
+    messagingSenderId: "614210455616",
+    appId: "1:614210455616:web:cedabfd68dca95ae4337a5",
+    measurementId: "G-3V3740GPG7"
   }
 };
 

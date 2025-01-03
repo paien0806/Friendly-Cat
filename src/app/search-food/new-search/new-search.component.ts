@@ -6,7 +6,10 @@ import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
 import { FamilyMartRequestService } from './services/family-mart-request.service';
 import { LoadingService } from '../../services/loading.service'
+import { AuthService } from 'src/app/services/auth.service';
+
 import { MessageDialogComponent } from 'src/app/components/message-dialog/message-dialog.component';
+import { LoginPageComponent } from 'src/app/components/login-page/login-page.component';
 import { FoodCategory, LocationData, StoreStockItem, Store, Location, FoodDetail711 } from '../model/seven-eleven.model'
 import { fStore, StoreModel, FoodDetailFamilyMart } from '../model/family-mart.model';
 
@@ -25,6 +28,8 @@ import { getDistance } from 'geolib';
   styleUrls: ['./new-search.component.scss'],
 })
 export class NewSearchComponent implements OnInit {
+  user: any = null;
+
   searchForm: FormGroup; // 表單
   searchTerm: string = '';
   searchSelectedStore: any = null;
@@ -70,8 +75,9 @@ export class NewSearchComponent implements OnInit {
     private geolocationService: GeolocationService,
     private sevenElevenService: SevenElevenRequestService,
     private familyMartService: FamilyMartRequestService,
+    private authService: AuthService,
     public loadingService: LoadingService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
   ) {
     this.searchForm = new FormGroup({
       selectedStoreName: new FormControl(''), // 控制選中的商店
@@ -121,6 +127,11 @@ export class NewSearchComponent implements OnInit {
   }
 
   init() {
+    // 訂閱 getUser 方法來獲取用戶資料
+    this.authService.getUser().subscribe(user => {
+      this.user = user;  // 設定用戶資料
+    });
+
     // // 使用 from 將 Promise 轉換為 Observable
     // this.getCityName();
 
@@ -601,9 +612,10 @@ export class NewSearchComponent implements OnInit {
     if (storeLatitude && storeLongitude) {
       this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
       if(this.totalStoresShowList[0].distance > 1 || this.totalStoresShowList[0].remainingQty === 0){
-        const dialogRef = this.dialog.open(MessageDialogComponent, {
+        const dialogRef = this.dialog.open(LoginPageComponent, {
           data: {
-            message: '該門市無庫存，請重新搜尋。'
+            message: '該門市無庫存，請重新搜尋。',
+            imgPath: 'assets/NoResult.jpg',
           }
         });
         dialogRef.afterClosed().subscribe(result => {
@@ -706,5 +718,36 @@ export class NewSearchComponent implements OnInit {
 
   fStoreName(storeName: string): string {
     return storeName ? storeName.replace('全家', '') : ''
+  }
+
+  toggleLoginStatus() {
+    if (this.user) {
+      this.authService.logout();
+      this.user = null;
+    } else {
+      const dialogRef = this.dialog.open(LoginPageComponent, {
+        data: {
+        }
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        if(result) {
+          this.authService.getUser().subscribe((user) => {
+            this.user = user;
+            if (user) {
+              this.user = user; // 更新當前用戶
+              const uid = user.uid; // 獲取 UID
+
+              // 從 Realtime Database 獲取用戶相關數據
+              this.authService.getUserData(uid).then((userData) => {
+                console.log('用戶資料:', userData);
+                // 根據需求更新頁面或存儲數據
+              }).catch((error) => {
+                console.error('獲取用戶資料失敗:', error);
+              });
+            }
+          });
+        }
+      });
+    }
   }
 }

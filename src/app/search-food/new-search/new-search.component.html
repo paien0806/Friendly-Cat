@@ -1,3 +1,11 @@
+<!-- 固定於右上角的登入按鈕 -->
+<button
+  class="fixed top-4 right-4 px-6 py-3 text-white bg-primary-default rounded-full shadow-md"
+  (click)="toggleLoginStatus()"
+  >
+  {{ user ? user.email + ' 登出'  :  ' 登入'}}
+</button>
+
 <div class="container mx-auto my-3 p-6 bg-primary-white max-w-4xl">
   <ng-container>
     <div class="flex items-center bg-primary-white justify-center mb-6 h-24">
@@ -67,8 +75,10 @@
               alt="7-Eleven Icon"
               class="w-4 h-4"
             />
-            <span>{{ store.name }}門市</span>
-            <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
+            <div class="flex flex-col">
+              <span>{{ store.name }}門市</span>
+              <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
+            </div>
           </div>
           <div *ngIf="store.label === '全家'" class="flex items-center gap-2">
             <img
@@ -76,8 +86,10 @@
               alt="FamilyMart Icon"
               class="w-4 h-4"
             />
-            <span>{{ store.name.replace('店', '') }}門市</span>
-            <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
+            <div class="flex flex-col">
+              <span>{{ store.name.replace('店', '') }}門市</span>
+              <span class="text-xs sm:text-sm text-gray-500">{{ store.addr }}</span>
+            </div>
           </div>
         </mat-option>
       </mat-autocomplete>
