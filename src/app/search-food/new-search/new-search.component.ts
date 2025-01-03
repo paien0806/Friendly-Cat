@@ -22,6 +22,8 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { getDistance } from 'geolib';
 
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 @Component({
   selector: 'app-new-search',
   templateUrl: './new-search.component.html',
@@ -70,6 +72,8 @@ export class NewSearchComponent implements OnInit {
   selectedStore?: any;
   selectedCategory?: any;
 
+  favoriteStores: any[] = [];
+
   constructor(
     private http: HttpClient,
     private geolocationService: GeolocationService,
@@ -78,6 +82,7 @@ export class NewSearchComponent implements OnInit {
     private authService: AuthService,
     public loadingService: LoadingService,
     public dialog: MatDialog,
+    private firestore: AngularFirestore,
   ) {
     this.searchForm = new FormGroup({
       selectedStoreName: new FormControl(''), // 控制選中的商店
@@ -130,6 +135,7 @@ export class NewSearchComponent implements OnInit {
     // 訂閱 getUser 方法來獲取用戶資料
     this.authService.getUser().subscribe(user => {
       this.user = user;  // 設定用戶資料
+      this.loadFavoriteStores();
     });
 
     // // 使用 from 將 Promise 轉換為 Observable
@@ -590,6 +596,7 @@ export class NewSearchComponent implements OnInit {
     this.nearby711Stores.forEach((store) => {
       const transformedStore = {
         ...store,
+        storeName: `7-11${store.StoreName}門市`,
         label: '7-11',
         distance: store.Distance, // 統一使用 `distance` 字段
         remainingQty: store.RemainingQty,
@@ -602,6 +609,7 @@ export class NewSearchComponent implements OnInit {
     this.nearbyFamilyMartStores.forEach((store) => {
       const transformedStore = {
         ...store,
+        storeName: store.name,
         label: '全家',
         distance: store.distance,
         showDistance: true
@@ -612,7 +620,7 @@ export class NewSearchComponent implements OnInit {
     if (storeLatitude && storeLongitude) {
       this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
       if(this.totalStoresShowList[0].distance > 1 || this.totalStoresShowList[0].remainingQty === 0){
-        const dialogRef = this.dialog.open(LoginPageComponent, {
+        const dialogRef = this.dialog.open(MessageDialogComponent, {
           data: {
             message: '該門市無庫存，請重新搜尋。',
             imgPath: 'assets/NoResult.jpg',
@@ -720,7 +728,7 @@ export class NewSearchComponent implements OnInit {
     return storeName ? storeName.replace('全家', '') : ''
   }
 
-  toggleLoginStatus() {
+  loginOrlogout() {
     if (this.user) {
       this.authService.logout();
       this.user = null;
@@ -733,21 +741,46 @@ export class NewSearchComponent implements OnInit {
         if(result) {
           this.authService.getUser().subscribe((user) => {
             this.user = user;
-            if (user) {
-              this.user = user; // 更新當前用戶
-              const uid = user.uid; // 獲取 UID
-
-              // 從 Realtime Database 獲取用戶相關數據
-              this.authService.getUserData(uid).then((userData) => {
-                console.log('用戶資料:', userData);
-                // 根據需求更新頁面或存儲數據
-              }).catch((error) => {
-                console.error('獲取用戶資料失敗:', error);
-              });
-            }
+            this.loadFavoriteStores();
+            // if (user) {
+            //   console.log('用戶資料:', user);
+            // }
           });
         }
       });
     }
+  }
+
+  loadFavoriteStores() {
+    if (this.user) {
+      const userRef = this.firestore.collection('users').doc(this.user.uid);
+      userRef.collection('favorites').valueChanges().subscribe(favorites => {
+        this.favoriteStores = favorites.map(fav => fav['storeName']);
+      });
+      console.log('favoriteStores', this.favoriteStores)
+    }
+  }
+
+  toggleFavorite(store: any) {
+    if (this.user) {
+      const userRef = this.firestore.collection('users').doc(this.user.uid);
+      const favoriteRef = userRef.collection('favorites').doc(store.storeName);
+
+      // 如果商店已經在喜愛清單內，刪除它
+      if (this.isFavorite(store)) {
+        favoriteRef.delete();
+      } else {
+        // 否則新增該商店為喜愛商店
+        favoriteRef.set({
+          storeName: store.storeName
+        });
+      }
+    } else {
+      console.log('用戶尚未登入');
+    }
+  }
+
+  isFavorite(store: any): boolean {
+    return this.favoriteStores.includes(store.storeName);
   }
 }

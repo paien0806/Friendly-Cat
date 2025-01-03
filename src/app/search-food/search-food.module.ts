@@ -19,13 +19,15 @@ import { EmptyInfoPipe } from '../pipes/empty-info.pipe';
 
 import { DisplayComponent } from './new-search/display/display.component';
 import { NewSearchComponent } from './new-search/new-search.component';
+import { SiderComponent } from '../components/sider/sider.component';
 
 @NgModule({
   declarations: [
     DisplayComponent,
     NewSearchComponent,
     RoundPipe,
-    EmptyInfoPipe
+    EmptyInfoPipe,
+    SiderComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,32 @@
+<mat-card class="w-80 p-4 bg-primary-light shadow-md flex flex-col items-start">
+  <!-- 登录/登出按钮 -->
+  <div class="w-full flex justify-between">
+    <button
+      mat-button
+      color="primary"
+      (click)="loginOrLogout()"
+      class="bg-primary-default text-white py-2 px-4 rounded-full font-bold"
+    >
+      {{ user ? user.email + ' 登出' : '登入' }}
+    </button>
+  </div>
+
+  <!-- 显示用户身份 -->
+  <div *ngIf="user" class="w-full">
+    <p class="text-sm text-primary-dark">{{ user?.email }}</p>
+    <p class="text-xs text-primary-dark">{{ user?.name }}</p>
+  </div>
+
+  <!-- 显示喜爱商店 -->
+  <div  class="w-full" *ngIf="user && favoriteStores.length > 0">
+    <h3 class="text-lg font-bold text-primary-default mb-2">喜爱商店</h3>
+    <div *ngFor="let store of favoriteStores" class="flex items-center space-x-2 mb-3">
+      <!-- <img
+        [src]="store.iconUrl"
+        alt="{{ store.storeName }}"
+        class="w-6 h-6 rounded-full"
+      /> -->
+      <p class="text-sm text-primary-dark">{{ store }}</p>
+    </div>
+  </div>
+</mat-card>

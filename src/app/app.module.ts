@@ -14,10 +14,14 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+
 import { SearchFoodModule } from './search-food/search-food.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageDialogComponent } from './components/message-dialog/message-dialog.component';
-import {LoginPageComponent } from './components/login-page/login-page.component'
+import { LoginPageComponent } from './components/login-page/login-page.component'
+
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideAnalytics, getAnalytics } from '@angular/fire/analytics';
@@ -44,7 +48,9 @@ import { environment } from 'src/environments/environment';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),  // 初始化 Firebase
     AngularFireAuthModule,  // 引入 Firebase 認證模組
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MatDividerModule,
+    MatCardModule
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
