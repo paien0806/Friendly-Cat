@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-sider',
@@ -6,8 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sider.component.scss'],
 })
 export class SiderComponent {
-  @Input() user: any; // 输入用户对象
-  @Input() favoriteStores: any[] = []; // 输入喜爱商店列表
+  @Input() user: any;
+  @Input() favoriteStores: any[] = [];
+
+  sevenElevenIconUrl = environment.sevenElevenUrl.icon;
+  familyMartIconUrl = environment.familyMartUrl.icon;
 
   loginOrLogout() {
     // 处理登录登出的逻辑
