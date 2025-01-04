@@ -6,7 +6,10 @@ import { GeolocationService } from 'src/app/services/geolocation.service';
 import { SevenElevenRequestService } from './services/seven-eleven-request.service';
 import { FamilyMartRequestService } from './services/family-mart-request.service';
 import { LoadingService } from '../../services/loading.service'
+import { AuthService } from 'src/app/services/auth.service';
+
 import { MessageDialogComponent } from 'src/app/components/message-dialog/message-dialog.component';
+import { LoginPageComponent } from 'src/app/components/login-page/login-page.component';
 import { FoodCategory, LocationData, StoreStockItem, Store, Location, FoodDetail711 } from '../model/seven-eleven.model'
 import { fStore, StoreModel, FoodDetailFamilyMart } from '../model/family-mart.model';
 
@@ -19,12 +22,16 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { getDistance } from 'geolib';
 
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 @Component({
   selector: 'app-new-search',
   templateUrl: './new-search.component.html',
   styleUrls: ['./new-search.component.scss'],
 })
 export class NewSearchComponent implements OnInit {
+  user: any = null;
+
   searchForm: FormGroup; // 表單
   searchTerm: string = '';
   searchSelectedStore: any = null;
@@ -65,13 +72,17 @@ export class NewSearchComponent implements OnInit {
   selectedStore?: any;
   selectedCategory?: any;
 
+  favoriteStores: any[] = [];
+
   constructor(
     private http: HttpClient,
     private geolocationService: GeolocationService,
     private sevenElevenService: SevenElevenRequestService,
     private familyMartService: FamilyMartRequestService,
+    private authService: AuthService,
     public loadingService: LoadingService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private firestore: AngularFirestore,
   ) {
     this.searchForm = new FormGroup({
       selectedStoreName: new FormControl(''), // 控制選中的商店
@@ -120,7 +131,15 @@ export class NewSearchComponent implements OnInit {
     }
   }
 
-  init() {
+  init() {    
+    // 訂閱 getUser 方法來獲取用戶資料
+    this.authService.getUser().subscribe(user => {
+      if (user && user.emailVerified) {
+        this.user = user;  // 設定用戶資料
+        this.loadFavoriteStores();
+      }
+    });
+
     // // 使用 from 將 Promise 轉換為 Observable
     // this.getCityName();
 
@@ -579,6 +598,7 @@ export class NewSearchComponent implements OnInit {
     this.nearby711Stores.forEach((store) => {
       const transformedStore = {
         ...store,
+        storeName: `7-11${store.StoreName}門市`,
         label: '7-11',
         distance: store.Distance, // 統一使用 `distance` 字段
         remainingQty: store.RemainingQty,
@@ -591,6 +611,7 @@ export class NewSearchComponent implements OnInit {
     this.nearbyFamilyMartStores.forEach((store) => {
       const transformedStore = {
         ...store,
+        storeName: store.name,
         label: '全家',
         distance: store.distance,
         showDistance: true
@@ -603,7 +624,8 @@ export class NewSearchComponent implements OnInit {
       if(this.totalStoresShowList[0].distance > 1 || this.totalStoresShowList[0].remainingQty === 0){
         const dialogRef = this.dialog.open(MessageDialogComponent, {
           data: {
-            message: '該門市無庫存，請重新搜尋。'
+            message: '該門市無庫存，請重新搜尋。',
+            imgPath: 'assets/NoResult.jpg',
           }
         });
         dialogRef.afterClosed().subscribe(result => {
@@ -706,5 +728,61 @@ export class NewSearchComponent implements OnInit {
 
   fStoreName(storeName: string): string {
     return storeName ? storeName.replace('全家', '') : ''
+  }
+
+  loginOrlogout() {
+    if (this.user) {
+      this.authService.logout();
+      this.user = null;
+      window.location.reload();
+    } else {
+      const dialogRef = this.dialog.open(LoginPageComponent, {
+        data: {
+        }
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        if(result) {
+          this.authService.getUser().subscribe((user) => {
+            if (user && user.emailVerified) {
+              this.user = user;
+              this.loadFavoriteStores();
+            }
+          });
+        }
+      });
+    }
+  }
+
+  loadFavoriteStores() {
+    if (this.user.emailVerified) {
+      const userRef = this.firestore.collection('users').doc(this.user.uid);
+      userRef.collection('favorites').valueChanges().subscribe(favorites => {
+        this.favoriteStores = favorites.map(fav => fav['storeName']);
+      });
+      console.log('favoriteStores', this.favoriteStores)
+    }
+  }
+
+  toggleFavorite(store: any) {
+    if (this.user.emailVerified) {
+      const userRef = this.firestore.collection('users').doc(this.user.uid);
+      const favoriteRef = userRef.collection('favorites').doc(store.storeName);
+
+      // 如果商店已經在喜愛清單內，刪除它
+      if (this.isFavorite(store)) {
+        favoriteRef.delete();
+      } else {
+        // 否則新增該商店為喜愛商店
+        favoriteRef.set({
+          storeName: store.storeName
+        });
+      }
+    } else {
+      console.log('用戶尚未登入或信箱未驗證');
+    }
+  }
+
+  isFavorite(store: any): boolean {
+    return this.favoriteStores.includes(store.storeName);
   }
 }
