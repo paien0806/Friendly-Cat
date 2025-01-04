@@ -4,6 +4,7 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,6 +47,7 @@ import { environment } from 'src/environments/environment';
     MatDialogModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),  // 初始化 Firebase
     AngularFireAuthModule,  // 引入 Firebase 認證模組
     AngularFireDatabaseModule,

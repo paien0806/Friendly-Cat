@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from '@angular/fire/auth';
+import { Auth, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from '@angular/fire/auth';
 import { getDatabase, ref, get } from 'firebase/database';
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app';  // Firebase
@@ -26,9 +26,18 @@ export class AuthService {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
 
-  // 註冊新帳號
-  register(email: string, password: string) {
-    return createUserWithEmailAndPassword(this.auth, email, password);
+  // 註冊新帳號並儲存暱稱
+  register(email: string, password: string, displayName: string) {
+    return createUserWithEmailAndPassword(this.auth, email, password).then((userCredential) => {
+      // 更新使用者的 displayName
+      const user = userCredential.user;
+      if (user) {
+        return updateProfile(user, { displayName: displayName }).then(() => {
+          return user; // 回傳更新後的使用者
+        });
+      }
+      return Promise.reject("使用者註冊失敗");
+    });
   }
 
   // Google OAuth2 Login

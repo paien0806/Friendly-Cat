@@ -131,7 +131,7 @@ export class NewSearchComponent implements OnInit {
     }
   }
 
-  init() {
+  init() {    
     // 訂閱 getUser 方法來獲取用戶資料
     this.authService.getUser().subscribe(user => {
       this.user = user;  // 設定用戶資料
@@ -732,6 +732,7 @@ export class NewSearchComponent implements OnInit {
     if (this.user) {
       this.authService.logout();
       this.user = null;
+      window.location.reload();
     } else {
       const dialogRef = this.dialog.open(LoginPageComponent, {
         data: {

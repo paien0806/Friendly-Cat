@@ -1,53 +1,83 @@
 <mat-dialog-content class="dialog-content">
-  <!-- Header with a Close Button in the Top Right -->
+  <!-- Header -->
   <div class="flex justify-between items-center">
-    <h2 mat-dialog-title class="text-primary-default text-xl font-semibold mb-6">登入</h2>
+    <h2 mat-dialog-title class="text-primary-default text-xl font-semibold mb-6">
+      {{ isRegister ? '註冊新帳號' : '登入' }}
+    </h2>
     <button mat-icon-button (click)="close(false)" class="text-gray-600 hover:text-gray-800 focus:outline-none">
-      <span class="material-icons">close</span> <!-- 使用 Material Icons 中的 close -->
+      <span class="material-icons">close</span>
     </button>
   </div>
 
-  <!-- Login Form -->
-  <form (ngSubmit)="login()" class="space-y-4">
+  <!-- Form -->
+  <form [formGroup]="authForm" (ngSubmit)="submitForm()" class="space-y-4">
     <div>
       <label for="email" class="text-primary-default">帳號</label>
       <input
         type="email"
         id="email"
-        [(ngModel)]="email"
-        name="email"
+        formControlName="email"
         placeholder="輸入帳號"
         class="input-field w-full p-2 border border-gray-300 rounded-md"
-        required
       />
+      <small class="text-red-500" *ngIf="f['email'].errors?.['required'] && f['email'].touched">帳號為必填</small>
+      <small class="text-red-500" *ngIf="f['email'].errors?.['email'] && f['email'].touched">請輸入有效的電子郵件</small>
     </div>
     <div>
       <label for="password" class="text-primary-default">密碼</label>
       <input
         type="password"
         id="password"
-        [(ngModel)]="password"
-        name="password"
+        formControlName="password"
         placeholder="輸入密碼"
         class="input-field w-full p-2 border border-gray-300 rounded-md"
-        required
       />
+      <small class="text-red-500" *ngIf="f['email'].errors?.['required'] && f['email'].touched">密碼為必填</small>
+      <small class="text-red-500" *ngIf="f['password'].errors?.['minlength'] && f['password'].touched">密碼至少需要6個字元</small>
     </div>
-    <!-- Error Message -->
-    <p *ngIf="errorMessage" class="error-message text-red-500 mb-4">{{ errorMessage }}</p>
+
+    <!-- 註冊頁面需要 -->
+    <div *ngIf="isRegister">
+      <div>
+        <label for="rePassword" class="text-primary-default">重新輸入密碼</label>
+        <input
+          type="password"
+          id="rePassword"
+          formControlName="rePassword"
+          placeholder="再次輸入您的密碼"
+          class="input-field w-full p-2 border border-gray-300 rounded-md"
+        />
+        <small class="text-red-500" *ngIf="authForm.errors?.['passwordsMismatch'] && f['rePassword'].touched">
+          密碼與再次輸入的密碼不一致
+        </small>
+      </div>
+      <div>
+        <label for="displayName" class="text-primary-default">暱稱</label>
+        <input
+          type="text"
+          id="displayName"
+          formControlName="displayName"
+          placeholder="怎麼稱呼您"
+          class="input-field w-full p-2 border border-gray-300 rounded-md"
+        />
+        <small class="text-red-500" *ngIf="authForm.errors?.['displayNameRequired'] && f['displayName'].touched">
+          暱稱為必填
+        </small>
+      </div>
+    </div>
+
     <button type="submit" class="btn-login w-full py-2 px-4 bg-primary-default text-white rounded-md mt-4">
-      登入
+      {{ isRegister ? '註冊新帳號' : '登入' }}
     </button>
+    <!-- Error Message -->
+    <!-- <p *ngIf="errorMessage" class="error-message text-red-500 mb-4">{{ errorMessage }}</p> -->
   </form>
 
-  <!-- Login and Register buttons in the same row -->
+  <!-- Toggle and Google Login -->
   <div class="flex justify-between items-center mt-6">
-    <!-- Register Link -->
-    <button (click)="register()" class="btn-register text-primary-default underline mr-4">
-      註冊
+    <button (click)="isRegister = !isRegister" class="btn-register text-primary-default underline mr-4">
+      {{ isRegister ? '已有帳號？登入' : '註冊' }}
     </button>
-
-    <!-- Google OAuth2 Login -->
     <button (click)="loginWithGoogle()" class="btn-google border border-gray-300 flex items-center py-2 px-4 bg-primary-light text-gray-700 rounded-md">
       <img src="assets/google.png" alt="Google Logo" class="w-5 h-5 mr-2" />
       Google 登入
