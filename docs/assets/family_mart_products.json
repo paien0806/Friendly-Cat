@@ -517,7 +517,7 @@
         "Carb": 32.6,
         "Calories": 170.0,
         "Fat": 1.6,
-        "Description": "燒丼聯名商品"
+        "Description": "使用特色鬼椒雞烘烤，配上甜鹹的招牌野郎醬，醃瓜條與蔬菜，解膩爽口。"
     },
     {
         "category": "飯糰壽司",
@@ -2251,6 +2251,26 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "星—蕃茄肉醬義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0571056.jpg",
+        "Protein": 24.5,
+        "Carb": 73.1,
+        "Calories": 506.0,
+        "Fat": 12.6,
+        "Description": "食用前需微波加熱,並儘速食用完畢；家用微波700W 150秒勿超過90度※本產品含過敏原大豆、含麩質之穀物、含牛奶羊奶其製品、含堅果類其製品。"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "星—奶油培根義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0571074.jpg",
+        "Protein": 23.9,
+        "Carb": 72.5,
+        "Calories": 585.0,
+        "Fat": 22.1,
+        "Description": "食用前需微波加熱，並儘速食用完畢；家用微波700W 150秒勿超過90度 ※本產品含過敏原大豆、含麩質之穀物、牛奶、蛋、堅果。"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "星—青醬雞肉義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0571088.jpg",
         "Protein": 28.3,
@@ -2991,6 +3011,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "三起司嘩啦嘩啦薯餅焗飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984558.jpg",
+        "Protein": 16.1,
+        "Carb": 79.1,
+        "Calories": 564.0,
+        "Fat": 20.3,
+        "Description": "三起司嘩啦嘩啦薯餅焗飯"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "蜂蜜蘋果咖哩雞歐姆蛋飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984576.jpg",
         "Protein": 17.6,
@@ -3398,16 +3428,6 @@
         "Calories": 45.2,
         "Fat": 0.1,
         "Description": "茶香口味的蛋白丁"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "維也納風味雞肉棒",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0536549.jpg",
-        "Protein": 10.3,
-        "Carb": 6.1,
-        "Calories": 195.0,
-        "Fat": 14.4,
-        "Description": "本產品可能含有骨頭，食用時請小心。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
