@@ -57,7 +57,7 @@ export class LoginPageComponent {
   submitForm() {
     if (this.authForm.invalid) {
       this.markFormGroupTouched(this.authForm);
-      this.errorMessage = '請確認以下欄位：\n' + this.collectErrors(this.authForm);
+      // this.errorMessage = '請確認以下欄位：\n' + this.collectErrors(this.authForm);
       return;
     }
 
@@ -119,15 +119,35 @@ export class LoginPageComponent {
     const { email, password } = this.authForm.value;
     this.authService
       .login(email, password)
-      .then(() => {
+      .then(userCredential => {
+        const user = userCredential.user;
+
+        console.log(user);
+  
+        // 檢查信箱是否已驗證
+        if (user && !user.emailVerified) {
+          this.errorMessage = '您的信箱尚未驗證，請先至信箱點擊驗證連結後再重新登入。';
+          return;
+        }
+  
         console.log('一般登入成功');
         this.close(true);
       })
       .catch(error => {
+        // 處理錯誤代碼
+        switch (error.code) {
+          case 'auth/invalid-credential':
+            this.errorMessage = '帳號不存在或密碼錯誤，請再試一次。';
+            break;
+          default:
+            this.errorMessage = '因不明原因登入失敗，請稍後再試。';
+            break;
+        }
+  
         console.error(error.message);
-        this.errorMessage = error.message;
       });
   }
+  
 
   // 註冊邏輯
   register() {
@@ -135,16 +155,43 @@ export class LoginPageComponent {
     this.authService
       .register(email, password, displayName)
       .then(() => {
-        this.errorMessage = '註冊成功，請重新輸入帳號密碼登入';
+        this.errorMessage = '註冊成功，請至您的信箱確認後重新登入';
         this.authForm.reset();
         this.isRegister = false; // 切回登入頁面
-        this.close(true);
+      })
+      .catch(error => {
+        switch (error.code) {
+          case 'auth/email-already-in-use':
+            this.errorMessage = '帳號已存在，請使用Google或直接登入';
+            break;
+          default:
+            this.errorMessage = '因不明原因註冊失敗，請稍後再試。';
+            break;
+        }
+      });
+  }
+
+  resendVerificationEmail() {
+    const { email, password } = this.authForm.value;
+    this.authService
+      .login(email, password)
+      .then(userCredential => {
+        const user = userCredential.user;
+
+        console.log("驗證信重發給", user);
+  
+        if (user) {
+          this.authService.sendVerificationEmail(user);
+          this.errorMessage = '驗證信已重新寄送，請檢查您的電子郵件並重新登入';
+          return;
+        }
       })
       .catch(error => {
         console.error(error.message);
-        this.errorMessage = error.message;
+        this.errorMessage = '重新寄送驗證信失敗，請稍後再試。';
       });
   }
+  
 
   // Google 登入邏輯
   loginWithGoogle() {
@@ -168,5 +215,23 @@ export class LoginPageComponent {
   // 快速存取表單控制項
   get f() {
     return this.authForm.controls;
+  }
+
+  forgotPassword() {
+    const { email } = this.authForm.value;
+  
+    if (!email) {
+      this.errorMessage = '請輸入帳號使用的電子郵件地址';
+      return;
+    }
+  
+    this.authService.forgotPassword(email)
+      .then(() => {
+        this.errorMessage = '重設密碼的郵件已發送，請檢查您的信箱';
+      })
+      .catch(error => {
+        console.error('重設密碼錯誤', error.message);
+        this.errorMessage = '發送重設密碼郵件時出錯，請稍後再試。';
+      });
   }
 }

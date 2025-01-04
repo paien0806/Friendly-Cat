@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Auth, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from '@angular/fire/auth';
+import { Auth, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, updateProfile, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from '@angular/fire/auth';
 import { getDatabase, ref, get } from 'firebase/database';
-import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app';  // Firebase
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable, map } from 'rxjs';
+import { User } from 'firebase/auth';
+import { getAuth, fetchSignInMethodsForEmail } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -26,17 +27,25 @@ export class AuthService {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
 
-  // 註冊新帳號並儲存暱稱
   register(email: string, password: string, displayName: string) {
-    return createUserWithEmailAndPassword(this.auth, email, password).then((userCredential) => {
-      // 更新使用者的 displayName
+    return createUserWithEmailAndPassword(this.auth, email, password).then(userCredential => {
       const user = userCredential.user;
+  
       if (user) {
-        return updateProfile(user, { displayName: displayName }).then(() => {
-          return user; // 回傳更新後的使用者
+        // 設定顯示名稱
+        updateProfile(user, { displayName }).then(() => {
+          console.log('使用者名稱已更新:', displayName);
         });
+  
+        // 發送驗證信件
+        sendEmailVerification(user).then(() => {
+          console.log('驗證信已發送至:', email);
+        });
+  
+        return user;
       }
-      return Promise.reject("使用者註冊失敗");
+  
+      return Promise.reject('使用者註冊失敗');
     });
   }
 
@@ -74,5 +83,39 @@ export class AuthService {
     const db = getDatabase();
     const userRef = ref(db, `users/${uid}`);
     return get(userRef).then((snapshot) => snapshot.val());
+  }
+
+  sendVerificationEmail(user: User) {
+    return sendEmailVerification(user);
+  }
+
+  resendVerificationEmail(email: string) {
+    const auth = getAuth(); // 使用原生的 Firebase Auth
+    return fetchSignInMethodsForEmail(auth, email).then(methods => {
+      if (methods.includes('password')) {
+        const user = auth.currentUser;
+        if (user) {
+          return sendEmailVerification(user);
+        } else {
+          return Promise.reject(new Error('請先登入以寄送驗證信。'));
+        }
+      } else {
+        return Promise.reject(new Error('此電子郵件未註冊。'));
+      }
+    });
+  }  
+
+  // 發送重設密碼的電子郵件
+  forgotPassword(email: string): Promise<void> {
+    return this.afAuth.sendPasswordResetEmail(email)
+      .then(() => {
+        // 成功後的操作
+        console.log('重設密碼的郵件已發送');
+      })
+      .catch(error => {
+        // 失敗後的錯誤處理
+        console.error('重設密碼郵件發送失敗', error);
+        throw error;
+      });
   }
 }

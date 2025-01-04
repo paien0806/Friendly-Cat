@@ -134,8 +134,10 @@ export class NewSearchComponent implements OnInit {
   init() {    
     // 訂閱 getUser 方法來獲取用戶資料
     this.authService.getUser().subscribe(user => {
-      this.user = user;  // 設定用戶資料
-      this.loadFavoriteStores();
+      if (user && user.emailVerified) {
+        this.user = user;  // 設定用戶資料
+        this.loadFavoriteStores();
+      }
     });
 
     // // 使用 from 將 Promise 轉換為 Observable
@@ -741,11 +743,10 @@ export class NewSearchComponent implements OnInit {
       dialogRef.afterClosed().subscribe(result => {
         if(result) {
           this.authService.getUser().subscribe((user) => {
-            this.user = user;
-            this.loadFavoriteStores();
-            // if (user) {
-            //   console.log('用戶資料:', user);
-            // }
+            if (user && user.emailVerified) {
+              this.user = user;
+              this.loadFavoriteStores();
+            }
           });
         }
       });
@@ -753,7 +754,7 @@ export class NewSearchComponent implements OnInit {
   }
 
   loadFavoriteStores() {
-    if (this.user) {
+    if (this.user.emailVerified) {
       const userRef = this.firestore.collection('users').doc(this.user.uid);
       userRef.collection('favorites').valueChanges().subscribe(favorites => {
         this.favoriteStores = favorites.map(fav => fav['storeName']);
@@ -763,7 +764,7 @@ export class NewSearchComponent implements OnInit {
   }
 
   toggleFavorite(store: any) {
-    if (this.user) {
+    if (this.user.emailVerified) {
       const userRef = this.firestore.collection('users').doc(this.user.uid);
       const favoriteRef = userRef.collection('favorites').doc(store.storeName);
 
@@ -777,7 +778,7 @@ export class NewSearchComponent implements OnInit {
         });
       }
     } else {
-      console.log('用戶尚未登入');
+      console.log('用戶尚未登入或信箱未驗證');
     }
   }
 
