@@ -1914,7 +1914,7 @@
         "name": "永心鳳茶剝皮辣椒燉雞盅",
         "kcal": "130",
         "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_286.png",
+        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_175.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -4605,6 +4605,16 @@
         "kcal": "362",
         "price": "49",
         "image": "https://www.7-11.com.tw/freshfoods/13_luwei/images/luwei_74.png",
+        "special_sale": "False",
+        "new": "",
+        "content": ""
+    },
+    {
+        "category": "13_luwei",
+        "name": "御料小館滷味燙",
+        "kcal": "370",
+        "price": "89",
+        "image": "https://www.7-11.com.tw/freshfoods/13_luwei/images/luwei_201.png",
         "special_sale": "False",
         "new": "",
         "content": ""
