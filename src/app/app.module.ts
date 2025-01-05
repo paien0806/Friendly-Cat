@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { SearchFoodModule } from './search-food/search-food.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -52,7 +53,8 @@ import { environment } from 'src/environments/environment';
     AngularFireAuthModule,  // 引入 Firebase 認證模組
     AngularFireDatabaseModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),

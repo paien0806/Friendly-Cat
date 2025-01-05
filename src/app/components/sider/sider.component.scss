@@ -1,0 +1,28 @@
+.toolbar {
+    background-color: theme('colors.primary.light');
+    color: theme('colors.primary.default');
+}
+
+.mat-menu-item button {
+    width: 100%;
+}
+
+.menu-header {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: theme('colors.primary.default');
+}
+
+.store-icon {
+    width: 20px;
+    /* 圖片寬度 */
+    height: 20px;
+    /* 圖片高度 */
+    margin-right: 8px;
+    /* 圖片與文字的間距 */
+    display: inline-block;
+    /* 將圖片設為行內塊元素 */
+    vertical-align: middle;
+    /* 圖片與文字垂直居中對齊 */
+}

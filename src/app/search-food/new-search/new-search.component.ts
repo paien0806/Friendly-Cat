@@ -770,11 +770,28 @@ export class NewSearchComponent implements OnInit {
 
       // 如果商店已經在喜愛清單內，刪除它
       if (this.isFavorite(store)) {
-        favoriteRef.delete();
+        const dialogRef = this.dialog.open(MessageDialogComponent, {
+          data: {
+            title: "取消收藏",
+            message: `已將『${store.storeName}』從收藏中移除`,
+            imgPath: "assets/S__222224406.jpg"
+          }
+        });
+        dialogRef.afterClosed().subscribe(result => {
+          favoriteRef.delete();
+        });
       } else {
-        // 否則新增該商店為喜愛商店
-        favoriteRef.set({
-          storeName: store.storeName
+        const dialogRef = this.dialog.open(MessageDialogComponent, {
+          data: {
+            title: "新增收藏",
+            message: `『${store.storeName}』已加入您的收藏店家`,
+            imgPath: "assets/S__222224406.jpg"
+          }
+        });
+        dialogRef.afterClosed().subscribe(result => {
+          favoriteRef.set({
+            storeName: store.storeName,
+          });
         });
       }
     } else {

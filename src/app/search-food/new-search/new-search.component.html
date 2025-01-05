@@ -1,12 +1,4 @@
-<!-- 固定於右上角的登入按鈕 -->
-<button
-  class="fixed top-4 right-4 px-6 py-3 text-white bg-primary-default rounded-full shadow-md"
-  (click)="loginOrlogout()"
-  >
-  {{ user ? user.displayName + ' 登出'  :  ' 登入'}}
-</button>
-
-<!-- <app-sider [user]="user" [favoriteStores]="favoriteStores"></app-sider> -->
+<app-sider [user]="user" [favoriteStores]="favoriteStores"></app-sider>
 
 <div class="container mx-auto my-3 p-6 bg-primary-white max-w-4xl">
   <ng-container>

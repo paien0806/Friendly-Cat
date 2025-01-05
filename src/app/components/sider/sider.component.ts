@@ -13,7 +13,7 @@ export class SiderComponent {
   sevenElevenIconUrl = environment.sevenElevenUrl.icon;
   familyMartIconUrl = environment.familyMartUrl.icon;
 
-  loginOrLogout() {
+  loginOrlogout() {
     // 处理登录登出的逻辑
     if (this.user) {
       // 登出逻辑

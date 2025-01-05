@@ -1,32 +1,33 @@
-<mat-card class="w-80 p-4 bg-primary-light shadow-md flex flex-col items-start">
-  <!-- 登录/登出按钮 -->
-  <div class="w-full flex justify-between">
-    <button
-      mat-button
-      color="primary"
-      (click)="loginOrLogout()"
-      class="bg-primary-default text-white py-2 px-4 rounded-full font-bold"
-    >
-      {{ user ? user.email + ' 登出' : '登入' }}
-    </button>
-  </div>
+<mat-toolbar class="toolbar">
+  <!-- 菜單按鈕 -->
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
 
-  <!-- 显示用户身份 -->
-  <div *ngIf="user" class="w-full">
-    <p class="text-sm text-primary-dark">{{ user?.email }}</p>
-    <p class="text-xs text-primary-dark">{{ user?.name }}</p>
-  </div>
+  <span>友善黑貓 Friendly Cat</span>
+  <span class="example-spacer"></span>
 
-  <!-- 显示喜爱商店 -->
-  <div  class="w-full" *ngIf="user && favoriteStores.length > 0">
-    <h3 class="text-lg font-bold text-primary-default mb-2">喜爱商店</h3>
-    <div *ngFor="let store of favoriteStores" class="flex items-center space-x-2 mb-3">
-      <img
-        [src]="store.includes('7-11') ? sevenElevenIconUrl : familyMartIconUrl"
-        alt="{{ store }}"
-        class="w-6 h-6 rounded-full"
-      />
-      <p class="text-sm text-primary-dark">{{ store }}</p>
+  <mat-menu #menu="matMenu">
+    <!-- 標題 -->
+    <div class="menu-header">
+      您收藏的店家
     </div>
-  </div>
-</mat-card>
+    <mat-divider></mat-divider>
+
+    <!-- 喜愛店家清單 -->
+    <ng-container *ngFor="let store of favoriteStores">
+      <button mat-menu-item class="custom-menu-item">
+        <!-- 根據店名判斷顯示圖標 -->
+        <img *ngIf="store.includes('7-11')" [src]="sevenElevenIconUrl" alt="7-11" class="store-icon" />
+        <img *ngIf="store.includes('全家')" [src]="familyMartIconUrl" alt="FamilyMart" class="store-icon" />
+        {{ store }}
+      </button>      
+    </ng-container>
+
+    <button mat-menu-item>
+      <button class="px-3 py-1 text-white bg-primary-default rounded-full shadow-sm" (click)="loginOrlogout()">
+        {{ user ? user.displayName + ' 登出' : ' 登入' }}
+      </button>
+    </button>
+  </mat-menu>
+</mat-toolbar>

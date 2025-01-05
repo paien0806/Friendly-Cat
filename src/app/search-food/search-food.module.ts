@@ -13,6 +13,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete'; // 用�
 import { MatButtonModule } from '@angular/material/button'; // 用於 mat-button
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { RoundPipe } from '../pipes/round.pipe';
 import { EmptyInfoPipe } from '../pipes/empty-info.pipe';
@@ -42,6 +45,9 @@ import { SiderComponent } from '../components/sider/sider.component';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatDividerModule
   ]
 })
 export class SearchFoodModule { }
