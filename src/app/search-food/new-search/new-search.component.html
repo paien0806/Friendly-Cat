@@ -1,4 +1,10 @@
-<app-sider [user]="user" [favoriteStores]="favoriteStores"></app-sider>
+<app-sider
+  [user]="user"
+  [favoriteStores]="favoriteStores"
+  (userUpdated)="onUserUpdated($event)"
+  (favoriteStoresUpdated)="onFavoriteStoresUpdated($event)"
+></app-sider>
+
 
 <div class="container mx-auto my-3 p-6 bg-primary-white max-w-4xl">
   <ng-container>

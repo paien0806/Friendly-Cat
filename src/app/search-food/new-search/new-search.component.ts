@@ -9,7 +9,6 @@ import { LoadingService } from '../../services/loading.service'
 import { AuthService } from 'src/app/services/auth.service';
 
 import { MessageDialogComponent } from 'src/app/components/message-dialog/message-dialog.component';
-import { LoginPageComponent } from 'src/app/components/login-page/login-page.component';
 import { FoodCategory, LocationData, StoreStockItem, Store, Location, FoodDetail711 } from '../model/seven-eleven.model'
 import { fStore, StoreModel, FoodDetailFamilyMart } from '../model/family-mart.model';
 
@@ -730,29 +729,6 @@ export class NewSearchComponent implements OnInit {
     return storeName ? storeName.replace('全家', '') : ''
   }
 
-  loginOrlogout() {
-    if (this.user) {
-      this.authService.logout();
-      this.user = null;
-      window.location.reload();
-    } else {
-      const dialogRef = this.dialog.open(LoginPageComponent, {
-        data: {
-        }
-      });
-      dialogRef.afterClosed().subscribe(result => {
-        if(result) {
-          this.authService.getUser().subscribe((user) => {
-            if (user && user.emailVerified) {
-              this.user = user;
-              this.loadFavoriteStores();
-            }
-          });
-        }
-      });
-    }
-  }
-
   loadFavoriteStores() {
     if (this.user.emailVerified) {
       const userRef = this.firestore.collection('users').doc(this.user.uid);
@@ -801,5 +777,16 @@ export class NewSearchComponent implements OnInit {
 
   isFavorite(store: any): boolean {
     return this.favoriteStores.includes(store.storeName);
+  }
+
+  onUserUpdated(user: any) {
+    this.user = user; // 更新用戶狀態
+    if (user) {
+      this.loadFavoriteStores(); // 加載收藏店家
+    }
+  }
+
+  onFavoriteStoresUpdated(favoriteStores: any) {
+    this.favoriteStores = favoriteStores; // 更新用戶狀態
   }
 }
