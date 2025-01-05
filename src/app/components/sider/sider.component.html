@@ -10,7 +10,7 @@
   <mat-menu #menu="matMenu">
     <!-- 標題 -->
     <div class="menu-header">
-      您收藏的店家
+      {{user ? "您收藏的店家" : "登入後可收藏店家"}}
     </div>
     <mat-divider></mat-divider>
 
@@ -25,9 +25,9 @@
     </ng-container>
 
     <button mat-menu-item>
-      <button class="px-3 py-1 text-white bg-primary-default rounded-full shadow-sm" (click)="loginOrlogout()">
+      <div class="px-3 py-1 text-white text-center bg-primary-default rounded-full shadow-sm" (click)="loginOrlogout()">
         {{ user ? user.displayName + ' 登出' : ' 登入' }}
-      </button>
+      </div>
     </button>
   </mat-menu>
 </mat-toolbar>
