@@ -26,3 +26,8 @@
     vertical-align: middle;
     /* 圖片與文字垂直居中對齊 */
 }
+
+.text-with-shadow {
+  font-weight: bold; /* 設定粗體 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 加入陰影，2px 2px 是陰影偏移，5px 是模糊半徑，rgba 定義顏色 */
+}
