@@ -14,7 +14,7 @@
       <h5 class="text-primary-default sm:text-xl font-bold ml-4 py-1 px-3 border-2 border-primary-default rounded-full bg-primary-light inline-block">
         <!-- 當 loading$ 為 true 時顯示進度條和訊息 -->
         <div *ngIf="loadingService.loading$ | async" class="loading-container">
-          <span class="text-primary-default lg:text-md sm:text-xl">
+          <span class="flex items-center text-primary-default lg:text-md sm:text-xl">
             {{ loadingService.message$ | async }}
             <mat-progress-spinner mode="indeterminate" diameter="20" class="text-primary-default"></mat-progress-spinner>
           </span> <!-- 顯示傳入的訊息 -->
