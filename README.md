@@ -12,7 +12,7 @@
     1. 商品圖片
     2. 商品價格
     3. 商品資訊
-
+* 會員功能 - 收藏喜愛的商店
 
 ## DEMO
 #### 連結： [友善黑貓](https://alan-cheng.github.io/friendly-time/)
@@ -32,7 +32,14 @@
 >
 > - 點選食物分類，顯示該分類下各商品詳細資訊
 >
->![友善黑貓商品業](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/store_product.png?raw=true "商品頁面")
+>![友善黑貓商品頁](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/store_product.png?raw=true "商品頁面")
+>
+>
+>### 3. 會員功能
+>
+> - 加入會員後可由導覽列登入，商店右方愛心可將該店加入收藏
+>
+>![友善黑貓會員功能](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/member.png?raw=true "會員功能")
 
 
 
@@ -40,13 +47,15 @@
 
 
 
->| Left columns  | Right columns |
+>| 技術  | 版本 |
 >| ------------- |:-------------:|
 >| Angular       | ^14.2.0      |
 >| Node.js       | 18.20.4      |
 >| TypeScript    | ~4.7.2       |
 >| Tailwindcss   | ^2.2.19      |
 >| Python        | 3.12.4       |
+>| Firebase Authentication      | --           |
+>| Firebase Storage        | --       |
 
 ---
 
@@ -80,5 +89,3 @@
 >
 >`npx cap open ios`
 >
-
-
