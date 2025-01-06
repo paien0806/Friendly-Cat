@@ -16,6 +16,7 @@ export class SiderComponent {
 
   @Output() userUpdated = new EventEmitter<any>();
   @Output() favoriteStoresUpdated = new EventEmitter<any>();
+  @Output() searchStore = new EventEmitter<string>();
 
   sevenElevenIconUrl = environment.sevenElevenUrl.icon;
   familyMartIconUrl = environment.familyMartUrl.icon;
@@ -36,7 +37,7 @@ export class SiderComponent {
         width: '300px', // 設定對話框的寬度
         data: {
           title: "登出成功",
-          message: `您已順利登出`,
+          message: `已順利登出`,
           imgPath: "assets/S__222224406.jpg"
         }
       });
@@ -59,5 +60,9 @@ export class SiderComponent {
         }
       });
     }
+  }
+
+  onSearchStore(store: any) {
+    this.searchStore.emit(store);
   }
 }

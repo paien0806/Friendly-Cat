@@ -130,7 +130,7 @@ export class NewSearchComponent implements OnInit {
     }
   }
 
-  init() {    
+  init() {
     // 訂閱 getUser 方法來獲取用戶資料
     this.authService.getUser().subscribe(user => {
       if (user && user.emailVerified) {
@@ -142,7 +142,7 @@ export class NewSearchComponent implements OnInit {
     // // 使用 from 將 Promise 轉換為 Observable
     // this.getCityName();
 
-    this.loadingService.show();  // 显示加载动画
+    this.loadingService.show("載入商店資訊中，請稍後喵");  // 显示加载动画
 
     // 取得711跟全家的商品詳細資訊
     this.sevenElevenService.getFoodDetails().subscribe((data) => {
@@ -237,7 +237,7 @@ export class NewSearchComponent implements OnInit {
     const input = (event.target as HTMLInputElement).value;  // 確保這裡的值是有效的
 
     if (input.length >= 2) {
-      this.loadingService.show();
+      this.loadingService.show("正在為您搜尋店家");
 
       this.unifiedDropDownList = [];
 
@@ -472,23 +472,23 @@ export class NewSearchComponent implements OnInit {
     }
   }
 
-  onOptionSelect(event: MatAutocompleteSelectedEvent): void {
+  onOptionSelect(event: MatAutocompleteSelectedEvent | null, lat?: number, lng?: number): void {
     // 從選中的選項中獲取值
-    this.searchSelectedStore = event.option.value.name;
+    this.searchSelectedStore = event?.option.value.name;
 
-    this.searchTerm =  event.option.value.label + event.option.value.name.replace('店', '') + '門市'
+    this.searchTerm =  event?.option.value.label + event?.option.value.name.replace('店', '') + '門市'
 
-    const label = event.option.value.label;
-    const storeName = event.option.value.name;
-    const storeLongitude = Number(event.option.value.longitude);
-    const storeLatitude = Number(event.option.value.latitude);
+    const label = event?.option.value.label;
+    const storeName = event?.option.value.name;
+    const storeLongitude = lng !== undefined ? lng : Number(event?.option.value.longitude);
+    const storeLatitude = lat !== undefined ? lat : Number(event?.option.value.latitude);
     // console.log('Store Type:', label);
     // console.log('Store Name:', storeName);
     // console.log('Store Longitude:', storeLongitude);
     // console.log('Store Latitude:', storeLatitude);
     // console.log('Selected Option:', event.option.value);
 
-    this.loadingService.show()
+    this.loadingService.show("正在搜尋店家喵")
     from(this.geolocationService.getCurrentPosition())
       .pipe(
         switchMap((position) => {
@@ -543,7 +543,7 @@ export class NewSearchComponent implements OnInit {
     this.unifiedDropDownList = [];
     this.searchTerm = '';
 
-    this.loadingService.show()
+    this.loadingService.show("搜尋店家中喵")
     from(this.geolocationService.getCurrentPosition())
       .pipe(
         switchMap((position) => {
@@ -733,9 +733,9 @@ export class NewSearchComponent implements OnInit {
     if (this.user.emailVerified) {
       const userRef = this.firestore.collection('users').doc(this.user.uid);
       userRef.collection('favorites').valueChanges().subscribe(favorites => {
-        this.favoriteStores = favorites.map(fav => fav['storeName']);
+        this.favoriteStores = favorites;
+        console.log('favoriteStores', this.favoriteStores)
       });
-      console.log('favoriteStores', this.favoriteStores)
     }
   }
 
@@ -764,10 +764,23 @@ export class NewSearchComponent implements OnInit {
             imgPath: "assets/S__222224406.jpg"
           }
         });
+
         dialogRef.afterClosed().subscribe(result => {
-          favoriteRef.set({
-            storeName: store.storeName,
-          });
+          const favoriteData: any = {
+            storeName: store.storeName
+          };
+          // 依照商店設定選擇性的資料
+          if (store.StoreName) {
+            favoriteData.store711Name = store.StoreName;
+            favoriteData.label = '7-11';
+          }
+          if (store.longitude && store.latitude) {
+            favoriteData.storeFLongitude = store.longitude;
+            favoriteData.storeFLatitude = store.latitude;
+            favoriteData.label = '全家';
+          }
+
+          favoriteRef.set(favoriteData);
         });
       }
     } else {
@@ -776,7 +789,7 @@ export class NewSearchComponent implements OnInit {
   }
 
   isFavorite(store: any): boolean {
-    return this.favoriteStores.includes(store.storeName);
+    return this.favoriteStores.some(favStore => favStore.storeName === store.storeName);
   }
 
   onUserUpdated(user: any) {
@@ -788,5 +801,63 @@ export class NewSearchComponent implements OnInit {
 
   onFavoriteStoresUpdated(favoriteStores: any) {
     this.favoriteStores = favoriteStores; // 更新用戶狀態
+  }
+
+  onFavoriteStoreSearch(store: any) {
+    console.log("搜尋收藏店家", store);
+    this.loadingService.show("幫你找看看唷");
+    // 用最白癡的方法，把店家的經緯度找出來，直接用onOptionSelect()搞一波
+    var lat = 0;
+    var lng = 0;
+    if (store.label === "全家") {
+      lat = store.storeFLatitude;
+      lng = store.storeFLongitude;
+      this.onOptionSelect(null, lat, lng);
+      this.searchTerm = '';
+    }
+    else {
+      from(this.geolocationService.getCurrentPosition())
+        .pipe(
+          switchMap((position) => {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+
+            this.latitude = lat;
+            this.longitude = lng;
+
+            return of([]);
+          }),
+          switchMap((res) => {
+            if(res) {
+              return this.sevenElevenService.getAccessToken();
+            }
+            else{
+              return [];
+            }
+          }),
+          switchMap((token: any) => {
+            if (token && token.element) {
+              sessionStorage.setItem('711Token', token.element);
+              return this.sevenElevenService.getStoreByAddress(store.store711Name);
+            } else {
+              // 如果 token 沒有成功返回，返回空陣列
+              return of([]);
+            }
+          })
+        ).subscribe(
+          (res) => {
+            if (res) {
+              lat = res.element[0].Latitude;
+              lng = res.element[0].Longitude;
+              console.log(lat, lng);
+              this.onOptionSelect(null, lat, lng);
+              this.searchTerm = '';
+            } else {
+              console.error('Failed to fetch food categories');
+              this.loadingService.hide();
+            }
+          }
+        );
+    }
   }
 }

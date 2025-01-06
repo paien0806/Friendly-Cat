@@ -16,11 +16,11 @@
 
     <!-- 喜愛店家清單 -->
     <ng-container *ngFor="let store of favoriteStores">
-      <button *ngIf="user" mat-menu-item class="custom-menu-item">
+      <button *ngIf="user" mat-menu-item class="custom-menu-item" (click)="onSearchStore(store)">
         <!-- 根據店名判斷顯示圖標 -->
-        <img *ngIf="store.includes('7-11')" [src]="sevenElevenIconUrl" alt="7-11" class="store-icon" />
-        <img *ngIf="store.includes('全家')" [src]="familyMartIconUrl" alt="FamilyMart" class="store-icon" />
-        {{ store }}
+        <img *ngIf="store.storeName.includes('7-11')" [src]="sevenElevenIconUrl" alt="7-11" class="store-icon" />
+        <img *ngIf="store.storeName.includes('全家')" [src]="familyMartIconUrl" alt="FamilyMart" class="store-icon" />
+        <span class="text-gray-600">{{ store.storeName }}</span>
       </button>
     </ng-container>
 

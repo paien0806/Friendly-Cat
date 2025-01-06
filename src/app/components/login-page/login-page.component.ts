@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { MatDialogRef } from '@angular/material/dialog';
-
+import { MatDialog } from '@angular/material/dialog';
+import { MessageDialogComponent } from '../message-dialog/message-dialog.component';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -16,7 +17,8 @@ export class LoginPageComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private dialogRef: MatDialogRef<LoginPageComponent>
+    private dialogRef: MatDialogRef<LoginPageComponent>,
+    public dialog: MatDialog,
   ) {
     // 初始化表單
     this.authForm = this.fb.group(
@@ -131,7 +133,17 @@ export class LoginPageComponent {
         }
 
         console.log('一般登入成功');
-        this.close(true);
+        const dialogRef = this.dialog.open(MessageDialogComponent, {
+          width: '300px', // 設定對話框的寬度
+          data: {
+            title: "登入成功",
+            message: `${user.displayName}～歡迎回來喵`,
+            imgPath: "assets/S__222224406.jpg"
+          }
+        });
+        dialogRef.afterClosed().subscribe((result) => {
+          this.close(true);
+        });
       })
       .catch(error => {
         // 處理錯誤代碼
@@ -197,9 +209,20 @@ export class LoginPageComponent {
   loginWithGoogle() {
     this.authService
       .loginWithGoogle()
-      .then(() => {
+      .then((userCredential) => {
+        const user = userCredential.user;
         console.log('Google登入成功');
-        this.close(true);
+        const dialogRef = this.dialog.open(MessageDialogComponent, {
+          width: '300px', // 設定對話框的寬度
+          data: {
+            title: "登入成功",
+            message: `${user.displayName}～歡迎回來喵`,
+            imgPath: "assets/S__222224406.jpg"
+          }
+        });
+        dialogRef.afterClosed().subscribe((result) => {
+          this.close(true);
+        });
       })
       .catch(error => {
         console.error(error.message);
