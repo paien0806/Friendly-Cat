@@ -4561,6 +4561,16 @@
     },
     {
         "category": "冷凍食品",
+        "title": "豆乳雞",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0928100.jpg",
+        "Protein": 16.0,
+        "Carb": 15.4,
+        "Calories": 228.0,
+        "Fat": 11.4,
+        "Description": "1.微波加熱後高溫，請小心撕口處冒出的高溫蒸氣。 2.微波後，請於2小時內食用完畢。 3.本包裝不可水煮，不可火烤加熱。 4.本產品經剔骨處理，偶有碎骨殘留，請小心食用並注意。"
+    },
+    {
+        "category": "冷凍食品",
         "title": "十三香風味炸雞",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0959593.jpg",
         "Protein": 14.1,
