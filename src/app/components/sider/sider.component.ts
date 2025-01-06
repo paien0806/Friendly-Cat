@@ -33,6 +33,7 @@ export class SiderComponent {
       this.userUpdated.emit(null);
       this.favoriteStoresUpdated.emit([]);
       const dialogRef = this.dialog.open(MessageDialogComponent, {
+        width: '300px', // 設定對話框的寬度
         data: {
           title: "登出成功",
           message: `您已順利登出`,
@@ -44,6 +45,7 @@ export class SiderComponent {
       });
     } else {
       const dialogRef = this.dialog.open(LoginPageComponent, {
+        width: '500px', // 設定對話框的寬度
         data: {},
       });
       dialogRef.afterClosed().subscribe(result => {

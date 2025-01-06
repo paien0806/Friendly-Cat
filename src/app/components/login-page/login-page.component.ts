@@ -45,13 +45,13 @@ export class LoginPageComponent {
   displayNameRequiredValidator(group: AbstractControl): ValidationErrors | null {
     const isRegister = this.isRegister; // 使用目前的 isRegister 狀態
     const displayName = group.get('displayName')?.value;
-  
+
     if (isRegister && (!displayName || displayName.trim() === '')) {
       return { displayNameRequired: true };
     }
     return null;
   }
-  
+
 
   // 提交表單
   submitForm() {
@@ -123,13 +123,13 @@ export class LoginPageComponent {
         const user = userCredential.user;
 
         console.log(user);
-  
+
         // 檢查信箱是否已驗證
         if (user && !user.emailVerified) {
           this.errorMessage = '您的信箱尚未驗證，請先至信箱點擊驗證連結後再重新登入。';
           return;
         }
-  
+
         console.log('一般登入成功');
         this.close(true);
       })
@@ -143,11 +143,11 @@ export class LoginPageComponent {
             this.errorMessage = '因不明原因登入失敗，請稍後再試。';
             break;
         }
-  
+
         console.error(error.message);
       });
   }
-  
+
 
   // 註冊邏輯
   register() {
@@ -179,7 +179,7 @@ export class LoginPageComponent {
         const user = userCredential.user;
 
         console.log("驗證信重發給", user);
-  
+
         if (user) {
           this.authService.sendVerificationEmail(user);
           this.errorMessage = '驗證信已重新寄送，請檢查您的電子郵件並重新登入';
@@ -191,7 +191,7 @@ export class LoginPageComponent {
         this.errorMessage = '重新寄送驗證信失敗，請稍後再試。';
       });
   }
-  
+
 
   // Google 登入邏輯
   loginWithGoogle() {
@@ -203,7 +203,7 @@ export class LoginPageComponent {
       })
       .catch(error => {
         console.error(error.message);
-        this.errorMessage = error.message;
+        this.errorMessage = "Google登入失敗，請重新再試";
       });
   }
 
@@ -219,12 +219,12 @@ export class LoginPageComponent {
 
   forgotPassword() {
     const { email } = this.authForm.value;
-  
+
     if (!email) {
       this.errorMessage = '請輸入帳號使用的電子郵件地址';
       return;
     }
-  
+
     this.authService.forgotPassword(email)
       .then(() => {
         this.errorMessage = '重設密碼的郵件已發送，請檢查您的信箱';
