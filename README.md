@@ -67,7 +67,7 @@
 >
 >- 輸出靜態資源於/docs，加上專案名稱前綴為GitHub-Pages存取路徑：
 >
->`ng build --configuration=production --base-href /friendly-time/ >--output-path=docs --aot`
+>`ng build --configuration=production --base-href /Friendly-Cat/ >--output-path=docs --aot`
 >
 >- 輸出於專案根目錄之/dict/<專案名稱>：
 >
