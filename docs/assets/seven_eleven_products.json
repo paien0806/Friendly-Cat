@@ -3261,16 +3261,6 @@
     },
     {
         "category": "11_bread",
-        "name": "開運桂圓糕",
-        "kcal": "",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_785.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
         "name": "巧克力可麗露",
         "kcal": "176",
         "price": "49",
@@ -4228,6 +4218,16 @@
         "special_sale": "False",
         "new": "",
         "content": "茉莉茶凍口感Q彈，帶有淡淡茉莉花香風味。"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊杏仁豆腐",
+        "kcal": "132",
+        "price": "40",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_647.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "古早味濃郁杏仁香"
     },
     {
         "category": "12_steam",

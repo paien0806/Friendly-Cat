@@ -921,16 +921,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配玫瑰乳酪鹽可頌",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0873248.jpg",
-        "Protein": 6.7,
-        "Carb": 30.2,
-        "Calories": 228.0,
-        "Fat": 8.9,
-        "Description": "台灣玫瑰花瓣醬 X 澳洲乳酪"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配熱帶水果乳酪軟歐",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0873252.jpg",
         "Protein": 6.7,
@@ -1241,6 +1231,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配墨西哥葡萄奶酥麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0947867.jpg",
+        "Protein": 9.7,
+        "Carb": 57.2,
+        "Calories": 467.0,
+        "Fat": 22.2,
+        "Description": "拆封後請儘早食用"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "二配勁辣老司雞麵包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0948368.jpg",
         "Protein": 9.0,
@@ -1388,6 +1388,16 @@
         "Calories": 175.0,
         "Fat": 2.1,
         "Description": "糖漬香橘丁 X 酒漬葡萄乾 X 蔓越莓乾"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配辣傑克乳酪小土司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1007834.jpg",
+        "Protein": 9.2,
+        "Carb": 39.6,
+        "Calories": 304.0,
+        "Fat": 12.1,
+        "Description": "微波後請小心燙口"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -3071,6 +3081,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "紅燒纖牛若風味燴飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1017936.jpg",
+        "Protein": 16.3,
+        "Carb": 95.0,
+        "Calories": 576.0,
+        "Fat": 14.5,
+        "Description": "非素食專業產線，本產品含部分肉桂原料，孕婦請審慎食用"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "財神指定大雞腿油飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1019160.jpg",
         "Protein": 41.0,
@@ -3631,16 +3651,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "藻鹽鮮嫩雞柳條",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0792098.jpg",
-        "Protein": 17.0,
-        "Carb": 2.4,
-        "Calories": 83.4,
-        "Fat": 0.6,
-        "Description": "使用淡路島藻鹽製成之舒肥雞柳."
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "藻鹽醬滷豆皮",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0792139.jpg",
         "Protein": 9.4,
@@ -3908,6 +3918,16 @@
         "Calories": 151.0,
         "Fat": 6.3,
         "Description": "優格鮪魚沙拉"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "薑汁醬油番茄杯（截切）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0988693.jpg",
+        "Protein": 1.4,
+        "Carb": 11.7,
+        "Calories": 59.6,
+        "Fat": 0.8,
+        "Description": "當季水果汁多鮮美"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -6107,7 +6127,7 @@
         "Carb": 21.5,
         "Calories": 139.0,
         "Fat": 3.3,
-        "Description": "濃郁絲滑口感 無添加香料 真實可可香 呈現大人味的苦甜滋味"
+        "Description": "濃郁絲滑口感，無添加香料 真實可可香，呈現大人味的苦甜滋味"
     },
     {
         "category": "飲品",
