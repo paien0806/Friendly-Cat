@@ -551,6 +551,16 @@
     },
     {
         "category": "飯糰壽司",
+        "title": "年年魷魚香菇炊飯飯卷",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1018655.jpg",
+        "Protein": 5.8,
+        "Carb": 34.8,
+        "Calories": 191.0,
+        "Fat": 3.2,
+        "Description": "年年魷魚香菇炊飯飯卷"
+    },
+    {
+        "category": "飯糰壽司",
         "title": "一配真明太子乳酪細卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1018687.jpg",
         "Protein": 3.6,
@@ -2481,16 +2491,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "粉紅醬菇菇義大利麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0842378.jpg",
-        "Protein": 12.9,
-        "Carb": 60.9,
-        "Calories": 404.0,
-        "Fat": 12.2,
-        "Description": "※本產品含過敏原麩質之穀物、大豆、堅果、牛奶類及其製品。※食用前需微波加熱，並儘速食用完畢；家用微波700W150秒勿超過90℃。"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "麻婆豆腐波浪拌麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0842700.jpg",
         "Protein": 24.6,
@@ -3007,7 +3007,7 @@
         "Carb": 100.8,
         "Calories": 683.0,
         "Fat": 19.1,
-        "Description": "使用手做漢堡排"
+        "Description": "話題品份量漢堡排，以日式人氣中濃醬汁開發，賣相仿日式漢堡排定食，吸引年輕族群滿足冬季口腹之慾"
     },
     {
         "category": "飯麵粥品",
