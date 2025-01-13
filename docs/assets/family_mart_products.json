@@ -547,7 +547,7 @@
         "Carb": 37.5,
         "Calories": 190.0,
         "Fat": 2.3,
-        "Description": "明太子入料，高級感提升"
+        "Description": "選用日本明太子創始店-FUKUYA的粒明太子，搭配昆布柴魚高湯製成的厚切玉子燒"
     },
     {
         "category": "飯糰壽司",
@@ -2588,6 +2588,16 @@
         "Calories": 618.0,
         "Fat": 24.2,
         "Description": "水水造咖聯名商品"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "南義火辣牛哨子筆尖麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864879.jpg",
+        "Protein": 34.0,
+        "Carb": 80.5,
+        "Calories": 613.0,
+        "Fat": 17.2,
+        "Description": "※本產品含過敏原含麩質之穀物、牛奶、大豆、蛋類及其製品 ※本產品含薑絲纖維屬正常現象，請安心食用。 ※本產品含有蠶豆，不適合對其敏感體質者食用"
     },
     {
         "category": "飯麵粥品",
