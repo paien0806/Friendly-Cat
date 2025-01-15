@@ -332,7 +332,7 @@
     {
         "category": "1_Ricerolls",
         "name": "新極上飯糰-冠軍烏魚子",
-        "kcal": "",
+        "kcal": "*",
         "price": "59",
         "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_474.png",
         "special_sale": "False",

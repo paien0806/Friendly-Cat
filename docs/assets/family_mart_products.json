@@ -3071,6 +3071,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "美味蟹煲",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1017940.jpg",
+        "Protein": 16.2,
+        "Carb": 88.3,
+        "Calories": 482.0,
+        "Fat": 7.3,
+        "Description": "美味蟹煲"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "財神指定大雞腿油飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1019160.jpg",
         "Protein": 41.0,
@@ -3078,6 +3088,16 @@
         "Calories": 871.0,
         "Fat": 29.2,
         "Description": "糯米口感Ｑ彈越嚼越香，鋪上滿滿香菇再搭配肉質鮮嫩的大雞腿，令人食指大動越吃越滋味絕對深得你心!"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "泰式海鮮麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1019215.jpg",
+        "Protein": 20.7,
+        "Carb": 52.9,
+        "Calories": 377.0,
+        "Fat": 9.2,
+        "Description": "天使麵滑Ｑ口感，拌入蔬菜及海鮮沾附濃郁香醇的湯汁厚實酸勁加上辣感完全開胃涮嘴！"
     },
     {
         "category": "關東煮、湯品",
@@ -3418,16 +3438,6 @@
         "Calories": 121.3,
         "Fat": 1.8,
         "Description": "以國產雞胸肉製成，清新檸檬香氣與剛好的微辣，單吃或搭配生菜、海鮮，都能吃到最爽口的泰式風味。"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "彩蔬洋芋火腿沙拉",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0413630.jpg",
-        "Protein": 4.2,
-        "Carb": 18.3,
-        "Calories": 131.0,
-        "Fat": 4.6,
-        "Description": "彩蔬洋芋火腿沙拉"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -6157,7 +6167,7 @@
         "Carb": 10.9,
         "Calories": 148.0,
         "Fat": 8.4,
-        "Description": "國際SQF驗證 就是高品質"
+        "Description": "用心講究 感受美好"
     },
     {
         "category": "飲品",
@@ -6257,7 +6267,7 @@
         "Carb": 10.9,
         "Calories": 102.0,
         "Fat": 3.2,
-        "Description": "國際SQF驗證 就是高品質"
+        "Description": "用心講究 感受美好"
     },
     {
         "category": "飲品",
