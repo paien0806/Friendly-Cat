@@ -1417,7 +1417,7 @@
         "Carb": 43.2,
         "Calories": 265.0,
         "Fat": 6.0,
-        "Description": "丹麥鮮奶油乾酪 X 獨特雞腿造型"
+        "Description": "丹麥鮮奶油乾酪 X 燻雞風味內餡"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2578,16 +2578,6 @@
         "Calories": 642.0,
         "Fat": 30.0,
         "Description": "※本產品含過敏原麩質之穀物、牛奶、大豆、蛋、頭足類及其製品。※食用前需微波加熱，並儘速食用完畢。家用微波700W150秒勿超過90℃"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "古典波隆那肉醬寬扁麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864910.jpg",
-        "Protein": 24.5,
-        "Carb": 78.1,
-        "Calories": 613.0,
-        "Fat": 22.4,
-        "Description": "※本產品含過敏原麩質之穀物、大豆、牛奶、蛋及其製品。\t\t※食用前需微波加熱，並儘速食用完畢。家用微波700W150秒勿超過90℃\t\t\t\t\t\t\t\t"
     },
     {
         "category": "飯麵粥品",
@@ -6193,11 +6183,11 @@
         "category": "飲品",
         "title": "林鳳營全脂鮮乳３３８ｍｌ",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2720063.jpg",
-        "Protein": 10.8,
-        "Carb": 16.2,
-        "Calories": 221.0,
-        "Fat": 12.5,
-        "Description": "國際SQF驗證 就是高品質"
+        "Protein": 7.7,
+        "Carb": 11.5,
+        "Calories": 157.0,
+        "Fat": 8.9,
+        "Description": "用心講究 感受美好"
     },
     {
         "category": "飲品",
@@ -6253,11 +6243,11 @@
         "category": "飲品",
         "title": "林鳳營低脂鮮乳３３８ｍｌ",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2750014.jpg",
-        "Protein": 10.8,
-        "Carb": 16.2,
-        "Calories": 150.0,
-        "Fat": 4.7,
-        "Description": "國際SQF驗證 就是高品質"
+        "Protein": 7.7,
+        "Carb": 11.5,
+        "Calories": 107.0,
+        "Fat": 3.4,
+        "Description": "用心講究 感受美好"
     },
     {
         "category": "飲品",
@@ -6723,9 +6713,9 @@
         "category": "飲品",
         "title": "統一多多活菌發酵乳原味３００",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2860223.jpg",
-        "Protein": 4.0,
-        "Carb": 56.8,
-        "Calories": 243.0,
+        "Protein": 3.9,
+        "Carb": 51.0,
+        "Calories": 220.0,
         "Fat": 0.0,
         "Description": "原味多多"
     },
