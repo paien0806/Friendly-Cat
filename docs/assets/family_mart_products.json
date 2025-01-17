@@ -11,16 +11,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "星—二配大飯糰江原道雪蟹蟹膏",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0058818.jpg",
-        "Protein": 5.7,
-        "Carb": 41.7,
-        "Calories": 256.0,
-        "Fat": 7.4,
-        "Description": "網紅金針菇聯名商品.韓國超人氣話題商品-蟹膏入料，搭配麻油拌飯.製成韓式蟹膏沙拉,讓整體順口度更加提升"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配鮭魚海帶芽飯糰",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0083582.jpg",
         "Protein": 4.1,
@@ -331,16 +321,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "二配大飯糰辣醬魷魚",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0834505.jpg",
-        "Protein": 7.8,
-        "Carb": 42.0,
-        "Calories": 218.0,
-        "Fat": 2.1,
-        "Description": "金家ㄟ聯名，韓式風味辣醬配上Q彈魷魚，彷彿身處韓國"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "二配蠔香鮑菇筍丁飯糰",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0839046.jpg",
         "Protein": 4.4,
@@ -517,7 +497,7 @@
         "Carb": 32.6,
         "Calories": 170.0,
         "Fat": 1.6,
-        "Description": "燒丼聯名商品"
+        "Description": "使用特色鬼椒雞烘烤，配上甜鹹的招牌野郎醬，醃瓜條與蔬菜，解膩爽口。"
     },
     {
         "category": "飯糰壽司",
@@ -550,24 +530,34 @@
         "Description": "小心魚刺"
     },
     {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配典藏蜂蜜蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0025091.jpg",
-        "Protein": 3.8,
-        "Carb": 33.9,
-        "Calories": 180.0,
-        "Fat": 3.3,
-        "Description": "1. 選用進口龍眼蜜，風味香醇濃郁2. 紅外線烤爐搭配特製木框烤盤，口感綿密濕潤"
+        "category": "飯糰壽司",
+        "title": "二配真明太子玉子飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1018332.jpg",
+        "Protein": 5.0,
+        "Carb": 37.5,
+        "Calories": 190.0,
+        "Fat": 2.3,
+        "Description": "選用日本明太子創始店-FUKUYA的粒明太子，搭配昆布柴魚高湯製成的厚切玉子燒"
     },
     {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配杯子蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0025114.jpg",
-        "Protein": 1.8,
-        "Carb": 12.5,
-        "Calories": 100.0,
-        "Fat": 4.7,
-        "Description": "添加瑞穗鮮乳，奶香濃郁，營養滿分"
+        "category": "飯糰壽司",
+        "title": "年年魷魚香菇炊飯飯卷",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1018655.jpg",
+        "Protein": 5.8,
+        "Carb": 34.8,
+        "Calories": 191.0,
+        "Fat": 3.2,
+        "Description": "年年魷魚香菇炊飯飯卷"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "一配真明太子乳酪細卷",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1018687.jpg",
+        "Protein": 3.6,
+        "Carb": 30.2,
+        "Calories": 174.0,
+        "Fat": 4.3,
+        "Description": "選用日本明太子創始店粒明太子真MAKOTO，明太子搭配奶油乳酪醬"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -841,16 +831,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配加州莓果乳酪軟歐",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0765518.jpg",
-        "Protein": 6.9,
-        "Carb": 37.1,
-        "Calories": 233.0,
-        "Fat": 6.3,
-        "Description": "加州蔓越莓 X 澳洲奶油乳酪 X 荷蘭雜糧粉"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "二配雙莓莓煉乳滿餡",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0768370.jpg",
         "Protein": 6.5,
@@ -861,33 +841,13 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配鹹奶油手撕包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0789766.jpg",
-        "Protein": 10.4,
-        "Carb": 57.2,
-        "Calories": 491.0,
-        "Fat": 24.6,
-        "Description": "微波後請小心燙口"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配雙餡巧克力夾心蛋糕",
+        "title": "一配醇黑巧克力夾心蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0791860.jpg",
         "Protein": 5.9,
-        "Carb": 41.7,
-        "Calories": 356.0,
-        "Fat": 18.4,
+        "Carb": 41.0,
+        "Calories": 422.0,
+        "Fat": 26.0,
         "Description": "包裝內含脫氧包，請勿食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配巧克力扁可頌",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0798785.jpg",
-        "Protein": 5.7,
-        "Carb": 41.9,
-        "Calories": 356.0,
-        "Fat": 18.5,
-        "Description": "此產品不可微波"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -898,16 +858,6 @@
         "Calories": 347.1,
         "Fat": 15.1,
         "Description": "表面黑點為焦糖化反應屬自然現象，請安心食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "二配香草芋泥夾心土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0829362.jpg",
-        "Protein": 5.8,
-        "Carb": 33.7,
-        "Calories": 205.0,
-        "Fat": 5.2,
-        "Description": "綿密芋泥餡&滑順香草奶霜"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -951,46 +901,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配巧克力生排包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0853749.jpg",
-        "Protein": 10.8,
-        "Carb": 65.8,
-        "Calories": 428.0,
-        "Fat": 13.6,
-        "Description": "微波後請小心燙口"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配蜜蘋奶酥小土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0862209.jpg",
-        "Protein": 8.6,
-        "Carb": 54.3,
-        "Calories": 357.0,
-        "Fat": 11.8,
-        "Description": "微波後請小心燙口"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配椪糖紅茶捲蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0862213.jpg",
-        "Protein": 5.5,
-        "Carb": 23.5,
-        "Calories": 286.1,
-        "Fat": 18.9,
-        "Description": "本產品請勿微波；內附脫氧包，請勿食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "二配薄荷巧克力夾心土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0862772.jpg",
-        "Protein": 5.6,
-        "Carb": 32.6,
-        "Calories": 257.0,
-        "Fat": 11.6,
-        "Description": "沁涼薄荷+甜苦巧克力"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "二配伯爵可可鬆餅",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0862809.jpg",
         "Protein": 6.1,
@@ -1008,16 +918,6 @@
         "Calories": 217.0,
         "Fat": 6.7,
         "Description": "屏東玫瑰奶霜+綜合莓果餡"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配玫瑰乳酪鹽可頌",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0873248.jpg",
-        "Protein": 6.7,
-        "Carb": 30.2,
-        "Calories": 228.0,
-        "Fat": 8.9,
-        "Description": "台灣玫瑰花瓣醬 X 澳洲乳酪"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1048,26 +948,6 @@
         "Calories": 96.0,
         "Fat": 3.6,
         "Description": "鹹香芝麻味 X 口感有勁"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "二配薄荷巧克力麻吉麵包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0881734.jpg",
-        "Protein": 5.5,
-        "Carb": 43.5,
-        "Calories": 277.0,
-        "Fat": 9.1,
-        "Description": "沁涼薄荷巧克力 X Q彈麻糬"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配蜂蜜奶油手撕包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0881934.jpg",
-        "Protein": 11.1,
-        "Carb": 65.4,
-        "Calories": 439.0,
-        "Fat": 14.8,
-        "Description": "麵包體表面褐色小點，屬梅納反應，為正常現象"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1351,6 +1231,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配墨西哥葡萄奶酥麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0947867.jpg",
+        "Protein": 9.7,
+        "Carb": 57.2,
+        "Calories": 467.0,
+        "Fat": 22.2,
+        "Description": "拆封後請儘早食用"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "二配勁辣老司雞麵包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0948368.jpg",
         "Protein": 9.0,
@@ -1377,7 +1267,7 @@
         "Carb": 32.6,
         "Calories": 203.0,
         "Fat": 4.8,
-        "Description": "起司紅醬 X 濃郁乾酪條 X 帕瑪森起司"
+        "Description": "起司紅醬 X 濃郁乾酪條 X 帕馬森起司"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1433,10 +1323,10 @@
         "category": "麵包、吐司、蛋糕",
         "title": "一配紅寶石可可軟歐",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0982956.jpg",
-        "Protein": 5.4,
-        "Carb": 33.2,
-        "Calories": 199.0,
-        "Fat": 5.0,
+        "Protein": 5.7,
+        "Carb": 34.7,
+        "Calories": 209.0,
+        "Fat": 5.3,
         "Description": "添加熊本石臼研磨糯小麥 X 明治可可粉"
     },
     {
@@ -1501,6 +1391,36 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配辣傑克乳酪小土司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1007834.jpg",
+        "Protein": 9.2,
+        "Carb": 39.6,
+        "Calories": 304.0,
+        "Fat": 12.1,
+        "Description": "微波後請小心燙口"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配好奶奶酥金磚",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1011944.jpg",
+        "Protein": 9.1,
+        "Carb": 47.3,
+        "Calories": 353.6,
+        "Fat": 14.4,
+        "Description": "以湯種燙麵工序讓吐司更保濕與柔軟，以奶油及牛奶和蛋熬煮獨家法式奶酥，香甜而不膩，居家回溫自然奶香依然猶存"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配雞腿造型麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1020672.jpg",
+        "Protein": 9.6,
+        "Carb": 43.2,
+        "Calories": 265.0,
+        "Fat": 6.0,
+        "Description": "丹麥鮮奶油乾酪 X 燻雞風味內餡"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配丹麥菠蘿可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1820062.jpg",
         "Protein": 7.9,
@@ -1544,10 +1464,10 @@
         "title": "二配海苔肉鬆沙拉麵包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1870071.jpg",
         "Protein": 9.5,
-        "Carb": 40.5,
-        "Calories": 375.0,
-        "Fat": 19.4,
-        "Description": "炒焙台灣豬肉 在地風味"
+        "Carb": 40.9,
+        "Calories": 366.0,
+        "Fat": 18.3,
+        "Description": "炒焙台灣豬肉x柔軟麵包"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1951,16 +1871,6 @@
     },
     {
         "category": "三明治、漢堡",
-        "title": "羅勒菠菠豆纖堡",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0857593.jpg",
-        "Protein": 4.4,
-        "Carb": 33.9,
-        "Calories": 267.0,
-        "Fat": 12.6,
-        "Description": "羅勒菠菠豆纖堡"
-    },
-    {
-        "category": "三明治、漢堡",
         "title": "彩蔬洋芋三明治",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0857616.jpg",
         "Protein": 7.1,
@@ -2111,6 +2021,16 @@
     },
     {
         "category": "三明治、漢堡",
+        "title": "切達海鮮雙饗三明治",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0988998.jpg",
+        "Protein": 8.3,
+        "Carb": 24.8,
+        "Calories": 193.0,
+        "Fat": 6.8,
+        "Description": "切達海鮮雙饗三明治"
+    },
+    {
+        "category": "三明治、漢堡",
         "title": "滿滿起司燻腸洋芋堡",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0994096.jpg",
         "Protein": 13.0,
@@ -2118,6 +2038,16 @@
         "Calories": 321.0,
         "Fat": 13.0,
         "Description": "滿滿起司燻腸洋芋堡"
+    },
+    {
+        "category": "三明治、漢堡",
+        "title": "黃金滿袋熔岩匹克堡",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1021787.jpg",
+        "Protein": 12.5,
+        "Carb": 42.7,
+        "Calories": 392.0,
+        "Fat": 19.0,
+        "Description": "黃金滿袋熔岩匹克堡"
     },
     {
         "category": "三明治、漢堡",
@@ -2221,26 +2151,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "星—日式豬排佐咖哩歐姆蛋燴飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0399193.jpg",
-        "Protein": 31.4,
-        "Carb": 101.6,
-        "Calories": 771.0,
-        "Fat": 26.5,
-        "Description": "※豬肉內含有肌紅蛋白，故肉質粉紅並非為未熟，敬請安心食用\t"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—香草雞排佐白醬歐姆蛋燴飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0399393.jpg",
-        "Protein": 25.7,
-        "Carb": 101.4,
-        "Calories": 662.0,
-        "Fat": 17.1,
-        "Description": "日式與西式歐姆蛋的結合"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "星—醬燒炙烤親子丼",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0399402.jpg",
         "Protein": 24.8,
@@ -2338,6 +2248,26 @@
         "Calories": 677.0,
         "Fat": 15.7,
         "Description": "金咖哩濃厚辛辣咖哩飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "星—蕃茄肉醬義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0571056.jpg",
+        "Protein": 24.5,
+        "Carb": 73.1,
+        "Calories": 506.0,
+        "Fat": 12.6,
+        "Description": "食用前需微波加熱,並儘速食用完畢；家用微波700W 150秒勿超過90度※本產品含過敏原大豆、含麩質之穀物、含牛奶羊奶其製品、含堅果類其製品。"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "星—奶油培根義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0571074.jpg",
+        "Protein": 23.9,
+        "Carb": 72.5,
+        "Calories": 585.0,
+        "Fat": 22.1,
+        "Description": "食用前需微波加熱，並儘速食用完畢；家用微波700W 150秒勿超過90度 ※本產品含過敏原大豆、含麩質之穀物、牛奶、蛋、堅果。"
     },
     {
         "category": "飯麵粥品",
@@ -2466,8 +2396,8 @@
         "Protein": 13.4,
         "Carb": 44.2,
         "Calories": 282.0,
-        "Fat": 58.0,
-        "Description": "軟Q米飯與海鮮高湯稍烹煮，保留米飯口感吸附鮮甜湯頭搭配豐富配料讓人欲罷不能~"
+        "Fat": 5.8,
+        "Description": "每顆米粒吸收湯頭的精華，濃郁的油蔥酥香氣加上蝦米、西芹層層堆疊搭上海鮮配料，吃完滿滿的幸福感。"
     },
     {
         "category": "飯麵粥品",
@@ -2531,16 +2461,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "粉紅醬菇菇義大利麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0842378.jpg",
-        "Protein": 12.9,
-        "Carb": 60.9,
-        "Calories": 404.0,
-        "Fat": 12.2,
-        "Description": "※本產品含過敏原麩質之穀物、大豆、堅果、牛奶類及其製品。※食用前需微波加熱，並儘速食用完畢；家用微波700W150秒勿超過90℃。"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "麻婆豆腐波浪拌麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0842700.jpg",
         "Protein": 24.6,
@@ -2601,16 +2521,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "植蔬雙饗餐盒",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0852589.jpg",
-        "Protein": 17.9,
-        "Carb": 79.1,
-        "Calories": 530.0,
-        "Fat": 15.8,
-        "Description": "※本產品非素食專門產線生產※內含老薑粗纖維為原物料特性屬正常現象※蔬菜因氣候季節變化微調"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "秘傳醬汁日式炒麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0857052.jpg",
         "Protein": 17.8,
@@ -2641,33 +2551,23 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "日式柴魚茶泡鰻魚飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0863241.jpg",
-        "Protein": 16.7,
-        "Carb": 62.8,
-        "Calories": 376.0,
-        "Fat": 6.4,
-        "Description": "小心魚刺"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "什錦海之味炊飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0863255.jpg",
-        "Protein": 15.2,
-        "Carb": 99.6,
-        "Calories": 506.0,
-        "Fat": 5.3,
-        "Description": "什錦海之味炊飯"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "經典滷肉飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864079.jpg",
         "Protein": 18.6,
         "Carb": 81.8,
         "Calories": 618.0,
         "Fat": 24.2,
-        "Description": "以台式油蔥肉燥搭配秋木耳以及烤蔥蛋、薑味筍絲及香腸片，撒蒜蔥油酥提升香氣。"
+        "Description": "水水造咖聯名商品"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "南義火辣牛哨子筆尖麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864879.jpg",
+        "Protein": 34.0,
+        "Carb": 80.5,
+        "Calories": 613.0,
+        "Fat": 17.2,
+        "Description": "※本產品含過敏原含麩質之穀物、牛奶、大豆、蛋類及其製品 ※本產品含薑絲纖維屬正常現象，請安心食用。 ※本產品含有蠶豆，不適合對其敏感體質者食用"
     },
     {
         "category": "飯麵粥品",
@@ -2678,16 +2578,6 @@
         "Calories": 642.0,
         "Fat": 30.0,
         "Description": "※本產品含過敏原麩質之穀物、牛奶、大豆、蛋、頭足類及其製品。※食用前需微波加熱，並儘速食用完畢。家用微波700W150秒勿超過90℃"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "古典波隆那肉醬寬扁麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864910.jpg",
-        "Protein": 24.5,
-        "Carb": 78.1,
-        "Calories": 613.0,
-        "Fat": 22.4,
-        "Description": "※本產品含過敏原麩質之穀物、大豆、牛奶、蛋及其製品。\t\t※食用前需微波加熱，並儘速食用完畢。家用微波700W150秒勿超過90℃\t\t\t\t\t\t\t\t"
     },
     {
         "category": "飯麵粥品",
@@ -2777,7 +2667,7 @@
         "Carb": 66.6,
         "Calories": 481.0,
         "Fat": 10.4,
-        "Description": "搭配多種蔬菜，讓商品賣相更加鮮豔，使商品值感更加提升"
+        "Description": "※雞肉易含細碎硬骨，請小心食用※雞胸肉黑點屬天然辛香料染色，可安心食用。"
     },
     {
         "category": "飯麵粥品",
@@ -2797,7 +2687,7 @@
         "Carb": 61.6,
         "Calories": 451.0,
         "Fat": 11.1,
-        "Description": "一次補充多種蔬菜及動植物性蛋白質"
+        "Description": "營養師監製商品"
     },
     {
         "category": "飯麵粥品",
@@ -3087,7 +2977,7 @@
         "Carb": 100.8,
         "Calories": 683.0,
         "Fat": 19.1,
-        "Description": "使用手做漢堡排"
+        "Description": "話題品份量漢堡排，以日式人氣中濃醬汁開發，賣相仿日式漢堡排定食，吸引年輕族群滿足冬季口腹之慾"
     },
     {
         "category": "飯麵粥品",
@@ -3111,6 +3001,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "三起司嘩啦嘩啦薯餅焗飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984558.jpg",
+        "Protein": 16.1,
+        "Carb": 79.1,
+        "Calories": 564.0,
+        "Fat": 20.3,
+        "Description": "三起司嘩啦嘩啦薯餅焗飯"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "蜂蜜蘋果咖哩雞歐姆蛋飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984576.jpg",
         "Protein": 17.6,
@@ -3131,6 +3031,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "青青乳酪生義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0993468.jpg",
+        "Protein": 26.7,
+        "Carb": 70.8,
+        "Calories": 702.0,
+        "Fat": 34.5,
+        "Description": "※本產品含過敏原含麩質之穀物、牛奶、大豆、堅果、花生、蛋、螺貝類及其製品。※內含九層塔，粗纖維屬正常現象。 ※白色粉末為起司粉，此為正常現象。"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "小熊維尼餐盒",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1000387.jpg",
         "Protein": 8.4,
@@ -3138,6 +3048,46 @@
         "Calories": 260.0,
         "Fat": 5.8,
         "Description": "小熊維尼餐盒"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "紅燒纖牛若風味燴飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1017936.jpg",
+        "Protein": 16.3,
+        "Carb": 95.0,
+        "Calories": 576.0,
+        "Fat": 14.5,
+        "Description": "非素食專業產線，本產品含部分肉桂原料，孕婦請審慎食用"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "美味蟹煲",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1017940.jpg",
+        "Protein": 16.2,
+        "Carb": 88.3,
+        "Calories": 482.0,
+        "Fat": 7.3,
+        "Description": "美味蟹煲"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "財神指定大雞腿油飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1019160.jpg",
+        "Protein": 41.0,
+        "Carb": 111.7,
+        "Calories": 871.0,
+        "Fat": 29.2,
+        "Description": "糯米口感Ｑ彈越嚼越香，鋪上滿滿香菇再搭配肉質鮮嫩的大雞腿，令人食指大動越吃越滋味絕對深得你心!"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "泰式海鮮麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1019215.jpg",
+        "Protein": 20.7,
+        "Carb": 52.9,
+        "Calories": 377.0,
+        "Fat": 9.2,
+        "Description": "天使麵滑Ｑ口感，拌入蔬菜及海鮮沾附濃郁香醇的湯汁厚實酸勁加上辣感完全開胃涮嘴！"
     },
     {
         "category": "關東煮、湯品",
@@ -3361,16 +3311,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "桃木燻雞胸",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0147413.jpg",
-        "Protein": 20.1,
-        "Carb": 0.5,
-        "Calories": 102.2,
-        "Fat": 2.2,
-        "Description": "拆開後，即可食用，亦可加熱後食用"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "季節水果拼盤（截切）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0193046.jpg",
         "Protein": 1.2,
@@ -3441,6 +3381,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "青森王林蘋果（截切盒）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0338163.jpg",
+        "Protein": 0.2,
+        "Carb": 18.1,
+        "Calories": 74.1,
+        "Fat": 0.1,
+        "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "雞汁油蔥手工麵線",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0344516.jpg",
         "Protein": 9.2,
@@ -3481,16 +3431,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "彩蔬洋芋火腿沙拉",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0413630.jpg",
-        "Protein": 4.2,
-        "Carb": 18.3,
-        "Calories": 131.0,
-        "Fat": 4.6,
-        "Description": "彩蔬洋芋火腿沙拉"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "履歷子彈蓮霧（截切盒）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0448677.jpg",
         "Protein": 0.6,
@@ -3518,26 +3458,6 @@
         "Calories": 45.2,
         "Fat": 0.1,
         "Description": "茶香口味的蛋白丁"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "維也納風味雞肉棒",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0536549.jpg",
-        "Protein": 10.3,
-        "Carb": 6.1,
-        "Calories": 195.0,
-        "Fat": 14.4,
-        "Description": "本產品可能含有骨頭，食用時請小心。"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "蒜香紐奧良風味雞Ｑ丸",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0573858.jpg",
-        "Protein": 12.8,
-        "Carb": 3.4,
-        "Calories": 109.8,
-        "Fat": 5.0,
-        "Description": "蛋白質補充Ｑ彈新食感，以國產生鮮雞胸肉製成，濃郁蒜香配上微辣尾韻，給你越吃越涮嘴的營養健身補給。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -3601,16 +3521,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "麻油風味嫩雞胸",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0659626.jpg",
-        "Protein": 20.9,
-        "Carb": 3.2,
-        "Calories": 129.7,
-        "Fat": 3.7,
-        "Description": "本產品已充分熟化，產品橫切面帶有些許粉紅色或紅色血管為正常現象"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "雪梨（截切）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0659967.jpg",
         "Protein": 0.4,
@@ -3638,16 +3548,6 @@
         "Calories": 162.0,
         "Fat": 5.4,
         "Description": "香辣醬粉絲煲"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "青花椒麻嫩雞胸",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0703255.jpg",
-        "Protein": 19.4,
-        "Carb": 3.7,
-        "Calories": 125.7,
-        "Fat": 3.7,
-        "Description": "1. 本產品經剔骨處理，偶有碎骨殘留，請小心食用並注意。 2. 本產品已充分熟化，產品橫切面帶有些許"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -3731,16 +3631,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "藻鹽鮮嫩雞柳條",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0792098.jpg",
-        "Protein": 17.0,
-        "Carb": 2.4,
-        "Calories": 83.4,
-        "Fat": 0.6,
-        "Description": "使用淡路島藻鹽製成之舒肥雞柳."
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "藻鹽醬滷豆皮",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0792139.jpg",
         "Protein": 9.4,
@@ -3801,16 +3691,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "春水鰹香豆乳嫩雞柳",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0841154.jpg",
-        "Protein": 18.0,
-        "Carb": 3.4,
-        "Calories": 101.8,
-        "Fat": 1.8,
-        "Description": "本產品已充分熟化，產品特性具有些為筋膜及橫切面帶有些許粉紅色或紅色血管為正常現象。"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "春水招牌辣醬嫩雞胸",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0841572.jpg",
         "Protein": 20.1,
@@ -3838,16 +3718,6 @@
         "Calories": 43.2,
         "Fat": 0.1,
         "Description": "白色果肉香甜清脆"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "涼拌越式麵沙拉",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0867372.jpg",
-        "Protein": 9.7,
-        "Carb": 31.2,
-        "Calories": 206.0,
-        "Fat": 4.7,
-        "Description": "涼拌越式麵沙拉"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -4001,6 +3871,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "雙月剝皮辣椒珍珠香腸",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0917234.jpg",
+        "Protein": 6.8,
+        "Carb": 8.2,
+        "Calories": 202.5,
+        "Fat": 15.9,
+        "Description": "1.\t微波加熱過程會有短暫膨脹現象，並發出小聲響(因產品含有油脂)，此屬正常現象請安心操作。 2.\t微波前，請先撕開封口，並依照指示微波，加熱後請小心燙手及燙口。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "履歷木瓜（截切—盒）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0917575.jpg",
         "Protein": 1.0,
@@ -4021,6 +3901,26 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "肉骨茶風味嫩雞胸",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0982415.jpg",
+        "Protein": 20.3,
+        "Carb": 2.7,
+        "Calories": 110.0,
+        "Fat": 2.0,
+        "Description": "1.本產品已充分熟化，產品特性具有些為筋膜及橫切面帶有些許粉紅色或紅色血管為正常現象。 2.本產品經"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "薑汁醬油番茄杯（截切）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0988693.jpg",
+        "Protein": 1.4,
+        "Carb": 11.7,
+        "Calories": 59.6,
+        "Fat": 0.8,
+        "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "水梨（截切）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1310110.jpg",
         "Protein": 0.8,
@@ -4036,6 +3936,16 @@
         "Protein": 1.5,
         "Carb": 17.2,
         "Calories": 77.5,
+        "Fat": 0.3,
+        "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "愛文芒果（截切）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1310679.jpg",
+        "Protein": 0.0,
+        "Carb": 17.6,
+        "Calories": 75.5,
         "Fat": 0.3,
         "Description": "當季水果汁多鮮美"
     },
@@ -4228,16 +4138,6 @@
         "Calories": 154.0,
         "Fat": 5.3,
         "Description": "健身風潮，提供低脂、優質蛋白質訴求"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "甲霸大熱狗",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1630536.jpg",
-        "Protein": 9.8,
-        "Carb": 7.0,
-        "Calories": 193.0,
-        "Fat": 14.0,
-        "Description": "本產品已熟，覆熱即可食用，微波、煎、煮、烤均合適。門市微波按2；家庭式600W-800W 約30秒。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -4728,6 +4628,16 @@
         "Calories": 239.3,
         "Fat": 13.3,
         "Description": "微波後請於2小時內食用完畢。"
+    },
+    {
+        "category": "冷凍食品",
+        "title": "豆乳雞",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0928100.jpg",
+        "Protein": 16.0,
+        "Carb": 15.4,
+        "Calories": 228.0,
+        "Fat": 11.4,
+        "Description": "1.微波加熱後高溫，請小心撕口處冒出的高溫蒸氣。 2.微波後，請於2小時內食用完畢。 3.本包裝不可水煮，不可火烤加熱。 4.本產品經剔骨處理，偶有碎骨殘留，請小心食用並注意。"
     },
     {
         "category": "冷凍食品",
@@ -5981,16 +5891,6 @@
     },
     {
         "category": "飲品",
-        "title": "義美黑可可植物蛋白奶",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0445342.jpg",
-        "Protein": 21.2,
-        "Carb": 30.8,
-        "Calories": 340.0,
-        "Fat": 14.7,
-        "Description": "無添加防腐劑、香料、色素；特選法國可可粉；蛋白質含量5.3g/100ml。"
-    },
-    {
-        "category": "飲品",
         "title": "光泉高鈣鮮豆漿",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0474274.jpg",
         "Protein": 15.3,
@@ -6217,7 +6117,7 @@
         "Carb": 21.5,
         "Calories": 139.0,
         "Fat": 3.3,
-        "Description": "濃郁絲滑口感 無添加香料 真實可可香 呈現大人味的苦甜滋味"
+        "Description": "濃郁絲滑口感，無添加香料 真實可可香，呈現大人味的苦甜滋味"
     },
     {
         "category": "飲品",
@@ -6228,6 +6128,16 @@
         "Calories": 112.8,
         "Fat": 5.6,
         "Description": "健康食品認證-調節血脂。本產品供保健用，請依建議攝取量食用。"
+    },
+    {
+        "category": "飲品",
+        "title": "選—義美無加糖高纖豆奶９００",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1010611.jpg",
+        "Protein": 10.2,
+        "Carb": 10.5,
+        "Calories": 119.0,
+        "Fat": 5.4,
+        "Description": "富含膳食纖維"
     },
     {
         "category": "飲品",
@@ -6247,7 +6157,7 @@
         "Carb": 10.9,
         "Calories": 148.0,
         "Fat": 8.4,
-        "Description": "國際SQF驗證 就是高品質"
+        "Description": "用心講究 感受美好"
     },
     {
         "category": "飲品",
@@ -6273,11 +6183,11 @@
         "category": "飲品",
         "title": "林鳳營全脂鮮乳３３８ｍｌ",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2720063.jpg",
-        "Protein": 10.8,
-        "Carb": 16.2,
-        "Calories": 221.0,
-        "Fat": 12.5,
-        "Description": "國際SQF驗證 就是高品質"
+        "Protein": 7.7,
+        "Carb": 11.5,
+        "Calories": 157.0,
+        "Fat": 8.9,
+        "Description": "用心講究 感受美好"
     },
     {
         "category": "飲品",
@@ -6333,11 +6243,11 @@
         "category": "飲品",
         "title": "林鳳營低脂鮮乳３３８ｍｌ",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2750014.jpg",
-        "Protein": 10.8,
-        "Carb": 16.2,
-        "Calories": 150.0,
-        "Fat": 4.7,
-        "Description": "國際SQF驗證 就是高品質"
+        "Protein": 7.7,
+        "Carb": 11.5,
+        "Calories": 107.0,
+        "Fat": 3.4,
+        "Description": "用心講究 感受美好"
     },
     {
         "category": "飲品",
@@ -6347,7 +6257,7 @@
         "Carb": 10.9,
         "Calories": 102.0,
         "Fat": 3.2,
-        "Description": "國際SQF驗證 就是高品質"
+        "Description": "用心講究 感受美好"
     },
     {
         "category": "飲品",
@@ -6803,9 +6713,9 @@
         "category": "飲品",
         "title": "統一多多活菌發酵乳原味３００",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2860223.jpg",
-        "Protein": 4.0,
-        "Carb": 56.8,
-        "Calories": 243.0,
+        "Protein": 3.9,
+        "Carb": 51.0,
+        "Calories": 220.0,
         "Fat": 0.0,
         "Description": "原味多多"
     },
