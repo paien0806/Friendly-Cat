@@ -1454,7 +1454,7 @@
         "title": "二配草莓麵包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1870053.jpg",
         "Protein": 6.4,
-        "Carb": 45.5,
+        "Carb": 45.1,
         "Calories": 244.0,
         "Fat": 4.2,
         "Description": "馬特烈種使用 麵包柔軟升級 搭配酸甜草莓醬"
@@ -3901,6 +3901,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "剝皮辣椒嫩雞胸",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0976703.jpg",
+        "Protein": 20.4,
+        "Carb": 2.6,
+        "Calories": 97.4,
+        "Fat": 0.6,
+        "Description": "本產品生產製程廠房，其設備或生產管線有處理奶類、蛋類、魚類、堅果類、甲殼類、芝麻、種子類、花生、頭足"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "肉骨茶風味嫩雞胸",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0982415.jpg",
         "Protein": 20.3,
@@ -3908,6 +3918,16 @@
         "Calories": 110.0,
         "Fat": 2.0,
         "Description": "1.本產品已充分熟化，產品特性具有些為筋膜及橫切面帶有些許粉紅色或紅色血管為正常現象。 2.本產品經"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "一口吃烏魚子",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0987506.jpg",
+        "Protein": 4.0,
+        "Carb": 0.1,
+        "Calories": 43.0,
+        "Fat": 3.0,
+        "Description": "商品取出使用後，請立即食用完畢，請勿重覆冷藏"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -4607,7 +4627,7 @@
         "Carb": 1.2,
         "Calories": 235.0,
         "Fat": 16.6,
-        "Description": "1.微波加熱後高溫，請小心撕口處冒出的高溫蒸氣。 2.微波後，請於2小時內食用完畢。 3.本包裝不可水煮，不可火烤加熱。 4.本產品含有硬骨，請小心食用。"
+        "Description": "1.微波加熱後高溫，請小心撕口處冒出的高溫蒸氣。 2.微波後，請於2小時內食用完畢。 3.本包裝不可"
     },
     {
         "category": "冷凍食品",
