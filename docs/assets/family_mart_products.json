@@ -801,6 +801,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "二配莓好草莓鬆餅",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0689477.jpg",
+        "Protein": 5.4,
+        "Carb": 55.0,
+        "Calories": 353.0,
+        "Fat": 12.4,
+        "Description": "日式膨鬆餅皮 24道究極燒成"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配琥珀楓糖小可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0735371.jpg",
         "Protein": 4.2,
@@ -1435,9 +1445,9 @@
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1870085.jpg",
         "Protein": 10.4,
         "Carb": 68.5,
-        "Calories": 528.0,
+        "Calories": 529.0,
         "Fat": 23.6,
-        "Description": "可可香氣提升 麵糰柔軟度升級"
+        "Description": "可可麵團X水滴巧克力風味糖粒"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2368,16 +2378,6 @@
         "Calories": 555.0,
         "Fat": 11.0,
         "Description": "※雞肉內含有肌紅蛋白，故肉質粉紅並非為未熟，敬請安心食用※蔬菜與熱量會因時節微調。※雞肉易含細碎硬骨，請小心食用"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "檸檬牛排醬鐵板漢堡排飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0806792.jpg",
-        "Protein": 24.7,
-        "Carb": 102.1,
-        "Calories": 652.0,
-        "Fat": 16.2,
-        "Description": "法蘭西亭聯名商品"
     },
     {
         "category": "飯麵粥品",
@@ -3708,16 +3708,6 @@
         "Calories": 156.0,
         "Fat": 7.3,
         "Description": "※本產品含過敏原牛奶、大豆、含麩質之穀物、蛋類及其製品。※食用前需微波加熱，並儘速食用完畢；家用微波700W100秒勿超過90℃。"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "泰式野菇麵沙拉",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0893701.jpg",
-        "Protein": 10.0,
-        "Carb": 22.5,
-        "Calories": 179.0,
-        "Fat": 5.5,
-        "Description": "泰式野菇麵沙拉"
     },
     {
         "category": "小菜沙拉、雞胸肉",
