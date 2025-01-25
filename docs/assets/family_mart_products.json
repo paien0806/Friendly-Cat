@@ -607,7 +607,7 @@
         "Carb": 33.6,
         "Calories": 267.0,
         "Fat": 11.5,
-        "Description": "螺旋麵包捲裹入紐西蘭奶油，表面撒上澳洲海鹽，柔軟鹹香"
+        "Description": "紐西蘭奶油 X 澳洲海鹽"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -733,10 +733,10 @@
         "category": "麵包、吐司、蛋糕",
         "title": "一配椰香葡萄麵包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0590890.jpg",
-        "Protein": 12.8,
-        "Carb": 67.6,
-        "Calories": 499.0,
-        "Fat": 19.7,
+        "Protein": 9.5,
+        "Carb": 50.1,
+        "Calories": 370.0,
+        "Fat": 14.6,
         "Description": "特製椰子餡 X 香甜葡萄乾"
     },
     {
@@ -798,16 +798,6 @@
         "Calories": 335.0,
         "Fat": 7.9,
         "Description": "微波請小心燙口"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "二配莓好草莓鬆餅",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0689477.jpg",
-        "Protein": 5.4,
-        "Carb": 55.0,
-        "Calories": 353.0,
-        "Fat": 12.4,
-        "Description": "日式膨鬆餅皮 24道究極燒成"
     },
     {
         "category": "麵包、吐司、蛋糕",
