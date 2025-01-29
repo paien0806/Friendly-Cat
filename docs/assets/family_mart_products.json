@@ -891,16 +891,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "二配焦糖瑪奇朵鬆餅",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0877715.jpg",
-        "Protein": 6.2,
-        "Carb": 54.5,
-        "Calories": 351.0,
-        "Fat": 12.0,
-        "Description": "日式蓬鬆餅皮x24道究極燒成"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配韓式麵包球",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0881489.jpg",
         "Protein": 1.2,
@@ -1678,16 +1668,6 @@
         "Calories": 197.0,
         "Fat": 9.7,
         "Description": "美味肉鬆、火腿、雞蛋沙拉搭配新鮮蔬菜，多層次的口感及享受"
-    },
-    {
-        "category": "三明治、漢堡",
-        "title": "星—經典總匯三明治",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0482201.jpg",
-        "Protein": 7.5,
-        "Carb": 22.2,
-        "Calories": 192.0,
-        "Fat": 8.2,
-        "Description": "經典總匯三明治"
     },
     {
         "category": "三明治、漢堡",
