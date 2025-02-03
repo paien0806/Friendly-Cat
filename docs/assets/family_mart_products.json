@@ -671,16 +671,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配雙目糖蜂蜜蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0508077.jpg",
-        "Protein": 6.9,
-        "Carb": 45.9,
-        "Calories": 348.0,
-        "Fat": 15.2,
-        "Description": "本產品背部糖會融化屬自然現象，請安心食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配菠蘿奶酥麵包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0523980.jpg",
         "Protein": 8.2,
@@ -1798,16 +1788,6 @@
         "Calories": 176.0,
         "Fat": 9.3,
         "Description": "蔬菜總匯三明治"
-    },
-    {
-        "category": "三明治、漢堡",
-        "title": "彩蔬洋芋三明治",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0857616.jpg",
-        "Protein": 7.1,
-        "Carb": 20.5,
-        "Calories": 182.0,
-        "Fat": 7.9,
-        "Description": "彩蔬洋芋三明治"
     },
     {
         "category": "三明治、漢堡",
@@ -4273,10 +4253,10 @@
         "category": "冷凍食品",
         "title": "川味椒麻煎餃",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0094044.jpg",
-        "Protein": 12.3,
-        "Carb": 50.9,
-        "Calories": 412.0,
-        "Fat": 17.7,
+        "Protein": 14.7,
+        "Carb": 35.9,
+        "Calories": 308.0,
+        "Fat": 11.7,
         "Description": "媽媽的好手藝，讓餐桌上的每一道菜，都成為了藝術品。"
     },
     {
