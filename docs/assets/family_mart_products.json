@@ -540,6 +540,16 @@
         "Description": "選用日本明太子創始店粒明太子真MAKOTO，明太子搭配奶油乳酪醬"
     },
     {
+        "category": "飯糰壽司",
+        "title": "二配鮭魚野菜昆布炊飯飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1035556.jpg",
+        "Protein": 4.6,
+        "Carb": 36.1,
+        "Calories": 171.0,
+        "Fat": 0.9,
+        "Description": "鮭魚肉簡單調味，健康無負擔。"
+    },
+    {
         "category": "麵包、吐司、蛋糕",
         "title": "一配起酥蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0065326.jpg",
@@ -1348,6 +1358,16 @@
         "Calories": 265.0,
         "Fat": 6.0,
         "Description": "丹麥鮮奶油乾酪 X 燻雞風味內餡"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配粉漾草莓鬆餅",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1035324.jpg",
+        "Protein": 5.4,
+        "Carb": 55.0,
+        "Calories": 353.0,
+        "Fat": 12.4,
+        "Description": "日式膨鬆餅皮 24道究極燒成"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2188,16 +2208,6 @@
         "Calories": 573.0,
         "Fat": 19.8,
         "Description": "食用前需微波加熱，並儘速食用完畢；家用微波700W 150秒勿超過90度※本產品含過敏原大豆、含麩質之穀物、含牛奶羊奶、含魚類、含蛋類、含堅果類其製品。"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—焗烤燻火腿筆尖麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0575587.jpg",
-        "Protein": 29.4,
-        "Carb": 63.0,
-        "Calories": 701.0,
-        "Fat": 36.9,
-        "Description": "食用前須微波加熱，並儘速食用完畢、家用微波700W 150秒勿超過90度C  ※本產品含過敏原小麥、牛奶、大豆、蛋。"
     },
     {
         "category": "飯麵粥品",
