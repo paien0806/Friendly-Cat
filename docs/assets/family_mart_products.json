@@ -550,6 +550,26 @@
         "Description": "鮭魚肉簡單調味，健康無負擔。"
     },
     {
+        "category": "飯糰壽司",
+        "title": "一配傳香滷肉飯飯糰（區）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1035629.jpg",
+        "Protein": 5.8,
+        "Carb": 32.8,
+        "Calories": 181.0,
+        "Fat": 2.9,
+        "Description": "傳香滷肉飯糰(區)"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "一配熟成明太子飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037403.jpg",
+        "Protein": 3.9,
+        "Carb": 30.5,
+        "Calories": 156.0,
+        "Fat": 2.0,
+        "Description": "※完整明太子含薄膜，其深色絲線為魚卵血管，屬正常現象，請放心食用"
+    },
+    {
         "category": "麵包、吐司、蛋糕",
         "title": "一配起酥蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0065326.jpg",
@@ -1371,6 +1391,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配蜜藏草莓乳酪球",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1035524.jpg",
+        "Protein": 7.0,
+        "Carb": 37.0,
+        "Calories": 242.0,
+        "Fat": 7.4,
+        "Description": "麵包體白色粉末為麵粉，非發霉現象，請安心食用"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配丹麥菠蘿可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1820062.jpg",
         "Protein": 7.9,
@@ -1978,6 +2008,26 @@
         "Calories": 392.0,
         "Fat": 19.0,
         "Description": "黃金滿袋熔岩匹克堡"
+    },
+    {
+        "category": "三明治、漢堡",
+        "title": "海鹽花生可可三明治",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1036720.jpg",
+        "Protein": 5.9,
+        "Carb": 24.7,
+        "Calories": 210.0,
+        "Fat": 9.8,
+        "Description": "海鹽花生可可三明治"
+    },
+    {
+        "category": "三明治、漢堡",
+        "title": "草莓奶油三明治",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1036734.jpg",
+        "Protein": 4.3,
+        "Carb": 25.8,
+        "Calories": 192.0,
+        "Fat": 7.9,
+        "Description": "草莓奶油三明治"
     },
     {
         "category": "三明治、漢堡",
@@ -3000,6 +3050,36 @@
         "Description": "天使麵滑Ｑ口感，拌入蔬菜及海鮮沾附濃郁香醇的湯汁厚實酸勁加上辣感完全開胃涮嘴！"
     },
     {
+        "category": "飯麵粥品",
+        "title": "牛丼",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1036639.jpg",
+        "Protein": 15.3,
+        "Carb": 99.3,
+        "Calories": 595.0,
+        "Fat": 15.3,
+        "Description": "牛丼"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "清炒雙鮮蔬滿盒",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037108.jpg",
+        "Protein": 20.5,
+        "Carb": 17.9,
+        "Calories": 221.0,
+        "Fat": 7.5,
+        "Description": "清炒雙鮮蔬滿盒"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "黑胡椒豬柳多彩纖蔬餐盒",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037112.jpg",
+        "Protein": 11.5,
+        "Carb": 67.3,
+        "Calories": 389.0,
+        "Fat": 8.0,
+        "Description": "選用較健康食材:多種蔬菜、糙米"
+    },
+    {
         "category": "關東煮、湯品",
         "title": "剝皮辣椒雞湯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0332199.jpg",
@@ -3111,16 +3191,6 @@
     },
     {
         "category": "關東煮、湯品",
-        "title": "蒜好好蒜頭雞湯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0780394.jpg",
-        "Protein": 25.0,
-        "Carb": 8.6,
-        "Calories": 209.0,
-        "Fat": 8.3,
-        "Description": "蒜先煸香再與雞肉、高麗菜等食材同煮，使湯更有蒜香濃郁、雞肉軟Q不祡，喝了暖胃又營養~"
-    },
-    {
-        "category": "關東煮、湯品",
         "title": "鮮筍排骨湯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0810707.jpg",
         "Protein": 18.2,
@@ -3198,6 +3268,16 @@
         "Calories": 76.0,
         "Fat": 1.3,
         "Description": "白胡椒粒、豬肚豬排骨熬煮增加湯頭的濃郁風味，入口滑順尾韻微嗆辣是四季皆宜的溫潤湯品！"
+    },
+    {
+        "category": "關東煮、湯品",
+        "title": "泡椒酸菜牛",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037380.jpg",
+        "Protein": 20.8,
+        "Carb": 33.6,
+        "Calories": 446.0,
+        "Fat": 25.2,
+        "Description": "固形物197公克以上"
     },
     {
         "category": "關東煮、湯品",
@@ -3838,6 +3918,26 @@
         "Calories": 59.6,
         "Fat": 0.8,
         "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "履歷地瓜沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1021173.jpg",
+        "Protein": 1.5,
+        "Carb": 14.1,
+        "Calories": 64.2,
+        "Fat": 0.2,
+        "Description": "※蔬菜與熱量會因時節微調※拆封後兩小時內食用完畢"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "酸橙乳酪握沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1025004.jpg",
+        "Protein": 8.1,
+        "Carb": 27.7,
+        "Calories": 221.0,
+        "Fat": 8.7,
+        "Description": "酸橙乳酪握沙拉"
     },
     {
         "category": "小菜沙拉、雞胸肉",
