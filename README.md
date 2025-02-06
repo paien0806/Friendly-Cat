@@ -15,7 +15,7 @@
 * 會員功能 - 收藏喜愛的商店
 
 ## DEMO
-#### 連結： [友善黑貓](https://alan-cheng.github.io/friendly-time/)
+#### 連結： [友善黑貓](https://alan-cheng.github.io/Friendly-Cat/)
 >
 >
 >
