@@ -4240,6 +4240,316 @@
         "content": "使用進口開心果製成外交官奶油內餡"
     },
     {
+        "category": "11_bread",
+        "name": "春上蛋糕杯-黑糖撞奶",
+        "kcal": "403.3",
+        "price": "80",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_733.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "使用在地黑糖熬煮內餡，加入QQ麻糬丁增加口感"
+    },
+    {
+        "category": "11_bread",
+        "name": "春上蛋糕杯-香濃芋泥",
+        "kcal": "472",
+        "price": "79",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_725.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "新竹名店-春上布丁蛋糕監製"
+    },
+    {
+        "category": "11_bread",
+        "name": "好農好濃鮮奶泡芙",
+        "kcal": "168",
+        "price": "49",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_300.png",
+        "special_sale": "False",
+        "new": "",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "吳寶春草莓奶酪",
+        "kcal": "",
+        "price": "59",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_806.png",
+        "special_sale": "True",
+        "new": "",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "吳寶春雞蛋布丁",
+        "kcal": "213",
+        "price": "55",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_735.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "香甜微苦焦糖搭配濃郁蛋奶香的雞蛋布丁，加入台灣香草籽。"
+    },
+    {
+        "category": "11_bread",
+        "name": "三福鮮奶烤布丁",
+        "kcal": "175",
+        "price": "45",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_703.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "嚴選台灣在地香濃鮮奶、優質雞蛋製成"
+    },
+    {
+        "category": "11_bread",
+        "name": "黑丸仙草吸凍飲",
+        "kcal": "99.6",
+        "price": "35",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_705.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "古法慢火熬煮，口感Ｑ彈軟嫩滑順"
+    },
+    {
+        "category": "11_bread",
+        "name": "OPEN!雙葡萄吸凍飲PP220",
+        "kcal": "147.8",
+        "price": "39",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_645.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "無添加香料，果汁含量60%"
+    },
+    {
+        "category": "11_bread",
+        "name": "OPEN!蜂蜜檸檬吸凍飲PP220",
+        "kcal": "         142.6　",
+        "price": "39",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_646.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "無添加香料，特選蜜蜂故事館蜂蜜"
+    },
+    {
+        "category": "11_bread",
+        "name": "原之果實小蜜柑鮮果凍",
+        "kcal": "204",
+        "price": "59",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_627.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "添加三顆完整小蜜柑"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊泰奶布丁",
+        "kcal": "100.1",
+        "price": "49",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_706.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "米其林一星泰式餐廳頌丹樂聯名商品"
+    },
+    {
+        "category": "11_bread",
+        "name": "晶典小品-茉莉茶凍",
+        "kcal": "85.6",
+        "price": "25",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_249.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "茉莉茶凍口感Q彈，帶有淡淡茉莉花香風味。"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊杏仁豆腐",
+        "kcal": "132",
+        "price": "40",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_647.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "古早味濃郁杏仁香"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊楊枝甘露",
+        "kcal": "190",
+        "price": "65",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_614.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "經典港式風味呈現"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊黑糖檸檬愛玉",
+        "kcal": "158.4",
+        "price": "40",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_617.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "特選愛玉子搭配黑糖與檸檬黃金比例風味"
+    },
+    {
+        "category": "11_bread",
+        "name": "優果甜坊紅豆紫米湯",
+        "kcal": "263.48",
+        "price": "49",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_742.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "紅豆食府聯名，風味濃郁、甜而不膩"
+    },
+    {
+        "category": "11_bread",
+        "name": "優果甜坊芋頭西米露",
+        "kcal": "204.68",
+        "price": "65",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_764.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "嚴選台灣優質檳榔心芋製成"
+    },
+    {
+        "category": "11_bread",
+        "name": "優果甜坊黑糖地瓜蜜芋湯",
+        "kcal": "206.64",
+        "price": "59",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_799.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "選用台農57號地瓜、66號紅地瓜及蜜漬檳榔心芋"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊蒟蒻薏仁綠豆湯",
+        "kcal": "207.8",
+        "price": "49",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_544.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "嚴選澳洲優質綠豆、沁甜蜂蜜蒟蒻"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊可可玉米片鮮奶酪",
+        "kcal": "161.2",
+        "price": "40",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_337.png",
+        "special_sale": "False",
+        "new": "",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊黑糖豆花",
+        "kcal": "164.6",
+        "price": "40",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_335.png",
+        "special_sale": "False",
+        "new": "",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊摩摩喳喳甜湯",
+        "kcal": "250.3",
+        "price": "65",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_626.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "經典泰式甜湯，濃郁椰奶與豐富配料　"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊仙草凍",
+        "kcal": "137.8",
+        "price": "40",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_338.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "仙草乾熬煮製成，無添加香料及防腐劑，濃醇清香口感軟嫩。"
+    },
+    {
+        "category": "11_bread",
+        "name": "優菓甜坊銀耳蓮子湯",
+        "kcal": "141.8",
+        "price": "59",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_339.png",
+        "special_sale": "False",
+        "new": "",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "丹麥紅豆土司",
+        "kcal": "354",
+        "price": "45",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_771.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "萬丹紅豆，芬蘭進口奶油"
+    },
+    {
+        "category": "11_bread",
+        "name": "焙香芝麻蜂巢麵包",
+        "kcal": "384",
+        "price": "45",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_739.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "世界麵包冠軍武子靖監製，芝麻乳酪雙餡"
+    },
+    {
+        "category": "11_bread",
+        "name": "起司丹麥菠蘿",
+        "kcal": "286",
+        "price": "45",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_685.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "多層次丹麥 切達起司片"
+    },
+    {
+        "category": "11_bread",
+        "name": "奶油手撕餐包",
+        "kcal": "317",
+        "price": "30",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_250.png",
+        "special_sale": "False",
+        "new": "",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "丹麥起司火腿",
+        "kcal": "396",
+        "price": "35",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_224.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "香甜沙拉醬與鮮甜火腿片(豬原料來源：台灣)\n"
+    },
+    {
+        "category": "11_bread",
+        "name": "蛋黃奶香麵包",
+        "kcal": "310",
+        "price": "25",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_225.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "鹹香蛋黃醬"
+    },
+    {
+        "category": "11_bread",
+        "name": "三起司布里歐",
+        "kcal": "282",
+        "price": "35",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_168.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "切達/帕瑪森/Cream Cheese"
+    },
+    {
         "category": "12_steam",
         "name": "炊肉圓",
         "kcal": "221.1",
