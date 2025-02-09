@@ -16,8 +16,10 @@
         <ul class="space-y-6 sm:space-y-4">
           <li *ngFor="let item of itemsBySubCategory[subCategory.Name]">
             <div class="border border-gray-300 flex flex-col sm:flex-row items-start p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <img [src]="getFoodDetail711(item).image" [alt]="getFoodDetail711(item).name"
-                   class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32">
+              <img [src]="getFoodDetail711(item).image"
+                [alt]="getFoodDetail711(item).name"
+                class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32 cursor-pointer"
+                (click)="openImageDialog(getFoodDetail711(item).image)">
 
               <div class="flex-1">
                 <!-- 商品名稱與標籤 -->
@@ -85,8 +87,11 @@
         <ul class="space-y-6 sm:space-y-4">
           <li *ngFor="let item of itemsBySubCategory[subCategory.name]">
             <div class="border border-gray-300 food-item flex flex-col sm:flex-row items-start p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <img [src]="getFoodDetailFamilyMart(item).picture_url" [alt]="getFoodDetailFamilyMart(item).title"
-                   class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32">
+              <img [src]="getFoodDetailFamilyMart(item).picture_url"
+                [alt]="getFoodDetailFamilyMart(item).title"
+                class="object-contain rounded-lg mb-4 sm:mb-0 sm:mr-6 shadow-md w-24 h-24 sm:w-32 sm:h-32 cursor-pointer"
+                (click)="openImageDialog(getFoodDetailFamilyMart(item).picture_url)">
+
 
 
               <div class="flex-1">

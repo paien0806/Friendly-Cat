@@ -1,7 +1,10 @@
 import { Component, Input, OnChanges, SimpleChanges, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 import { Item, CategoryStockItem, FoodDetail711  } from '../../model/seven-eleven.model';  // 根據你的實際路徑導入模型
 import { ProductModel, FoodDetailFamilyMart } from '../../model/family-mart.model'
+
+import { ImageDialogComponent } from '../image-dialog/image-dialog.component';
 
 import { SevenElevenRequestService } from '../services/seven-eleven-request.service';
 
@@ -22,6 +25,7 @@ export class DisplayComponent implements OnChanges, OnInit {
 
   constructor(
     private sevenElevenRequestService: SevenElevenRequestService,
+    private dialog: MatDialog,
   ) {}
 
   ngOnInit() {}
@@ -176,5 +180,12 @@ export class DisplayComponent implements OnChanges, OnInit {
       "Description": ""
     };
     return foodDetail;
+  }
+
+  openImageDialog(imageUrl: string): void {
+    this.dialog.open(ImageDialogComponent, {
+      data: { image: imageUrl },
+      panelClass: 'custom-dialog' // 可用於自定義樣式
+    });
   }
 }
