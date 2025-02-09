@@ -21,6 +21,7 @@ export class DisplayComponent implements OnChanges, OnInit {
   @Input() foodDetails!: any[];
 
   subCategories: any[] = [];
+  subCategoriesName: string = '';
   itemsBySubCategory: { [key: string]: Item[] } = {};  // 儲存每個子分類的商品列表
 
   constructor(
@@ -41,6 +42,7 @@ export class DisplayComponent implements OnChanges, OnInit {
     if (this.store && this.category) {
       if (this.store.StoreName) {
         this.subCategories = this.category.Children;  // 更新子分類列表
+        this.subCategoriesName = this.category.Name;
         this.loadItemsBySubCategory();  // 載入子分類下的所有商品資料
       }
       else if (this.store.name) {
@@ -65,9 +67,45 @@ export class DisplayComponent implements OnChanges, OnInit {
     if (this.store) {
       this.sevenElevenRequestService.getItemsByStoreNo(this.store.StoreNo).subscribe(response => {
         if (response.isSuccess && response.element.StoreStockItem) {
-          const categoryStockItems: CategoryStockItem[] = response.element.StoreStockItem.CategoryStockItems;
+          let categoryStockItems: CategoryStockItem[] = response.element.StoreStockItem.CategoryStockItems;
+
+          // 7-11耍白痴，麵包跟甜點的分類裡面都有蛋糕，會造成子分類顯示錯誤
+          // 懶得修正資料結構，直接愚蠢的修改食物子分類名稱來區分唄
+          if (this.subCategoriesName == "甜點") {
+            let sweetCakeId = "";
+            this.subCategories = this.subCategories.map((subCategory) => {
+              if (subCategory.Name === "蛋糕") {
+                sweetCakeId = subCategory.ID;
+                return { ...subCategory, Name: "冷藏蛋糕" };
+              }
+              return subCategory;
+            });
+            categoryStockItems = categoryStockItems.map((categoryStockItem) => {
+              if (categoryStockItem.Name === "蛋糕" && categoryStockItem.NodeID.toString() == sweetCakeId) {
+                return { ...categoryStockItem, Name: "冷藏蛋糕" };
+              }
+              return categoryStockItem;
+            })
+          }
+          if (this.subCategoriesName == "麵包蛋糕") {
+            let sweetCakeId = "";
+            this.subCategories = this.subCategories.map((subCategory) => {
+              if (subCategory.Name === "蛋糕") {
+                sweetCakeId = subCategory.ID;
+                return { ...subCategory, Name: "麵包蛋糕" };
+              }
+              return subCategory;
+            });
+            categoryStockItems = categoryStockItems.map((categoryStockItem) => {
+              if (categoryStockItem.Name === "蛋糕" && categoryStockItem.NodeID.toString() == sweetCakeId) {
+                return { ...categoryStockItem, Name: "麵包蛋糕" };
+              }
+              return categoryStockItem;
+            })
+          }
 
           this.subCategories.forEach(subCategory => {
+
             const items: Item[] = [];
 
             // 遍歷 CategoryStockItems，根據子分類名稱過濾並提取 ItemList
