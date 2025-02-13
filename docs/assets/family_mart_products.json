@@ -891,16 +891,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配熱帶水果乳酪軟歐",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0873252.jpg",
-        "Protein": 6.7,
-        "Carb": 32.7,
-        "Calories": 197.0,
-        "Fat": 4.4,
-        "Description": "埔里百香果 X 金鑽鳳梨 X 澳洲乳酪"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配韓式麵包球",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0881489.jpg",
         "Protein": 1.2,
@@ -2388,16 +2378,6 @@
         "Calories": 800.0,
         "Fat": 36.9,
         "Description": "豐富蔬菜配上嫩雞"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "麻婆豆腐波浪拌麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0842700.jpg",
-        "Protein": 24.6,
-        "Carb": 63.7,
-        "Calories": 516.0,
-        "Fat": 18.2,
-        "Description": "麻婆豆腐波浪拌麵"
     },
     {
         "category": "飯麵粥品",
