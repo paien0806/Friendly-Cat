@@ -3881,6 +3881,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "法式香草嫩雞胸",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1032099.jpg",
+        "Protein": 20.8,
+        "Carb": 2.3,
+        "Calories": 106.0,
+        "Fat": 1.5,
+        "Description": "1.微波加熱後高溫，請小心撕口處冒出的高溫蒸氣 2.微波後或拆袋後請於2小時內食用完畢3.包裝圖片僅供調理參考，請以實際內容為準 4.本產品經低溫充分熟化,部分切面帶些許粉紅色為正常現象,請安心食用"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "青森蜜富士蘋果（截切盒）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1310029.jpg",
         "Protein": 0.2,
@@ -4947,7 +4957,7 @@
         "Carb": 9.4,
         "Calories": 145.0,
         "Fat": 7.9,
-        "Description": "媽媽的好手藝，讓餐桌上的每一道菜，都成為了藝術品。"
+        "Description": "述為火腿燒賣之營養標示，其他單品的營養成份參考包裝袋"
     },
     {
         "category": "冷凍食品",
@@ -5508,16 +5518,6 @@
         "Calories": 276.0,
         "Fat": 7.3,
         "Description": "1. 增量20%，鮮豬肉添加筍子的爽脆口感，風味獨特且兼具營養。2. 麵皮使用二次延壓手法，增加麵皮"
-    },
-    {
-        "category": "茶葉蛋、蒸箱熟食",
-        "title": "青花椒麻香肉包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0507853.jpg",
-        "Protein": 10.4,
-        "Carb": 36.9,
-        "Calories": 248.0,
-        "Fat": 6.5,
-        "Description": "內餡選用嚴選國產豬與特色花椒粉及麻辣醬完美融合，香麻帶勁"
     },
     {
         "category": "茶葉蛋、蒸箱熟食",
