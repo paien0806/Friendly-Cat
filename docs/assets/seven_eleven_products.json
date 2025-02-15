@@ -2921,13 +2921,13 @@
     },
     {
         "category": "8_Bigbite",
-        "name": "星宇航空-美式爆汁熱狗堡",
-        "kcal": "390",
+        "name": "星宇航空美式爆汁熱狗堡",
+        "kcal": "401",
         "price": "69",
         "image": "https://www.7-11.com.tw/freshfoods/8_Bigbite/images/Bigbite_27.png",
         "special_sale": "False",
         "new": "",
-        "content": "豬原料來源:西班牙、臺灣"
+        "content": ""
     },
     {
         "category": "8_Bigbite",
@@ -2981,7 +2981,7 @@
     },
     {
         "category": "8_Bigbite",
-        "name": "I",
+        "name": "三起司熱狗",
         "kcal": "212",
         "price": "33",
         "image": "https://www.7-11.com.tw/freshfoods/8_Bigbite/images/Bigbite_14.png",
