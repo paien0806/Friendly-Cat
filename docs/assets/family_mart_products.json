@@ -2741,16 +2741,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "東坡肉便當",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0942594.jpg",
-        "Protein": 17.7,
-        "Carb": 67.9,
-        "Calories": 511.0,
-        "Fat": 18.7,
-        "Description": "特選肥瘦分明國產五花肉，慢燉滷製，搭配青江菜及古早味滷筍乾的傳統府城美食。"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "海鮮烘蛋燴飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0942603.jpg",
         "Protein": 20.6,
@@ -3688,16 +3678,6 @@
         "Calories": 119.0,
         "Fat": 3.4,
         "Description": "紫高麗菜染色為正常現象"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "和風豆腐沙拉",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0904257.jpg",
-        "Protein": 12.2,
-        "Carb": 7.8,
-        "Calories": 136.0,
-        "Fat": 6.3,
-        "Description": "和風豆腐沙拉"
     },
     {
         "category": "小菜沙拉、雞胸肉",
