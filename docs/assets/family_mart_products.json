@@ -537,7 +537,17 @@
         "Carb": 30.2,
         "Calories": 174.0,
         "Fat": 4.3,
-        "Description": "選用日本明太子創始店粒明太子真MAKOTO，明太子搭配奶油乳酪醬"
+        "Description": "使用日本明太子創始店-搭配明太子真MAKOTO，明太子搭配奶油乳酪醬。"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "二配哇沙米黃金魚卵海鮮飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1019279.jpg",
+        "Protein": 4.4,
+        "Carb": 33.3,
+        "Calories": 187.0,
+        "Fat": 4.1,
+        "Description": "豐洲市場聯名，日本直輸魚卵丁搭配皇后牛奶米，口味豐富"
     },
     {
         "category": "飯糰壽司",
@@ -1381,6 +1391,26 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "二配生藍莓草莓甜心滿餡",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1038318.jpg",
+        "Protein": 7.7,
+        "Carb": 43.7,
+        "Calories": 309.0,
+        "Fat": 11.5,
+        "Description": "香甜藍莓醬，草莓果酸奶霜"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配記憶深刻奶油土司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1044739.jpg",
+        "Protein": 10.2,
+        "Carb": 52.8,
+        "Calories": 300.0,
+        "Fat": 5.3,
+        "Description": "無"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配丹麥菠蘿可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1820062.jpg",
         "Protein": 7.9,
@@ -2068,16 +2098,6 @@
         "Calories": 291.0,
         "Fat": 2.0,
         "Description": "優質池上飯"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—香辣醬雞肉炒麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0248162.jpg",
-        "Protein": 24.9,
-        "Carb": 83.0,
-        "Calories": 611.0,
-        "Fat": 19.7,
-        "Description": "鼎泰豐聯名商品-黑木耳內側白點為孢子粉,屬正常現象請安心食用"
     },
     {
         "category": "飯麵粥品",
@@ -2971,6 +2991,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "南義火辣牛哨子筆尖麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1020236.jpg",
+        "Protein": 34.0,
+        "Carb": 80.5,
+        "Calories": 613.0,
+        "Fat": 17.2,
+        "Description": "※本產品含過敏原含麩質之穀物、牛奶、大豆、蛋類及其製品 ※本產品含薑絲纖維屬正常現象，請安心食用。 ※本產品含有蠶豆，不適合對其敏感體質者食用"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "牛丼",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1036639.jpg",
         "Protein": 15.3,
@@ -3197,7 +3227,7 @@
         "Carb": 33.6,
         "Calories": 446.0,
         "Fat": 25.2,
-        "Description": "固形物197公克以上"
+        "Description": "選用Q彈寬粉，順口又易吸附湯汁，湯頭酸酸辣辣帶點甜的口感加上豐富配料。"
     },
     {
         "category": "關東煮、湯品",
@@ -4238,6 +4268,16 @@
         "Calories": 209.0,
         "Fat": 17.0,
         "Description": "食用說明：本產品已熟，解凍後可即食或經煎、烤等復熱調理風味更佳"
+    },
+    {
+        "category": "夯蕃薯、現烤熟食",
+        "title": "義式起司雞肉熱狗",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1046195.jpg",
+        "Protein": 11.3,
+        "Carb": 5.7,
+        "Calories": 190.0,
+        "Fat": 13.6,
+        "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常。"
     },
     {
         "category": "冷凍食品",
