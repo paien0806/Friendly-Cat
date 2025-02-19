@@ -557,7 +557,7 @@
         "Carb": 36.1,
         "Calories": 171.0,
         "Fat": 0.9,
-        "Description": "鮭魚肉簡單調味，健康無負擔。"
+        "Description": "高湯熬煮製成昆布炊飯，使用大麥仁增加口感，內餡使用蔬菜拌炒芝麻、鮭魚肉。"
     },
     {
         "category": "飯糰壽司",
@@ -1398,6 +1398,26 @@
         "Calories": 309.0,
         "Fat": 11.5,
         "Description": "香甜藍莓醬，草莓果酸奶霜"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配喵咪肉球奶油包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1043610.jpg",
+        "Protein": 7.3,
+        "Carb": 39.5,
+        "Calories": 333.0,
+        "Fat": 16.2,
+        "Description": "馬達加斯加香草 X 可愛貓掌造型"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配貓貓尾巴捲蛋糕",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1044725.jpg",
+        "Protein": 5.1,
+        "Carb": 22.5,
+        "Calories": 287.7,
+        "Fat": 19.7,
+        "Description": "請避免儲放於陽光直射或高溫場所，拆封後請盡早食用"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -3027,7 +3047,57 @@
         "Carb": 67.3,
         "Calories": 389.0,
         "Fat": 8.0,
-        "Description": "選用較健康食材:多種蔬菜、糙米"
+        "Description": "使用白花椰菜米搭配穀物炊飯、搭配多種富含高纖維質的蔬菜以及焦香軟嫩的黑胡椒豬柳"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "粉紅醬鮮蝦細扁麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037471.jpg",
+        "Protein": 21.7,
+        "Carb": 64.6,
+        "Calories": 456.0,
+        "Fat": 12.2,
+        "Description": "※因蝦腸難以完全去除，可能有蝦仁色澤偏深狀況，屬正常請安心食用"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "煸椒醬乾拌麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037499.jpg",
+        "Protein": 18.0,
+        "Carb": 63.2,
+        "Calories": 428.0,
+        "Fat": 11.5,
+        "Description": "煸椒醬乾拌麵"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "香濃玉米雞茸粥",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1038863.jpg",
+        "Protein": 6.0,
+        "Carb": 27.6,
+        "Calories": 170.0,
+        "Fat": 3.9,
+        "Description": "鮮嫩雞肉搭配鮮甜清脆玉米粒，香氣層次豐富味道清爽無負擔，是大小朋友都愛的家常粥~"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "煸椒香烤腿排便當",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1043765.jpg",
+        "Protein": 19.5,
+        "Carb": 81.3,
+        "Calories": 469.0,
+        "Fat": 7.1,
+        "Description": "煸椒香烤腿排便當"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "煸椒烘蛋飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1045076.jpg",
+        "Protein": 20.6,
+        "Carb": 80.6,
+        "Calories": 527.0,
+        "Fat": 13.4,
+        "Description": "煸椒烘蛋飯"
     },
     {
         "category": "關東煮、湯品",
@@ -3878,6 +3948,16 @@
         "Calories": 106.0,
         "Fat": 1.5,
         "Description": "1.微波加熱後高溫，請小心撕口處冒出的高溫蒸氣 2.微波後或拆袋後請於2小時內食用完畢3.包裝圖片僅供調理參考，請以實際內容為準 4.本產品經低溫充分熟化,部分切面帶些許粉紅色為正常現象,請安心食用"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "三杯鮮嫩雞柳條",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037744.jpg",
+        "Protein": 19.9,
+        "Carb": 2.5,
+        "Calories": 114.8,
+        "Fat": 2.8,
+        "Description": "本產品經低溫充分熟化， 部分切面帶些許淡紅色為正常現象， 請安心食用。本產品表面如有瘀血屬正常現象，請安心食用。本產品可能含有軟骨，質地偏硬，請注意並小心食用。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -5688,6 +5768,26 @@
         "Calories": 227.3,
         "Fat": 4.9,
         "Description": "潮味決聯名商品，使用經典三杯紹興醬與肉餡進行調配，鹹香夠味"
+    },
+    {
+        "category": "茶葉蛋、蒸箱熟食",
+        "title": "青麻椒香雞肉包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0987556.jpg",
+        "Protein": 9.7,
+        "Carb": 36.9,
+        "Calories": 222.4,
+        "Fat": 4.0,
+        "Description": "青麻椒帶有清新的麻香與微辣搭配清爽雞肉，增添刺激層次感。"
+    },
+    {
+        "category": "茶葉蛋、蒸箱熟食",
+        "title": "麻油菇菇包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1041690.jpg",
+        "Protein": 5.1,
+        "Carb": 23.8,
+        "Calories": 145.5,
+        "Fat": 3.3,
+        "Description": "植物絞肉內餡，增添口感。 香菇、杏鮑菇與毛豆仁添加，咬感豐富。"
     },
     {
         "category": "茶葉蛋、蒸箱熟食",
