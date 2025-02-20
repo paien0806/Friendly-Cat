@@ -311,16 +311,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "二配蠔香鮑菇筍丁飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0839046.jpg",
-        "Protein": 4.4,
-        "Carb": 35.4,
-        "Calories": 176.0,
-        "Fat": 1.9,
-        "Description": "※本產品非素食專門產線生產※內含老薑粗纖維為原物料特性屬正常現象"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配府城風味蝦仁飯飯糰（區）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0850600.jpg",
         "Protein": 4.8,
@@ -567,7 +557,7 @@
         "Carb": 32.8,
         "Calories": 181.0,
         "Fat": 2.9,
-        "Description": "傳香滷肉飯糰(區)"
+        "Description": "內餡使用皮油丁提升肉燥口感，萃取其南部肉燥特色風味。"
     },
     {
         "category": "飯糰壽司",
@@ -868,16 +858,6 @@
         "Calories": 468.0,
         "Fat": 11.0,
         "Description": "野生藍莓粒 X 澳洲乳酪 X 荷蘭雜糧粉"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配可可牛奶杯子蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0850828.jpg",
-        "Protein": 1.7,
-        "Carb": 14.2,
-        "Calories": 100.5,
-        "Fat": 4.1,
-        "Description": "本產品請勿微波；內附脫氧包，請勿食用"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2061,6 +2041,16 @@
     },
     {
         "category": "三明治、漢堡",
+        "title": "蛋蛋嘉年華三明治",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1040371.jpg",
+        "Protein": 8.0,
+        "Carb": 21.3,
+        "Calories": 187.0,
+        "Fat": 7.8,
+        "Description": "蛋蛋嘉年華三明治"
+    },
+    {
+        "category": "三明治、漢堡",
         "title": "輕乳酪巧克力三明治",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1060084.jpg",
         "Protein": 5.4,
@@ -3208,16 +3198,6 @@
         "Calories": 97.0,
         "Fat": 3.1,
         "Description": "花蛤味噌湯"
-    },
-    {
-        "category": "關東煮、湯品",
-        "title": "鮮筍排骨湯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0810707.jpg",
-        "Protein": 18.2,
-        "Carb": 2.9,
-        "Calories": 159.0,
-        "Fat": 8.3,
-        "Description": "新鮮竹筍與鮮嫩豬排骨一起燉煮，鮮甜清爽的湯頭配上爽脆竹筍是很消暑的湯品之一!"
     },
     {
         "category": "關東煮、湯品",

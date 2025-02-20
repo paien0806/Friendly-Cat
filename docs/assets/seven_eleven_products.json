@@ -201,16 +201,6 @@
     },
     {
         "category": "19_star",
-        "name": "加賀屋味噌鹽麴雞肉鍋",
-        "kcal": "420",
-        "price": "129",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_176.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "19_star",
         "name": "加賀屋-炙烤魚排烏龍麵",
         "kcal": "383",
         "price": "119",
@@ -335,16 +325,6 @@
         "kcal": "235",
         "price": "55",
         "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_154.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "19_star",
-        "name": "涵碧美饌-紹興東坡肉御膳",
-        "kcal": "630",
-        "price": "129",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_180.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -694,7 +674,7 @@
         "name": "(熱壓土司)奶茶卡士達",
         "kcal": "256",
         "price": "60",
-        "image": "https://www.7-11.com.tw/freshfoods/16_sandwich/images/sandwich_89.png",
+        "image": "https://www.7-11.com.tw/freshfoods/16_sandwich/images/sandwich_90.png",
         "special_sale": "False",
         "new": "True",
         "content": ""
@@ -705,16 +685,6 @@
         "kcal": "387",
         "price": "79",
         "image": "https://www.7-11.com.tw/freshfoods/16_sandwich/images/sandwich_85.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "16_sandwich",
-        "name": "韓式炸雞厚土司",
-        "kcal": "442",
-        "price": "89",
-        "image": "https://www.7-11.com.tw/freshfoods/16_sandwich/images/sandwich_83.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -745,7 +715,7 @@
         "kcal": "267",
         "price": "50",
         "image": "https://www.7-11.com.tw/freshfoods/16_sandwich/images/sandwich_86.png",
-        "special_sale": "True",
+        "special_sale": "False",
         "new": "",
         "content": ""
     },
@@ -881,16 +851,6 @@
     },
     {
         "category": "16_sandwich",
-        "name": "芋香肉鬆三明治",
-        "kcal": "368",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/16_sandwich/images/sandwich_79.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "16_sandwich",
         "name": "藍莓乳酪三明治",
         "kcal": "175",
         "price": "29",
@@ -958,16 +918,6 @@
         "special_sale": "False",
         "new": "",
         "content": "特製火腿搭配起司蛋、豬原料來源：西班牙"
-    },
-    {
-        "category": "16_sandwich",
-        "name": "起司三重奏三明治",
-        "kcal": "283",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/16_sandwich/images/sandwich_05.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用三種起司，濃郁拔絲"
     },
     {
         "category": "2_Light",
