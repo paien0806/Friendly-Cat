@@ -14,7 +14,7 @@ import { fStore, StoreModel, FoodDetailFamilyMart } from '../model/family-mart.m
 
 import { environment } from 'src/environments/environment';
 
-import { switchMap, from, of, catchError, Observable, tap, forkJoin } from 'rxjs';
+import { switchMap, from, of, catchError, Observable, tap, forkJoin, Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatDialog } from '@angular/material/dialog';
@@ -73,6 +73,8 @@ export class NewSearchComponent implements OnInit {
 
   favoriteStores: any[] = [];
 
+  searchInput$ = new Subject<string>();
+
   constructor(
     private http: HttpClient,
     private geolocationService: GeolocationService,
@@ -89,6 +91,14 @@ export class NewSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.searchInput$
+    .pipe(
+      debounceTime(300), // 等待使用者停止輸入 300ms
+      distinctUntilChanged() // 避免重複的相同輸入
+    )
+    .subscribe((input) => {
+      this.handleSearch(input);
+    });
     this.init();
   }
 
@@ -232,10 +242,13 @@ export class NewSearchComponent implements OnInit {
     this.selectedStore = store;
   }
 
-  // 這寫的真他媽醜到爆
   onInput(event: Event): void {
-    const input = (event.target as HTMLInputElement).value;  // 確保這裡的值是有效的
+    const input = (event.target as HTMLInputElement).value;
+    this.searchInput$.next(input); // 將輸入值推到 Subject
+  }
 
+  // 這寫的真他媽醜到爆
+  handleSearch(input: string): void {
     if (input.length >= 2) {
       this.loadingService.show("正在為您搜尋店家");
 
