@@ -881,16 +881,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配韓式麵包球",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0881489.jpg",
-        "Protein": 1.2,
-        "Carb": 14.4,
-        "Calories": 96.0,
-        "Fat": 3.6,
-        "Description": "鹹香芝麻味 X 口感有勁"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "二配維也納奶油餐包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0891022.jpg",
         "Protein": 3.0,
@@ -2967,7 +2957,7 @@
         "Carb": 95.0,
         "Calories": 576.0,
         "Fat": 14.5,
-        "Description": "非素食專業產線，本產品含部分肉桂原料，孕婦請審慎食用"
+        "Description": "人氣蔬食回歸，新鮮牛蕃茄熬製而成紅燒燴汁，搭配仿葷牛若塊，鹹香酸味平衡下飯!"
     },
     {
         "category": "飯麵粥品",
@@ -3077,7 +3067,7 @@
         "Carb": 81.3,
         "Calories": 469.0,
         "Fat": 7.1,
-        "Description": "煸椒香烤腿排便當"
+        "Description": "本產品含有蔭豉，有黑點屬正常現象"
     },
     {
         "category": "飯麵粥品",
