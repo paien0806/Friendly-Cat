@@ -421,16 +421,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "鮮蔬厚蛋牛肉飯卷",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0923023.jpg",
-        "Protein": 6.3,
-        "Carb": 37.2,
-        "Calories": 218.0,
-        "Fat": 4.8,
-        "Description": "鮮蔬厚蛋牛肉飯卷"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配牛肉燥飯飯糰",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0942885.jpg",
         "Protein": 5.3,
@@ -1001,16 +991,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配莓莓胖芙蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0914959.jpg",
-        "Protein": 2.0,
-        "Carb": 16.3,
-        "Calories": 143.4,
-        "Fat": 7.8,
-        "Description": "請避免儲放於陽光直射或高溫場所，拆封後請盡早食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配起司核桃軟歐",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0915705.jpg",
         "Protein": 16.3,
@@ -1107,16 +1087,6 @@
         "Carb": 84.2,
         "Calories": 432.0,
         "Fat": 5.0,
-        "Description": "麵包體表面褐色小點，屬梅納反應，為正常現象"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配辣傑克乳酪小土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0947285.jpg",
-        "Protein": 9.2,
-        "Carb": 39.6,
-        "Calories": 304.0,
-        "Fat": 12.1,
         "Description": "麵包體表面褐色小點，屬梅納反應，為正常現象"
     },
     {
@@ -1378,6 +1348,16 @@
         "Calories": 333.0,
         "Fat": 16.2,
         "Description": "馬達加斯加香草 X 可愛貓掌造型"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配濃情巧克力熔岩蛋糕",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1043688.jpg",
+        "Protein": 6.6,
+        "Carb": 28.1,
+        "Calories": 313.4,
+        "Fat": 19.4,
+        "Description": "微波後請小心燙口"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2161,26 +2141,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "星—糖燻野郎熟成牛飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0496248.jpg",
-        "Protein": 14.7,
-        "Carb": 97.2,
-        "Calories": 656.0,
-        "Fat": 23.0,
-        "Description": "燒丼人氣款-燒肉日式專門店，薄切牛五花直火炙燒牛五花，刷上燒丼人氣NO.1糖燻野郎醬，肉香四溢，口口濃郁"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—壹號醬鹽蔥雞豚飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0496284.jpg",
-        "Protein": 24.4,
-        "Carb": 91.9,
-        "Calories": 593.0,
-        "Fat": 14.4,
-        "Description": "開丼聯名商品"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "星—香濃雙重起司海陸焗飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0564425.jpg",
         "Protein": 22.9,
@@ -2361,16 +2321,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "火烤胸排蔬滿盒",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0809295.jpg",
-        "Protein": 18.0,
-        "Carb": 40.0,
-        "Calories": 316.0,
-        "Fat": 9.2,
-        "Description": "※以根莖類取代精緻澱粉※胡蘿蔔塊帶有綠色屬正常現象，請安心食用。"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "香烤嫩雞彩蔬餐盒（區）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0831111.jpg",
         "Protein": 32.1,
@@ -2478,16 +2428,6 @@
         "Calories": 613.0,
         "Fat": 17.2,
         "Description": "※本產品含過敏原含麩質之穀物、牛奶、大豆、蛋類及其製品 ※本產品含薑絲纖維屬正常現象，請安心食用。 ※本產品含有蠶豆，不適合對其敏感體質者食用"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "後花園松露白醬筆尖麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864897.jpg",
-        "Protein": 25.5,
-        "Carb": 67.2,
-        "Calories": 642.0,
-        "Fat": 30.0,
-        "Description": "※本產品含過敏原麩質之穀物、牛奶、大豆、蛋、頭足類及其製品。※食用前需微波加熱，並儘速食用完畢。家用微波700W150秒勿超過90℃"
     },
     {
         "category": "飯麵粥品",
