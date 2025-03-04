@@ -2321,26 +2321,6 @@
     },
     {
         "category": "5_ForeignDishes",
-        "name": "韓式泡菜豆腐鍋(含牛)",
-        "kcal": "",
-        "price": "129",
-        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_435.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "5_ForeignDishes",
-        "name": "韓式部隊鍋湯便當",
-        "kcal": "419",
-        "price": "99",
-        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_436.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "5_ForeignDishes",
         "name": "壹番屋-炸雞排起司咖哩焗飯",
         "kcal": "657",
         "price": "99",

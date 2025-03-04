@@ -560,6 +560,16 @@
         "Description": "※完整明太子含薄膜，其深色絲線為魚卵血管，屬正常現象，請放心食用"
     },
     {
+        "category": "飯糰壽司",
+        "title": "二配大飯糰金沙肉鬆",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1054681.jpg",
+        "Protein": 5.6,
+        "Carb": 45.1,
+        "Calories": 251.0,
+        "Fat": 5.5,
+        "Description": "大飯糰金沙肉鬆"
+    },
+    {
         "category": "麵包、吐司、蛋糕",
         "title": "一配起酥蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0065326.jpg",
@@ -1381,6 +1391,26 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "二配一抹茶香鬆餅",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1045480.jpg",
+        "Protein": 6.3,
+        "Carb": 54.5,
+        "Calories": 319.0,
+        "Fat": 8.5,
+        "Description": "日式膨鬆餅皮 24道究極燒成"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配玄米抹茶麻吉麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049111.jpg",
+        "Protein": 6.0,
+        "Carb": 42.6,
+        "Calories": 280.0,
+        "Fat": 9.5,
+        "Description": "靜岡抹茶x玄米抹茶醬xQ彈麻糬"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配丹麥菠蘿可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1820062.jpg",
         "Protein": 7.9,
@@ -2101,7 +2131,7 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "星—醬燒炙烤親子丼",
+        "title": "星—極上炙烤親子丼",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0399402.jpg",
         "Protein": 24.8,
         "Carb": 107.5,
@@ -2378,16 +2408,6 @@
         "Calories": 539.0,
         "Fat": 14.5,
         "Description": "※本產品已充分熟化，產品橫切面帶有些許粉紅色或紅色血管為正常現象"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "秘傳醬汁日式炒麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0857052.jpg",
-        "Protein": 17.8,
-        "Carb": 61.7,
-        "Calories": 397.0,
-        "Fat": 8.8,
-        "Description": "秘傳醬汁日式炒麵"
     },
     {
         "category": "飯麵粥品",
@@ -6118,6 +6138,36 @@
         "Calories": 119.0,
         "Fat": 5.4,
         "Description": "富含膳食纖維"
+    },
+    {
+        "category": "飲品",
+        "title": "優意思蜜桃蘋果優格飲",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1050205.jpg",
+        "Protein": 7.7,
+        "Carb": 30.7,
+        "Calories": 176.0,
+        "Fat": 2.4,
+        "Description": "發酵過程無添加砂糖.每瓶含21億個以上益生菌.搖一搖品嘗最佳風味."
+    },
+    {
+        "category": "飲品",
+        "title": "優意思牛奶燕麥優格飲",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1050255.jpg",
+        "Protein": 8.2,
+        "Carb": 20.9,
+        "Calories": 142.0,
+        "Fat": 2.6,
+        "Description": "發酵過程無添加砂糖；每瓶含21億以上益生菌；搖一搖品嘗最佳風味。"
+    },
+    {
+        "category": "飲品",
+        "title": "義美無加糖高鈣豆奶",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1055932.jpg",
+        "Protein": 14.0,
+        "Carb": 7.4,
+        "Calories": 146.0,
+        "Fat": 6.7,
+        "Description": "無加糖、零膽固醇、高鈣係以每100大卡含有120毫克以上鈣之基準"
     },
     {
         "category": "飲品",
