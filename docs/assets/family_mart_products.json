@@ -1411,6 +1411,36 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配靜岡抹茶菠蘿",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049193.jpg",
+        "Protein": 9.8,
+        "Carb": 57.3,
+        "Calories": 460.0,
+        "Fat": 21.3,
+        "Description": "靜岡抹茶粉X香濃抹茶餡X經典菠蘿"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配抹茶蜜桃乳酪貝果",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049220.jpg",
+        "Protein": 8.0,
+        "Carb": 40.3,
+        "Calories": 230.0,
+        "Fat": 4.0,
+        "Description": "此產品不可微波"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配抹茶奶霜蛋糕",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049852.jpg",
+        "Protein": 9.2,
+        "Carb": 33.6,
+        "Calories": 387.2,
+        "Fat": 24.0,
+        "Description": "本產品請勿微波；內附脫氧包，請勿食用"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配丹麥菠蘿可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1820062.jpg",
         "Protein": 7.9,
@@ -2048,6 +2078,16 @@
         "Calories": 187.0,
         "Fat": 7.8,
         "Description": "蛋蛋嘉年華三明治"
+    },
+    {
+        "category": "三明治、漢堡",
+        "title": "花生芝麻麻糬三明治",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1050346.jpg",
+        "Protein": 4.7,
+        "Carb": 29.0,
+        "Calories": 223.0,
+        "Fat": 9.8,
+        "Description": "花生芝麻麻糬三明治"
     },
     {
         "category": "三明治、漢堡",
@@ -3011,6 +3051,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "黑胡椒雞排鐵板麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037512.jpg",
+        "Protein": 23.8,
+        "Carb": 57.3,
+        "Calories": 429.0,
+        "Fat": 11.5,
+        "Description": "黑胡椒雞排鐵板麵"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "香濃玉米雞茸粥",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1038863.jpg",
         "Protein": 6.0,
@@ -3038,6 +3088,26 @@
         "Calories": 527.0,
         "Fat": 13.4,
         "Description": "煸椒烘蛋飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "粵式油雞叉燒雙拼便當",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1056015.jpg",
+        "Protein": 17.8,
+        "Carb": 76.5,
+        "Calories": 480.0,
+        "Fat": 11.3,
+        "Description": "辰園聯名"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "甕底蔭油臘味炒飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1056047.jpg",
+        "Protein": 19.7,
+        "Carb": 95.5,
+        "Calories": 670.0,
+        "Fat": 23.4,
+        "Description": "甕底蔭油臘味炒飯"
     },
     {
         "category": "關東煮、湯品",
@@ -3871,6 +3941,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "蛋蛋辛蔬麵沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1025109.jpg",
+        "Protein": 13.3,
+        "Carb": 19.3,
+        "Calories": 191.0,
+        "Fat": 6.8,
+        "Description": "蛋蛋辛蔬麵沙拉"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "法式香草嫩雞胸",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1032099.jpg",
         "Protein": 20.8,
@@ -4141,26 +4221,6 @@
     },
     {
         "category": "夯蕃薯、現烤熟食",
-        "title": "金黃芝士熱狗（包）",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0376282.jpg",
-        "Protein": 10.9,
-        "Carb": 4.6,
-        "Calories": 220.0,
-        "Fat": 17.5,
-        "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常"
-    },
-    {
-        "category": "夯蕃薯、現烤熟食",
-        "title": "金黃芝士熱狗",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0396109.jpg",
-        "Protein": 10.9,
-        "Carb": 4.6,
-        "Calories": 220.0,
-        "Fat": 17.5,
-        "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常。"
-    },
-    {
-        "category": "夯蕃薯、現烤熟食",
         "title": "經典原味熱狗",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0410050.jpg",
         "Protein": 11.0,
@@ -4201,26 +4261,6 @@
     },
     {
         "category": "夯蕃薯、現烤熟食",
-        "title": "原味爆汁熱狗",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0587340.jpg",
-        "Protein": 9.9,
-        "Carb": 4.5,
-        "Calories": 198.0,
-        "Fat": 15.6,
-        "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常。"
-    },
-    {
-        "category": "夯蕃薯、現烤熟食",
-        "title": "辣味爆汁熱狗",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0592610.jpg",
-        "Protein": 10.2,
-        "Carb": 4.7,
-        "Calories": 180.0,
-        "Fat": 13.4,
-        "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常。"
-    },
-    {
-        "category": "夯蕃薯、現烤熟食",
         "title": "韓式辣醬熱狗",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0799513.jpg",
         "Protein": 9.9,
@@ -4237,26 +4277,6 @@
         "Carb": 5.6,
         "Calories": 204.0,
         "Fat": 15.5,
-        "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常。"
-    },
-    {
-        "category": "夯蕃薯、現烤熟食",
-        "title": "維也納雞肉熱狗",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0874399.jpg",
-        "Protein": 11.3,
-        "Carb": 5.7,
-        "Calories": 187.0,
-        "Fat": 13.3,
-        "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常。"
-    },
-    {
-        "category": "夯蕃薯、現烤熟食",
-        "title": "香辣雞肉熱狗",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0887067.jpg",
-        "Protein": 10.9,
-        "Carb": 7.9,
-        "Calories": 193.0,
-        "Fat": 13.1,
         "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常。"
     },
     {
@@ -4278,16 +4298,6 @@
         "Calories": 209.0,
         "Fat": 17.0,
         "Description": "食用說明：本產品已熟，解凍後可即食或經煎、烤等復熱調理風味更佳"
-    },
-    {
-        "category": "夯蕃薯、現烤熟食",
-        "title": "義式起司雞肉熱狗",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1046195.jpg",
-        "Protein": 11.3,
-        "Carb": 5.7,
-        "Calories": 190.0,
-        "Fat": 13.6,
-        "Description": "請在冷藏環境解凍24小時，勿以淋熱水或微波方式進行解凍，以避免商品品質異常。"
     },
     {
         "category": "冷凍食品",
