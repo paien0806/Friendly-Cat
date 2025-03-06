@@ -131,16 +131,6 @@
     },
     {
         "category": "19_star",
-        "name": "加賀屋-黃金開運御膳",
-        "kcal": "464",
-        "price": "129",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_184.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "19_star",
         "name": "加賀屋-鮮蔬魚肉湯泡飯",
         "kcal": "332",
         "price": "99",
@@ -284,7 +274,7 @@
         "name": "晶英府城肉燥米糕飯糰",
         "kcal": "429",
         "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_186.png",
+        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_195.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -334,7 +324,7 @@
         "name": "阜杭豆漿-經典飯糰",
         "kcal": "569",
         "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_185.png",
+        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_196.png",
         "special_sale": "False",
         "new": "",
         "content": ""

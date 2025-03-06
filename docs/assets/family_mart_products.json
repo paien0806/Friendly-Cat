@@ -571,6 +571,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配巧克力派司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0040786.jpg",
+        "Protein": 5.9,
+        "Carb": 37.0,
+        "Calories": 405.0,
+        "Fat": 25.9,
+        "Description": "產品表面裝飾較脆弱，部分裂開與脫落屬自然現象，請安心食用"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配起酥蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0065326.jpg",
         "Protein": 5.2,
@@ -921,16 +931,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配麥麥椪柑乳酪小土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0903342.jpg",
-        "Protein": 9.6,
-        "Carb": 45.5,
-        "Calories": 294.0,
-        "Fat": 8.1,
-        "Description": "麵包體表面褐色小點，屬梅納反應，為正常現象"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配炸彈奶酥麵包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0904275.jpg",
         "Protein": 6.2,
@@ -1038,16 +1038,6 @@
         "Calories": 238.0,
         "Fat": 3.6,
         "Description": "麵包體表面褐色小點，屬於梅納反應，為正常現象"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配綜合堅果辮子麵包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0927681.jpg",
-        "Protein": 9.2,
-        "Carb": 52.4,
-        "Calories": 342.0,
-        "Fat": 10.6,
-        "Description": "寶山黑糖 X 綜合堅果 X 手工辮子造型"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -3058,6 +3048,16 @@
         "Calories": 429.0,
         "Fat": 11.5,
         "Description": "黑胡椒雞排鐵板麵"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "拿坡里義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037526.jpg",
+        "Protein": 27.4,
+        "Carb": 106.0,
+        "Calories": 659.0,
+        "Fat": 14.0,
+        "Description": "※本產品含過敏原含麩質之穀物、堅果、大豆、牛奶、蛋類及其製品。 ※白色粉末為起司粉，此為正常現象。 家用微波 7  0  0 W150秒勿超過9 0°C 食用前需微波加熱,並儘速食用完畢"
     },
     {
         "category": "飯麵粥品",
@@ -6058,16 +6058,6 @@
         "Calories": 222.0,
         "Fat": 9.4,
         "Description": "無加糖+高纖"
-    },
-    {
-        "category": "飲品",
-        "title": "福樂活力Ｂ綜合維他牛乳",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0775474.jpg",
-        "Protein": 6.0,
-        "Carb": 42.0,
-        "Calories": 236.0,
-        "Fat": 4.9,
-        "Description": "14種維生素+礦物質"
     },
     {
         "category": "飲品",
