@@ -561,13 +561,23 @@
     },
     {
         "category": "飯糰壽司",
+        "title": "一配粵式玫瑰油雞飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1054677.jpg",
+        "Protein": 6.2,
+        "Carb": 33.3,
+        "Calories": 171.0,
+        "Fat": 1.4,
+        "Description": "※本產品已充分熟化，產品橫切面帶有些許粉紅色或紅色血管為正常現象※原物料雞肉易含細碎硬骨，請小心食用"
+    },
+    {
+        "category": "飯糰壽司",
         "title": "二配大飯糰金沙肉鬆",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1054681.jpg",
         "Protein": 5.6,
         "Carb": 45.1,
         "Calories": 251.0,
         "Fat": 5.5,
-        "Description": "大飯糰金沙肉鬆"
+        "Description": "金沙肉鬆帶有鹹蛋黃的濃厚香氣和奶油的香甜，外層包覆麻油鹽大海苔。"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1911,16 +1921,6 @@
     },
     {
         "category": "三明治、漢堡",
-        "title": "熱炒鹹豬肉長堡",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0895517.jpg",
-        "Protein": 10.0,
-        "Carb": 26.2,
-        "Calories": 283.0,
-        "Fat": 15.4,
-        "Description": "熱炒鹹豬肉長堡"
-    },
-    {
-        "category": "三明治、漢堡",
         "title": "紅醬薯薯歐姆蛋三明治",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0895521.jpg",
         "Protein": 9.8,
@@ -2163,11 +2163,11 @@
         "category": "飯麵粥品",
         "title": "星—極上炙烤親子丼",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0399402.jpg",
-        "Protein": 24.8,
-        "Carb": 107.5,
-        "Calories": 573.0,
-        "Fat": 5.1,
-        "Description": "醬燒炙烤親子丼"
+        "Protein": 25.1,
+        "Carb": 91.7,
+        "Calories": 526.0,
+        "Fat": 6.5,
+        "Description": "炙烤雞腿丁搭配特調柴魚風味醬與親子滑蛋,呈現道地日本百年丼飯風味"
     },
     {
         "category": "飯麵粥品",
