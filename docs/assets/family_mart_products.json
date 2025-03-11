@@ -2551,16 +2551,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "焙煎咖哩豆腐牛",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0903306.jpg",
-        "Protein": 21.0,
-        "Carb": 91.1,
-        "Calories": 609.0,
-        "Fat": 17.6,
-        "Description": "焙煎咖哩為醬體基底，搭配炒香牛絞肉與豆腐，每一口都濃郁十足"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "星—健身Ｇ肉餐盒",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0904302.jpg",
         "Protein": 30.0,
@@ -3381,6 +3371,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "綠肉洋香瓜（截切—盒）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0321114.jpg",
+        "Protein": 1.0,
+        "Carb": 14.1,
+        "Calories": 60.4,
+        "Fat": 0.0,
+        "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "雙拼水果盒（截切）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0334787.jpg",
         "Protein": 1.6,
@@ -3917,6 +3917,16 @@
         "Carb": 11.7,
         "Calories": 59.6,
         "Fat": 0.8,
+        "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "古早味甘梅芭樂（截切杯）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1020404.jpg",
+        "Protein": 1.3,
+        "Carb": 16.4,
+        "Calories": 74.4,
+        "Fat": 0.4,
         "Description": "當季水果汁多鮮美"
     },
     {
@@ -4657,7 +4667,7 @@
         "Carb": 15.4,
         "Calories": 228.0,
         "Fat": 11.4,
-        "Description": "1.微波加熱後高溫，請小心撕口處冒出的高溫蒸氣。 2.微波後，請於2小時內食用完畢。 3.本包裝不可水煮，不可火烤加熱。 4.本產品經剔骨處理，偶有碎骨殘留，請小心食用並注意。"
+        "Description": "1.微波加熱後高溫，請小心撕口處冒出的高溫蒸氣。 2.微波後，請於2小時內食用完畢。 3.本包裝不可"
     },
     {
         "category": "冷凍食品",
@@ -6088,16 +6098,6 @@
         "Calories": 262.3,
         "Fat": 13.5,
         "Description": "沉澱為黃豆纖維、花生及杏仁，係屬自然現象，飲用前請先搖勻．"
-    },
-    {
-        "category": "飲品",
-        "title": "加倍佳巧克力牛奶",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0884132.jpg",
-        "Protein": 7.1,
-        "Carb": 37.5,
-        "Calories": 263.0,
-        "Fat": 9.4,
-        "Description": "香草巧克力風味"
     },
     {
         "category": "飲品",
