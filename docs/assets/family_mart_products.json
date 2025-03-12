@@ -1441,6 +1441,26 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配椰棗核桃小土司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049866.jpg",
+        "Protein": 9.1,
+        "Carb": 51.9,
+        "Calories": 375.0,
+        "Fat": 14.5,
+        "Description": "微波後請小心燙口"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配椰棗果乾餐包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049870.jpg",
+        "Protein": 3.5,
+        "Carb": 18.2,
+        "Calories": 116.0,
+        "Fat": 3.2,
+        "Description": "香甜椰棗X加州葡萄乾"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配丹麥菠蘿可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1820062.jpg",
         "Protein": 7.9,
@@ -2123,11 +2143,11 @@
         "category": "飯麵粥品",
         "title": "星—香辣醬蒜味香腸蛋炒飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0226225.jpg",
-        "Protein": 19.5,
-        "Carb": 114.6,
-        "Calories": 830.0,
-        "Fat": 32.6,
-        "Description": "香辣醬香腸蛋炒飯"
+        "Protein": 18.6,
+        "Carb": 103.7,
+        "Calories": 815.0,
+        "Fat": 36.3,
+        "Description": "香辣醬蒜味香腸蛋炒飯"
     },
     {
         "category": "飯麵粥品",
@@ -2877,7 +2897,7 @@
         "Carb": 89.4,
         "Calories": 603.0,
         "Fat": 19.8,
-        "Description": "經典燒豚飯"
+        "Description": "全家全明星商品"
     },
     {
         "category": "飯麵粥品",
@@ -2987,7 +3007,7 @@
         "Carb": 99.3,
         "Calories": 595.0,
         "Fat": 15.3,
-        "Description": "牛丼"
+        "Description": "日式壽喜燒風味，經典的鹹甜好滋味，配上燉煮牛五花令人唇齒留香"
     },
     {
         "category": "飯麵粥品",
@@ -3078,6 +3098,16 @@
         "Calories": 527.0,
         "Fat": 13.4,
         "Description": "煸椒烘蛋飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "清炒剝皮辣椒雞義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1054118.jpg",
+        "Protein": 2.1,
+        "Carb": 64.5,
+        "Calories": 423.0,
+        "Fat": 8.8,
+        "Description": "UNO PASTA系列新口味"
     },
     {
         "category": "飯麵粥品",
@@ -3288,6 +3318,16 @@
         "Calories": 446.0,
         "Fat": 25.2,
         "Description": "選用Q彈寬粉，順口又易吸附湯汁，湯頭酸酸辣辣帶點甜的口感加上豐富配料。"
+    },
+    {
+        "category": "關東煮、湯品",
+        "title": "西湖牛肉羹",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057702.jpg",
+        "Protein": 10.9,
+        "Carb": 8.3,
+        "Calories": 114.0,
+        "Fat": 4.2,
+        "Description": "香醇潤滑的牛肉碎，加入豆腐、草菇和細滑蛋白，濃郁牛肉香氣搭上順口羹湯，是道鮮美可口的湯品。"
     },
     {
         "category": "關東煮、湯品",
@@ -4678,6 +4718,16 @@
         "Calories": 210.0,
         "Fat": 11.0,
         "Description": "十三香風味炸雞"
+    },
+    {
+        "category": "冷凍食品",
+        "title": "上海風味生煎包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0972595.jpg",
+        "Protein": 16.3,
+        "Carb": 52.0,
+        "Calories": 413.0,
+        "Fat": 15.6,
+        "Description": "媽媽的好手藝，讓餐桌上的每一道菜，都成為了藝術品。"
     },
     {
         "category": "冷凍食品",

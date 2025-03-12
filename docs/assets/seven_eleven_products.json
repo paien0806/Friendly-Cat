@@ -4811,16 +4811,6 @@
     },
     {
         "category": "13_luwei",
-        "name": "上海風味生煎包",
-        "kcal": "247",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/13_luwei/images/luwei_89.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "13_luwei",
         "name": "御料小館韓式泡菜鍋貼",
         "kcal": "402",
         "price": "49",
@@ -4871,30 +4861,10 @@
     },
     {
         "category": "13_luwei",
-        "name": "香腸蛋炒飯",
-        "kcal": "616",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/13_luwei/images/luwei_75.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "13_luwei",
         "name": "海陸雙鮮燒賣",
         "kcal": "362",
         "price": "49",
         "image": "https://www.7-11.com.tw/freshfoods/13_luwei/images/luwei_74.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "13_luwei",
-        "name": "御料小館牛肉咖哩歐姆蛋飯",
-        "kcal": "382",
-        "price": "89",
-        "image": "https://www.7-11.com.tw/freshfoods/13_luwei/images/luwei_163.png",
         "special_sale": "False",
         "new": "",
         "content": ""
