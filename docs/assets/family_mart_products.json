@@ -387,7 +387,7 @@
         "Carb": 39.7,
         "Calories": 249.0,
         "Fat": 7.6,
-        "Description": "金家ㄟ聯名，內餡以蟹膏加蛋絲為主題，在混拌蟹味絲及芝麻油，充滿韓式風味"
+        "Description": "選用進口蟹膏入料"
     },
     {
         "category": "飯糰壽司",
@@ -1038,16 +1038,6 @@
         "Calories": 435.0,
         "Fat": 8.8,
         "Description": "麵包體白色粉末為麵粉，非發霉現象，請安心食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配帕瑪森起司麻吉球",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0927627.jpg",
-        "Protein": 5.5,
-        "Carb": 45.9,
-        "Calories": 238.0,
-        "Fat": 3.6,
-        "Description": "麵包體表面褐色小點，屬於梅納反應，為正常現象"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2421,16 +2411,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "粉紅醬燻腸起司義大利麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0842887.jpg",
-        "Protein": 27.0,
-        "Carb": 73.5,
-        "Calories": 581.0,
-        "Fat": 20.0,
-        "Description": "※本產品含過敏原麩質之穀物、堅果、大豆、牛奶、蛋類及其製品。※食用前需微波加熱，並儘速食用完畢；家用微波700W150秒勿超過90℃。"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "星—義式蒜炒雞腿排義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0842891.jpg",
         "Protein": 27.0,
@@ -2528,16 +2508,6 @@
         "Calories": 624.0,
         "Fat": 20.1,
         "Description": "鼎泰豐聯名商品"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "台式肉燥酸菜拌麵（區）",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0882744.jpg",
-        "Protein": 19.7,
-        "Carb": 74.7,
-        "Calories": 572.0,
-        "Fat": 21.7,
-        "Description": "台式肉燥酸菜拌麵(區)"
     },
     {
         "category": "飯麵粥品",
@@ -2698,16 +2668,6 @@
         "Calories": 595.0,
         "Fat": 24.9,
         "Description": "牛肉拌麵"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "鮮蝦燴意麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0916129.jpg",
-        "Protein": 17.8,
-        "Carb": 56.5,
-        "Calories": 507.0,
-        "Fat": 23.3,
-        "Description": "嚴選鍋燒意麵口感佳，配蝦仁及經典配菜，淋上酸酸甜甜的醋味羹湯，酸爽帶勁。"
     },
     {
         "category": "飯麵粥品",
@@ -3768,16 +3728,6 @@
         "Calories": 43.2,
         "Fat": 0.1,
         "Description": "白色果肉香甜清脆"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "越式牛肉寬粉",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0873193.jpg",
-        "Protein": 13.5,
-        "Carb": 5.5,
-        "Calories": 127.0,
-        "Fat": 5.5,
-        "Description": "自製沙茶湯頭，濃厚的沙茶風味，再點綴上秘製沙茶醬，使整體風味更上一層。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
