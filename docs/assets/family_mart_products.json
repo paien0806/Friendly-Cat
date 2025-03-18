@@ -447,7 +447,7 @@
         "Carb": 31.4,
         "Calories": 232.0,
         "Fat": 9.2,
-        "Description": "強調醬汁風味及主菜感，使用牛五花部位醃漬，搭配明太子沙拉醬及小黃瓜調解膩。"
+        "Description": "※牛培根含有牛筋為正常現象請安心食用。"
     },
     {
         "category": "飯糰壽司",
@@ -578,6 +578,16 @@
         "Calories": 251.0,
         "Fat": 5.5,
         "Description": "金沙肉鬆帶有鹹蛋黃的濃厚香氣和奶油的香甜，外層包覆麻油鹽大海苔。"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "二配大飯糰椒香鮪魚",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067909.jpg",
+        "Protein": 6.5,
+        "Carb": 40.2,
+        "Calories": 264.0,
+        "Fat": 8.6,
+        "Description": "使用椒麻風味的大飯糰海苔，加強商品風味層次。鮪魚沙拉添加花椒油、藤椒油，風味鹹鮮，香麻而不辣，刷嘴耐吃。"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1451,6 +1461,26 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "二配抹茶巧克力蛋糕麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049907.jpg",
+        "Protein": 6.9,
+        "Carb": 44.3,
+        "Calories": 320.0,
+        "Fat": 12.9,
+        "Description": "靜岡抹茶X貝可拉巧克力磅蛋糕X佐藤園抹茶卡士達餡"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配春韻抹茶夾心土司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1052093.jpg",
+        "Protein": 5.2,
+        "Carb": 33.2,
+        "Calories": 254.0,
+        "Fat": 11.1,
+        "Description": "靜岡抹茶+白巧水滴"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配丹麥菠蘿可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1820062.jpg",
         "Protein": 7.9,
@@ -2181,16 +2211,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "星—炭香燒豚飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0426908.jpg",
-        "Protein": 15.4,
-        "Carb": 76.5,
-        "Calories": 534.0,
-        "Fat": 18.3,
-        "Description": "使用燒肉專門店國產豬五花、直火炙燒，刷上日式炭燒風味燒烤醬，搭配韓式泡菜與起司，讓燒肉風味層次更多元"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "星—皮蛋辣拌麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0477731.jpg",
         "Protein": 22.5,
@@ -2338,16 +2358,6 @@
         "Calories": 645.0,
         "Fat": 26.6,
         "Description": "Q彈意麵拌上鹹香肉燥，搭配油菜、滷蛋、豆腐等配料，一口接一口吃完唇齒留香，讓人懷念的好滋味!"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—嘉義劉里長雞肉片飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0752727.jpg",
-        "Protein": 18.0,
-        "Carb": 97.2,
-        "Calories": 552.0,
-        "Fat": 9.9,
-        "Description": "嘉義劉里長雞肉片飯"
     },
     {
         "category": "飯麵粥品",
@@ -2531,16 +2541,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "今天吃蛋包飯喔",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0895553.jpg",
-        "Protein": 16.7,
-        "Carb": 66.5,
-        "Calories": 495.0,
-        "Fat": 18.0,
-        "Description": "今天吃蛋包飯喔"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "星—健身Ｇ肉餐盒",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0904302.jpg",
         "Protein": 30.0,
@@ -2598,16 +2598,6 @@
         "Calories": 554.0,
         "Fat": 21.0,
         "Description": "※食用前需微波加熱※本產品含過敏原麩質之穀物、大豆、牛奶、蛋類及其製品。※本產品含薑絲纖維屬正常現象，請安心食用。※內含薑黃顏色為原物料特性屬正常現象。"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "羅勒海鮮雲朵湯義大利麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0915991.jpg",
-        "Protein": 19.8,
-        "Carb": 66.9,
-        "Calories": 547.0,
-        "Fat": 22.4,
-        "Description": "※食用前需微波加熱，並儘速食用完畢。家用微波700W180秒勿超過90℃※本產品含過敏原麩質之穀物、牛奶、羊奶、大豆、蛋類、軟體動物類(頭足類、螺貝類)、甲殼類(蝦類、蟹類)、堅果類、種子類及其製品。"
     },
     {
         "category": "飯麵粥品",
@@ -6158,6 +6148,16 @@
         "Calories": 271.0,
         "Fat": 0.0,
         "Description": "每瓶含300億個以上益生菌/產品可能有蛋白質沉澱，請搖勻後飲用"
+    },
+    {
+        "category": "飲品",
+        "title": "光泉麥芽牛乳９３６ｍｌ",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1071364.jpg",
+        "Protein": 5.9,
+        "Carb": 29.6,
+        "Calories": 197.8,
+        "Fat": 6.2,
+        "Description": "乳脂肪上浮，係屬自然現象，請搖勻後安心飲用。"
     },
     {
         "category": "飲品",

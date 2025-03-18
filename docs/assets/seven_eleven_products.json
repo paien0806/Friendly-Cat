@@ -2691,16 +2691,6 @@
     },
     {
         "category": "6_Noodles",
-        "name": "蘑菇雙醬豬排鐵板麵",
-        "kcal": "599",
-        "price": "89",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_176.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "6_Noodles",
         "name": "蔥爆沙茶牛肉炒麵",
         "kcal": "571",
         "price": "89",
