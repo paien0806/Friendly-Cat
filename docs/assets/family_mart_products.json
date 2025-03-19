@@ -581,6 +581,16 @@
     },
     {
         "category": "飯糰壽司",
+        "title": "椒香胡麻雞絲飯卷",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1058944.jpg",
+        "Protein": 7.7,
+        "Carb": 31.2,
+        "Calories": 190.0,
+        "Fat": 3.7,
+        "Description": "椒香胡麻雞絲飯卷"
+    },
+    {
+        "category": "飯糰壽司",
         "title": "二配大飯糰椒香鮪魚",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067909.jpg",
         "Protein": 6.5,
@@ -588,6 +598,26 @@
         "Calories": 264.0,
         "Fat": 8.6,
         "Description": "使用椒麻風味的大飯糰海苔，加強商品風味層次。鮪魚沙拉添加花椒油、藤椒油，風味鹹鮮，香麻而不辣，刷嘴耐吃。"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "一配泰式酸辣雞絲飯糰（區）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067959.jpg",
+        "Protein": 4.6,
+        "Carb": 34.4,
+        "Calories": 167.0,
+        "Fat": 1.2,
+        "Description": "泰式酸辣雞絲飯糰(區)"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "一配炙烤焦糖鮭魚細卷",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1069074.jpg",
+        "Protein": 3.3,
+        "Carb": 32.0,
+        "Calories": 161.0,
+        "Fat": 2.2,
+        "Description": "※鮭魚焦紋為炙烤正常現象。"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1481,6 +1511,26 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配抹茶甜甜圈蛋糕",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1069210.jpg",
+        "Protein": 5.4,
+        "Carb": 45.4,
+        "Calories": 409.0,
+        "Fat": 22.9,
+        "Description": "抹茶粉久置會氧化變成褐色，屬自然現象，請安心食用"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配加州莓果乳酪軟歐",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1070140.jpg",
+        "Protein": 13.1,
+        "Carb": 65.4,
+        "Calories": 417.0,
+        "Fat": 11.4,
+        "Description": "添加熊本石臼研磨糯小麥 X 澳洲乳酪 X 蔓越莓乾"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配丹麥菠蘿可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1820062.jpg",
         "Protein": 7.9,
@@ -2128,6 +2178,16 @@
         "Calories": 174.0,
         "Fat": 5.5,
         "Description": "濃醇的巧克力配上輕乳酪實在讓人欲罷不能"
+    },
+    {
+        "category": "三明治、漢堡",
+        "title": "椒麻雞腿堡",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067822.jpg",
+        "Protein": 14.6,
+        "Carb": 31.3,
+        "Calories": 328.0,
+        "Fat": 16.1,
+        "Description": "椒麻雞腿堡"
     },
     {
         "category": "三明治、漢堡",
@@ -3051,6 +3111,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "青花椒麻雞肉拌麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049202.jpg",
+        "Protein": 22.2,
+        "Carb": 64.1,
+        "Calories": 452.0,
+        "Fat": 11.8,
+        "Description": "青花椒麻雞肉拌麵"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "清炒剝皮辣椒雞義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1054118.jpg",
         "Protein": 2.1,
@@ -3078,6 +3148,16 @@
         "Calories": 670.0,
         "Fat": 23.4,
         "Description": "甕底蔭油臘味炒飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "麻奶豬肉鍋好下飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067854.jpg",
+        "Protein": 16.1,
+        "Carb": 89.6,
+        "Calories": 571.0,
+        "Fat": 16.5,
+        "Description": "麻奶豬肉鍋好下飯"
     },
     {
         "category": "關東煮、湯品",
@@ -3958,6 +4038,16 @@
         "Calories": 85.0,
         "Fat": 4.3,
         "Description": "非供即食，應充分加熱。本產品含過敏原麩質之穀物、大豆、牛奶、蛋及其製品 。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "蔥鹽雞肉麵沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057093.jpg",
+        "Protein": 15.2,
+        "Carb": 18.6,
+        "Calories": 186.0,
+        "Fat": 5.6,
+        "Description": "蔥鹽雞肉麵沙拉"
     },
     {
         "category": "小菜沙拉、雞胸肉",
