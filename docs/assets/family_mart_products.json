@@ -321,16 +321,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "一配日式肉味噌飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0874626.jpg",
-        "Protein": 5.6,
-        "Carb": 29.8,
-        "Calories": 156.0,
-        "Fat": 1.6,
-        "Description": "川?主廚聯名，雞絞肉搭配白味噌，再添加蔥花、海苔醬增加風味層次"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "二配小白鹽味飯糰",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0889069.jpg",
         "Protein": 3.3,
@@ -587,7 +577,7 @@
         "Carb": 31.2,
         "Calories": 190.0,
         "Fat": 3.7,
-        "Description": "椒香胡麻雞絲飯卷"
+        "Description": "※原物料雞肉絲可能微量含細碎硬骨，請小心食用"
     },
     {
         "category": "飯糰壽司",
@@ -901,16 +891,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配蜂蜜雙餡雪花蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0817313.jpg",
-        "Protein": 5.0,
-        "Carb": 47.8,
-        "Calories": 347.1,
-        "Fat": 15.1,
-        "Description": "表面黑點為焦糖化反應屬自然現象，請安心食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配藍莓乳酪軟歐",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0829471.jpg",
         "Protein": 13.3,
@@ -1058,16 +1038,6 @@
         "Calories": 443.0,
         "Fat": 11.0,
         "Description": "添加熊本石臼研磨糯小麥 X 熟成起司"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配蘭姆葡萄乳酪軟歐",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0915969.jpg",
-        "Protein": 6.7,
-        "Carb": 37.7,
-        "Calories": 230.0,
-        "Fat": 5.8,
-        "Description": "添加熊本石臼研磨糯小麥 X 澳洲乳酪"
     },
     {
         "category": "麵包、吐司、蛋糕",
