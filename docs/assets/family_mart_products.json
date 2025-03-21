@@ -2711,16 +2711,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "香烤牛肉黑胡椒醬歐姆蛋飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0925752.jpg",
-        "Protein": 21.0,
-        "Carb": 85.2,
-        "Calories": 618.0,
-        "Fat": 21.4,
-        "Description": "※牛培根含有牛筋為正常現象請安心食用"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "糖燻野郎炙燒牛",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0930286.jpg",
         "Protein": 15.5,
@@ -4293,11 +4283,11 @@
         "category": "夯蕃薯、現烤熟食",
         "title": "冰烤蕃薯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0460041.jpg",
-        "Protein": 0.7,
-        "Carb": 17.3,
-        "Calories": 72.0,
+        "Protein": 1.3,
+        "Carb": 34.6,
+        "Calories": 144.0,
         "Fat": 0.0,
-        "Description": "無添加，冷熱食都可"
+        "Description": "甘藷經過清洗及烘烤加工,可連皮食用.甘藷切口處若呈現黑白色,為乳汁氧化之自然現象,請安心食用.建議微"
     },
     {
         "category": "夯蕃薯、現烤熟食",
