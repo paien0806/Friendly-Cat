@@ -5941,16 +5941,6 @@
     },
     {
         "category": "飲品",
-        "title": "ＦＭＣ紅豆紫米漿",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0479329.jpg",
-        "Protein": 2.9,
-        "Carb": 28.8,
-        "Calories": 126.8,
-        "Fat": 0.0,
-        "Description": "離開冷藏請勿超過半小時"
-    },
-    {
-        "category": "飲品",
         "title": "福樂超能蛋白營養牛乳可可口味",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0490579.jpg",
         "Protein": 20.3,
@@ -5968,16 +5958,6 @@
         "Calories": 76.0,
         "Fat": 0.0,
         "Description": "搭餐爽快"
-    },
-    {
-        "category": "飲品",
-        "title": "ＦＭＣ特濃黑可可",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0601091.jpg",
-        "Protein": 8.5,
-        "Carb": 32.0,
-        "Calories": 280.0,
-        "Fat": 13.1,
-        "Description": "嚴選比利時黑巧克力"
     },
     {
         "category": "飲品",
@@ -6858,16 +6838,6 @@
         "Calories": 250.4,
         "Fat": 7.2,
         "Description": "整顆花生研磨, 香濃好滋味"
-    },
-    {
-        "category": "飲品",
-        "title": "光泉燕麥高纖豆漿",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2940122.jpg",
-        "Protein": 12.8,
-        "Carb": 16.0,
-        "Calories": 164.0,
-        "Fat": 7.2,
-        "Description": "非基因改造黃豆研磨, 純正好滋味"
     },
     {
         "category": "飲品",
