@@ -117,7 +117,7 @@
         "Carb": 32.0,
         "Calories": 188.0,
         "Fat": 4.3,
-        "Description": "究極工法，全新升級1.使用高等級鮪魚。2.增加蔬菜甜味"
+        "Description": "究極工法，全新升級1.使用高等級鮪魚，具纖維感。2.以兩段式洋蔥調理工法，增加蔬菜甜味與口感"
     },
     {
         "category": "飯糰壽司",
@@ -157,7 +157,7 @@
         "Carb": 41.4,
         "Calories": 239.0,
         "Fat": 5.7,
-        "Description": "肉鬆與豬油拌炒增加酥脆口感和米飯搭配美乃滋，提升風味。"
+        "Description": "究極工法，全新升級1.肉鬆與豬油拌炒增加酥脆口感。2.兩段式美乃滋工法，提升米飯食味值。"
     },
     {
         "category": "飯糰壽司",
@@ -1958,16 +1958,6 @@
         "Calories": 432.0,
         "Fat": 25.1,
         "Description": "美式熱狗堡"
-    },
-    {
-        "category": "三明治、漢堡",
-        "title": "蒜香香腸長堡",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0895480.jpg",
-        "Protein": 15.7,
-        "Carb": 40.2,
-        "Calories": 487.0,
-        "Fat": 29.3,
-        "Description": "蒜香香腸長堡"
     },
     {
         "category": "三明治、漢堡",
