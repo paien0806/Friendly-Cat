@@ -321,16 +321,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "二配小白鹽味飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0889069.jpg",
-        "Protein": 3.3,
-        "Carb": 41.7,
-        "Calories": 186.0,
-        "Fat": 0.7,
-        "Description": "蠟筆小新聯名限量商品"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配明太子鹽烤赤魚飯糰",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0889114.jpg",
         "Protein": 5.6,
@@ -667,7 +657,7 @@
         "Carb": 18.2,
         "Calories": 176.6,
         "Fat": 10.2,
-        "Description": "開封後請盡早食用完畢,微波後請小心燙口"
+        "Description": "開封後請儘早食用完畢，微波後請小心燙口"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1498,6 +1488,16 @@
         "Calories": 417.0,
         "Fat": 11.4,
         "Description": "添加熊本石臼研磨糯小麥 X 澳洲乳酪 X 蔓越莓乾"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配藍莓乳酪丹麥",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1070154.jpg",
+        "Protein": 4.3,
+        "Carb": 30.8,
+        "Calories": 265.0,
+        "Fat": 13.9,
+        "Description": "此產品不可微波"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2817,7 +2817,7 @@
         "Carb": 100.8,
         "Calories": 683.0,
         "Fat": 19.1,
-        "Description": "話題品份量漢堡排，以日式人氣中濃醬汁開發，賣相仿日式漢堡排定食，吸引年輕族群滿足冬季口腹之慾"
+        "Description": "使用手做漢堡排"
     },
     {
         "category": "飯麵粥品",
@@ -2991,6 +2991,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "星—義式蕃茄起司義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037508.jpg",
+        "Protein": 29.7,
+        "Carb": 69.4,
+        "Calories": 538.0,
+        "Fat": 15.6,
+        "Description": "食用前需微波加熱,並儘速食用完畢；家用微波 7  0  0 W150秒勿超過9 0°C  ※本產品含過敏原含麩質之穀物、堅果、牛奶、大豆、蛋類及其製品。"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "黑胡椒雞排鐵板麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037512.jpg",
         "Protein": 23.8,
@@ -3088,6 +3098,16 @@
         "Calories": 571.0,
         "Fat": 16.5,
         "Description": "麻奶豬肉鍋好下飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "極旨黑咖哩漢堡排飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067872.jpg",
+        "Protein": 22.2,
+        "Carb": 94.5,
+        "Calories": 578.0,
+        "Fat": 12.3,
+        "Description": "極旨黑咖哩漢堡排飯"
     },
     {
         "category": "關東煮、湯品",
