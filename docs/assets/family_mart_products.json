@@ -1111,16 +1111,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配起司杯子蛋糕",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0948413.jpg",
-        "Protein": 2.1,
-        "Carb": 13.6,
-        "Calories": 110.5,
-        "Fat": 5.3,
-        "Description": "本產品請勿微波；內附脫氧包，請勿食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配黑金起司鹽可頌",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0949041.jpg",
         "Protein": 7.4,
@@ -2601,16 +2591,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "義式鮭魚雲朵湯義大利麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0916006.jpg",
-        "Protein": 22.4,
-        "Carb": 70.4,
-        "Calories": 521.0,
-        "Fat": 16.7,
-        "Description": "※小心魚刺※食用前需微波加熱，並儘速食用完畢。家用微波700W180秒勿超過90℃※本產品酒精濃度低於法定值0.5%以下，為一般食品非酒精產品，懷孕者、對酒精過敏者請勿食用。"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "海鮮什錦炒麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0916010.jpg",
         "Protein": 20.2,
@@ -3088,6 +3068,16 @@
         "Calories": 670.0,
         "Fat": 23.4,
         "Description": "甕底蔭油臘味炒飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "星—熱那亞青醬義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057902.jpg",
+        "Protein": 33.1,
+        "Carb": 54.6,
+        "Calories": 539.0,
+        "Fat": 20.8,
+        "Description": "※食用前需微波加熱，並儘速食用完畢 家用微波700W150秒勿超過90℃※內含九層塔，粗纖維屬正常現象。※本產品含過敏原含麩質之穀物、堅果、大豆、牛奶、蛋、魚類及其製品。"
     },
     {
         "category": "飯麵粥品",
