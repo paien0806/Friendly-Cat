@@ -1,0 +1,20 @@
+<div class="chatbot-container" [class.open]="isOpen" *ngIf="true">
+    <div class="chatbot-header" (click)="toggleChat()">
+        黑貓幫你找💬
+        <button class="toggle-btn" (click)="toggleChat($event)">
+            {{ isOpen ? '➖' : '➕' }}
+        </button>
+    </div>
+
+    <div #chatBody *ngIf="isOpen" class="chatbot-body">
+        <div *ngFor="let msg of messages" [ngClass]="msg.sender">
+            <span *ngIf="msg.sender == 'user'">{{ msg.text }}</span>
+            <span *ngIf="msg.sender == 'bot'">🐈‍⬛： {{ msg.text }}</span>
+        </div>
+    </div>
+
+    <div *ngIf="isOpen" class="chatbot-footer">
+        <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="輸入訊息...">
+        <button (click)="sendMessage()">➤</button>
+    </div>
+</div>

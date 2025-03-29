@@ -47,7 +47,7 @@ import { SiderComponent } from '../components/sider/sider.component';
     MatCardModule,
     MatMenuModule,
     MatToolbarModule,
-    MatDividerModule
+    MatDividerModule,
   ]
 })
 export class SearchFoodModule { }

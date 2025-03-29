@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { MessageDialogComponent } from 'src/app/components/message-dialog/message-dialog.component';
 import { FoodCategory, LocationData, StoreStockItem, Store, Location, FoodDetail711 } from '../model/seven-eleven.model'
 import { fStore, StoreModel, FoodDetailFamilyMart } from '../model/family-mart.model';
+import { StoreDataService } from 'src/app/services/stores-data.service';
 
 import { environment } from 'src/environments/environment';
 
@@ -84,6 +85,7 @@ export class NewSearchComponent implements OnInit {
     public loadingService: LoadingService,
     public dialog: MatDialog,
     private firestore: AngularFirestore,
+    private storeDataService: StoreDataService
   ) {
     this.searchForm = new FormGroup({
       selectedStoreName: new FormControl(''), // 控制選中的商店
@@ -711,6 +713,7 @@ export class NewSearchComponent implements OnInit {
         else{
           this.combineStoreList();
         }
+        this.storeDataService.setStores(this.totalStoresShowList);
       },
       (error) => {
         console.error('Error fetching store data:', error);
