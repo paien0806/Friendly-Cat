@@ -3041,6 +3041,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "星—奶油培根義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1054095.jpg",
+        "Protein": 21.3,
+        "Carb": 48.8,
+        "Calories": 488.0,
+        "Fat": 22.9,
+        "Description": "※食用前需微波加熱，並儘速食用完畢；家用微波700W150秒勿超過90℃。※本產品含過敏原含麩質之穀物、大豆、牛奶、蛋類及其製品。"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "清炒剝皮辣椒雞義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1054118.jpg",
         "Protein": 2.1,
@@ -3801,16 +3811,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "柚子胡椒雞肉棒",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0905449.jpg",
-        "Protein": 10.2,
-        "Carb": 6.1,
-        "Calories": 172.0,
-        "Fat": 11.9,
-        "Description": "本產品可能含有骨頭，食用時請小心。"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "柚子胡椒嫩雞胸",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0905453.jpg",
         "Protein": 26.4,
@@ -3868,6 +3868,16 @@
         "Calories": 69.0,
         "Fat": 0.2,
         "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "一顆蛋沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0955058.jpg",
+        "Protein": 7.5,
+        "Carb": 9.0,
+        "Calories": 213.0,
+        "Fat": 16.3,
+        "Description": "1.本產品不可微波加熱2.拆封後請盡速食用完畢3.兒童請在家長或大人陪同下食用4.本產品若受外力刺破會造成酸敗、發霉及膨包現象，請勿食用5.本產品含有雞蛋之過敏原"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -3988,6 +3998,16 @@
         "Calories": 186.0,
         "Fat": 5.6,
         "Description": "蔥鹽雞肉麵沙拉"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "沙茶黑胡椒嫩雞胸",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1063355.jpg",
+        "Protein": 26.9,
+        "Carb": 5.5,
+        "Calories": 146.7,
+        "Fat": 1.9,
+        "Description": "過癮但不罪惡，健身族爽度破表的日常享受！濃郁沙茶與黑胡椒香氣迸發，雞胸肉質軟嫩入味。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
