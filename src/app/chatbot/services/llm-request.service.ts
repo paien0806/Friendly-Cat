@@ -9,8 +9,10 @@ export class LlmRequestService {
 
   url = "https://openrouter.ai/api/v1/chat/completions";
 
+  k = "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";
+
   headers = new Headers({
-    "Authorization": "Bearer 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", // 替換為你的 API Key
+    "Authorization": "Bearer " + this.k, // 替換為你的 API Key
     "Content-Type": "application/json",
   });
 
