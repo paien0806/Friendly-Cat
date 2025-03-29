@@ -60,7 +60,7 @@ export class LlmRequestService {
       `
         }
       ],
-      max_tokens: 4000,
+      max_tokens: 6000,
     });
 
     return this.requestService.get("https://square-water-d5e4.jhcheng-alan.workers.dev/").pipe(

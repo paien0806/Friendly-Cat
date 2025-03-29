@@ -1,4 +1,4 @@
-<div class="chatbot-container" [class.open]="isOpen" *ngIf="true">
+<div class="chatbot-container" [class.open]="isOpen" *ngIf="isLogin">
     <div class="chatbot-header" (click)="toggleChat()">
         黑貓幫你找💬
         <button class="toggle-btn" (click)="toggleChat($event)">

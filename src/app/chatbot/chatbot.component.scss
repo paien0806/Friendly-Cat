@@ -19,8 +19,9 @@
 }
 
 .chatbot-container.open {
+    resize: vertical; /* 只允許垂直縮放 */
     height: 25rem;
-    max-height: 50vh;
+    max-height: 80vh;
 }
 
 .chatbot-header {
