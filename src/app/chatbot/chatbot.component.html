@@ -8,10 +8,15 @@
 
     <div #chatBody *ngIf="isOpen" class="chatbot-body">
         <div *ngFor="let msg of messages" [ngClass]="msg.sender">
-            <span *ngIf="msg.sender == 'user'">{{ msg.text }}</span>
-            <span *ngIf="msg.sender == 'bot'">🐈‍⬛： {{ msg.text }}</span>
+            <span *ngIf="msg.sender === 'user'" class="text-gray-700">{{ msg.text }}</span>
+            <span *ngIf="msg.sender === 'bot' && !msg.isLoading" class="text-primary-default">
+                🐈‍⬛： {{ msg.text }}
+            </span>
+            <span *ngIf="msg.sender === 'bot' && msg.isLoading" class="text-primary-default loading-text">
+                🐈‍⬛： {{ msg.text }}
+            </span>
         </div>
-    </div>
+    </div>    
 
     <div *ngIf="isOpen" class="chatbot-footer">
         <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="輸入訊息...">
