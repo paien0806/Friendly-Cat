@@ -26,28 +26,28 @@
 >
 > * 點選「使用目前位置」則以目前為中心搜尋附近店家，並顯示距離
 >
->![友善黑貓搜尋頁](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/search.png?raw=true "搜尋頁面")
+>![友善黑貓搜尋頁](https://github.com/Alan-Cheng/Friendly-Cat/blob/main/demo/search.png?raw=true "搜尋頁面")
 >
 >
 >### 2. 商品列表
 >
 > - 點選食物分類，顯示該分類下各商品詳細資訊
 >
->![友善黑貓商品頁](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/store_product.png?raw=true "商品頁面")
+>![友善黑貓商品頁](https://github.com/Alan-Cheng/Friendly-Cat/blob/main/demo/store_product.png?raw=true "商品頁面")
 >
 >
 >### 3. 會員功能
 >
 > - 加入會員後可由導覽列登入，商店右方愛心可將該店加入收藏
 >
->![友善黑貓會員功能](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/member.png?raw=true "會員功能")
+>![友善黑貓會員功能](https://github.com/Alan-Cheng/Friendly-Cat/blob/main/demo/member.png?raw=true "會員功能")
 >
 >
 >### 4. 聊天機器人功能
 >
 > - 登入會員後可使用聊天機器人，自動搜尋想找的食物資訊
 >
->![友善黑貓聊天機器人功能](https://github.com/Alan-Cheng/friendly-time/blob/develop/demo/chatbot.png?raw=true "聊天機器人功能")
+>![友善黑貓聊天機器人功能](https://github.com/Alan-Cheng/Friendly-Cat/blob/main/demo/chatbot.png?raw=true "聊天機器人功能")
 
 
 
