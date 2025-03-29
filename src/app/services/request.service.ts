@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -23,7 +23,7 @@ export class RequestService {
     return this.http.get(url, { params: httpParams });
   }
 
-  post(url: string, params?: any, body?: any): Observable<any> {
+  post(url: string, params?: any, body?: any, headers?: any): Observable<any> {
     let httpParams = new HttpParams();
 
     // 直接將 params 加入 httpParams，不做物件檢查
@@ -36,6 +36,6 @@ export class RequestService {
     }
 
     // 發送 POST 請求
-    return this.http.post(url, body || {}, { params: httpParams });
+    return this.http.post(url, body || {}, { params: httpParams, headers });
   }
 }

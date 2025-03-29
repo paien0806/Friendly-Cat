@@ -72,10 +72,15 @@ export class ChatbotComponent {
 
           this.llmRequestService.getLLMRes(input, this.storesInfo).subscribe((res) => {
             this.messages = this.messages.filter(msg => !msg.isLoading);
-            const resMessage: StoreResponse = JSON.parse(res.choices[0].message.content.trim().replace(/```json|```/g, ''));
+            const resObj: StoreResponse = JSON.parse(res.choices[0].message.content.trim().replace(/```json|```/g, ''));
+
+            if (resObj.stores.length === 0) {
+              this.putMessage("找不到你想要的東西啦QQ", "bot");
+              return
+            }
             
             let messageText = "這些商店有賣你想要的！\n\n";
-            resMessage.stores.forEach((store: Store) => {
+            resObj.stores.forEach((store: Store) => {
               messageText += `📍 ${store.storeName}（距離 ${store.distance.toFixed(1)}m）\n`;
               if (store.items.length > 0) {
                 messageText += ` ${store.items.join("\n")}\n\n`;

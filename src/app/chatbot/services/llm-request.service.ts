@@ -10,7 +10,7 @@ export class LlmRequestService {
   url = "https://openrouter.ai/api/v1/chat/completions";
 
   headers = new Headers({
-    "Authorization": "Bearer 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", // 替換為你的 API Key
+    "Authorization": "Bearer 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", // 替換為你的 API Key
     "Content-Type": "application/json",
   });
 
@@ -36,6 +36,9 @@ export class LlmRequestService {
 
       如果詢問的資訊不包含查詢商店內的商品相關，請告訴使用者你只能幫忙搜尋食品。
 
+      商店資訊如下：
+      ${this.jsonListToString(storesInfo)}
+
       如果沒有符合條件的商品，請回傳：
       \`\`\`json
       { "stores": [] }
@@ -45,9 +48,6 @@ export class LlmRequestService {
         {
           role: "user",
           content: `請根據我提供的商店資訊，找出符合「${foodDesc}」食物描述的商品。
-      
-      商店資訊如下：
-      ${this.jsonListToString(storesInfo)}
       
       請只回傳 JSON 格式，不要有其他解釋，格式如下：
       \`\`\`json
@@ -70,12 +70,7 @@ export class LlmRequestService {
       max_tokens: 4000,
     });
 
-    const headers = new Headers({
-      "Authorization": "Bearer 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", // 替換為你的 API Key
-      "Content-Type": "application/json",
-    });
-
-    return this.requestService.post(this.url, null, body, headers);
+    return this.requestService.post(this.url, null, body, this.headers);
   }
 
   private jsonListToString(json: any[]): string {
