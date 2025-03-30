@@ -8,7 +8,7 @@ import { Observable, switchMap } from 'rxjs';
 export class LlmRequestService {
 
   url = "https://openrouter.ai/api/v1/chat/completions";
-  model = "deepseek/deepseek-r1-distill-qwen-32b:free";
+  model = "deepseek/deepseek-chat-v3-0324:free";
   
   constructor(
     private requestService: RequestService
@@ -65,7 +65,6 @@ export class LlmRequestService {
 
     return this.requestService.get("https://square-water-d5e4.jhcheng-alan.workers.dev/").pipe(
       switchMap(res => {
-        console.log(res.token);
         const headers = new Headers({
           "Authorization": res.token, // 替換為你的 API Key
           "Content-Type": "application/json",

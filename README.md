@@ -65,7 +65,7 @@
 >| Firebase Authentication      | --           |
 >| Firebase Storage        | --       |
 >| Cloudflare Worker        | --       |
->| OpenRouter(DeepSeek)        | --       |
+>| Chatbot(OpenRouter-DeepSeek V3)      | --       |
 
 ---
 
