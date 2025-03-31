@@ -28,9 +28,8 @@ export class ChatbotComponent {
   storesInfo: any[] = [];
   isOpen = false;
   userInput = '';
-  messages: { text: string; sender: string; isLoading?: boolean }[] = [
-    { text: '嗨，想要找什麼類型的食物呢？', sender: 'bot' }
-  ];
+  userName = '';
+  messages: { text: string; sender: string; isLoading?: boolean }[] = [];
 
   constructor(
     private authService: AuthService,
@@ -42,6 +41,10 @@ export class ChatbotComponent {
   ngOnInit() {
     this.authService.isLoggedIn().subscribe((res) => {
       this.isLogin = res;
+    });
+    this.authService.getUser().subscribe((user) => {
+      this.userName = user.displayName;
+      this.putMessage(`嗨～${this.userName}！ 想找什麼類型的食物呢？`, "bot")
     });
   }
 
@@ -84,7 +87,7 @@ export class ChatbotComponent {
               return
             }
 
-            let messageText = "這些商店有賣你想要的！\n\n";
+            let messageText = "這些商店有你想要的！\n\n";
             resObj.stores.forEach((store: Store) => {
               messageText += `📍 ${store.storeName}（距離 ${store.distance.toFixed(1)}m）\n`;
               if (store.items.length > 0) {
