@@ -74,11 +74,16 @@ export class ChatbotComponent {
             this.messages = this.messages.filter(msg => !msg.isLoading);
             const resObj: StoreResponse = JSON.parse(res.choices[0].message.content.trim().replace(/```json|```/g, ''));
 
-            if (resObj.stores.length === 0) {
-              this.putMessage("找不到你想要的東西啦QQ", "bot");
+            if (resObj.error) {
+              this.putMessage(resObj.error, "bot");
               return
             }
-            
+
+            if (resObj.stores.length === 0) {
+              this.putMessage("找不到你想要的東西QQ", "bot");
+              return
+            }
+
             let messageText = "這些商店有賣你想要的！\n\n";
             resObj.stores.forEach((store: Store) => {
               messageText += `📍 ${store.storeName}（距離 ${store.distance.toFixed(1)}m）\n`;
@@ -117,29 +122,22 @@ export class ChatbotComponent {
     const requests = this.storesInfo.map(storeInfo => {
       return storeInfo.StoreNo
         ? this.sevenElevenRequestService.getItemsByStoreNo(storeInfo.StoreNo).pipe(
-            map(res => ({
-              "storeName": storeInfo.storeName,
-              "distance": storeInfo.distance,
-              "foodInfo": res.element.StoreStockItem.CategoryStockItems
-            }))
-          )
+          map(res => ({
+            "storeName": storeInfo.storeName,
+            "distance": storeInfo.distance,
+            "foodInfo": res.element.StoreStockItem.CategoryStockItems
+          }))
+        )
         : of({
           "storeName": storeInfo.storeName,
           "distance": storeInfo.distance,
           "foodInfo": storeInfo.info
         });
     });
-  
-    return forkJoin(requests);
-  }
 
-  private convertLLMResToJson(res: any): any {
-    res = res.split('\`\`\`json')[1];
-    try {
-      return JSON.parse(res);
-    } catch (error){
-      return null;
-    }
+    return forkJoin(requests).pipe(
+      map(results => results.filter(result => result.foodInfo.length > 0))
+    );
   }
 
 }

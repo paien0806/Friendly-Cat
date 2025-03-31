@@ -6,4 +6,5 @@ export interface Store {
 
 export interface StoreResponse {
     stores: Store[];      // 商店陣列
+    error: string;
 }
