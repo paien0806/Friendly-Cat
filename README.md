@@ -14,7 +14,7 @@
     3. 商品資訊
 * 會員功能 - 收藏喜愛的商店
 
-* 2025/03：新增功能[ChatBot]，登入後可使用聊天窗搜尋食物  
+* 2025/03：新增功能[ChatBot]，可使用聊天窗搜尋食物  
 ## DEMO
 #### 連結： [友善黑貓](https://alan-cheng.github.io/Friendly-Cat/)
 >
