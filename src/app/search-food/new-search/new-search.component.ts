@@ -367,8 +367,15 @@ export class NewSearchComponent implements OnInit {
 
               this.unifiedDropDownList = [...nameGroup, ...addrGroup];
 
-
-              this.loadingService.hide();
+              if (this.unifiedDropDownList.length === 0) {
+                this.loadingService.show("好像找不到店家耶～請重新搜尋");
+                setTimeout(() => {
+                  this.loadingService.hide();
+                }, 2000);
+              }
+              else{
+                this.loadingService.hide();
+              }
             }
           },
           (error) => {
@@ -474,7 +481,15 @@ export class NewSearchComponent implements OnInit {
 
             this.unifiedDropDownList = [...nameGroup, ...addrGroup];
 
-            this.loadingService.hide();
+            if (this.unifiedDropDownList.length === 0) {
+              this.loadingService.show("好像找不到店家耶～請重新搜尋");
+              setTimeout(() => {
+                this.loadingService.hide();
+              }, 2000);
+            }
+            else {
+              this.loadingService.hide();
+            }
           }
         },
         (error) => {
