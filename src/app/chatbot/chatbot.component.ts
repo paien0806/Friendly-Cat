@@ -55,6 +55,15 @@ export class ChatbotComponent {
     this.isOpen = !this.isOpen;
   }
 
+  handleEnter(event: Event) {
+    const keyboardEvent = event as KeyboardEvent;
+    if (keyboardEvent.isComposing) {
+      event.preventDefault();
+      return;
+    }
+    this.sendMessage();
+  }
+
   sendMessage() {
     if (this.userInput.trim()) {
       this.storesInfo = this.storeDataService.getStores().slice(0, 10);

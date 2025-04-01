@@ -19,7 +19,7 @@
     </div>    
 
     <div *ngIf="isOpen" class="chatbot-footer">
-        <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="輸入訊息...">
+        <input type="text" [(ngModel)]="userInput" (keydown.enter)="handleEnter($event)" placeholder="輸入訊息...">
         <button (click)="sendMessage()">➤</button>
     </div>
 </div>
