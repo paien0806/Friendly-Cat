@@ -31,6 +31,19 @@ export class ChatbotComponent {
   userName = '';
   messages: { text: string; sender: string; isLoading?: boolean }[] = [];
 
+  // 為了讓 7-11 商品搜尋更精準而建立的Map
+  sevenElevenFoodCategoryMap = new Map<string, number[]>([
+    ["便當粥品", [137, 139, 140, 142, 143, 185, 187, 192]],
+    ["麵食", [144, 146, 149, 151, 153, 155]],
+    ["生鮮蔬果", [157, 158]],
+    ["沙拉", [160, 159, 189]],
+    ["配菜湯品", [161, 162]],
+    ["飯糰手卷", [163, 164, 165, 166, 167]],
+    ["麵包蛋糕", [168, 169, 170, 171]],
+    ["三明治堡類", [172, 178, 174, 175, 176, 177, 190, 191]],
+    ["甜點", [179, 180, 181, 182, 183]]
+  ]);
+
   constructor(
     private authService: AuthService,
     private storeDataService: StoreDataService,
@@ -79,7 +92,6 @@ export class ChatbotComponent {
 
         // 確保 7-11 資料取得後再送到 LLM
         this.requestSevenInfoAndCombineFm().subscribe(updatedStores => {
-          console.log("updatedStores", updatedStores);
           this.storesInfo = updatedStores; // 更新 storesInfo
 
           this.llmRequestService.getLLMRes(input, this.storesInfo).subscribe((res) => {
@@ -134,22 +146,34 @@ export class ChatbotComponent {
     const requests = this.storesInfo.map(storeInfo => {
       return storeInfo.StoreNo
         ? this.sevenElevenRequestService.getItemsByStoreNo(storeInfo.StoreNo).pipe(
-          map(res => ({
+            map(res => ({
+              "storeName": storeInfo.storeName,
+              "distance": storeInfo.distance,
+              "foodInfo": res.element.StoreStockItem.CategoryStockItems.map((item: any) => ({
+                "category": this.getCategoryNameByNodeID(item.NodeID),
+                "RemainingQty": item.RemainingQty,
+                "ItemList": item.ItemList
+              }))
+            }))
+          )
+        : of({
             "storeName": storeInfo.storeName,
             "distance": storeInfo.distance,
-            "foodInfo": res.element.StoreStockItem.CategoryStockItems
-          }))
-        )
-        : of({
-          "storeName": storeInfo.storeName,
-          "distance": storeInfo.distance,
-          "foodInfo": storeInfo.info
-        });
+            "foodInfo": storeInfo.info
+          });
     });
-
+  
     return forkJoin(requests).pipe(
       map(results => results.filter(result => result.foodInfo.length > 0))
     );
   }
 
+  private getCategoryNameByNodeID(nodeID: number): string {
+    for (const [category, ids] of this.sevenElevenFoodCategoryMap.entries()) {
+      if (ids.includes(nodeID)) {
+        return category;
+      }
+    }
+    return "未知分類";
+  }
 }
