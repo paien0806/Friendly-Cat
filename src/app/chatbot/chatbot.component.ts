@@ -56,8 +56,12 @@ export class ChatbotComponent {
       this.isLogin = res;
     });
     this.authService.getUser().subscribe((user) => {
-      this.userName = user.displayName;
-      this.putMessage(`嗨～${this.userName}！ 想找什麼類型的食物呢？`, "bot")
+      if (!user) {
+        this.isLogin = false;
+        this.putMessage(`嗨～${this.userName}！ 想找什麼類型的食物呢？`, "bot");
+      }
+        this.userName = user.displayName;
+        this.putMessage(`嗨～${this.userName}！ 想找什麼類型的食物呢？`, "bot")
     });
   }
 
@@ -86,39 +90,61 @@ export class ChatbotComponent {
       this.putMessage(input, 'user');
 
       if (this.storesInfo.length === 0) {
-        this.putMessage('請先點擊「使用目前位置」搜尋按鈕，才能幫你看附近商店唷！', 'bot');
+        setTimeout(() => {
+          this.putMessage('請先點擊「使用目前位置」搜尋按鈕，才能幫你看附近商店唷！', 'bot');
+        }, 500);
       } else {
-        this.putMessage('正在搜尋附近的便利商店...', 'bot', true);
+        setTimeout(() => {
+          this.putMessage('正在搜尋附近的便利商店...', 'bot', true);
+        }, 500);
 
         // 確保 7-11 資料取得後再送到 LLM
         this.requestSevenInfoAndCombineFm().subscribe(updatedStores => {
           this.storesInfo = updatedStores; // 更新 storesInfo
 
-          this.llmRequestService.getLLMRes(input, this.storesInfo).subscribe((res) => {
-            this.messages = this.messages.filter(msg => !msg.isLoading);
-            const resObj: StoreResponse = JSON.parse(res.choices[0].message.content.trim().replace(/```json|```/g, ''));
+          this.llmRequestService.getLLMRes(input, this.storesInfo).subscribe({
+            next: (res) => {
+              this.messages = this.messages.filter(msg => !msg.isLoading);
+              try {
+                let content = res.choices[0].message.content.trim();
+                content = content.replace(/```(json)?/g, '');
+                const resObj: StoreResponse = JSON.parse(content);
+                
+                if (!resObj.stores) {
+                  throw new Error('Invalid store response format');
+                }
 
-            if (resObj.error) {
-              this.putMessage(resObj.error, "bot");
-              return
-            }
+                if (resObj.error) {
+                  this.putMessage(resObj.error, "bot");
+                  return;
+                }
 
-            if (resObj.stores.length === 0) {
-              this.putMessage("找不到你想要的東西QQ", "bot");
-              return
-            }
+                if (resObj.stores.length === 0) {
+                  this.putMessage("找不到你想要的東西QQ", "bot");
+                  return;
+                }
 
-            let messageText = "這些商店有你想要的！\n\n";
-            resObj.stores.forEach((store: Store) => {
-              messageText += `📍 ${store.storeName}（距離 ${store.distance.toFixed(1)}m）\n`;
-              if (store.items.length > 0) {
-                messageText += ` ${store.items.join("\n")}\n\n`;
-              } else {
-                messageText += `⚠️ 這間店沒有找到相關商品\n\n`;
+                let messageText = "🐈‍⬛：這些商店有你想要的！\n\n";
+                resObj.stores.forEach((store: Store) => {
+                  messageText += `📍 ${store.storeName}\n`;
+                  messageText += `🏃距離 ${store.distance.toFixed(1)} 公尺\n`;
+                  if (store.items.length > 0) {
+                    messageText += `${store.items.map(item => `- ${item}`).join("\n")}\n\n`;;
+                  } else {
+                    messageText += `⚠️ 這間店沒有找到相關商品\n\n`;
+                  }
+                });
+
+                this.putMessage(messageText, 'bot');
+              } catch (e) {
+                console.error('JSON parse error:', e);
+                this.putMessage('處理商店資訊時發生錯誤，請稍後再試', "bot");
               }
-            });
-
-            this.putMessage(messageText, 'bot');
+            },
+            error: (err) => {
+              console.error('API request error:', err);
+              this.putMessage('無法取得商店資訊，請稍後再試', "bot");
+            }
           });
         });
       }
@@ -175,5 +201,39 @@ export class ChatbotComponent {
       }
     }
     return "未知分類";
+  }
+
+  isStoreMessage(text: string): boolean {
+    return text.includes('📍') && text.includes('距離');
+  }
+
+  formatStoreMessage(text: string): string {
+    const lines = text.split('\n');
+    let formatted = '';
+    let isFirstStore = true;
+    
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].startsWith('📍')) {
+        if (!isFirstStore) {
+          formatted += '<br>'; // 在每間店資訊前加空行
+        }
+        else {
+          formatted += '<br>';
+        }
+        const storeName = lines[i].substring(1).trim();
+        let storeNameEncoded = '';
+        try {
+          storeNameEncoded = encodeURIComponent(storeName);
+        } catch (e) {
+          storeNameEncoded = encodeURIComponent(storeName.replace(/[^\w\u4e00-\u9fa5]/g, ''));
+        }
+        formatted += `${lines[i]} <a href="https://www.google.com/maps/search/${storeNameEncoded}" target="_blank" style="display: inline-block; margin-left: 5px;"><img src="assets/GoogleMap_icon.png" alt="Google 地圖" class="w-3 h-3 inline-block" style="width: 16px; height: 16px; vertical-align: middle;"></a><br>`;
+        isFirstStore = false;
+      } else if (lines[i].trim() !== '') {
+        formatted += `${lines[i]}<br>`;
+      }
+    }
+    
+    return formatted;
   }
 }
