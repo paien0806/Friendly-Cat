@@ -6,7 +6,7 @@
         "price": "69",
         "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_198.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -16,7 +16,7 @@
         "price": "99",
         "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_197.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -26,7 +26,7 @@
         "price": "99",
         "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_201.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "泰國直輸魚露炒製"
     },
     {
@@ -321,12 +321,22 @@
     },
     {
         "category": "1_Ricerolls",
+        "name": "炙烤燻腸飯糰",
+        "kcal": "245",
+        "price": "45",
+        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_491.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "1_Ricerolls",
         "name": "新極上飯糰-熟成明太子鮭魚",
         "kcal": "228",
         "price": "55",
         "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_487.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -336,17 +346,7 @@
         "price": "55",
         "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_488.png",
         "special_sale": "False",
-        "new": "True",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
-        "name": "繽紛花漾壽司組",
-        "kcal": "366",
-        "price": "79",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_490.png",
-        "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -356,7 +356,7 @@
         "price": "39",
         "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_489.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -368,6 +368,16 @@
         "special_sale": "False",
         "new": "",
         "content": "智利銀鮭搭配日本明太子，添加鮭魚、海帶芽拌入飯中，清新爽口"
+    },
+    {
+        "category": "1_Ricerolls",
+        "name": "繽紛花漾壽司組",
+        "kcal": "366",
+        "price": "79",
+        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_490.png",
+        "special_sale": "False",
+        "new": "",
+        "content": ""
     },
     {
         "category": "1_Ricerolls",
@@ -681,6 +691,16 @@
     },
     {
         "category": "16_sandwich",
+        "name": "(熱壓土司)花生醬燻培根",
+        "kcal": "357",
+        "price": "70",
+        "image": "https://www.7-11.com.tw/freshfoods/16_sandwich/images/sandwich_92.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "16_sandwich",
         "name": "法式起司燻培根厚土司",
         "kcal": "387",
         "price": "79",
@@ -941,12 +961,52 @@
     },
     {
         "category": "2_Light",
+        "name": "OPEN將-芭樂切片",
+        "kcal": "",
+        "price": "55",
+        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1084.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "2_Light",
+        "name": "澳洲紅寶石無籽葡萄袋",
+        "kcal": "",
+        "price": "65",
+        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1085.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "2_Light",
+        "name": "義式烤番茄雞胸時蔬沙拉餐",
+        "kcal": "",
+        "price": "99",
+        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1086.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "2_Light",
+        "name": "凱薩雞肉沙拉",
+        "kcal": "204",
+        "price": "89",
+        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1088.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "蘿蔓生菜佐手撕雞胸肉"
+    },
+    {
+        "category": "2_Light",
         "name": "美國小蜜柑盒",
         "kcal": "",
         "price": "89",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1079.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -956,7 +1016,7 @@
         "price": "55",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1080.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -966,7 +1026,7 @@
         "price": "60",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1081.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -976,7 +1036,7 @@
         "price": "60",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1082.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "提供成人一日1/3蔬菜需求量 "
     },
     {
@@ -986,7 +1046,7 @@
         "price": "49",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1083.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "石安牧場溏心蛋"
     },
     {
@@ -1251,16 +1311,6 @@
     },
     {
         "category": "2_Light",
-        "name": "智利甜桃隨手杯",
-        "kcal": "",
-        "price": "55",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1073.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
         "name": "英倫紅肉西瓜杯",
         "kcal": "",
         "price": "55",
@@ -1276,16 +1326,6 @@
         "price": "69",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1075.png",
         "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
-        "name": "雪之國山形蘋果切片",
-        "kcal": "",
-        "price": "69",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1063.png",
-        "special_sale": "False",
         "new": "",
         "content": ""
     },
@@ -1311,36 +1351,6 @@
     },
     {
         "category": "2_Light",
-        "name": "繽紛水果拼盤",
-        "kcal": "",
-        "price": "69",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1062.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
-        "name": "祕魯綠無籽葡萄袋",
-        "kcal": "",
-        "price": "79",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1060.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
-        "name": "葡萄蘋果雙拼",
-        "kcal": "",
-        "price": "69",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1046.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
         "name": "OPEN將-美國富士蘋果袋",
         "kcal": "",
         "price": "55",
@@ -1355,16 +1365,6 @@
         "kcal": "",
         "price": "65",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1044.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
-        "name": "OPEN小將-芭樂切片",
-        "kcal": "",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1033.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -1736,7 +1736,7 @@
         "price": "89",
         "image": "https://www.7-11.com.tw/freshfoods/3_Cuisine/images/cuisine_304.png",
         "special_sale": "True",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -1941,12 +1941,52 @@
     },
     {
         "category": "4_Snacks",
+        "name": "豆腐蛋白棒",
+        "kcal": "163",
+        "price": "49",
+        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_303.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "4_Snacks",
+        "name": "聖德雞肉蛋白棒-義式風味",
+        "kcal": "164",
+        "price": "49",
+        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_304.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "4_Snacks",
+        "name": "21xBEING Fit桃木燻雞胸",
+        "kcal": "120",
+        "price": "59",
+        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_302.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "4_Snacks",
+        "name": "21Plus人參糯米雞湯",
+        "kcal": "",
+        "price": "65",
+        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_305.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "4_Snacks",
         "name": "21Plus蒜香鹽酥雞",
         "kcal": "281",
         "price": "59",
         "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_299.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -1956,7 +1996,7 @@
         "price": "49",
         "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_300.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -1966,7 +2006,7 @@
         "price": "69",
         "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_301.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -1978,16 +2018,6 @@
         "special_sale": "False",
         "new": "",
         "content": "川辣椒麻風味，具有飽足感的小吃"
-    },
-    {
-        "category": "4_Snacks",
-        "name": "21Plus人參糯米雞湯",
-        "kcal": "",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_289.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
     },
     {
         "category": "4_Snacks",
@@ -2421,20 +2451,30 @@
     },
     {
         "category": "5_ForeignDishes",
-        "name": "新馬辣麻辣鍋(含牛)",
-        "kcal": "439",
-        "price": "129",
-        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_437.png",
+        "name": "烤魚多彩鮮蔬餐盒",
+        "kcal": "418",
+        "price": "99",
+        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_447.png",
         "special_sale": "False",
-        "new": "",
+        "new": "True",
         "content": ""
     },
     {
         "category": "5_ForeignDishes",
         "name": "壹番屋-炸雞排起司咖哩焗飯",
-        "kcal": "657",
+        "kcal": "770",
         "price": "99",
-        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_433.png",
+        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_446.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "5_ForeignDishes",
+        "name": "新馬辣麻辣鍋(含牛)",
+        "kcal": "439",
+        "price": "129",
+        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_437.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -2611,23 +2651,23 @@
     },
     {
         "category": "6_Noodles",
-        "name": "和風中華冷麵",
-        "kcal": "",
-        "price": "89",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_180.png",
+        "name": "韓式炸醬拌麵",
+        "kcal": "601",
+        "price": "85",
+        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_181.png",
         "special_sale": "False",
         "new": "True",
         "content": ""
     },
     {
         "category": "6_Noodles",
-        "name": "極饗-榨菜肉絲湯麵",
-        "kcal": "484",
+        "name": "和風中華冷麵",
+        "kcal": "",
         "price": "89",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_178.png",
+        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_180.png",
         "special_sale": "False",
         "new": "",
-        "content": "爽脆榨菜x醃漬肉絲"
+        "content": ""
     },
     {
         "category": "6_Noodles",
@@ -2661,16 +2701,6 @@
     },
     {
         "category": "6_Noodles",
-        "name": "韓式炸醬拌麵",
-        "kcal": "601",
-        "price": "85",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_162.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "6_Noodles",
         "name": "日式蕎麥風味麵",
         "kcal": "320",
         "price": "52",
@@ -2695,16 +2725,6 @@
         "kcal": "674",
         "price": "59",
         "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_130.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "整份大於半台斤"
-    },
-    {
-        "category": "6_Noodles",
-        "name": "真飽涼麵-蒜辣麻醬",
-        "kcal": "676",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_131.png",
         "special_sale": "False",
         "new": "",
         "content": "整份大於半台斤"
@@ -2761,12 +2781,22 @@
     },
     {
         "category": "7_Oden",
+        "name": "滷豬血",
+        "kcal": "14kcal/個",
+        "price": "20元/個",
+        "image": "https://www.7-11.com.tw/freshfoods/7_Oden/images/Oden_145.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "7_Oden",
         "name": "野菜豆腐棒",
         "kcal": "72kcal/個",
         "price": "20元/個",
         "image": "https://www.7-11.com.tw/freshfoods/7_Oden/images/Oden_144.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -2961,6 +2991,16 @@
     },
     {
         "category": "8_Bigbite",
+        "name": "曼哈頓風味辣熱狗",
+        "kcal": "218",
+        "price": "38",
+        "image": "https://www.7-11.com.tw/freshfoods/8_Bigbite/images/Bigbite_38.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "肉汁四溢結合微辣滋味，爆汁Q彈(豬原料來源：加拿大)"
+    },
+    {
+        "category": "8_Bigbite",
         "name": "星宇航空美式爆汁熱狗堡(微辣)",
         "kcal": "401",
         "price": "69",
@@ -2981,33 +3021,13 @@
     },
     {
         "category": "8_Bigbite",
-        "name": "日式炭烤風味熱狗",
-        "kcal": "203",
-        "price": "38",
-        "image": "https://www.7-11.com.tw/freshfoods/8_Bigbite/images/Bigbite_35.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "獨特日式炭火香氣，味道濃郁爆汁，肉感扎實"
-    },
-    {
-        "category": "8_Bigbite",
         "name": "橋村辣醬熱狗",
         "kcal": "206",
         "price": "38",
         "image": "https://www.7-11.com.tw/freshfoods/8_Bigbite/images/Bigbite_33.png",
         "special_sale": "False",
         "new": "",
-        "content": "橋村招牌辣醬加入蜂蜜調味，甜辣交織"
-    },
-    {
-        "category": "8_Bigbite",
-        "name": "椒麻香辣熱狗",
-        "kcal": "190",
-        "price": "35",
-        "image": "https://www.7-11.com.tw/freshfoods/8_Bigbite/images/Bigbite_32.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "椒香麻辣獨特香氣，搭配嚴選豬肉，Q彈多汁(豬原料來源：西班牙、加拿大)"
+        "content": "橋村招牌辣醬加入蜂蜜調味，甜辣交織(豬原料來源：加拿大、西班牙)"
     },
     {
         "category": "8_Bigbite",
@@ -3044,10 +3064,110 @@
         "name": "貝洛邦核桃多穀物",
         "kcal": "",
         "price": "50",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_834.png",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_844.png",
         "special_sale": "True",
         "new": "True",
         "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "優格巧克力甜甜圈",
+        "kcal": "",
+        "price": "42",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_842.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "花生厚片土司",
+        "kcal": "",
+        "price": "42",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_845.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "起司QQ條",
+        "kcal": "",
+        "price": "39",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_843.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "11_bread",
+        "name": "史努比花生大福",
+        "kcal": "199",
+        "price": "39",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_847.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "香濃顆粒花生雙餡x糯米香Ｑ彈外皮"
+    },
+    {
+        "category": "11_bread",
+        "name": "LADEARS藍莓黑森林蛋糕",
+        "kcal": "185",
+        "price": "65",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_846.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "比利時巧克力搭配加拿大進口藍莓醬內餡"
+    },
+    {
+        "category": "11_bread",
+        "name": "竹葉堂和風醬油串糰子",
+        "kcal": "214.9",
+        "price": "42",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_848.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "柴魚香搭配日式鹹甜醬油"
+    },
+    {
+        "category": "11_bread",
+        "name": "優意思蛋白質果醬優格(桃氣蜜桃)",
+        "kcal": "124",
+        "price": "39",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_849.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "酸甜平衡吃得到真實蜜桃果粒+果醬"
+    },
+    {
+        "category": "11_bread",
+        "name": "優意思蛋白質果醬優格(仲夏藍莓)",
+        "kcal": "128",
+        "price": "39",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_850.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "酸甜平衡吃得到真藍莓桃果粒+果醬"
+    },
+    {
+        "category": "11_bread",
+        "name": "鮮奶優酪-莓果穀物脆片兩入組",
+        "kcal": "235.6",
+        "price": "80",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_851.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "100%在地生乳製成x莓果穀物脆片"
+    },
+    {
+        "category": "11_bread",
+        "name": "新貴派風味雙餡泡芙",
+        "kcal": "253",
+        "price": "59",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_852.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": "77新貴派首波獨家聯名100%新貴派風味，復刻經典重現！"
     },
     {
         "category": "11_bread",
@@ -3056,7 +3176,7 @@
         "price": "35",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_835.png",
         "special_sale": "True",
-        "new": "True",
+        "new": "",
         "content": ""
     },
     {
@@ -3066,7 +3186,7 @@
         "price": "59",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_836.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "百年抹茶名店-伊藤久右衛門聯名推出，使用日本京都宇治抹茶粉"
     },
     {
@@ -3076,7 +3196,7 @@
         "price": "79",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_837.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "手工36層壓延製成酥脆派皮搭配苦甜焦糖內餡"
     },
     {
@@ -3086,7 +3206,7 @@
         "price": "49",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_838.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "百年抹茶名店-伊藤久右衛門聯名推出，使用日本京都宇治抹茶粉"
     },
     {
@@ -3096,7 +3216,7 @@
         "price": "40",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_839.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "特選在地愛玉子製作，結合黑糖與檸檬黃金比例，風味酸甜清爽"
     },
     {
@@ -3106,7 +3226,7 @@
         "price": "15",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_840.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "嚴選非基因改造黃豆製作 ，香甜水果風味、滑順、Q嫩"
     },
     {
@@ -3116,7 +3236,7 @@
         "price": "49",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_841.png",
         "special_sale": "False",
-        "new": "True",
+        "new": "",
         "content": "鬆軟薄皮小泡芙，搭配主廚特調香醇焦糖醬"
     },
     {
@@ -3591,16 +3711,6 @@
     },
     {
         "category": "11_bread",
-        "name": "竹葉堂和風醬油串糰子",
-        "kcal": "214.9",
-        "price": "42",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_824.png",
-        "special_sale": "True",
-        "new": "",
-        "content": "柴魚香搭配日式鹹甜醬油"
-    },
-    {
-        "category": "11_bread",
         "name": "竹葉堂花生煉乳糰子",
         "kcal": "341.1",
         "price": "55",
@@ -3761,16 +3871,6 @@
     },
     {
         "category": "11_bread",
-        "name": "福樂Q果蜂蜜柚香優酪135G",
-        "kcal": "99",
-        "price": "35",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_718.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "蒟蒻啵啵與椰果增量20%，嚼感再升級"
-    },
-    {
-        "category": "11_bread",
         "name": "福樂Q果葡萄奇異果優酪135G",
         "kcal": "106",
         "price": "35",
@@ -3828,36 +3928,6 @@
         "special_sale": "False",
         "new": "",
         "content": "使用日本專用粉，香甜日式菠蘿"
-    },
-    {
-        "category": "11_bread",
-        "name": "質立推健希臘式優格-2重蛋白",
-        "kcal": "168",
-        "price": "38",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_568.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "含12g蛋白質、優質蛋白質-米蛋白"
-    },
-    {
-        "category": "11_bread",
-        "name": "質立推健希臘式優格-2重纖維",
-        "kcal": "145",
-        "price": "38",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_569.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "含12g蛋白質、膳食纖維"
-    },
-    {
-        "category": "11_bread",
-        "name": "盛香珍寒天雙層凍(蜜柑+優格)",
-        "kcal": "178",
-        "price": "40",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_567.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "添加25%蜜柑果汁、蜜柑果肉及優格"
     },
     {
         "category": "11_bread",
@@ -3921,16 +3991,6 @@
     },
     {
         "category": "11_bread",
-        "name": "焦糖閃電泡芙",
-        "kcal": "126",
-        "price": "55",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_788.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "法式工法熬煮焦糖，點綴西班牙進口跳跳糖"
-    },
-    {
-        "category": "11_bread",
         "name": "日式麻糬泡芙",
         "kcal": "143",
         "price": "49",
@@ -3971,16 +4031,6 @@
     },
     {
         "category": "11_bread",
-        "name": "亞尼克原味生乳捲",
-        "kcal": "144",
-        "price": "79",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_731.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "內餡使用日本中澤奶霜，蓬鬆細緻，入口即化"
-    },
-    {
-        "category": "11_bread",
         "name": "春上方塊戚風杯(草莓)",
         "kcal": "",
         "price": "65",
@@ -3998,16 +4048,6 @@
         "special_sale": "False",
         "new": "",
         "content": "使用進口開心果製成外交官奶油內餡"
-    },
-    {
-        "category": "11_bread",
-        "name": "春上蛋糕杯-黑糖撞奶",
-        "kcal": "403.3",
-        "price": "80",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_733.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用在地黑糖熬煮內餡，加入QQ麻糬丁增加口感"
     },
     {
         "category": "11_bread",
@@ -4078,16 +4118,6 @@
         "special_sale": "False",
         "new": "",
         "content": "添加三顆完整小蜜柑"
-    },
-    {
-        "category": "11_bread",
-        "name": "優菓甜坊泰奶布丁",
-        "kcal": "100.1",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_706.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "米其林一星泰式餐廳頌丹樂聯名商品"
     },
     {
         "category": "11_bread",
@@ -4951,6 +4981,26 @@
     },
     {
         "category": "17_ohlala",
+        "name": "星宇-美式漢堡排筆管麵",
+        "kcal": "",
+        "price": "139",
+        "image": "https://www.7-11.com.tw/freshfoods/17_ohlala/images/ohlala_96.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "17_ohlala",
+        "name": "烤雞燻腸白醬焗飯",
+        "kcal": "592",
+        "price": "79",
+        "image": "https://www.7-11.com.tw/freshfoods/17_ohlala/images/ohlala_95.png",
+        "special_sale": "False",
+        "new": "True",
+        "content": ""
+    },
+    {
+        "category": "17_ohlala",
         "name": "雙拼起司紅醬焗飯",
         "kcal": "684",
         "price": "89",
@@ -5051,16 +5101,6 @@
     },
     {
         "category": "17_ohlala",
-        "name": "燻腸紅醬義大利麵",
-        "kcal": "733",
-        "price": "79",
-        "image": "https://www.7-11.com.tw/freshfoods/17_ohlala/images/ohlala_07.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "完熟蕃茄x雙色起司(豬原料來源：加拿大)"
-    },
-    {
-        "category": "17_ohlala",
         "name": "義式蕃茄肉醬義大利麵",
         "kcal": "587",
         "price": "79",
@@ -5081,13 +5121,33 @@
     },
     {
         "category": "18_veg",
-        "name": "芝麻香鬆蛋三明治",
-        "kcal": "301",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/18_veg/images/veg_123.png",
+        "name": "小小樹食義式紅茄嫩蛋燉飯",
+        "kcal": "",
+        "price": "89",
+        "image": "https://www.7-11.com.tw/freshfoods/18_veg/images/veg_126.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "(五辛蛋奶蔬)義式紅醬x 滑順嫩蛋"
+    },
+    {
+        "category": "18_veg",
+        "name": "祥和川味水煮牛若燴飯",
+        "kcal": "583",
+        "price": "99",
+        "image": "https://www.7-11.com.tw/freshfoods/18_veg/images/veg_125.png",
+        "special_sale": "True",
+        "new": "True",
+        "content": "(蔬食)川味麻香，植物牛若口感彈嫩"
+    },
+    {
+        "category": "18_veg",
+        "name": "西魯時蔬燴飯",
+        "kcal": "619",
+        "price": "89",
+        "image": "https://www.7-11.com.tw/freshfoods/18_veg/images/veg_127.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "(蛋蔬)五款時蔬x蛋酥鹹香，每份提供成人每日1/2蔬菜需求量"
     },
     {
         "category": "18_veg",
@@ -5096,8 +5156,8 @@
         "price": "99",
         "image": "https://www.7-11.com.tw/freshfoods/18_veg/images/veg_122.png",
         "special_sale": "False",
-        "new": "True",
-        "content": ""
+        "new": "",
+        "content": "(五辛蔬)義大利直輸風乾蕃茄x 洋蔥炒菇"
     },
     {
         "category": "18_veg",
@@ -5106,18 +5166,8 @@
         "price": "89",
         "image": "https://www.7-11.com.tw/freshfoods/18_veg/images/veg_124.png",
         "special_sale": "False",
-        "new": "True",
-        "content": "(五辛蛋奶蔬) 金沙鹹蛋黃醬x 醬烤板豆腐"
-    },
-    {
-        "category": "18_veg",
-        "name": "西魯時蔬燴飯",
-        "kcal": "619",
-        "price": "89",
-        "image": "https://www.7-11.com.tw/freshfoods/18_veg/images/veg_120.png",
-        "special_sale": "False",
         "new": "",
-        "content": "(蛋蔬)五款時蔬x蛋酥鹹香，每份提供成人每日1/2蔬菜需求量"
+        "content": "(五辛蛋奶蔬) 金沙鹹蛋黃醬x 醬烤板豆腐"
     },
     {
         "category": "18_veg",
@@ -5138,6 +5188,16 @@
         "special_sale": "False",
         "new": "",
         "content": "(蛋奶蔬)植物香鬆x香滷玉子"
+    },
+    {
+        "category": "18_veg",
+        "name": "芝麻香鬆蛋三明治",
+        "kcal": "301",
+        "price": "39",
+        "image": "https://www.7-11.com.tw/freshfoods/18_veg/images/veg_123.png",
+        "special_sale": "False",
+        "new": "",
+        "content": "(蛋奶蔬) 焙炒芝麻香鬆香氣濃郁，口感香脆。"
     },
     {
         "category": "18_veg",

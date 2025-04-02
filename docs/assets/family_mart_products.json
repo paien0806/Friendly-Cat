@@ -600,6 +600,26 @@
         "Description": "※鮭魚焦紋為炙烤正常現象。"
     },
     {
+        "category": "飯糰壽司",
+        "title": "玩具總動員系列壽司餐盒",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1076350.jpg",
+        "Protein": 5.6,
+        "Carb": 43.2,
+        "Calories": 216.0,
+        "Fat": 2.3,
+        "Description": "玩具總動員系列壽司餐盒"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "二配火腿豬黃金玉米飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1077106.jpg",
+        "Protein": 7.4,
+        "Carb": 32.9,
+        "Calories": 195.0,
+        "Fat": 3.7,
+        "Description": "迪士尼聯名商品"
+    },
+    {
         "category": "麵包、吐司、蛋糕",
         "title": "一配巧克力派司",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0040786.jpg",
@@ -1488,6 +1508,16 @@
         "Calories": 265.0,
         "Fat": 13.9,
         "Description": "此產品不可微波"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配巧克力捲",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1076314.jpg",
+        "Protein": 6.4,
+        "Carb": 34.6,
+        "Calories": 213.0,
+        "Fat": 5.5,
+        "Description": "過敏原標示：本產品含有大豆(食用烤酥油來源)、牛奶、含有麩質的穀類及其製品，不適合其過敏體質者食用。"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -3108,6 +3138,16 @@
         "Calories": 578.0,
         "Fat": 12.3,
         "Description": "極旨黑咖哩漢堡排飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "玩具總動員系列３０週年紀念餐盒",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1073407.jpg",
+        "Protein": 9.0,
+        "Carb": 44.0,
+        "Calories": 304.0,
+        "Fat": 10.1,
+        "Description": "玩具總動員系列30週年紀念餐盒"
     },
     {
         "category": "關東煮、湯品",
