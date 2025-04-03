@@ -89,14 +89,16 @@ export class ChatbotComponent {
       // 加入使用者訊息
       this.putMessage(input, 'user');
 
+      if (this.messages.length > 0 && this.messages[this.messages.length - 1].isLoading) {
+        this.putMessage('正在搜尋中，搜尋完畢後請重新查詢...', 'bot', false);
+        return;
+      }
+
       if (this.storesInfo.length === 0) {
-        setTimeout(() => {
-          this.putMessage('請先點擊「使用目前位置」搜尋按鈕，才能幫你看附近商店唷！', 'bot');
-        }, 500);
+        this.putMessage('請先點擊「使用目前位置」搜尋按鈕，才能幫你看附近商店唷！', 'bot');
+        return;
       } else {
-        setTimeout(() => {
-          this.putMessage('正在搜尋附近的便利商店...', 'bot', true);
-        }, 500);
+        this.putMessage('正在搜尋附近的便利商店...', 'bot', true);
 
         // 確保 7-11 資料取得後再送到 LLM
         this.requestSevenInfoAndCombineFm().subscribe(updatedStores => {
@@ -126,10 +128,10 @@ export class ChatbotComponent {
 
                 let messageText = "🐈‍⬛：這些商店有你想要的！\n\n";
                 resObj.stores.forEach((store: Store) => {
-                  messageText += `📍 ${store.storeName}\n`;
-                  messageText += `🏃距離 ${store.distance.toFixed(1)} 公尺\n`;
+                  messageText += `🏪 ${store.storeName}  \n`;
+                  messageText += `（📍 距離 ${store.distance.toFixed(0)} 公尺）\n`;
                   if (store.items.length > 0) {
-                    messageText += `${store.items.map(item => `- ${item}`).join("\n")}\n\n`;;
+                    messageText += `${store.items.map((item, index) => `${index + 1}. ${item}`).join("\n")}\n\n`;
                   } else {
                     messageText += `⚠️ 這間店沒有找到相關商品\n\n`;
                   }
@@ -153,7 +155,14 @@ export class ChatbotComponent {
 
 
   putMessage(message: string, sender: string, isLoading?: boolean) {
-    this.messages.push({ text: message, sender: sender, isLoading: isLoading });
+    if (sender === 'bot') {
+      setTimeout(() => {
+        this.messages.push({ text: message, sender: sender, isLoading: isLoading });
+      }, 500);
+    }
+    else{
+      this.messages.push({ text: message, sender: sender });
+    }
   }
 
   // Auto-scroll to bottom after view updates
@@ -204,7 +213,7 @@ export class ChatbotComponent {
   }
 
   isStoreMessage(text: string): boolean {
-    return text.includes('📍') && text.includes('距離');
+    return text.includes('🏪') && text.includes('距離');
   }
 
   formatStoreMessage(text: string): string {
@@ -213,7 +222,7 @@ export class ChatbotComponent {
     let isFirstStore = true;
     
     for (let i = 0; i < lines.length; i++) {
-      if (lines[i].startsWith('📍')) {
+      if (lines[i].startsWith('🏪')) {
         if (!isFirstStore) {
           formatted += '<br>'; // 在每間店資訊前加空行
         }

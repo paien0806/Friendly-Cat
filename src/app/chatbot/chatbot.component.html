@@ -20,7 +20,11 @@
     </div>    
 
     <div *ngIf="isOpen" class="chatbot-footer">
-        <input type="text" [(ngModel)]="userInput" (keydown.enter)="handleEnter($event)" placeholder="輸入訊息...">
+        <input type="text" 
+            [(ngModel)]="userInput" 
+            [disabled]="messages[messages.length - 1].isLoading || false" 
+            (keyup.enter)="handleEnter($event)" [placeholder]="messages[messages.length - 1].isLoading || false ? '搜尋中，請稍後...' : '請輸入訊息'"
+        >
         <button (click)="sendMessage()">➤</button>
     </div>
 </div>
