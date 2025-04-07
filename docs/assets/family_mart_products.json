@@ -1926,7 +1926,7 @@
         "Protein": 14.0,
         "Carb": 20.5,
         "Calories": 205.0,
-        "Fat": 8.1,
+        "Fat": 7.5,
         "Description": "紐奧良風味烤雞鮮蔬三明治"
     },
     {
@@ -2708,16 +2708,6 @@
         "Calories": 608.0,
         "Fat": 13.6,
         "Description": "海鮮烘蛋燴飯"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "古早味芋頭鹹粥",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0943704.jpg",
-        "Protein": 12.0,
-        "Carb": 57.1,
-        "Calories": 389.0,
-        "Fat": 12.5,
-        "Description": "生米與高湯一同熬煮絲綢滑順口感，每口都能吃到濃郁芋香與香菇油蔥提味，口感層次豐富。"
     },
     {
         "category": "飯麵粥品",
