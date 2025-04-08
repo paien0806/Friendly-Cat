@@ -2691,16 +2691,6 @@
     },
     {
         "category": "6_Noodles",
-        "name": "木曜-香蒜番茄野菇義大利麵",
-        "kcal": "480",
-        "price": "89",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_144.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "(五辛蔬) OMNI新鮪魚x 蒜味野菇"
-    },
-    {
-        "category": "6_Noodles",
         "name": "日式蕎麥風味麵",
         "kcal": "320",
         "price": "52",

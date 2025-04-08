@@ -2401,16 +2401,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "幸福餐盒（雞）",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0775038.jpg",
-        "Protein": 38.4,
-        "Carb": 75.5,
-        "Calories": 555.0,
-        "Fat": 11.0,
-        "Description": "※雞肉內含有肌紅蛋白，故肉質粉紅並非為未熟，敬請安心食用※蔬菜與熱量會因時節微調。※雞肉易含細碎硬骨，請小心食用"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "壹號醬壽喜燒牛丼",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0808576.jpg",
         "Protein": 17.2,
@@ -3111,6 +3101,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "泰式海鮮冷義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1059122.jpg",
+        "Protein": 9.5,
+        "Carb": 47.4,
+        "Calories": 259.0,
+        "Fat": 3.3,
+        "Description": "※本產品含過敏原含魚、麩質之穀物、大豆、甲殼類、蛋類及其製品。"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "麻奶豬肉鍋好下飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067854.jpg",
         "Protein": 16.1,
@@ -3128,6 +3128,16 @@
         "Calories": 578.0,
         "Fat": 12.3,
         "Description": "極旨黑咖哩漢堡排飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "泰式綠咖哩雞",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1072160.jpg",
+        "Protein": 15.3,
+        "Carb": 75.7,
+        "Calories": 433.0,
+        "Fat": 7.5,
+        "Description": "泰式綠咖哩雞"
     },
     {
         "category": "飯麵粥品",
@@ -6878,6 +6888,16 @@
         "Calories": 250.4,
         "Fat": 7.2,
         "Description": "整顆花生研磨, 香濃好滋味"
+    },
+    {
+        "category": "飲品",
+        "title": "光泉燕麥高纖豆漿",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2940122.jpg",
+        "Protein": 12.8,
+        "Carb": 16.0,
+        "Calories": 164.0,
+        "Fat": 7.2,
+        "Description": "非基因改造黃豆研磨, 純正好滋味"
     },
     {
         "category": "飲品",
