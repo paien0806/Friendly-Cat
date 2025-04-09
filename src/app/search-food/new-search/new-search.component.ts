@@ -32,6 +32,8 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class NewSearchComponent implements OnInit {
   user: any = null;
 
+  isLocationSearchMode: boolean = true; // 是否使用定位搜尋
+
   searchForm: FormGroup; // 表單
   searchTerm: string = '';
   searchSelectedStore: any = null;
@@ -503,6 +505,12 @@ export class NewSearchComponent implements OnInit {
   }
 
   onOptionSelect(event: MatAutocompleteSelectedEvent | null, lat?: number, lng?: number): void {
+    // 變更搜尋模式
+    this.isLocationSearchMode = false;
+
+    // 清除商店列表
+    this.totalStoresShowList = [];
+
     // 從選中的選項中獲取值
     this.searchSelectedStore = event?.option.value.name;
 
@@ -569,6 +577,12 @@ export class NewSearchComponent implements OnInit {
   }
 
   onUseCurrentLocation(): void {
+    // 變更搜尋模式
+    this.isLocationSearchMode = true;
+
+    // 清除商店列表
+    this.totalStoresShowList = [];
+
     // 清除輸入的搜尋條件
     this.unifiedDropDownList = [];
     this.searchTerm = '';
@@ -650,31 +664,32 @@ export class NewSearchComponent implements OnInit {
 
     if (storeLatitude && storeLongitude) {
       this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
-      if(this.totalStoresShowList[0].distance > 1 || this.totalStoresShowList[0].remainingQty === 0){
-        const dialogRef = this.dialog.open(MessageDialogComponent, {
-          data: {
-            message: '該門市無庫存，請重新搜尋。',
-            imgPath: 'assets/NoResult.jpg',
-          }
-        });
-        dialogRef.afterClosed().subscribe(result => {
-          this.totalStoresShowList = [];
-          this.searchTerm = '';
-        });
-        this.totalStoresShowList = [];
-        return;
-      }
-      this.totalStoresShowList = [
-        {
-          ...this.totalStoresShowList[0],
-          showDistance: false
-        }
-      ];
+      console.log('使用者搜尋店家附近的商店:', this.totalStoresShowList);
+      // if(this.totalStoresShowList[0].distance > 1 || this.totalStoresShowList[0].remainingQty === 0){
+      //   const dialogRef = this.dialog.open(MessageDialogComponent, {
+      //     data: {
+      //       message: '該門市無庫存，請重新搜尋。',
+      //       imgPath: 'assets/NoResult.jpg',
+      //     }
+      //   });
+      //   dialogRef.afterClosed().subscribe(result => {
+      //     this.totalStoresShowList = [];
+      //     this.searchTerm = '';
+      //   });
+      //   this.totalStoresShowList = [];
+      //   return;
+      // }
+      // this.totalStoresShowList = [
+      //   {
+      //     ...this.totalStoresShowList[0],
+      //     showDistance: false
+      //   }
+      // ];
     }
     else{
       // 根據距離排序
       this.totalStoresShowList.sort((a, b) => a.distance - b.distance);
-      console.log('最近的商店:', this.totalStoresShowList);
+      console.log('使用者附近的商店:', this.totalStoresShowList);
     }
   }
 
@@ -724,11 +739,14 @@ export class NewSearchComponent implements OnInit {
         // 等兩者完成後合併資料
         if (storeLatitude && storeLongitude) {
           this.combineStoreList(storeLatitude, storeLongitude);
+          this.storeDataService.setStores(this.totalStoresShowList);
+          this.storeDataService.setIsUserLocationSearch(false);
         }
         else{
           this.combineStoreList();
+          this.storeDataService.setStores(this.totalStoresShowList);
+          this.storeDataService.setIsUserLocationSearch(true);
         }
-        this.storeDataService.setStores(this.totalStoresShowList);
       },
       (error) => {
         console.error('Error fetching store data:', error);

@@ -26,6 +26,7 @@ export class ChatbotComponent {
 
   isLogin: boolean = false;
   storesInfo: any[] = [];
+  isUserLocationSearch: boolean = true;
   isOpen = false;
   userInput = '';
   userName = '';
@@ -58,10 +59,13 @@ export class ChatbotComponent {
     this.authService.getUser().subscribe((user) => {
       if (!user) {
         this.isLogin = false;
-        this.putMessage(`嗨～${this.userName}！ 想找什麼類型的食物呢？`, "bot");
+        this.putMessage(`嗨～！ 想找什麼類型的食物呢？`, "bot");
       }
         this.userName = user.displayName;
-        this.putMessage(`嗨～${this.userName}！ 想找什麼類型的食物呢？`, "bot")
+        this.putMessage(`歡迎回來～${this.userName}！ 想找什麼類型的食物呢？`, "bot")
+    });
+    this.storeDataService.isLocationSearch$.subscribe(isLocationSearch => {
+      this.isUserLocationSearch = isLocationSearch;
     });
   }
 
@@ -83,7 +87,13 @@ export class ChatbotComponent {
 
   sendMessage() {
     if (this.userInput.trim()) {
-      this.storesInfo = this.storeDataService.getStores().slice(0, 10);
+      // 手動篩掉711空店（711 API 會回傳所有店家資料)，只保留有商品的前 10 筆資料
+      this.storesInfo = this.storeDataService.getStores()
+        .filter(store => !(store.label === '7-11' && store.remainingQty === 0))
+        .slice(0, 10);
+
+      console.log('Filtered storesInfo:', this.storesInfo);
+
       const input = this.userInput;
       this.userInput = ''; // 清空輸入
       // 加入使用者訊息
@@ -129,7 +139,12 @@ export class ChatbotComponent {
                 let messageText = "🐈‍⬛：這些商店有你想要的！\n\n";
                 resObj.stores.forEach((store: Store) => {
                   messageText += `🏪 ${store.storeName}  \n`;
-                  messageText += `（📍 距離 ${store.distance.toFixed(0)} 公尺）\n`;
+                  if (this.isUserLocationSearch) {
+                    messageText += `（📍 距離您 ${store.distance.toFixed(0)} 公尺）\n`;
+                  }
+                  else {
+                    messageText += `（📍 距離您搜尋的商店 ${store.distance.toFixed(0)} 公尺）\n`;
+                  }
                   if (store.items.length > 0) {
                     messageText += `${store.items.map((item, index) => `${index + 1}. ${item}`).join("\n")}\n\n`;
                   } else {
