@@ -201,16 +201,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "一配炙烤焦糖燻鮭細卷",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0660124.jpg",
-        "Protein": 3.4,
-        "Carb": 31.2,
-        "Calories": 164.0,
-        "Fat": 2.8,
-        "Description": "爭鮮聯名商品-鮭魚焦紋為炙燒正常現象。"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "二配日式稻荷壽司",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0672814.jpg",
         "Protein": 7.6,
@@ -587,7 +577,7 @@
         "Carb": 34.4,
         "Calories": 167.0,
         "Fat": 1.2,
-        "Description": "泰式酸辣雞絲飯糰(區)"
+        "Description": "雞肉絲當主菜，搭配泰式酸甜醬的甜辣口感，口味豐富，迎合夏天季節。"
     },
     {
         "category": "飯糰壽司",
@@ -597,7 +587,7 @@
         "Carb": 32.0,
         "Calories": 161.0,
         "Fat": 2.2,
-        "Description": "※鮭魚焦紋為炙烤正常現象。"
+        "Description": "選用智利直輸大西洋鮭魚以冷燻工法低溫燻製，拌入特調沙拉，搭配酸甜壽司飯。"
     },
     {
         "category": "飯糰壽司",
@@ -617,7 +607,7 @@
         "Carb": 32.9,
         "Calories": 195.0,
         "Fat": 3.7,
-        "Description": "迪士尼聯名商品"
+        "Description": "大片的火腿呈現滿滿的彭湃感，裡面撲滿起司醬與玉米象徵小豬撲滿的財源滾滾來。"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2631,16 +2621,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "韓式辛牛義大利麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0916024.jpg",
-        "Protein": 27.0,
-        "Carb": 70.4,
-        "Calories": 504.0,
-        "Fat": 12.8,
-        "Description": "家用微波700W 150秒勿超過90度。  ※本產品含過敏原麩質之穀物、大豆、牛奶、蛋、芝麻及其製品。"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "韓式炸雞義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0916038.jpg",
         "Protein": 29.8,
@@ -2848,16 +2828,6 @@
         "Calories": 442.0,
         "Fat": 11.7,
         "Description": "迪士尼小熊維尼聯名商品"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "粉紅醬菇菇義大利麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0986514.jpg",
-        "Protein": 12.9,
-        "Carb": 60.9,
-        "Calories": 404.0,
-        "Fat": 12.2,
-        "Description": "※本產品含過敏原麩質之穀物、大豆、堅果、牛奶類及其製品。※食用前需微波加熱，並儘速食用完畢；家用微波700W150秒勿超過90℃。"
     },
     {
         "category": "飯麵粥品",
@@ -3087,7 +3057,7 @@
         "Carb": 76.5,
         "Calories": 480.0,
         "Fat": 11.3,
-        "Description": "辰園聯名"
+        "Description": "表皮油亮、肉質軟嫩有彈性的油雞，搭配高溫炙烤至焦脆、肉質厚實的叉燒肉"
     },
     {
         "category": "飯麵粥品",
@@ -3127,7 +3097,7 @@
         "Carb": 89.6,
         "Calories": 571.0,
         "Fat": 16.5,
-        "Description": "麻奶豬肉鍋好下飯"
+        "Description": "以流行的麻奶鍋底作主味，還原「火鍋下飯」的食用場景"
     },
     {
         "category": "飯麵粥品",
@@ -3137,7 +3107,7 @@
         "Carb": 94.5,
         "Calories": 578.0,
         "Fat": 12.3,
-        "Description": "極旨黑咖哩漢堡排飯"
+        "Description": "多種蔬菜炒焙出香氣，以兩種日本直輸咖哩黃金比例添加"
     },
     {
         "category": "飯麵粥品",
@@ -4048,6 +4018,16 @@
         "Calories": 186.0,
         "Fat": 5.6,
         "Description": "蔥鹽雞肉麵沙拉"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "彩蔬洋芋沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057411.jpg",
+        "Protein": 2.3,
+        "Carb": 17.6,
+        "Calories": 104.0,
+        "Fat": 2.7,
+        "Description": "※拆封後兩小時內食用完畢"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -6208,6 +6188,16 @@
         "Calories": 271.0,
         "Fat": 0.0,
         "Description": "每瓶含300億個以上益生菌/產品可能有蛋白質沉澱，請搖勻後飲用"
+    },
+    {
+        "category": "飲品",
+        "title": "ＯａｔＹａ蛋白燕麥奶",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1066608.jpg",
+        "Protein": 14.6,
+        "Carb": 20.3,
+        "Calories": 201.0,
+        "Fat": 6.8,
+        "Description": "3種優質蛋白、9種必需胺基酸"
     },
     {
         "category": "飲品",
