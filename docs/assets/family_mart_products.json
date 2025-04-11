@@ -2221,6 +2221,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "泰式綠咖哩雞",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0350991.jpg",
+        "Protein": 15.3,
+        "Carb": 75.7,
+        "Calories": 433.0,
+        "Fat": 7.5,
+        "Description": "泰式綠咖哩雞"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "星—極上炙烤親子丼",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0399402.jpg",
         "Protein": 25.1,
