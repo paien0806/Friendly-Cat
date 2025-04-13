@@ -871,16 +871,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "二配莓莓奶油土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0738579.jpg",
-        "Protein": 9.8,
-        "Carb": 53.3,
-        "Calories": 311.0,
-        "Fat": 6.5,
-        "Description": "莓果果乾與比利時草莓醬 匠吃莓果很美好"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配醇黑巧克力夾心蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0791860.jpg",
         "Protein": 5.9,
@@ -2468,16 +2458,6 @@
         "Calories": 539.0,
         "Fat": 14.5,
         "Description": "※本產品已充分熟化，產品橫切面帶有些許粉紅色或紅色血管為正常現象"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "松露野菇白醬燉飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0862172.jpg",
-        "Protein": 10.1,
-        "Carb": 78.2,
-        "Calories": 497.0,
-        "Fat": 16.1,
-        "Description": "※本產品非素食專門產線"
     },
     {
         "category": "飯麵粥品",
