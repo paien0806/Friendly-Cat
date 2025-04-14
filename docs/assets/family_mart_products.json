@@ -421,16 +421,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "松露乳酪德腸飯卷",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0969190.jpg",
-        "Protein": 7.0,
-        "Carb": 35.9,
-        "Calories": 235.0,
-        "Fat": 7.0,
-        "Description": "強調醬汁風味及主菜感，使用松露醬與奶油乳酪塊，煮成的乳酪醬，搭配德式香腸。"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "野郎鬼椒雞腿飯卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984467.jpg",
         "Protein": 6.2,
@@ -2781,16 +2771,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "虱目魚粥",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984526.jpg",
-        "Protein": 27.8,
-        "Carb": 53.7,
-        "Calories": 459.0,
-        "Fat": 14.6,
-        "Description": "※小心魚刺※固形物210公克以上"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "蒜蒜燒豚飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984530.jpg",
         "Protein": 17.1,
@@ -4018,6 +3998,16 @@
         "Calories": 146.7,
         "Fat": 1.9,
         "Description": "過癮但不罪惡，健身族爽度破表的日常享受！濃郁沙茶與黑胡椒香氣迸發，雞胸肉質軟嫩入味。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "梅干肉丸",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1076564.jpg",
+        "Protein": 13.6,
+        "Carb": 6.8,
+        "Calories": 132.0,
+        "Fat": 5.6,
+        "Description": "食用說明：本產品已熟，復熱即可食用。注意事項：本產品無添加防腐劑，請於開封後儘早食用完畢。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
