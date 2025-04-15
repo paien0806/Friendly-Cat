@@ -634,10 +634,10 @@
         "title": "星一配鹹奶油菠蘿小土司",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0102306.jpg",
         "Protein": 8.8,
-        "Carb": 46.5,
-        "Calories": 399.0,
-        "Fat": 19.8,
-        "Description": "澳洲海鹽 X 紐西蘭鮮奶油 X 經典菠蘿小土司"
+        "Carb": 48.7,
+        "Calories": 390.0,
+        "Fat": 17.8,
+        "Description": "紐西蘭鮮奶油 X 澳洲海鹽 X 湯種口感"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -693,11 +693,11 @@
         "category": "麵包、吐司、蛋糕",
         "title": "一配巧克力菠蘿",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0344489.jpg",
-        "Protein": 9.4,
-        "Carb": 47.9,
+        "Protein": 8.8,
+        "Carb": 49.0,
         "Calories": 346.0,
-        "Fat": 13.0,
-        "Description": "比利時貝可拉可可粉 X 香濃可可醬"
+        "Fat": 12.7,
+        "Description": "CACAO BARRY可可粉Ｘ香濃可可醬"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1508,6 +1508,16 @@
         "Calories": 266.0,
         "Fat": 10.0,
         "Description": "微波後請小心燙口"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配蕉心貘吉麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1089014.jpg",
+        "Protein": 5.4,
+        "Carb": 43.2,
+        "Calories": 278.0,
+        "Fat": 9.3,
+        "Description": "高雄旗山黑龍香蕉xQ彈麻糬"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2751,16 +2761,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "金沙醬鐵板牛雞雙饗飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984508.jpg",
-        "Protein": 34.2,
-        "Carb": 57.6,
-        "Calories": 533.0,
-        "Fat": 18.5,
-        "Description": "開丼熱銷聯名"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "日式中濃醬炭火漢堡排飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984512.jpg",
         "Protein": 26.6,
@@ -3998,6 +3998,16 @@
         "Calories": 146.7,
         "Fat": 1.9,
         "Description": "過癮但不罪惡，健身族爽度破表的日常享受！濃郁沙茶與黑胡椒香氣迸發，雞胸肉質軟嫩入味。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "ＧＡＢＡ明太子洋芋沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1066208.jpg",
+        "Protein": 2.5,
+        "Carb": 16.7,
+        "Calories": 111.0,
+        "Fat": 3.8,
+        "Description": "※使用本產品應避免同時飲酒或服用降血壓、鎮靜及癲癇等藥物；孕婦、授乳者、嬰幼兒，須諮詢醫師方可使用"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -6208,6 +6218,16 @@
         "Calories": 126.0,
         "Fat": 3.3,
         "Description": "【飲用前請搖勻】如有少量沉澱屬正常現象, 請搖勻後飲用"
+    },
+    {
+        "category": "飲品",
+        "title": "不含貘芝麻牛奶",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1091231.jpg",
+        "Protein": 8.2,
+        "Carb": 31.1,
+        "Calories": 218.4,
+        "Fat": 6.8,
+        "Description": "本產品如有芝麻沉澱與乳脂上浮，純屬自然現象，敬請安心飲用，搖勻後飲用 風味更佳。"
     },
     {
         "category": "飲品",
