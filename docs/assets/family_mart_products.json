@@ -2431,16 +2431,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "幸福餐盒（魚）",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0774937.jpg",
-        "Protein": 17.8,
-        "Carb": 88.6,
-        "Calories": 534.0,
-        "Fat": 12.0,
-        "Description": "※蔬菜與熱量會因時節微調。"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "壹號醬壽喜燒牛丼",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0808576.jpg",
         "Protein": 17.2,
