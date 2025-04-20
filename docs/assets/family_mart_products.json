@@ -2001,16 +2001,6 @@
     },
     {
         "category": "三明治、漢堡",
-        "title": "花生火腿蛋三明治",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0895535.jpg",
-        "Protein": 6.7,
-        "Carb": 22.4,
-        "Calories": 201.0,
-        "Fat": 9.4,
-        "Description": "花生火腿蛋三明治"
-    },
-    {
-        "category": "三明治、漢堡",
         "title": "大麥雙蛋白豬肉堡",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0907473.jpg",
         "Protein": 12.1,
@@ -2618,16 +2608,6 @@
         "Calories": 456.0,
         "Fat": 11.6,
         "Description": "家用微波700W 150秒勿超過90度  ※本產品含過敏原麩質之穀物、螺貝、魚、蛋、大豆、甲殼、花生及其製品。※內含九層塔，粗纖維屬正常現象。"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "和風咖哩雞雲朵湯義大利麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0915987.jpg",
-        "Protein": 26.0,
-        "Carb": 65.1,
-        "Calories": 554.0,
-        "Fat": 21.0,
-        "Description": "※食用前需微波加熱※本產品含過敏原麩質之穀物、大豆、牛奶、蛋類及其製品。※本產品含薑絲纖維屬正常現象，請安心食用。※內含薑黃顏色為原物料特性屬正常現象。"
     },
     {
         "category": "飯麵粥品",
