@@ -531,36 +531,6 @@
     },
     {
         "category": "1_Ricerolls",
-        "name": "新極上飯糰-冠軍烏魚子",
-        "kcal": "239",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_474.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
-        "name": "新極上飯糰-日本熟成明太子",
-        "kcal": "202",
-        "price": "55",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_475.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
-        "name": "新極上飯糰-日本帆立貝",
-        "kcal": "223",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_473.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
         "name": "星宇新極上-胡同炭火牛小排",
         "kcal": "235",
         "price": "55",
@@ -641,16 +611,6 @@
     },
     {
         "category": "1_Ricerolls",
-        "name": "橋村炸雞新極大飯糰",
-        "kcal": "289",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_455.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
         "name": "御選肉鬆飯糰",
         "kcal": "248",
         "price": "28",
@@ -658,16 +618,6 @@
         "special_sale": "False",
         "new": "",
         "content": "使用日本美乃滋二段焙炒工法，香酥感之外更加香醇(豬原料來源：加拿大、台灣)"
-    },
-    {
-        "category": "1_Ricerolls",
-        "name": "林聰明-雞肉飯飯糰",
-        "kcal": "211",
-        "price": "36",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_358.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "在地雞肉，慢煉蔥油"
     },
     {
         "category": "1_Ricerolls",
@@ -2801,23 +2751,13 @@
     },
     {
         "category": "7_Oden",
-        "name": "韓國魚版串",
-        "kcal": "91.6kcal/個",
-        "price": "35元/個",
-        "image": "https://www.7-11.com.tw/freshfoods/7_Oden/images/Oden_146.png",
-        "special_sale": "False",
-        "new": "True",
-        "content": ""
-    },
-    {
-        "category": "7_Oden",
         "name": "滷豬血",
         "kcal": "14kcal/個",
         "price": "20元/個",
         "image": "https://www.7-11.com.tw/freshfoods/7_Oden/images/Oden_145.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "口感軟嫩，富含蛋白質"
     },
     {
         "category": "7_Oden",
@@ -2827,7 +2767,7 @@
         "image": "https://www.7-11.com.tw/freshfoods/7_Oden/images/Oden_144.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "3種蔬菜與豆腐製成，口感軟嫩有層次感"
     },
     {
         "category": "7_Oden",
@@ -2837,7 +2777,7 @@
         "image": "https://www.7-11.com.tw/freshfoods/7_Oden/images/Oden_143.png",
         "special_sale": "False",
         "new": "",
-        "content": "口感鮮甜清爽"
+        "content": "菜梗薄而甜嫩，口感鮮甜清爽"
     },
     {
         "category": "7_Oden",
@@ -5658,6 +5598,16 @@
         "special_sale": "False",
         "new": "",
         "content": "老師傅家傳厚燒餅，蔥香馥郁"
+    },
+    {
+        "category": "22_ice",
+        "name": "黑芝麻牛奶霜淇淋",
+        "kcal": "186",
+        "price": "49",
+        "image": "https://www.7-11.com.tw/freshfoods/22_ice/images/ice_21.png",
+        "special_sale": "True",
+        "new": "True",
+        "content": "使用芝初8倍細黑芝麻粉，口感細緻綿密富含香氣"
     },
     {
         "category": "22_ice",

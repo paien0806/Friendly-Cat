@@ -620,6 +620,16 @@
         "Description": "※本產品含有蠶豆，蠶豆症患者請多加留意。"
     },
     {
+        "category": "飯糰壽司",
+        "title": "一配柚庵燒赤魚飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1086866.jpg",
+        "Protein": 6.1,
+        "Carb": 33.3,
+        "Calories": 166.0,
+        "Fat": 0.9,
+        "Description": "經典懷石料理入菜-柚庵燒。"
+    },
+    {
         "category": "麵包、吐司、蛋糕",
         "title": "一配巧克力派司",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0040786.jpg",
@@ -1531,6 +1541,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配醇香葡萄小土司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1087521.jpg",
+        "Protein": 11.3,
+        "Carb": 64.3,
+        "Calories": 379.0,
+        "Fat": 8.5,
+        "Description": "葡萄乾含有果蒂屬農產品特性"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配胖貘胖芙可可",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1089000.jpg",
         "Protein": 2.7,
@@ -1548,6 +1568,16 @@
         "Calories": 278.0,
         "Fat": 9.3,
         "Description": "高雄旗山黑龍香蕉xQ彈麻糬"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配蘭姆葡萄維也納",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1090144.jpg",
+        "Protein": 8.3,
+        "Carb": 48.7,
+        "Calories": 336.0,
+        "Fat": 12.0,
+        "Description": "香甜蘭姆奶油餡 X 加州葡萄乾"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2503,11 +2533,11 @@
         "category": "飯麵粥品",
         "title": "經典滷肉飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864079.jpg",
-        "Protein": 18.6,
-        "Carb": 81.8,
-        "Calories": 618.0,
-        "Fat": 24.2,
-        "Description": "水水造咖聯名商品"
+        "Protein": 22.1,
+        "Carb": 80.0,
+        "Calories": 593.0,
+        "Fat": 20.7,
+        "Description": "※香腸偶有軟骨屬正常現象，請小心食用。"
     },
     {
         "category": "飯麵粥品",
@@ -3058,6 +3088,16 @@
         "Calories": 400.0,
         "Fat": 14.5,
         "Description": "※本產品含過敏原麩質之穀物、牛奶、魚、甲殼、螺貝、大豆、蛋及其製品。※家用微波 7  0  0 W150秒勿超過9 0°C  食用前需微波加熱,並儘速食用完畢。"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "明太子烏龍拌麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1058930.jpg",
+        "Protein": 13.0,
+        "Carb": 62.9,
+        "Calories": 439.0,
+        "Fat": 14.9,
+        "Description": "明太子烏龍拌麵"
     },
     {
         "category": "飯麵粥品",
