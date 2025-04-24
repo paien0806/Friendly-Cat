@@ -4141,6 +4141,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "美國糖蜂蘋果（區—截切）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1069315.jpg",
+        "Protein": 0.2,
+        "Carb": 19.8,
+        "Calories": 83.9,
+        "Fat": 0.5,
+        "Description": "果肉清脆 多汁清爽"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "梅干肉丸",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1076564.jpg",
         "Protein": 13.6,
@@ -5868,6 +5878,16 @@
         "Calories": 145.5,
         "Fat": 3.3,
         "Description": "植物絞肉內餡，增添口感。 香菇、杏鮑菇與毛豆仁添加，咬感豐富。"
+    },
+    {
+        "category": "茶葉蛋、蒸箱熟食",
+        "title": "打拋豬肉包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1077574.jpg",
+        "Protein": 8.8,
+        "Carb": 36.1,
+        "Calories": 265.1,
+        "Fat": 9.5,
+        "Description": "1.知名連鎖炸雞bbq聯名新品2.以韓式經典「炸醬」為靈感,結合甜鹹濃郁的黑豆醬,搭配Q彈韓式魚板,"
     },
     {
         "category": "茶葉蛋、蒸箱熟食",
