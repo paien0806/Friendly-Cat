@@ -441,16 +441,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "二配小熊維尼蕃茄蛋包飯飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0985122.jpg",
-        "Protein": 4.4,
-        "Carb": 37.8,
-        "Calories": 195.0,
-        "Fat": 2.9,
-        "Description": "迪士尼小熊維尼聯名商品"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配鮪魚沙拉細卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1000323.jpg",
         "Protein": 4.3,
@@ -2501,16 +2491,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "泰式綠咖哩雞飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0852389.jpg",
-        "Protein": 16.3,
-        "Carb": 88.9,
-        "Calories": 509.0,
-        "Fat": 9.9,
-        "Description": "泰式綠咖哩雞飯"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "嘉義劉里長沙茶雞腿便當",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0852434.jpg",
         "Protein": 28.2,
@@ -3531,6 +3511,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "橘肉哈密瓜（截切—盒）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0426926.jpg",
+        "Protein": 2.0,
+        "Carb": 16.3,
+        "Calories": 73.2,
+        "Fat": 0.0,
+        "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "履歷子彈蓮霧（截切盒）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0448677.jpg",
         "Protein": 0.6,
@@ -4071,6 +4061,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "明太子蟹味棒",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1041072.jpg",
+        "Protein": 5.4,
+        "Carb": 9.4,
+        "Calories": 81.9,
+        "Fat": 2.5,
+        "Description": "\"1.日本技術 台灣首創「蟹味棒內含日本助宗鱈明太子」 2.「冷食」-有蟹味鮮甜、Q彈口感  「熱食」-有明太子、爆漿口感 3.上班族、瘦身、健身族群新選擇\""
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "香濃起司白醬花椰",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1056188.jpg",
         "Protein": 6.8,
@@ -4161,6 +4161,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "黃紅一起吃的西瓜（截切—盒）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1091209.jpg",
+        "Protein": 1.6,
+        "Carb": 15.4,
+        "Calories": 69.8,
+        "Fat": 0.2,
+        "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "青森蜜富士蘋果（截切盒）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1310029.jpg",
         "Protein": 0.2,
@@ -4187,6 +4197,16 @@
         "Carb": 17.2,
         "Calories": 77.5,
         "Fat": 0.3,
+        "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "履歷木瓜（截切—盒）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1310615.jpg",
+        "Protein": 1.0,
+        "Carb": 15.8,
+        "Calories": 69.0,
+        "Fat": 0.2,
         "Description": "當季水果汁多鮮美"
     },
     {
