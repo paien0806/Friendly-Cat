@@ -2631,13 +2631,13 @@
     },
     {
         "category": "6_Noodles",
-        "name": "韓式炸醬拌麵",
-        "kcal": "601",
-        "price": "85",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_181.png",
+        "name": "極饗-經典麻醬涼麵",
+        "kcal": "727",
+        "price": "65",
+        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_188.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "半台斤麵量X中焙麻醬香"
     },
     {
         "category": "6_Noodles",
@@ -2688,16 +2688,6 @@
         "special_sale": "False",
         "new": "",
         "content": "大份量涼麵x秘製爆香辣油"
-    },
-    {
-        "category": "6_Noodles",
-        "name": "真飽涼麵-特選麻醬",
-        "kcal": "674",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_130.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "整份大於半台斤"
     },
     {
         "category": "6_Noodles",
