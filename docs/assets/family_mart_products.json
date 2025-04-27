@@ -401,16 +401,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "一配辛辣叉燒飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0954511.jpg",
-        "Protein": 5.2,
-        "Carb": 33.2,
-        "Calories": 188.0,
-        "Fat": 3.8,
-        "Description": "麵屋武藏聯名商品"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "日式明太子炙烤牛飯卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0969172.jpg",
         "Protein": 6.0,
@@ -2091,16 +2081,6 @@
     },
     {
         "category": "三明治、漢堡",
-        "title": "壹號醬炙烤牛蛋堡",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0988784.jpg",
-        "Protein": 9.6,
-        "Carb": 30.2,
-        "Calories": 267.0,
-        "Fat": 12.1,
-        "Description": "壹號醬炙烤牛咬蛋堡"
-    },
-    {
-        "category": "三明治、漢堡",
         "title": "切達海鮮雙饗三明治",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0988998.jpg",
         "Protein": 8.3,
@@ -2731,16 +2711,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "武士叉燒便當",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0975234.jpg",
-        "Protein": 17.8,
-        "Carb": 83.0,
-        "Calories": 525.0,
-        "Fat": 13.4,
-        "Description": "武士叉燒便當"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "星—糖燻野郎三十天熟成牛飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0978278.jpg",
         "Protein": 17.9,
@@ -2808,16 +2778,6 @@
         "Calories": 702.0,
         "Fat": 34.5,
         "Description": "※本產品含過敏原含麩質之穀物、牛奶、大豆、堅果、花生、蛋、螺貝類及其製品。※內含九層塔，粗纖維屬正常現象。 ※白色粉末為起司粉，此為正常現象。"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "小熊維尼餐盒",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1000387.jpg",
-        "Protein": 8.4,
-        "Carb": 43.3,
-        "Calories": 260.0,
-        "Fat": 5.8,
-        "Description": "小熊維尼餐盒"
     },
     {
         "category": "飯麵粥品",
