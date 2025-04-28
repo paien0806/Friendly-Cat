@@ -2461,10 +2461,10 @@
     },
     {
         "category": "5_ForeignDishes",
-        "name": "烤魚多彩鮮蔬餐盒",
+        "name": "豆酥烤魚鮮蔬餐盒",
         "kcal": "418",
         "price": "99",
-        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_447.png",
+        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_452.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -2511,30 +2511,10 @@
     },
     {
         "category": "5_ForeignDishes",
-        "name": "幸福餐盒",
-        "kcal": "",
-        "price": "60",
-        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_439.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "5_ForeignDishes",
         "name": "增雞蛋白餐",
         "kcal": "595",
         "price": "99",
         "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_424.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "5_ForeignDishes",
-        "name": "菠菜起司烤雞紅藜糯麥飯",
-        "kcal": "411",
-        "price": "99",
-        "image": "https://www.7-11.com.tw/freshfoods/5_ForeignDishes/images/ForeignDishes_425.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -3672,7 +3652,7 @@
     {
         "category": "11_bread",
         "name": "好時-愛餡大亨巧克力軟法",
-        "kcal": "259",
+        "kcal": "342",
         "price": "39",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_779.png",
         "special_sale": "False",

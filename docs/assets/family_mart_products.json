@@ -1121,16 +1121,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "二配莓莓可可蛋糕麵包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0982942.jpg",
-        "Protein": 7.7,
-        "Carb": 38.4,
-        "Calories": 328.0,
-        "Fat": 16.0,
-        "Description": "巧克力磅蛋糕X酸甜滑順莓果乳酪餡"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配紅寶石可可軟歐",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0982956.jpg",
         "Protein": 5.7,
@@ -2221,16 +2211,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "星—香辣醬蒜味香腸蛋炒飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0226225.jpg",
-        "Protein": 18.6,
-        "Carb": 103.7,
-        "Calories": 815.0,
-        "Fat": 36.3,
-        "Description": "香辣醬蒜味香腸蛋炒飯"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "優質池上飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0247516.jpg",
         "Protein": 4.3,
@@ -2291,33 +2271,13 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "星—香濃雙重起司海陸焗飯",
+        "title": "星—二配香濃雙重起司海陸焗飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0564425.jpg",
         "Protein": 22.9,
         "Carb": 98.8,
         "Calories": 691.0,
         "Fat": 22.5,
         "Description": "※香腸偶有軟骨屬正常現象，請小心食用\t\t\t\t\t\t\t\t\t\t\t\t\t"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—金咖哩果香甘口咖哩飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0566572.jpg",
-        "Protein": 21.6,
-        "Carb": 115.1,
-        "Calories": 617.0,
-        "Fat": 7.7,
-        "Description": "金咖哩果香甘口咖哩飯"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—金咖哩濃厚辛辣咖哩飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0566590.jpg",
-        "Protein": 18.2,
-        "Carb": 115.1,
-        "Calories": 677.0,
-        "Fat": 15.7,
-        "Description": "金咖哩濃厚辛辣咖哩飯"
     },
     {
         "category": "飯麵粥品",
@@ -2368,26 +2328,6 @@
         "Calories": 506.0,
         "Fat": 8.4,
         "Description": "新招牌腿排便當"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—港式香滑嫩蛋牛肉燴飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0599971.jpg",
-        "Protein": 20.4,
-        "Carb": 97.6,
-        "Calories": 521.0,
-        "Fat": 5.2,
-        "Description": "港式香滑嫩蛋牛肉燴飯"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "香拌海鮮醬肉絲蛋炒飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0703146.jpg",
-        "Protein": 17.8,
-        "Carb": 96.3,
-        "Calories": 689.0,
-        "Fat": 25.7,
-        "Description": "香拌海鮮醬肉絲蛋炒飯"
     },
     {
         "category": "飯麵粥品",
@@ -2581,16 +2521,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "星—川味麻婆燒豆腐燴飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0910569.jpg",
-        "Protein": 26.5,
-        "Carb": 99.2,
-        "Calories": 684.0,
-        "Fat": 19.8,
-        "Description": "與鼎泰豐聯名，做出又辣又麻的四川麻婆豆腐"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "星—白酒蛤蜊義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0915973.jpg",
         "Protein": 44.9,
@@ -2641,17 +2571,7 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "星—里肌豬排可可咖哩歐姆蛋飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0925720.jpg",
-        "Protein": 24.2,
-        "Carb": 103.3,
-        "Calories": 735.0,
-        "Fat": 25.1,
-        "Description": "厚切炸里肌豬排佐可可咖哩與切達起司醬，搭上滑嫩歐姆蛋，完美呈現日式洋食感。"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "星—黃金雞排蘑菇白醬歐姆蛋飯",
+        "title": "二配黃金雞排蘑菇白醬歐姆蛋飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0925748.jpg",
         "Protein": 27.2,
         "Carb": 92.7,
@@ -2941,16 +2861,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "煸椒烘蛋飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1045076.jpg",
-        "Protein": 20.6,
-        "Carb": 80.6,
-        "Calories": 527.0,
-        "Fat": 13.4,
-        "Description": "煸椒烘蛋飯"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "青花椒麻雞肉拌麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049202.jpg",
         "Protein": 22.2,
@@ -3048,36 +2958,6 @@
         "Calories": 259.0,
         "Fat": 3.3,
         "Description": "※本產品含過敏原含魚、麩質之穀物、大豆、甲殼類、蛋類及其製品。"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "麻奶豬肉鍋好下飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067854.jpg",
-        "Protein": 16.1,
-        "Carb": 89.6,
-        "Calories": 571.0,
-        "Fat": 16.5,
-        "Description": "以流行的麻奶鍋底作主味，還原「火鍋下飯」的食用場景"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "極旨黑咖哩漢堡排飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067872.jpg",
-        "Protein": 22.2,
-        "Carb": 94.5,
-        "Calories": 578.0,
-        "Fat": 12.3,
-        "Description": "多種蔬菜炒焙出香氣，以兩種日本直輸咖哩黃金比例添加"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "泰式綠咖哩雞",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1072160.jpg",
-        "Protein": 15.3,
-        "Carb": 75.7,
-        "Calories": 433.0,
-        "Fat": 7.5,
-        "Description": "泰式綠咖哩雞"
     },
     {
         "category": "飯麵粥品",
@@ -3821,16 +3701,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "柚子胡椒花枝丸",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0905435.jpg",
-        "Protein": 8.6,
-        "Carb": 15.3,
-        "Calories": 184.0,
-        "Fat": 9.8,
-        "Description": "微波後請於2小時內食用完畢。"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "柚子胡椒嫩雞胸",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0905453.jpg",
         "Protein": 26.4,
@@ -4118,6 +3988,16 @@
         "Calories": 132.0,
         "Fat": 5.6,
         "Description": "食用說明：本產品已熟，復熱即可食用。注意事項：本產品無添加防腐劑，請於開封後儘早食用完畢。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "黑胡椒鴨賞",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1082458.jpg",
+        "Protein": 13.5,
+        "Carb": 1.8,
+        "Calories": 136.0,
+        "Fat": 8.3,
+        "Description": "1.\t本產品開封後請於當日食用完畢。 2.\t包裝袋若受外力損毀後造成酸敗、發霉、失真空等現象時，請勿食用本產品。 3.\t本產品經剔骨處理，偶有碎骨殘留，請小心食用並注意。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
