@@ -531,6 +531,16 @@
     },
     {
         "category": "飯糰壽司",
+        "title": "二配兩粒飯糰（鮪魚培根蛋沙拉）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1066749.jpg",
+        "Protein": 8.9,
+        "Carb": 60.4,
+        "Calories": 333.0,
+        "Fat": 6.1,
+        "Description": "此為兩顆飯糰組成套組販售"
+    },
+    {
+        "category": "飯糰壽司",
         "title": "二配大飯糰椒香鮪魚",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067909.jpg",
         "Protein": 6.5,
@@ -578,6 +588,16 @@
         "Calories": 195.0,
         "Fat": 3.7,
         "Description": "大片的火腿呈現滿滿的彭湃感，裡面撲滿起司醬與玉米象徵小豬撲滿的財源滾滾來。"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "二配芝麻香鬆飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1080915.jpg",
+        "Protein": 5.6,
+        "Carb": 38.1,
+        "Calories": 229.0,
+        "Fat": 6.0,
+        "Description": "※本產品非素食專門產線"
     },
     {
         "category": "飯糰壽司",
@@ -898,16 +918,6 @@
         "Calories": 355.0,
         "Fat": 12.3,
         "Description": "WA!COOKIES 聯名"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "二配玫瑰莓果夾心土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0872238.jpg",
-        "Protein": 5.0,
-        "Carb": 34.2,
-        "Calories": 217.0,
-        "Fat": 6.7,
-        "Description": "屏東玫瑰奶霜+綜合莓果餡"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1438,6 +1448,16 @@
         "Calories": 265.0,
         "Fat": 13.9,
         "Description": "此產品不可微波"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配莓果美玫鬆餅",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1070172.jpg",
+        "Protein": 5.7,
+        "Carb": 58.6,
+        "Calories": 297.0,
+        "Fat": 4.4,
+        "Description": "24道究極燒成 日式膨鬆餅皮"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -5861,16 +5881,6 @@
     },
     {
         "category": "飲品",
-        "title": "（選）義美堅果杏仁全豆奶９００",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0429338.jpg",
-        "Protein": 10.5,
-        "Carb": 17.3,
-        "Calories": 172.0,
-        "Fat": 8.3,
-        "Description": "富含膳食纖維；不含基因改造作物、防腐劑及膽固醇。"
-    },
-    {
-        "category": "飲品",
         "title": "（選）義美厚濃豆奶９３６ｍｌ",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0429356.jpg",
         "Protein": 16.5,
@@ -5888,16 +5898,6 @@
         "Calories": 125.0,
         "Fat": 5.8,
         "Description": "零膽固醇、不含基因改造作物、不含防腐劑；高纖、使用袋裝食品級。非基因改造黃豆"
-    },
-    {
-        "category": "飲品",
-        "title": "（選）義美高纖燕麥奶９３６ｍｌ",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0429433.jpg",
-        "Protein": 4.4,
-        "Carb": 24.6,
-        "Calories": 139.0,
-        "Fat": 3.4,
-        "Description": "高纖；獨特水解技術，自然甜口感來自特選燕麥"
     },
     {
         "category": "飲品",
