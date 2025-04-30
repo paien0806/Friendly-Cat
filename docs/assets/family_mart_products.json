@@ -1421,6 +1421,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配男友力麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1067713.jpg",
+        "Protein": 15.5,
+        "Carb": 93.8,
+        "Calories": 530.0,
+        "Fat": 10.3,
+        "Description": "六塊肌造型麵包 X 溫柔奶香風味"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配抹茶甜甜圈蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1069210.jpg",
         "Protein": 5.4,
@@ -1568,6 +1578,16 @@
         "Calories": 336.0,
         "Fat": 12.0,
         "Description": "香甜蘭姆奶油餡 X 加州葡萄乾"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配雙莓乳酪爆擊貝果",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1093633.jpg",
+        "Protein": 7.7,
+        "Carb": 39.4,
+        "Calories": 232.0,
+        "Fat": 4.9,
+        "Description": "此產品不可微波"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2218,6 +2238,16 @@
         "Calories": 201.0,
         "Fat": 9.9,
         "Description": "香鬆起司蛋三明治\t"
+    },
+    {
+        "category": "三明治、漢堡",
+        "title": "美式起司巨牛堡",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1097728.jpg",
+        "Protein": 21.5,
+        "Carb": 44.1,
+        "Calories": 429.0,
+        "Fat": 18.5,
+        "Description": "美式起司巨牛堡"
     },
     {
         "category": "飯麵粥品",
@@ -2948,6 +2978,16 @@
         "Calories": 539.0,
         "Fat": 20.8,
         "Description": "※食用前需微波加熱，並儘速食用完畢 家用微波700W150秒勿超過90℃※內含九層塔，粗纖維屬正常現象。※本產品含過敏原含麩質之穀物、堅果、大豆、牛奶、蛋、魚類及其製品。"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "老北京風味炸醬麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1058899.jpg",
+        "Protein": 22.4,
+        "Carb": 66.0,
+        "Calories": 512.0,
+        "Fat": 17.5,
+        "Description": "老北京風味炸醬麵"
     },
     {
         "category": "飯麵粥品",
@@ -3741,16 +3781,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "剝皮辣椒鹽水雞",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0907491.jpg",
-        "Protein": 12.7,
-        "Carb": 4.9,
-        "Calories": 113.8,
-        "Fat": 4.8,
-        "Description": "使用雙月剝皮辣椒之產品"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "雪梨（超值盒）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0907532.jpg",
         "Protein": 1.5,
@@ -4008,6 +4038,16 @@
         "Calories": 132.0,
         "Fat": 5.6,
         "Description": "食用說明：本產品已熟，復熱即可食用。注意事項：本產品無添加防腐劑，請於開封後儘早食用完畢。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "鹽麴嫩雞胸",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1082430.jpg",
+        "Protein": 21.7,
+        "Carb": 3.6,
+        "Calories": 120.1,
+        "Fat": 2.1,
+        "Description": "1.嚴選國產去皮雞胸肉 2.選用日本仙台直輸鹽麴風味醬汁 3.提升雞胸肉質，呈現出原汁原味最佳蛋白質來源。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
