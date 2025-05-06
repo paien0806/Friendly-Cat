@@ -2411,16 +2411,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "壹號醬壽喜燒牛丼",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0808576.jpg",
-        "Protein": 17.2,
-        "Carb": 102.5,
-        "Calories": 619.0,
-        "Fat": 15.4,
-        "Description": "醬香洋蔥絲配合牛五花肉，淋上壽喜燒湯，呈現道地日式風味"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "香烤嫩雞彩蔬餐盒（區）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0831111.jpg",
         "Protein": 32.1,
@@ -3658,6 +3648,16 @@
         "Calories": 43.2,
         "Fat": 0.8,
         "Description": "※拆封後兩小時內食用完畢"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "元氣滿滿野蔬沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0824530.jpg",
+        "Protein": 1.6,
+        "Carb": 12.6,
+        "Calories": 60.4,
+        "Fat": 0.4,
+        "Description": "※蔬菜與熱量會因時節微調  ※拆封後兩小時內食用完畢"
     },
     {
         "category": "小菜沙拉、雞胸肉",

@@ -3242,52 +3242,52 @@
     {
         "category": "11_bread",
         "name": "布丁卡士達半月燒",
-        "kcal": "",
+        "kcal": "148.1",
         "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_868.png",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_881.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "夾入迷你Q彈布丁與香濃卡士達內餡"
     },
     {
         "category": "11_bread",
         "name": "春上方塊戚風杯(布丁風味)",
-        "kcal": "",
+        "kcal": "226.1",
         "price": "65",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_869.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "使用統一布丁製成內餡"
     },
     {
         "category": "11_bread",
         "name": "舒芙蕾布丁",
-        "kcal": "",
+        "kcal": "235",
         "price": "69",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_870.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "使用澳洲起司製作舒芙蕾起司蛋糕"
     },
     {
         "category": "11_bread",
         "name": "黑丸七龍珠Z造型檸檬寒天愛玉凍",
-        "kcal": "",
+        "kcal": "85.6",
         "price": "48",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_871.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "新鮮檸檬汁結合愛玉與寒天，Q嫩又清爽"
     },
     {
         "category": "11_bread",
         "name": "福樂超能蛋白百香果優酪",
-        "kcal": "",
+        "kcal": "113",
         "price": "42",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_872.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "蛋白質增量配方，每杯含量達10g"
     },
     {
         "category": "11_bread",
@@ -3322,62 +3322,62 @@
     {
         "category": "11_bread",
         "name": "韓國延世大學草莓生乳包",
-        "kcal": "",
+        "kcal": "395.4",
         "price": "135",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_858.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "韓國便利商店銷售破千萬顆"
     },
     {
         "category": "11_bread",
         "name": "夢甜屋紅豆鮮奶油雙餡銅鑼燒",
-        "kcal": "",
+        "kcal": "207",
         "price": "69",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_859.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "日本甜點NO.1大廠-夢甜屋，直輸進口"
     },
     {
         "category": "11_bread",
         "name": "夢甜屋卡士達雙餡鯛魚燒",
-        "kcal": "",
+        "kcal": "177",
         "price": "75",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_860.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "Q彈夾心外皮搭配香濃卡士達雙餡"
     },
     {
         "category": "11_bread",
         "name": "黑丸七龍珠Z造型嫩仙草凍",
-        "kcal": "",
+        "kcal": "69.6",
         "price": "48",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_861.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "古法慢火熬煮，口感Ｑ彈軟嫩滑順"
     },
     {
         "category": "11_bread",
-        "name": "優果甜坊楊枝甘露",
-        "kcal": "",
+        "name": "優菓甜坊楊枝甘露",
+        "kcal": "132.5",
         "price": "65",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_862.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "含椰果、波羅蜜，配料豐富口感多層次"
     },
     {
         "category": "11_bread",
         "name": "整個SOY大豆優格(蜂蜜柚子)",
-        "kcal": "",
+        "kcal": "114.6",
         "price": "45",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_863.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "100%純植物性，０乳糖、０膽固醇"
     },
     {
         "category": "11_bread",
@@ -3461,16 +3461,6 @@
     },
     {
         "category": "11_bread",
-        "name": "鮮奶優酪-莓果穀物脆片兩入組",
-        "kcal": "235.6",
-        "price": "80",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_851.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "100%在地生乳製成x莓果穀物脆片"
-    },
-    {
-        "category": "11_bread",
         "name": "新貴派風味雙餡泡芙",
         "kcal": "253",
         "price": "59",
@@ -3511,17 +3501,7 @@
     },
     {
         "category": "11_bread",
-        "name": "白玉紅豆抹茶奶酪",
-        "kcal": "180",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_838.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "百年抹茶名店-伊藤久右衛門聯名推出，使用日本京都宇治抹茶粉"
-    },
-    {
-        "category": "11_bread",
-        "name": "優果甜坊黑糖檸檬愛玉",
+        "name": "優菓甜坊黑糖檸檬愛玉",
         "kcal": "77.6",
         "price": "40",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_839.png",
@@ -3641,16 +3621,6 @@
     },
     {
         "category": "11_bread",
-        "name": "巧克力可麗露",
-        "kcal": "176",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_780.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用法芙娜巧克力"
-    },
-    {
-        "category": "11_bread",
         "name": "巧克力英式司康",
         "kcal": "344",
         "price": "45",
@@ -3671,16 +3641,6 @@
     },
     {
         "category": "11_bread",
-        "name": "栗栗提拉米蘇杯",
-        "kcal": "260.2",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_773.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用法國栗子，五層層次，口感豐富"
-    },
-    {
-        "category": "11_bread",
         "name": "白巧克力草莓布雪",
         "kcal": "202",
         "price": "32",
@@ -3688,16 +3648,6 @@
         "special_sale": "False",
         "new": "",
         "content": "法芙娜白巧克力添加　"
-    },
-    {
-        "category": "11_bread",
-        "name": "芋泥大福",
-        "kcal": "151",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_723.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "Q彈大福皮 在地芋頭搭配蜜芋丁"
     },
     {
         "category": "11_bread",
@@ -3718,26 +3668,6 @@
         "special_sale": "False",
         "new": "",
         "content": "吉可頌主廚監製，使用法國進口奶油"
-    },
-    {
-        "category": "11_bread",
-        "name": "日本烤布蕾風味舒芙蕾夾心",
-        "kcal": "178",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_690.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "日本直輸，鬆軟夾心蛋糕裹上濃郁焦糖醬"
-    },
-    {
-        "category": "11_bread",
-        "name": "日本烤布蕾風味爆餡泡芙",
-        "kcal": "211",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_691.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "日本直輸鬆軟薄皮泡芙 與焦糖風味濃郁內餡"
     },
     {
         "category": "11_bread",
@@ -3768,36 +3698,6 @@
         "special_sale": "False",
         "new": "",
         "content": "日本直輸選用義大利濃郁栗子"
-    },
-    {
-        "category": "11_bread",
-        "name": "夢甜屋栗子雙餡銅鑼燒",
-        "kcal": "185",
-        "price": "75",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_741.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "日本直輸濃郁栗子醬與卡士達鮮奶油雙餡"
-    },
-    {
-        "category": "11_bread",
-        "name": "夢甜屋卡士達與鮮奶油雙餡泡芙",
-        "kcal": "187",
-        "price": "69",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_623.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "日本直輸，限量販售　"
-    },
-    {
-        "category": "11_bread",
-        "name": "北海道霜淇淋風味舒芙蕾鬆餅夾心",
-        "kcal": "199",
-        "price": "79",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_700.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用北海道產鮮奶油，內餡香醇濃郁，舒芙蕾鬆餅鬆軟綿密"
     },
     {
         "category": "11_bread",
@@ -4131,16 +4031,6 @@
     },
     {
         "category": "11_bread",
-        "name": "LOTTE 生雪見大福",
-        "kcal": "174.2",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_827.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "超薄麻糬皮，包裹著內餡爆漿的鮮奶油，質地輕巧甜而不膩"
-    },
-    {
-        "category": "11_bread",
         "name": "蔻蔻那椰香優格(芒果椰椰)",
         "kcal": "178",
         "price": "35",
@@ -4461,16 +4351,6 @@
     },
     {
         "category": "11_bread",
-        "name": "優菓甜坊楊枝甘露",
-        "kcal": "190",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_614.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "經典港式風味呈現"
-    },
-    {
-        "category": "11_bread",
         "name": "優菓甜坊黑糖檸檬愛玉",
         "kcal": "158.4",
         "price": "40",
@@ -4481,7 +4361,7 @@
     },
     {
         "category": "11_bread",
-        "name": "優果甜坊紅豆紫米湯",
+        "name": "優菓甜坊紅豆紫米湯",
         "kcal": "263.48",
         "price": "49",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_742.png",
@@ -4491,7 +4371,7 @@
     },
     {
         "category": "11_bread",
-        "name": "優果甜坊芋頭西米露",
+        "name": "優菓甜坊芋頭西米露",
         "kcal": "204.68",
         "price": "65",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_764.png",
@@ -4501,7 +4381,7 @@
     },
     {
         "category": "11_bread",
-        "name": "優果甜坊黑糖地瓜蜜芋湯",
+        "name": "優菓甜坊黑糖地瓜蜜芋湯",
         "kcal": "206.64",
         "price": "59",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_799.png",
