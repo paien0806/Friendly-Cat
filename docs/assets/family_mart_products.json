@@ -630,6 +630,16 @@
         "Description": "經典懷石料理入菜-柚庵燒。"
     },
     {
+        "category": "飯糰壽司",
+        "title": "狂暴巨雞卷",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1099334.jpg",
+        "Protein": 12.7,
+        "Carb": 65.1,
+        "Calories": 350.0,
+        "Fat": 4.3,
+        "Description": "※原物料雞肉易含細碎硬骨，請小心食用。"
+    },
+    {
         "category": "麵包、吐司、蛋糕",
         "title": "一配巧克力派司",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0040786.jpg",
@@ -1141,16 +1151,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "二配莓果巧克力夾心土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0983007.jpg",
-        "Protein": 5.6,
-        "Carb": 32.9,
-        "Calories": 215.0,
-        "Fat": 6.8,
-        "Description": "米歇爾柯茲可可粉"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配經典雪花蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0983570.jpg",
         "Protein": 6.9,
@@ -1577,6 +1577,16 @@
         "Carb": 39.4,
         "Calories": 232.0,
         "Fat": 4.9,
+        "Description": "此產品不可微波"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配玫瑰蔓越莓乳酪貝果",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1093651.jpg",
+        "Protein": 7.4,
+        "Carb": 40.3,
+        "Calories": 229.0,
+        "Fat": 4.2,
         "Description": "此產品不可微波"
     },
     {
@@ -3018,6 +3028,16 @@
         "Calories": 421.0,
         "Fat": 6.6,
         "Description": "※此產品含有蠶豆，蠶豆症患者請多加留意！※本產品非素食專門產線生產"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "鋪天蓋地蒸蛋飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1101686.jpg",
+        "Protein": 29.2,
+        "Carb": 111.3,
+        "Calories": 668.0,
+        "Fat": 11.7,
+        "Description": "大份量飽足"
     },
     {
         "category": "關東煮、湯品",
