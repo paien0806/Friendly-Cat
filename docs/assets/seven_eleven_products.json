@@ -2801,20 +2801,10 @@
     },
     {
         "category": "6_Noodles",
-        "name": "九州風味炒拉麵",
-        "kcal": "588",
-        "price": "99",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_187.png",
-        "special_sale": "False",
-        "new": "True",
-        "content": ""
-    },
-    {
-        "category": "6_Noodles",
         "name": "極饗-經典麻醬涼麵",
         "kcal": "727",
         "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_188.png",
+        "image": "https://www.7-11.com.tw/freshfoods/6_Noodles/images/Noodles_190.png",
         "special_sale": "False",
         "new": "",
         "content": "半台斤麵量X中焙麻醬香"

@@ -301,16 +301,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "一配府城風味蝦仁飯飯糰（區）",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0850600.jpg",
-        "Protein": 4.8,
-        "Carb": 34.1,
-        "Calories": 168.0,
-        "Fat": 1.5,
-        "Description": "一配府城風味蝦仁飯飯糰(區)"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配明太子鹽烤赤魚飯糰",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0889114.jpg",
         "Protein": 5.6,
@@ -1108,16 +1098,6 @@
         "Calories": 467.0,
         "Fat": 22.2,
         "Description": "拆封後請儘早食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配黑金起司鹽可頌",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0949041.jpg",
-        "Protein": 7.4,
-        "Carb": 32.6,
-        "Calories": 203.0,
-        "Fat": 4.8,
-        "Description": "起司紅醬 X 濃郁乾酪條 X 帕馬森起司"
     },
     {
         "category": "麵包、吐司、蛋糕",
