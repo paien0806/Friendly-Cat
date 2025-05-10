@@ -607,7 +607,7 @@
         "Carb": 34.1,
         "Calories": 189.0,
         "Fat": 3.9,
-        "Description": "※本產品含有蠶豆，蠶豆症患者請多加留意。"
+        "Description": "選用日本一見鍾情改良之台灣米種，鯖魚仿中華料理風味，香辣鹹香。"
     },
     {
         "category": "飯糰壽司",
@@ -2738,16 +2738,6 @@
         "Calories": 482.0,
         "Fat": 7.3,
         "Description": "美味蟹煲"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "財神指定大雞腿油飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1019160.jpg",
-        "Protein": 41.0,
-        "Carb": 111.7,
-        "Calories": 871.0,
-        "Fat": 29.2,
-        "Description": "糯米口感Ｑ彈越嚼越香，鋪上滿滿香菇再搭配肉質鮮嫩的大雞腿，令人食指大動越吃越滋味絕對深得你心!"
     },
     {
         "category": "飯麵粥品",
