@@ -1551,6 +1551,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "二配巧克力焙烏龍鬆餅",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1091768.jpg",
+        "Protein": 5.8,
+        "Carb": 55.9,
+        "Calories": 328.0,
+        "Fat": 9.0,
+        "Description": "畬室巧克力主廚監製"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配雙莓乳酪爆擊貝果",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1093633.jpg",
         "Protein": 7.7,
@@ -1568,6 +1578,16 @@
         "Calories": 229.0,
         "Fat": 4.2,
         "Description": "此產品不可微波"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配哈姆雙起司麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108379.jpg",
+        "Protein": 7.2,
+        "Carb": 28.3,
+        "Calories": 212.0,
+        "Fat": 7.8,
+        "Description": "鹹香火腿丁X雙重濃郁起司醬"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -6238,6 +6258,16 @@
         "Calories": 218.4,
         "Fat": 6.8,
         "Description": "本產品如有芝麻沉澱與乳脂上浮，純屬自然現象，敬請安心飲用，搖勻後飲用 風味更佳。"
+    },
+    {
+        "category": "飲品",
+        "title": "愛之味高鈣豆漿燕麥",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1110546.jpg",
+        "Protein": 4.6,
+        "Carb": 20.6,
+        "Calories": 155.9,
+        "Fat": 6.7,
+        "Description": "建議飲用量：每日建議攝取580mL，可依個別需要調整。"
     },
     {
         "category": "飲品",

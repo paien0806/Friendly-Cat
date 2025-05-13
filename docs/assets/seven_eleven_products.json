@@ -1911,16 +1911,6 @@
     },
     {
         "category": "3_Cuisine",
-        "name": "極饗-麻油豬肉飯",
-        "kcal": "575",
-        "price": "89",
-        "image": "https://www.7-11.com.tw/freshfoods/3_Cuisine/images/cuisine_293.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "3_Cuisine",
         "name": "極饗-椒鹽大雞排便當",
         "kcal": "997",
         "price": "119",
@@ -1935,16 +1925,6 @@
         "kcal": "701",
         "price": "89",
         "image": "https://www.7-11.com.tw/freshfoods/3_Cuisine/images/cuisine_281.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "3_Cuisine",
-        "name": "極饗-豪華奮起湖特製便當",
-        "kcal": "715",
-        "price": "129",
-        "image": "https://www.7-11.com.tw/freshfoods/3_Cuisine/images/cuisine_299.png",
         "special_sale": "False",
         "new": "",
         "content": ""
