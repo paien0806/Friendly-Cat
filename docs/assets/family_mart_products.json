@@ -401,16 +401,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "野郎鬼椒雞腿飯卷",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0984467.jpg",
-        "Protein": 6.2,
-        "Carb": 32.6,
-        "Calories": 170.0,
-        "Fat": 1.6,
-        "Description": "使用特色鬼椒雞烘烤，配上甜鹹的招牌野郎醬，醃瓜條與蔬菜，解膩爽口。"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "二配蒜蒜美乃滋蟹味飯糰",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0985118.jpg",
         "Protein": 5.7,
@@ -628,6 +618,36 @@
         "Calories": 350.0,
         "Fat": 4.3,
         "Description": "※原物料雞肉易含細碎硬骨，請小心食用。"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "星—一配海饌雙手卷",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1107991.jpg",
+        "Protein": 8.9,
+        "Carb": 54.6,
+        "Calories": 333.0,
+        "Fat": 8.8,
+        "Description": "※請小心魚刺。※口感新升級，鮪魚沙拉改成鮪魚玉米沙拉，提升口感豐富度，鮭魚沙拉增加使用巴沙魚提升鮮魚風味及層次感。"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "星—一配雙饗雙手卷",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108006.jpg",
+        "Protein": 7.6,
+        "Carb": 51.0,
+        "Calories": 292.0,
+        "Fat": 6.3,
+        "Description": "雙饗海陸雙手卷"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "一配香辣鹹水雞飯糰（區）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108747.jpg",
+        "Protein": 5.0,
+        "Carb": 30.9,
+        "Calories": 163.0,
+        "Fat": 2.1,
+        "Description": "香辣鹹水雞飯糰(區)"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1171,16 +1191,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配辣傑克乳酪小土司",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1007834.jpg",
-        "Protein": 9.2,
-        "Carb": 39.6,
-        "Calories": 304.0,
-        "Fat": 12.1,
-        "Description": "微波後請小心燙口"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配好奶奶酥金磚",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1011944.jpg",
         "Protein": 9.1,
@@ -1588,6 +1598,26 @@
         "Calories": 212.0,
         "Fat": 7.8,
         "Description": "鹹香火腿丁X雙重濃郁起司醬"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配蜜藏藍莓乳酪球",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108383.jpg",
+        "Protein": 6.4,
+        "Carb": 38.3,
+        "Calories": 243.0,
+        "Fat": 7.1,
+        "Description": "請避免儲放於高溫或日光照射處"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配爆餡藍莓餐包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108410.jpg",
+        "Protein": 2.7,
+        "Carb": 17.9,
+        "Calories": 118.0,
+        "Fat": 4.0,
+        "Description": "酸甜藍莓奶油風味 Ｘ 柔軟麵包"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -2250,6 +2280,26 @@
         "Description": "美式起司巨牛堡"
     },
     {
+        "category": "三明治、漢堡",
+        "title": "藍莓優格三明治",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108333.jpg",
+        "Protein": 4.0,
+        "Carb": 25.0,
+        "Calories": 162.0,
+        "Fat": 5.1,
+        "Description": "藍莓優格三明治"
+    },
+    {
+        "category": "三明治、漢堡",
+        "title": "茄汁薯餅蛋堡",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108406.jpg",
+        "Protein": 10.3,
+        "Carb": 38.5,
+        "Calories": 309.0,
+        "Fat": 12.5,
+        "Description": "茄汁薯餅蛋堡"
+    },
+    {
         "category": "飯麵粥品",
         "title": "星—生滾皮蛋煲粥",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0171018.jpg",
@@ -2451,16 +2501,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "嘉義劉里長沙茶雞腿便當",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0852434.jpg",
-        "Protein": 28.2,
-        "Carb": 73.8,
-        "Calories": 539.0,
-        "Fat": 14.5,
-        "Description": "※本產品已充分熟化，產品橫切面帶有些許粉紅色或紅色血管為正常現象"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "蒜辣燻火腿義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0862504.jpg",
         "Protein": 19.3,
@@ -2488,16 +2528,6 @@
         "Calories": 613.0,
         "Fat": 17.2,
         "Description": "※本產品含過敏原含麩質之穀物、牛奶、大豆、蛋類及其製品 ※本產品含薑絲纖維屬正常現象，請安心食用。 ※本產品含有蠶豆，不適合對其敏感體質者食用"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "桂林仔滷排便當",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0873789.jpg",
-        "Protein": 18.0,
-        "Carb": 80.2,
-        "Calories": 564.0,
-        "Fat": 19.0,
-        "Description": "周處除三害聯名商品"
     },
     {
         "category": "飯麵粥品",
@@ -2628,16 +2658,6 @@
         "Calories": 609.0,
         "Fat": 19.1,
         "Description": "燒丼聯名商品，直火炙燒薄切牛五花，刷上以紅糖、醬油等香料熬煮的糖燻野郎醬，搭配爽口的烤洋蔥紅蘿蔔絲"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "海鮮烘蛋燴飯",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0942603.jpg",
-        "Protein": 20.6,
-        "Carb": 100.6,
-        "Calories": 608.0,
-        "Fat": 13.6,
-        "Description": "海鮮烘蛋燴飯"
     },
     {
         "category": "飯麵粥品",
@@ -3018,6 +3038,16 @@
         "Calories": 668.0,
         "Fat": 11.7,
         "Description": "大份量飽足"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "悟家燒雞便當",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108979.jpg",
+        "Protein": 26.9,
+        "Carb": 69.0,
+        "Calories": 585.0,
+        "Fat": 22.4,
+        "Description": "悟家燒雞便當"
     },
     {
         "category": "關東煮、湯品",
@@ -3958,6 +3988,16 @@
         "Calories": 186.0,
         "Fat": 5.6,
         "Description": "蔥鹽雞肉麵沙拉"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "莓好鮮彩握沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057120.jpg",
+        "Protein": 7.2,
+        "Carb": 29.5,
+        "Calories": 202.0,
+        "Fat": 6.1,
+        "Description": "莓好鮮彩握沙拉"
     },
     {
         "category": "小菜沙拉、雞胸肉",
