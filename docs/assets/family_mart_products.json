@@ -607,7 +607,7 @@
         "Carb": 33.3,
         "Calories": 166.0,
         "Fat": 0.9,
-        "Description": "經典懷石料理入菜-柚庵燒。"
+        "Description": "將赤魚以醬油和柑橘類的水果為基底調和醃漬，融合出清新的燒烤風味。"
     },
     {
         "category": "飯糰壽司",
@@ -641,6 +641,16 @@
     },
     {
         "category": "飯糰壽司",
+        "title": "一配明太子龍蝦風味沙拉飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108529.jpg",
+        "Protein": 4.3,
+        "Carb": 32.3,
+        "Calories": 185.0,
+        "Fat": 4.2,
+        "Description": "全明星商品"
+    },
+    {
+        "category": "飯糰壽司",
         "title": "一配香辣鹹水雞飯糰（區）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108747.jpg",
         "Protein": 5.0,
@@ -648,6 +658,16 @@
         "Calories": 163.0,
         "Fat": 2.1,
         "Description": "香辣鹹水雞飯糰(區)"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "二配明太子龍蝦風味沙拉飯糰",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108929.jpg",
+        "Protein": 4.3,
+        "Carb": 32.3,
+        "Calories": 185.0,
+        "Fat": 4.2,
+        "Description": "二配明太子龍蝦風味沙拉飯糰"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1141,16 +1161,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "一配紅寶石可可軟歐",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0982956.jpg",
-        "Protein": 5.7,
-        "Carb": 34.7,
-        "Calories": 209.0,
-        "Fat": 5.3,
-        "Description": "添加熊本石臼研磨糯小麥 X 明治可可粉"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配經典雪花蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0983570.jpg",
         "Protein": 6.9,
@@ -1198,16 +1208,6 @@
         "Calories": 353.6,
         "Fat": 14.4,
         "Description": "以湯種燙麵工序讓吐司更保濕與柔軟，以奶油及牛奶和蛋熬煮獨家法式奶酥，香甜而不膩，居家回溫自然奶香依然猶存"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配雞腿造型麵包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1020672.jpg",
-        "Protein": 9.6,
-        "Carb": 43.2,
-        "Calories": 265.0,
-        "Fat": 6.0,
-        "Description": "丹麥鮮奶油乾酪 X 燻雞風味內餡"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -3038,6 +3038,16 @@
         "Calories": 668.0,
         "Fat": 11.7,
         "Description": "大份量飽足"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "二配薯勾以蛋包飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1102587.jpg",
+        "Protein": 16.5,
+        "Carb": 66.7,
+        "Calories": 504.0,
+        "Fat": 19.2,
+        "Description": "薯餅烘烤過程可能出現微小黑點，屬自然現象，請安心食用"
     },
     {
         "category": "飯麵粥品",
