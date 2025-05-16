@@ -637,7 +637,7 @@
         "Carb": 51.0,
         "Calories": 292.0,
         "Fat": 6.3,
-        "Description": "雙饗海陸雙手卷"
+        "Description": "全明星商品"
     },
     {
         "category": "飯糰壽司",
@@ -3057,7 +3057,7 @@
         "Carb": 69.0,
         "Calories": 585.0,
         "Fat": 22.4,
-        "Description": "悟家燒雞便當"
+        "Description": "※原物料雞肉易含細碎硬骨，請小心食用"
     },
     {
         "category": "關東煮、湯品",
@@ -4108,6 +4108,16 @@
         "Calories": 69.8,
         "Fat": 0.2,
         "Description": "當季水果汁多鮮美"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "咖哩魚蛋",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1092691.jpg",
+        "Protein": 10.5,
+        "Carb": 16.6,
+        "Calories": 155.0,
+        "Fat": 5.1,
+        "Description": "非供即食，應充分加熱。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -6298,6 +6308,16 @@
         "Calories": 126.0,
         "Fat": 3.3,
         "Description": "【飲用前請搖勻】如有少量沉澱屬正常現象, 請搖勻後飲用"
+    },
+    {
+        "category": "飲品",
+        "title": "果實繆繆木瓜大果粒牛乳",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1087008.jpg",
+        "Protein": 6.0,
+        "Carb": 33.3,
+        "Calories": 216.0,
+        "Fat": 6.3,
+        "Description": "木瓜果肉*香醇牛乳"
     },
     {
         "category": "飲品",
