@@ -2311,6 +2311,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "星—二配香辣醬蒜味香腸蛋炒飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0226225.jpg",
+        "Protein": 18.6,
+        "Carb": 103.7,
+        "Calories": 815.0,
+        "Fat": 36.3,
+        "Description": "香辣醬蒜味香腸蛋炒飯"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "優質池上飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0247516.jpg",
         "Protein": 4.3,
@@ -2381,6 +2391,26 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "星—二配金咖哩果香甘口咖哩飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0566572.jpg",
+        "Protein": 21.6,
+        "Carb": 115.1,
+        "Calories": 617.0,
+        "Fat": 7.7,
+        "Description": "金咖哩果香甘口咖哩飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "星—二配金咖哩濃厚辛辣咖哩飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0566590.jpg",
+        "Protein": 18.2,
+        "Carb": 115.1,
+        "Calories": 677.0,
+        "Fat": 15.7,
+        "Description": "金咖哩濃厚辛辣咖哩飯"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "星—蕃茄肉醬義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0571056.jpg",
         "Protein": 24.5,
@@ -2428,6 +2458,16 @@
         "Calories": 506.0,
         "Fat": 8.4,
         "Description": "新招牌腿排便當"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "二配香拌海鮮醬肉絲蛋炒飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0703146.jpg",
+        "Protein": 17.8,
+        "Carb": 96.3,
+        "Calories": 689.0,
+        "Fat": 25.7,
+        "Description": "香拌海鮮醬肉絲蛋炒飯"
     },
     {
         "category": "飯麵粥品",
@@ -2588,6 +2628,16 @@
         "Calories": 451.0,
         "Fat": 11.1,
         "Description": "營養師監製商品"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "星—二配川味麻婆燒豆腐燴飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0910569.jpg",
+        "Protein": 26.5,
+        "Carb": 99.2,
+        "Calories": 684.0,
+        "Fat": 19.8,
+        "Description": "與鼎泰豐聯名，做出又辣又麻的四川麻婆豆腐"
     },
     {
         "category": "飯麵粥品",
@@ -2881,6 +2931,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "整條培根香辣蒜炒義大利麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1037530.jpg",
+        "Protein": 34.3,
+        "Carb": 92.9,
+        "Calories": 700.0,
+        "Fat": 21.2,
+        "Description": "食用前需微波加熱，並儘速食用完畢。"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "香濃玉米雞茸粥",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1038863.jpg",
         "Protein": 6.0,
@@ -2898,6 +2958,16 @@
         "Calories": 469.0,
         "Fat": 7.1,
         "Description": "本產品含有蔭豉，有黑點屬正常現象"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "二配煸椒烘蛋飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1045076.jpg",
+        "Protein": 20.6,
+        "Carb": 80.6,
+        "Calories": 527.0,
+        "Fat": 13.4,
+        "Description": "煸椒烘蛋飯"
     },
     {
         "category": "飯麵粥品",
@@ -3008,6 +3078,26 @@
         "Calories": 259.0,
         "Fat": 3.3,
         "Description": "※本產品含過敏原含魚、麩質之穀物、大豆、甲殼類、蛋類及其製品。"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "二配粗飽系雞排炒飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1066771.jpg",
+        "Protein": 23.9,
+        "Carb": 123.5,
+        "Calories": 894.0,
+        "Fat": 33.7,
+        "Description": "粗飽系雞排炒飯"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "二配泰式綠咖哩雞",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1072160.jpg",
+        "Protein": 15.3,
+        "Carb": 75.7,
+        "Calories": 433.0,
+        "Fat": 7.5,
+        "Description": "泰式綠咖哩雞"
     },
     {
         "category": "飯麵粥品",
