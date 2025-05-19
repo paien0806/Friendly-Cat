@@ -951,16 +951,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "二配伯爵可可鬆餅",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0862809.jpg",
-        "Protein": 6.1,
-        "Carb": 55.0,
-        "Calories": 355.0,
-        "Fat": 12.3,
-        "Description": "WA!COOKIES 聯名"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "二配維也納奶油餐包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0891022.jpg",
         "Protein": 3.0,
@@ -1971,16 +1961,6 @@
     },
     {
         "category": "三明治、漢堡",
-        "title": "起司芥末蛋沙拉三明治",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0750870.jpg",
-        "Protein": 8.1,
-        "Carb": 22.1,
-        "Calories": 262.0,
-        "Fat": 15.7,
-        "Description": "起司芥末蛋沙拉三明治"
-    },
-    {
-        "category": "三明治、漢堡",
         "title": "菇菇嫩蛋貝果堡",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0777876.jpg",
         "Protein": 12.7,
@@ -2148,16 +2128,6 @@
         "Calories": 321.0,
         "Fat": 13.0,
         "Description": "滿滿起司燻腸洋芋堡"
-    },
-    {
-        "category": "三明治、漢堡",
-        "title": "黃金滿袋熔岩匹克堡",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1021787.jpg",
-        "Protein": 12.5,
-        "Carb": 42.7,
-        "Calories": 392.0,
-        "Fat": 19.0,
-        "Description": "黃金滿袋熔岩匹克堡"
     },
     {
         "category": "三明治、漢堡",
@@ -3371,16 +3341,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "鐵板黑胡椒嫩雞胸",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0076547.jpg",
-        "Protein": 24.0,
-        "Carb": 0.3,
-        "Calories": 116.1,
-        "Fat": 2.1,
-        "Description": "台式經典黑胡椒醬香氣噴發，搭配鮮嫩美味產銷履歷國產雞胸肉，每包 24 克蛋白質，快速補充日常所需。"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "季節水果拼盤（截切）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0193046.jpg",
         "Protein": 1.2,
@@ -3868,16 +3828,6 @@
         "Calories": 164.5,
         "Fat": 8.9,
         "Description": "經典海南雞變成丸子了！濃郁蔥薑香氣配上雞肉鮮甜滋味，Ｑ彈口感涮嘴的讓人欲罷不能。"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
-        "title": "柚子胡椒嫩雞胸",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0905453.jpg",
-        "Protein": 26.4,
-        "Carb": 6.4,
-        "Calories": 139.3,
-        "Fat": 0.9,
-        "Description": "與 SAKImoto bakery重磅聯名推出，嚴選日本柚子胡椒，打造即食雞胸全新清爽風味。"
     },
     {
         "category": "小菜沙拉、雞胸肉",
