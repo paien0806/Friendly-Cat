@@ -1071,16 +1071,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "二配香濃起司鬆餅",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0935204.jpg",
-        "Protein": 5.3,
-        "Carb": 52.4,
-        "Calories": 390.0,
-        "Fat": 17.7,
-        "Description": "日式膨鬆餅皮 24道究極燒成"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配雙目糖蜂蜜蛋糕",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0943045.jpg",
         "Protein": 7.4,
@@ -1598,6 +1588,16 @@
         "Calories": 118.0,
         "Fat": 4.0,
         "Description": "酸甜藍莓奶油風味 Ｘ 柔軟麵包"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配藍莓優格土司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108492.jpg",
+        "Protein": 6.9,
+        "Carb": 36.3,
+        "Calories": 209.0,
+        "Fat": 4.0,
+        "Description": "酸甜藍莓果乾與優格風味乳酪丁 匠吃藍莓很莓好"
     },
     {
         "category": "麵包、吐司、蛋糕",
