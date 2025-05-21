@@ -517,7 +517,7 @@
         "Carb": 60.4,
         "Calories": 333.0,
         "Fat": 6.1,
-        "Description": "此為兩顆飯糰組成套組販售"
+        "Description": "大份量平替商品！鮮香鮪魚沙拉結合爽口雞蛋沙拉與培根，雙倍美味，雙倍滿足。"
     },
     {
         "category": "飯糰壽司",
@@ -1018,16 +1018,6 @@
         "Calories": 211.0,
         "Fat": 6.4,
         "Description": "鹹香火腿丁X濃郁起司"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "二配焙烏龍茶麻吉麵包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0914713.jpg",
-        "Protein": 6.1,
-        "Carb": 44.7,
-        "Calories": 294.0,
-        "Fat": 10.0,
-        "Description": "濃郁烏龍茶巧克力餡xQ彈麻糬"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -1581,6 +1571,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配古早味藍莓麵包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108397.jpg",
+        "Protein": 8.4,
+        "Carb": 49.7,
+        "Calories": 302.0,
+        "Fat": 7.7,
+        "Description": "懷舊藍莓滋味 X 奶香墨西哥醬"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "一配爆餡藍莓餐包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108410.jpg",
         "Protein": 2.7,
@@ -2108,16 +2108,6 @@
         "Calories": 314.0,
         "Fat": 11.0,
         "Description": "麵包體表面褐色小點，屬梅納反應，為正常現象"
-    },
-    {
-        "category": "三明治、漢堡",
-        "title": "切達海鮮雙饗三明治",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0988998.jpg",
-        "Protein": 8.3,
-        "Carb": 24.8,
-        "Calories": 193.0,
-        "Fat": 6.8,
-        "Description": "切達海鮮雙饗三明治"
     },
     {
         "category": "三明治、漢堡",
@@ -4041,6 +4031,16 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "海鮮派對洋芋沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057184.jpg",
+        "Protein": 4.2,
+        "Carb": 19.1,
+        "Calories": 167.0,
+        "Fat": 8.3,
+        "Description": "海鮮派對洋芋沙拉"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "彩蔬洋芋沙拉",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057411.jpg",
         "Protein": 2.3,
@@ -4148,6 +4148,16 @@
         "Calories": 155.0,
         "Fat": 5.1,
         "Description": "非供即食，應充分加熱。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "摩登燒（區）",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1092764.jpg",
+        "Protein": 18.5,
+        "Carb": 58.5,
+        "Calories": 504.0,
+        "Fat": 21.8,
+        "Description": "摩登燒"
     },
     {
         "category": "小菜沙拉、雞胸肉",
