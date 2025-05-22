@@ -937,7 +937,7 @@
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1112.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "石安牧場白煮蛋"
     },
     {
         "category": "2_Light",
@@ -947,7 +947,7 @@
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1113.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "鮮嫩烤雞胸x香烤蕈菇"
     },
     {
         "category": "2_Light",
@@ -957,7 +957,7 @@
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1114.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "在地櫛瓜x義式風味烤雞胸"
     },
     {
         "category": "2_Light",
@@ -967,7 +967,7 @@
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1115.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "日本進口糯麥x能登半島海鮮高湯"
     },
     {
         "category": "2_Light",
@@ -1071,23 +1071,13 @@
     },
     {
         "category": "2_Light",
-        "name": "美國黑牌甜橙盒",
-        "kcal": "",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1101.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
         "name": "蔥鹽手撕雞沙拉",
         "kcal": "",
         "price": "79",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1102.png",
         "special_sale": "False",
         "new": "",
-        "content": ""
+        "content": "鮮嫩手撕雞胸x爽口蔥鹽醬"
     },
     {
         "category": "2_Light",
@@ -1151,30 +1141,10 @@
     },
     {
         "category": "2_Light",
-        "name": "履歷美濃瓜切片",
-        "kcal": "",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1091.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
         "name": "OPEN將-芭樂切片",
         "kcal": "",
         "price": "55",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1084.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "2_Light",
-        "name": "澳洲紅寶石無籽葡萄袋",
-        "kcal": "",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1085.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -1214,7 +1184,7 @@
         "name": "一日野菜-海藻沙拉",
         "kcal": "49",
         "price": "60",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1081.png",
+        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1120.png",
         "special_sale": "False",
         "new": "",
         "content": "提供成人一日1/2蔬菜需求量【參考國民健康署建議，以一日熱量需求1800大卡為例】"
@@ -1231,26 +1201,6 @@
     },
     {
         "category": "2_Light",
-        "name": "薯泥鮮蔬蛋沙拉",
-        "kcal": "153",
-        "price": "60",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1096.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "提供成人一日1/3蔬菜需求量 "
-    },
-    {
-        "category": "2_Light",
-        "name": "溏心蛋洋芋",
-        "kcal": "176",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1083.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "石安牧場溏心蛋"
-    },
-    {
-        "category": "2_Light",
         "name": "優格彩蔬棒沙拉",
         "kcal": "114",
         "price": "59",
@@ -1258,16 +1208,6 @@
         "special_sale": "False",
         "new": "",
         "content": "繽紛時蔬×蘋果優格醬"
-    },
-    {
-        "category": "2_Light",
-        "name": "和風香辣烤魷魚",
-        "kcal": "78",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1078.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "日本進口魷魚"
     },
     {
         "category": "2_Light",
@@ -1298,16 +1238,6 @@
         "special_sale": "False",
         "new": "",
         "content": "星廚特調香料烤雞×五種鮮蔬"
-    },
-    {
-        "category": "2_Light",
-        "name": "時蔬豬肉味噌湯沙拉",
-        "kcal": "104",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1056.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "五種時蔬×海陸味噌湯"
     },
     {
         "category": "2_Light",

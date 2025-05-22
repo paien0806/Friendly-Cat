@@ -381,16 +381,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "一配牛肉燥飯飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0942885.jpg",
-        "Protein": 5.3,
-        "Carb": 30.3,
-        "Calories": 174.0,
-        "Fat": 3.5,
-        "Description": "選用主廚特製中藥材滷製完美肥瘦比牛絞肉與杏鮑菇為內餡，香氣獨特"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "日式明太子炙烤牛飯卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0969172.jpg",
         "Protein": 6.0,
@@ -987,16 +977,6 @@
         "Carb": 37.1,
         "Calories": 260.0,
         "Fat": 7.5,
-        "Description": "麵包體白色粉末為麵粉，非發霉現象，請安心食用"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "一配炸彈奶酥麵包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0904275.jpg",
-        "Protein": 6.2,
-        "Carb": 40.8,
-        "Calories": 291.0,
-        "Fat": 11.5,
         "Description": "麵包體白色粉末為麵粉，非發霉現象，請安心食用"
     },
     {
@@ -3661,16 +3641,6 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "糖燻雞腿",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0774628.jpg",
-        "Protein": 17.7,
-        "Carb": 0.6,
-        "Calories": 139.2,
-        "Fat": 7.4,
-        "Description": "糖燻雞腿"
-    },
-    {
-        "category": "小菜沙拉、雞胸肉",
         "title": "藻鹽醬滷豆皮",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0792139.jpg",
         "Protein": 9.4,
@@ -6327,7 +6297,7 @@
         "Carb": 38.8,
         "Calories": 202.0,
         "Fat": 3.0,
-        "Description": "內含有5%草莓果肉。搖一搖享受美好風味。"
+        "Description": "內含5%草莓果肉"
     },
     {
         "category": "飲品",
