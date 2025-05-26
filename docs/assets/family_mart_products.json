@@ -391,16 +391,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "二配蒜蒜美乃滋蟹味飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0985118.jpg",
-        "Protein": 5.7,
-        "Carb": 42.9,
-        "Calories": 227.0,
-        "Fat": 3.6,
-        "Description": "濃厚系風味，使用日本直輸原料入餡"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配鮪魚沙拉細卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1000323.jpg",
         "Protein": 4.3,
@@ -3057,7 +3047,7 @@
         "Carb": 111.3,
         "Calories": 668.0,
         "Fat": 11.7,
-        "Description": "大份量飽足"
+        "Description": "蒸蛋內含柴魚香氣，口感細緻滑順，蛋香滿滿"
     },
     {
         "category": "飯麵粥品",
@@ -4351,7 +4341,7 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
-        "title": "珍珠香腸（蒜味）",
+        "title": "珍珠小香腸（蒜味）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1630209.jpg",
         "Protein": 8.7,
         "Carb": 11.1,
