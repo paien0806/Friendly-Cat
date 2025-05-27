@@ -650,6 +650,26 @@
         "Description": "二配明太子龍蝦風味沙拉飯糰"
     },
     {
+        "category": "飯糰壽司",
+        "title": "二配大飯糰韓式炸雞",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1117007.jpg",
+        "Protein": 6.4,
+        "Carb": 45.3,
+        "Calories": 236.0,
+        "Fat": 3.2,
+        "Description": "網紅金針菇聯名商品"
+    },
+    {
+        "category": "飯糰壽司",
+        "title": "二配大飯糰春川風味辣炒雞",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1117089.jpg",
+        "Protein": 7.0,
+        "Carb": 40.8,
+        "Calories": 205.0,
+        "Fat": 1.5,
+        "Description": "※原物料雞肉易含細碎硬骨，請小心食用。"
+    },
+    {
         "category": "麵包、吐司、蛋糕",
         "title": "一配巧克力派司",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0040786.jpg",
@@ -3068,6 +3088,16 @@
         "Calories": 585.0,
         "Fat": 22.4,
         "Description": "※原物料雞肉易含細碎硬骨，請小心食用"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "二配哞哞培根奶香海陸焗飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1120498.jpg",
+        "Protein": 22.2,
+        "Carb": 88.1,
+        "Calories": 614.0,
+        "Fat": 19.0,
+        "Description": "牛奶提升，濃郁度增加"
     },
     {
         "category": "關東煮、湯品",
@@ -6338,6 +6368,26 @@
         "Calories": 155.9,
         "Fat": 6.7,
         "Description": "建議飲用量：每日建議攝取580mL，可依個別需要調整。"
+    },
+    {
+        "category": "飲品",
+        "title": "光泉小麥風味植物蛋白飲",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1115996.jpg",
+        "Protein": 14.2,
+        "Carb": 22.9,
+        "Calories": 198.8,
+        "Fat": 5.6,
+        "Description": "1.過敏原醒語：本產品含麩質之穀物及大豆製品。2.本產品添加麥芽精粉及含有黃豆纖維，沉澱係屬自然現象，搖勻後飲用風味更佳。"
+    },
+    {
+        "category": "飲品",
+        "title": "味全高鈣高蛋白雙效營養牛乳",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1116106.jpg",
+        "Protein": 20.6,
+        "Carb": 25.1,
+        "Calories": 217.0,
+        "Fat": 3.8,
+        "Description": "保健專家 照顧全家人健康"
     },
     {
         "category": "飲品",
