@@ -991,26 +991,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "二配起司熱狗雙享麵包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0904807.jpg",
-        "Protein": 9.0,
-        "Carb": 30.6,
-        "Calories": 224.0,
-        "Fat": 7.3,
-        "Description": "金黃起司X多汁熱狗"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
-        "title": "二配哈姆起司麵包",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0914709.jpg",
-        "Protein": 8.0,
-        "Carb": 30.3,
-        "Calories": 211.0,
-        "Fat": 6.4,
-        "Description": "鹹香火腿丁X濃郁起司"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配日曬葡萄小土司",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0914931.jpg",
         "Protein": 12.9,
@@ -2240,6 +2220,16 @@
         "Description": "茄汁薯餅蛋堡"
     },
     {
+        "category": "三明治、漢堡",
+        "title": "哞哞奶香白醬火腿蛋堡",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1115855.jpg",
+        "Protein": 12.1,
+        "Carb": 30.5,
+        "Calories": 263.0,
+        "Fat": 10.3,
+        "Description": "哞哞奶香白醬火腿蛋堡"
+    },
+    {
         "category": "飯麵粥品",
         "title": "星—生滾皮蛋煲粥",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0171018.jpg",
@@ -3318,6 +3308,16 @@
         "Calories": 122.0,
         "Fat": 1.2,
         "Description": "以香茅、椰奶等食材熬煮道地泰式湯頭再加入豐富配料，湯頭酸甜微辣完美展現泰式正宗好滋味。"
+    },
+    {
+        "category": "關東煮、湯品",
+        "title": "馬鈴薯玉米濃湯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1118017.jpg",
+        "Protein": 8.4,
+        "Carb": 28.2,
+        "Calories": 224.0,
+        "Fat": 8.7,
+        "Description": "使用桂芳鮮乳及鮮奶油製成的湯底，搭配玉米粒、馬鈴薯丁加上黑胡椒粒提味，味道濃郁料多實在~"
     },
     {
         "category": "關東煮、湯品",
@@ -5888,6 +5888,16 @@
         "Calories": 265.1,
         "Fat": 9.5,
         "Description": "1.知名連鎖炸雞bbq聯名新品2.以韓式經典「炸醬」為靈感,結合甜鹹濃郁的黑豆醬,搭配Q彈韓式魚板,"
+    },
+    {
+        "category": "茶葉蛋、蒸箱熟食",
+        "title": "韓式炸醬魚板包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108438.jpg",
+        "Protein": 8.8,
+        "Carb": 38.7,
+        "Calories": 244.0,
+        "Fat": 6.0,
+        "Description": "知名連鎖炸雞bbq聯名新品，以韓式經典「炸醬」為靈感，結合甜鹹濃郁的黑豆醬，搭配 Q 彈韓式魚板，打"
     },
     {
         "category": "茶葉蛋、蒸箱熟食",
