@@ -371,16 +371,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "二配大飯糰韓式豆芽烤牛肉",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0922413.jpg",
-        "Protein": 6.2,
-        "Carb": 44.9,
-        "Calories": 249.0,
-        "Fat": 5.0,
-        "Description": "金家ㄟ聯名，內餡以牛五花搭配黃豆芽，口感豐富"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "日式明太子炙烤牛飯卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0969172.jpg",
         "Protein": 6.0,
@@ -3078,6 +3068,26 @@
         "Calories": 585.0,
         "Fat": 22.4,
         "Description": "※原物料雞肉易含細碎硬骨，請小心食用"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "悟家厚切排骨便當",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1119859.jpg",
+        "Protein": 24.1,
+        "Carb": 88.4,
+        "Calories": 554.0,
+        "Fat": 11.6,
+        "Description": "此產品含蠶豆。"
+    },
+    {
+        "category": "飯麵粥品",
+        "title": "嫩烤香料雞胸排蔬滿盒",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1119863.jpg",
+        "Protein": 28.0,
+        "Carb": 18.3,
+        "Calories": 266.0,
+        "Fat": 9.0,
+        "Description": "※雞胸肉黑點屬天然辛香料染色，及染色其他食材屬正常現象，請安心食用"
     },
     {
         "category": "飯麵粥品",
