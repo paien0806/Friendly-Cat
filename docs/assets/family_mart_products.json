@@ -391,16 +391,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "年年魷魚香菇炊飯飯卷",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1018655.jpg",
-        "Protein": 5.8,
-        "Carb": 34.8,
-        "Calories": 191.0,
-        "Fat": 3.2,
-        "Description": "年年魷魚香菇炊飯飯卷"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配真明太子乳酪細卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1018687.jpg",
         "Protein": 3.6,
@@ -2571,16 +2561,6 @@
     },
     {
         "category": "飯麵粥品",
-        "title": "海鮮什錦炒麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0916010.jpg",
-        "Protein": 20.2,
-        "Carb": 61.8,
-        "Calories": 476.0,
-        "Fat": 16.3,
-        "Description": "Q彈油麵拌炒鮮美醬汁搭配魷魚蔬菜等澎派配料，料多實在口口都能品嚐到鮮甘甜！"
-    },
-    {
-        "category": "飯麵粥品",
         "title": "韓式炸雞義大利麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0916038.jpg",
         "Protein": 29.8,
@@ -2748,16 +2728,6 @@
         "Calories": 377.0,
         "Fat": 9.2,
         "Description": "天使麵滑Ｑ口感，拌入蔬菜及海鮮沾附濃郁香醇的湯汁厚實酸勁加上辣感完全開胃涮嘴！"
-    },
-    {
-        "category": "飯麵粥品",
-        "title": "南義火辣牛哨子筆尖麵",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1020236.jpg",
-        "Protein": 34.0,
-        "Carb": 80.5,
-        "Calories": 613.0,
-        "Fat": 17.2,
-        "Description": "※本產品含過敏原含麩質之穀物、牛奶、大豆、蛋類及其製品 ※本產品含薑絲纖維屬正常現象，請安心食用。 ※本產品含有蠶豆，不適合對其敏感體質者食用"
     },
     {
         "category": "飯麵粥品",
@@ -6228,16 +6198,6 @@
         "Calories": 262.3,
         "Fat": 13.5,
         "Description": "沉澱為黃豆纖維、花生及杏仁，係屬自然現象，飲用前請先搖勻．"
-    },
-    {
-        "category": "飲品",
-        "title": "福樂Ｑ果葡萄奇異果優酪乳",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0904675.jpg",
-        "Protein": 7.1,
-        "Carb": 21.2,
-        "Calories": 130.0,
-        "Fat": 1.9,
-        "Description": "需冷藏於7度C以下,飲用前請搖一搖.本產品含蘆薈,孕婦忌食."
     },
     {
         "category": "飲品",
