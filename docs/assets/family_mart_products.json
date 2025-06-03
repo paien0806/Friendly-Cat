@@ -321,16 +321,6 @@
     },
     {
         "category": "飯糰壽司",
-        "title": "一配哇沙米黃金魚卵海鮮飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0905221.jpg",
-        "Protein": 4.3,
-        "Carb": 32.3,
-        "Calories": 182.0,
-        "Fat": 4.0,
-        "Description": "※本品含車前子請配合足量水一起食用，對其過敏者請勿食用"
-    },
-    {
-        "category": "飯糰壽司",
         "title": "一配碳烤燒肉飯飯糰（區）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0909839.jpg",
         "Protein": 5.8,
@@ -398,16 +388,6 @@
         "Calories": 174.0,
         "Fat": 4.3,
         "Description": "使用日本明太子創始店-搭配明太子真MAKOTO，明太子搭配奶油乳酪醬。"
-    },
-    {
-        "category": "飯糰壽司",
-        "title": "二配哇沙米黃金魚卵海鮮飯糰",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1019279.jpg",
-        "Protein": 4.4,
-        "Carb": 33.3,
-        "Calories": 187.0,
-        "Fat": 4.1,
-        "Description": "豐洲市場聯名，日本直輸魚卵丁搭配皇后牛奶米，口味豐富"
     },
     {
         "category": "飯糰壽司",
@@ -1498,6 +1478,16 @@
         "Calories": 229.0,
         "Fat": 4.2,
         "Description": "此產品不可微波"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "二配桃氣奶奶夾心土司",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1095417.jpg",
+        "Protein": 5.5,
+        "Carb": 32.0,
+        "Calories": 206.0,
+        "Fat": 6.2,
+        "Description": "顆粒黃桃果醬&滑順奶霜 柔軟土司與香甜黃桃 簡單美味匠愛餡"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -4131,6 +4121,26 @@
     },
     {
         "category": "小菜沙拉、雞胸肉",
+        "title": "韓式風味雞柳條",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1093447.jpg",
+        "Protein": 21.2,
+        "Carb": 2.5,
+        "Calories": 110.6,
+        "Fat": 1.8,
+        "Description": "本產品不含防腐劑，開封後請於當日食用完畢。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "丸串串—海鮮口味",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108347.jpg",
+        "Protein": 7.3,
+        "Carb": 12.8,
+        "Calories": 156.0,
+        "Fat": 8.4,
+        "Description": "微波加熱後高溫，請小心撕口處冒出的高溫蒸氣。"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
         "title": "青森蜜富士蘋果（截切盒）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1310029.jpg",
         "Protein": 0.2,
@@ -5878,16 +5888,6 @@
         "Calories": 244.0,
         "Fat": 6.0,
         "Description": "知名連鎖炸雞bbq聯名新品，以韓式經典「炸醬」為靈感，結合甜鹹濃郁的黑豆醬，搭配 Q 彈韓式魚板，打"
-    },
-    {
-        "category": "茶葉蛋、蒸箱熟食",
-        "title": "玫瑰鹽水煮蛋",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.2245021.jpg",
-        "Protein": 4.6,
-        "Carb": 0.6,
-        "Calories": 48.9,
-        "Fat": 3.1,
-        "Description": "軟嫩蛋白，濃郁蛋黃，每一口都是幸福滋味！"
     },
     {
         "category": "飲品",
