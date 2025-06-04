@@ -1061,16 +1061,6 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
-        "title": "二配滿滿美乃滋照燒披薩",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1000832.jpg",
-        "Protein": 11.1,
-        "Carb": 49.8,
-        "Calories": 348.0,
-        "Fat": 11.5,
-        "Description": "滿滿美乃滋x照燒醬汁"
-    },
-    {
-        "category": "麵包、吐司、蛋糕",
         "title": "一配雙果長纖全麥軟歐",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1000905.jpg",
         "Protein": 9.0,
@@ -1491,6 +1481,16 @@
     },
     {
         "category": "麵包、吐司、蛋糕",
+        "title": "一配奇異果蛋糕",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1095471.jpg",
+        "Protein": 4.3,
+        "Carb": 17.9,
+        "Calories": 186.9,
+        "Fat": 10.9,
+        "Description": "請避免儲放於陽光直射或高溫場所，拆封後請盡早食用"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
         "title": "二配哈姆雙起司麵包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108379.jpg",
         "Protein": 7.2,
@@ -1538,6 +1538,16 @@
         "Calories": 209.0,
         "Fat": 4.0,
         "Description": "酸甜藍莓果乾與優格風味乳酪丁 匠吃藍莓很莓好"
+    },
+    {
+        "category": "麵包、吐司、蛋糕",
+        "title": "一配脆皮巧克力小菠蘿",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1115728.jpg",
+        "Protein": 8.4,
+        "Carb": 61.6,
+        "Calories": 469.0,
+        "Fat": 21.0,
+        "Description": "此產品不可微波"
     },
     {
         "category": "麵包、吐司、蛋糕",
@@ -3001,6 +3011,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "星—府城鹽水意麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1094516.jpg",
+        "Protein": 26.0,
+        "Carb": 66.7,
+        "Calories": 506.0,
+        "Fat": 15.0,
+        "Description": "府城鹽水意麵"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "鋪天蓋地蒸蛋飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1101686.jpg",
         "Protein": 29.2,
@@ -3988,6 +4008,16 @@
         "Calories": 202.0,
         "Fat": 6.1,
         "Description": "莓好鮮彩握沙拉"
+    },
+    {
+        "category": "小菜沙拉、雞胸肉",
+        "title": "莎莎烤雞麵沙拉",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057152.jpg",
+        "Protein": 12.6,
+        "Carb": 33.9,
+        "Calories": 236.0,
+        "Fat": 5.5,
+        "Description": "莎莎烤雞麵沙拉"
     },
     {
         "category": "小菜沙拉、雞胸肉",
@@ -5881,6 +5911,16 @@
     },
     {
         "category": "茶葉蛋、蒸箱熟食",
+        "title": "泰式椒麻鵪鶉蛋",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108424.jpg",
+        "Protein": 5.3,
+        "Carb": 3.6,
+        "Calories": 83.0,
+        "Fat": 5.3,
+        "Description": "不可微波"
+    },
+    {
+        "category": "茶葉蛋、蒸箱熟食",
         "title": "韓式炸醬魚板包",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108438.jpg",
         "Protein": 8.8,
@@ -5888,6 +5928,16 @@
         "Calories": 244.0,
         "Fat": 6.0,
         "Description": "知名連鎖炸雞bbq聯名新品，以韓式經典「炸醬」為靈感，結合甜鹹濃郁的黑豆醬，搭配 Q 彈韓式魚板，打"
+    },
+    {
+        "category": "茶葉蛋、蒸箱熟食",
+        "title": "麻辣蛋白滷味",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108442.jpg",
+        "Protein": 2.8,
+        "Carb": 3.2,
+        "Calories": 26.0,
+        "Fat": 0.2,
+        "Description": "撕開微波按4"
     },
     {
         "category": "飲品",
