@@ -3041,6 +3041,16 @@
     },
     {
         "category": "飯麵粥品",
+        "title": "紅燒纖牛若風味燴飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108238.jpg",
+        "Protein": 16.6,
+        "Carb": 99.0,
+        "Calories": 578.0,
+        "Fat": 13.0,
+        "Description": "紅燒纖牛若風味燴飯"
+    },
+    {
+        "category": "飯麵粥品",
         "title": "悟家燒雞便當",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108979.jpg",
         "Protein": 26.9,
@@ -5908,6 +5918,16 @@
         "Calories": 265.1,
         "Fat": 9.5,
         "Description": "1.知名連鎖炸雞bbq聯名新品2.以韓式經典「炸醬」為靈感,結合甜鹹濃郁的黑豆醬,搭配Q彈韓式魚板,"
+    },
+    {
+        "category": "茶葉蛋、蒸箱熟食",
+        "title": "與粽不同造型包",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1108074.jpg",
+        "Protein": 4.2,
+        "Carb": 31.9,
+        "Calories": 169.9,
+        "Fat": 2.8,
+        "Description": "本產品含有麩質之穀物、牛奶、大豆、芝麻及其製品，不適合對其過敏體質者食用。"
     },
     {
         "category": "茶葉蛋、蒸箱熟食",
