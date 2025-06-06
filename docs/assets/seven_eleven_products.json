@@ -141,16 +141,6 @@
     },
     {
         "category": "19_star",
-        "name": "富錦樹-剝皮辣蝦滑蛋燴飯",
-        "kcal": "531",
-        "price": "99",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_183.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "19_star",
         "name": "頌丹樂-泰式打拋豬肉飯",
         "kcal": "598",
         "price": "89",
@@ -231,16 +221,6 @@
     },
     {
         "category": "19_star",
-        "name": "晶華紐奧良風味烤雞堡",
-        "kcal": "357",
-        "price": "79",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_163.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "19_star",
         "name": "晶英府城肉燥米糕飯糰",
         "kcal": "429",
         "price": "59",
@@ -252,7 +232,7 @@
     {
         "category": "19_star",
         "name": "星宇航空-鳥喜炙燒雞腿丼",
-        "kcal": "657",
+        "kcal": "600",
         "price": "99",
         "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_153.png",
         "special_sale": "False",

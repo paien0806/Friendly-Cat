@@ -1981,16 +1981,6 @@
     },
     {
         "category": "三明治、漢堡",
-        "title": "泰式酸辣炸雞堡",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0875745.jpg",
-        "Protein": 16.4,
-        "Carb": 35.2,
-        "Calories": 322.0,
-        "Fat": 12.9,
-        "Description": "泰式酸辣炸雞堡"
-    },
-    {
-        "category": "三明治、漢堡",
         "title": "美式熱狗堡",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0875781.jpg",
         "Protein": 15.3,
@@ -2463,10 +2453,10 @@
         "category": "飯麵粥品",
         "title": "經典滷肉飯",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864079.jpg",
-        "Protein": 22.1,
-        "Carb": 80.0,
-        "Calories": 593.0,
-        "Fat": 20.7,
+        "Protein": 18.6,
+        "Carb": 81.8,
+        "Calories": 618.0,
+        "Fat": 24.2,
         "Description": "※香腸偶有軟骨屬正常現象，請小心食用。"
     },
     {
