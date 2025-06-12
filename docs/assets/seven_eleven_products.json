@@ -81,16 +81,6 @@
     },
     {
         "category": "19_star",
-        "name": "晶英-玫瑰豉油雞便當",
-        "kcal": "592",
-        "price": "99",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_197.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "19_star",
         "name": "頌丹樂-遇見泰式打拋雞拌麵",
         "kcal": "570",
         "price": "99",
@@ -105,16 +95,6 @@
         "kcal": "197.8",
         "price": "59",
         "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_181.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "19_star",
-        "name": "心潮飯店-醬燒野菇豬肉飯",
-        "kcal": "557",
-        "price": "99",
-        "image": "https://www.7-11.com.tw/freshfoods/19_star/images/star_168.png",
         "special_sale": "False",
         "new": "",
         "content": ""
