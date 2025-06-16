@@ -311,16 +311,6 @@
     },
     {
         "category": "1_Ricerolls",
-        "name": "寶可夢-海鮮炊飯飯糰",
-        "kcal": "181",
-        "price": "30",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_498.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
         "name": "橋村炸雞新極大飯糰",
         "kcal": "322",
         "price": "49",
@@ -411,16 +401,6 @@
     },
     {
         "category": "1_Ricerolls",
-        "name": "繽紛花漾壽司組",
-        "kcal": "366",
-        "price": "79",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_490.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
         "name": "鮪魚肉鬆雙手卷",
         "kcal": "404",
         "price": "59",
@@ -484,7 +464,7 @@
         "name": "日本豆皮壽司",
         "kcal": "317",
         "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_483.png",
+        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_513.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -565,26 +545,6 @@
         "kcal": "203",
         "price": "25",
         "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_444.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
-        "name": "木曜-麻辣小龍蝦新極大飯糰",
-        "kcal": "289",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_481.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "1_Ricerolls",
-        "name": "木曜秘製炸醬麵新極大烤飯糰",
-        "kcal": "341",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/1_Ricerolls/images/ricerolls_477.png",
         "special_sale": "False",
         "new": "",
         "content": ""
