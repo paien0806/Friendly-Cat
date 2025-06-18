@@ -953,7 +953,7 @@
         "category": "2_Light",
         "name": "薯泥鮮蔬蛋沙拉",
         "kcal": "",
-        "price": "59",
+        "price": "60",
         "image": "https://www.7-11.com.tw/freshfoods/2_Light/images/light_1119.png",
         "special_sale": "False",
         "new": "",
@@ -3611,16 +3611,6 @@
     },
     {
         "category": "11_bread",
-        "name": "布丁卡士達半月燒",
-        "kcal": "148.1",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_881.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "夾入迷你Q彈布丁與香濃卡士達內餡"
-    },
-    {
-        "category": "11_bread",
         "name": "春上方塊戚風杯(布丁風味)",
         "kcal": "226.1",
         "price": "65",
@@ -4031,16 +4021,6 @@
     },
     {
         "category": "11_bread",
-        "name": "LADEARS草莓蛋糕風味馬卡龍",
-        "kcal": "131",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_814.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "厚餡法式奶油霜x酸甜草莓醬"
-    },
-    {
-        "category": "11_bread",
         "name": "LADEARS草莓法式千層蛋糕",
         "kcal": "175",
         "price": "69",
@@ -4061,16 +4041,6 @@
     },
     {
         "category": "11_bread",
-        "name": "LADEARS輕乳酪蛋糕",
-        "kcal": "172",
-        "price": "55",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_750.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用北海道乳酪"
-    },
-    {
-        "category": "11_bread",
         "name": "LADEARS北海道生乳捲",
         "kcal": "140",
         "price": "59",
@@ -4088,16 +4058,6 @@
         "special_sale": "False",
         "new": "",
         "content": "使用丹醇鮮奶"
-    },
-    {
-        "category": "11_bread",
-        "name": "LADEARS爆餡羅馬生乳包",
-        "kcal": "260",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_631.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "歐洲進口鮮奶油，綿密化口"
     },
     {
         "category": "11_bread",
@@ -4221,26 +4181,6 @@
     },
     {
         "category": "11_bread",
-        "name": "昂舒巴黎卡士達奶霜泡芙",
-        "kcal": "205",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_828.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "特調卡士達鮮奶油 完美比例"
-    },
-    {
-        "category": "11_bread",
-        "name": "昂舒巴黎草莓雙餡泡芙",
-        "kcal": "183",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_813.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "生乳奶霜x酸甜草莓果粒醬"
-    },
-    {
-        "category": "11_bread",
         "name": "韓國延世大學抹茶生乳包",
         "kcal": "391.8",
         "price": "135",
@@ -4258,16 +4198,6 @@
         "special_sale": "False",
         "new": "",
         "content": "韓國熱銷千萬顆"
-    },
-    {
-        "category": "11_bread",
-        "name": "韓國延世大學可可生乳包",
-        "kcal": "449.8",
-        "price": "119",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_776.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "韓國直輸"
     },
     {
         "category": "11_bread",
@@ -4501,26 +4431,6 @@
     },
     {
         "category": "11_bread",
-        "name": "春上方塊戚風杯(草莓)",
-        "kcal": "",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_822.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
-        "name": "春上方塊戚風杯(開心果）",
-        "kcal": "226.3",
-        "price": "65",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_787.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用進口開心果製成外交官奶油內餡"
-    },
-    {
-        "category": "11_bread",
         "name": "吳寶春雞蛋布丁",
         "kcal": "213",
         "price": "55",
@@ -4598,16 +4508,6 @@
         "special_sale": "False",
         "new": "",
         "content": "古早味濃郁杏仁香"
-    },
-    {
-        "category": "11_bread",
-        "name": "優菓甜坊黑糖檸檬愛玉",
-        "kcal": "158.4",
-        "price": "40",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_617.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "特選愛玉子搭配黑糖與檸檬黃金比例風味"
     },
     {
         "category": "11_bread",
