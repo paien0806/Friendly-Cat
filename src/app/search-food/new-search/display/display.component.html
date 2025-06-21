@@ -107,7 +107,7 @@
                 <!-- 商品描述 -->
                 <div *ngIf="getFoodDetailFamilyMart(item).picture_url !== 'assets/此商品暫無圖片.png'">
                   <p class="text-xs sm:text-sm text-gray-500 mb-1">商品描述: {{ getFoodDetailFamilyMart(item).Description | emptyInfo}}</p>
-                  <p class="text-xs sm:text-sm text-gray-500 mb-1">卡路里(kcal): {{ getFoodDetailFamilyMart(item).Calories | emptyInfo}}</p>
+                  <!-- <p class="text-xs sm:text-sm text-gray-500 mb-1">卡路里(kcal): {{ getFoodDetailFamilyMart(item).Calories | emptyInfo}}</p> -->
                 </div>
                 <!-- 商品沒資訊的話 -->
                 <div *ngIf="getFoodDetailFamilyMart(item).picture_url === 'assets/此商品暫無圖片.png'">
