@@ -195,7 +195,7 @@ export class DisplayComponent implements OnChanges, OnInit {
     // 設置 Fuse.js 配置選項
     const options = {
       includeScore: true,
-      threshold: 0.2,
+      threshold: 0.3,
       keys: ['title']
     };
 
