@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://alan-cheng.github.io/Friendly-Cat/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow specific paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow important resources
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /manifest.json 
