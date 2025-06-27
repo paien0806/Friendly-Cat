@@ -2154,7 +2154,7 @@
         "name": "馨苑薑絲鱸魚湯",
         "kcal": "84",
         "price": "69",
-        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_334.png",
+        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_335.png",
         "special_sale": "False",
         "new": "True",
         "content": ""
@@ -2431,16 +2431,6 @@
     },
     {
         "category": "4_Snacks",
-        "name": "蒸蛋雞白湯",
-        "kcal": "104",
-        "price": "55",
-        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_273.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "4_Snacks",
         "name": "永心鳳茶剝皮辣椒燉雞盅",
         "kcal": "130",
         "price": "65",
@@ -2575,16 +2565,6 @@
         "kcal": "327",
         "price": "55",
         "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_256.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "4_Snacks",
-        "name": "大腸肉羹麵線",
-        "kcal": "205",
-        "price": "59",
-        "image": "https://www.7-11.com.tw/freshfoods/4_Snacks/images/Snacks_245.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -3562,32 +3542,32 @@
     {
         "category": "11_bread",
         "name": "昂舒巴黎好時巧克力雙餡泡芙",
-        "kcal": "",
+        "kcal": "253",
         "price": "59",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_913.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "使用進口HERSHEY’S可可粉"
     },
     {
         "category": "11_bread",
         "name": "好時巧克力派",
-        "kcal": "",
+        "kcal": "173.1",
         "price": "45",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_914.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "使用進口HERSHEY’S可可粉與比利時74%巧克力"
     },
     {
         "category": "11_bread",
         "name": "好時摩卡咖啡風味奶酪",
-        "kcal": "",
+        "kcal": "205",
         "price": "45",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_915.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "使用進口HERSHEY’S可可粉與法芙娜40%牛奶巧克力"
     },
     {
         "category": "11_bread",
@@ -3597,17 +3577,17 @@
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_916.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "莓果果實+蒟蒻啵啵+椰果，美味更升級"
     },
     {
         "category": "11_bread",
         "name": "黑丸招牌仙草吸凍飲",
-        "kcal": "",
+        "kcal": "91",
         "price": "35",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_917.png",
         "special_sale": "False",
         "new": "True",
-        "content": ""
+        "content": "慢火熬煮、香氣濃郁，口感滑嫩再提升"
     },
     {
         "category": "11_bread",
@@ -3772,7 +3752,7 @@
     {
         "category": "11_bread",
         "name": "黑丸冬瓜檸檬吸凍飲",
-        "kcal": "32.8",
+        "kcal": "164",
         "price": "35",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_891.png",
         "special_sale": "False",
