@@ -57,7 +57,6 @@ jobs:
           git checkout --orphan cloudflare-page-temp
           git rm -rf .
           git add dist/
-          git add _headers _redirects wrangler.toml
           git commit -m "CI: Cloudflare Pages 自動部署 - $(date '+%Y-%m-%d %H:%M:%S')"
           git branch -D cloudflare-page || true
           git branch -m cloudflare-page
