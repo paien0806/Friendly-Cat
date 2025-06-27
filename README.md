@@ -16,7 +16,7 @@
 
 * 2025/03：新增聊天機器人功能，可使用對話搜尋食物  
 ## DEMO
-#### 連結： [友善黑貓](https://alan-cheng.github.io/Friendly-Cat/)
+#### 連結： [友善黑貓](https://friendlycat.alan-cheng.com/)
 >
 >
 >
@@ -99,3 +99,8 @@
 >
 >`npx cap open ios`
 >
+
+> ## 部署
+>
+> - **GitHub Pages**: 自動部署到 `https://alan-cheng.github.io/Friendly-Cat/`
+> - **Cloudflare Pages**: 自動部署到 `https://friendlycat.alan-cheng.com/`

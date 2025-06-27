@@ -49,6 +49,11 @@ jobs:
       - name: Build project for Cloudflare Pages
         run: ng build --configuration=production --base-href / --output-path=dist --aot
 
+      # 複製 assets 資料夾到 dist 目錄
+      - name: Copy assets to dist
+        run: |
+          cp -r docs/assets dist/
+
       # 推送到 cloudflare-page 分支
       - name: Deploy to cloudflare-page branch
         run: |
