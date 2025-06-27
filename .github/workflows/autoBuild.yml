@@ -32,18 +32,36 @@ jobs:
           npm install --force
           npm install -g @angular/cli
 
-      # 執行打包
-      - name: Build project
+      # 執行打包 (GitHub Pages)
+      - name: Build project for GitHub Pages
         run: ng build --configuration=production --base-href /Friendly-Cat/ --output-path=docs --aot
 
       # 確保打包結果存入版本控制
-      - name: Commit and push build output
+      - name: Commit and push build output to main
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add docs/
           git commit -m "CI: 自動打包 - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
           git push origin HEAD:main
+
+      # 執行打包 (Cloudflare Pages)
+      - name: Build project for Cloudflare Pages
+        run: ng build --configuration=production --base-href / --output-path=dist --aot
+
+      # 推送到 cloudflare-page 分支
+      - name: Deploy to cloudflare-page branch
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git checkout --orphan cloudflare-page-temp
+          git rm -rf .
+          git add dist/
+          git add _headers _redirects wrangler.toml
+          git commit -m "CI: Cloudflare Pages 自動部署 - $(date '+%Y-%m-%d %H:%M:%S')"
+          git branch -D cloudflare-page || true
+          git branch -m cloudflare-page
+          git push -f origin cloudflare-page
 
       # 觸發 Python 爬蟲工作流
       - name: Trigger Python Crawler Workflow
