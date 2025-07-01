@@ -3504,7 +3504,7 @@
         "name": "好時-愛餡大亨可可雙餡軟法",
         "kcal": "",
         "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_909.png",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_918.png",
         "special_sale": "False",
         "new": "True",
         "content": ""
@@ -3524,7 +3524,7 @@
         "name": "好時-莓果風味巧克力軟餅乾",
         "kcal": "",
         "price": "35",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_911.png",
+        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_919.png",
         "special_sale": "False",
         "new": "True",
         "content": ""
@@ -3605,16 +3605,6 @@
         "kcal": "",
         "price": "55",
         "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_899.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
-        "name": "晶華-新感覺鮪魚沙拉",
-        "kcal": "",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_900.png",
         "special_sale": "False",
         "new": "",
         "content": ""
@@ -3821,16 +3811,6 @@
     },
     {
         "category": "11_bread",
-        "name": "Semeur草莓蝴蝶酥",
-        "kcal": "",
-        "price": "35",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_876.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
         "name": "多那之特濃奶香波士頓",
         "kcal": "171",
         "price": "59",
@@ -3921,26 +3901,6 @@
     },
     {
         "category": "11_bread",
-        "name": "貝洛邦核桃多穀物",
-        "kcal": "",
-        "price": "50",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_856.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
-        "name": "芝士乳酪火腿貝果",
-        "kcal": "",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_857.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
         "name": "韓國延世大學草莓生乳包",
         "kcal": "395.4",
         "price": "135",
@@ -3998,16 +3958,6 @@
         "special_sale": "False",
         "new": "",
         "content": "100%純植物性，０乳糖、０膽固醇"
-    },
-    {
-        "category": "11_bread",
-        "name": "優格巧克力甜甜圈",
-        "kcal": "",
-        "price": "42",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_842.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
     },
     {
         "category": "11_bread",
@@ -4131,46 +4081,6 @@
     },
     {
         "category": "11_bread",
-        "name": "3重草莓甜甜圈",
-        "kcal": "",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_817.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
-        "name": "草莓奶油雙色可頌",
-        "kcal": "209",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_802.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "在地草莓醬x進口奶油"
-    },
-    {
-        "category": "11_bread",
-        "name": "草莓乳酪歐式歐包",
-        "kcal": "427.5",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_803.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "在地草莓x綿密乳酪　"
-    },
-    {
-        "category": "11_bread",
-        "name": "草莓厚切雙色年輪蛋糕",
-        "kcal": "",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_810.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
         "name": "草莓奶霜鬆餅",
         "kcal": "",
         "price": "39",
@@ -4191,36 +4101,6 @@
     },
     {
         "category": "11_bread",
-        "name": "桂圓核桃麵包",
-        "kcal": "385",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_786.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "開運桂圓x黑糖香氣"
-    },
-    {
-        "category": "11_bread",
-        "name": "芋泥起酥派",
-        "kcal": "",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_784.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
-        "name": "巧克力英式司康",
-        "kcal": "344",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_767.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "蜂蜜香氣x香醇可可　"
-    },
-    {
-        "category": "11_bread",
         "name": "巧脆可可麻糬泡芙",
         "kcal": "210",
         "price": "49",
@@ -4238,16 +4118,6 @@
         "special_sale": "False",
         "new": "",
         "content": "法芙娜白巧克力添加　"
-    },
-    {
-        "category": "11_bread",
-        "name": "吉可頌-比利時巧克力雙色可頌",
-        "kcal": "209",
-        "price": "49",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_754.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "吉可頌主廚監製，使用法國進口奶油"
     },
     {
         "category": "11_bread",
@@ -4361,46 +4231,6 @@
     },
     {
         "category": "11_bread",
-        "name": "好時-巧克力厚切雙色年輪",
-        "kcal": "441",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_768.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用進口HERSHEY’S可可粉"
-    },
-    {
-        "category": "11_bread",
-        "name": "好時-巧克力核桃歐式麵包",
-        "kcal": "516.2",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_753.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用進口HERSHEY’S可可粉"
-    },
-    {
-        "category": "11_bread",
-        "name": "好時-可可豆夾心布雪蛋糕",
-        "kcal": "217",
-        "price": "32",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_755.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用進口HERSHEY’S可可粉"
-    },
-    {
-        "category": "11_bread",
-        "name": "好時-巧克力豆軟餅乾",
-        "kcal": "310",
-        "price": "35",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_744.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用進口HERSHEY’S可可粉"
-    },
-    {
-        "category": "11_bread",
         "name": "好時生巧克力半月燒",
         "kcal": "226",
         "price": "49",
@@ -4408,16 +4238,6 @@
         "special_sale": "False",
         "new": "",
         "content": "使用進口HERSHEY’S可可粉"
-    },
-    {
-        "category": "11_bread",
-        "name": "好時-巧克力小圓餅",
-        "kcal": "179",
-        "price": "35",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_752.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "添加進口HERSHEY’S可可粉"
     },
     {
         "category": "11_bread",
@@ -4451,16 +4271,6 @@
     },
     {
         "category": "11_bread",
-        "name": "蜂蜜奶霜鬆餅",
-        "kcal": "300",
-        "price": "39",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_712.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用蜜蜂工坊蜂蜜馥郁香醇"
-    },
-    {
-        "category": "11_bread",
         "name": "起酥蛋糕",
         "kcal": "241",
         "price": "39",
@@ -4478,16 +4288,6 @@
         "special_sale": "False",
         "new": "",
         "content": "使用石安牧場蛋液製成18層炙燒蛋皮"
-    },
-    {
-        "category": "11_bread",
-        "name": "熔岩巧克力蛋糕",
-        "kcal": "323",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_747.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "使用瑞士蓮LINDT巧克力"
     },
     {
         "category": "11_bread",
@@ -4838,46 +4638,6 @@
         "special_sale": "False",
         "new": "",
         "content": ""
-    },
-    {
-        "category": "11_bread",
-        "name": "營養小土司",
-        "kcal": "",
-        "price": "42",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_819.png",
-        "special_sale": "False",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
-        "name": "能量小土司",
-        "kcal": "",
-        "price": "42",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_807.png",
-        "special_sale": "True",
-        "new": "",
-        "content": ""
-    },
-    {
-        "category": "11_bread",
-        "name": "焙香芝麻蜂巢麵包",
-        "kcal": "384",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_739.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "世界麵包冠軍武子靖監製，芝麻乳酪雙餡"
-    },
-    {
-        "category": "11_bread",
-        "name": "起司丹麥菠蘿",
-        "kcal": "286",
-        "price": "45",
-        "image": "https://www.7-11.com.tw/freshfoods/11_bread/images/bread_685.png",
-        "special_sale": "False",
-        "new": "",
-        "content": "多層次丹麥 切達起司片"
     },
     {
         "category": "11_bread",

@@ -131,16 +131,6 @@
     },
     {
         "category": "壽司手卷飯糰",
-        "title": "大飯糰金絲雪蟹蟹膏",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0922318.jpg",
-        "Protein": "",
-        "Carb": "",
-        "Calories": "",
-        "Fat": "",
-        "Description": "熱量249大卡，本包裝含1份"
-    },
-    {
-        "category": "壽司手卷飯糰",
         "title": "芝麻海苔香鬆細卷",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0922409.jpg",
         "Protein": "",
@@ -2041,6 +2031,16 @@
     },
     {
         "category": "生鮮蔬果沙拉",
+        "title": "有機山菠菜(玉美)",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1350336.jpg",
+        "Protein": "",
+        "Carb": "",
+        "Calories": "",
+        "Fat": "",
+        "Description": "本產品「營養標示」非強制標示項目"
+    },
+    {
+        "category": "生鮮蔬果沙拉",
         "title": "有機小白菜(玉美)",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1352192.jpg",
         "Protein": "",
@@ -2671,6 +2671,16 @@
     },
     {
         "category": "小菜、滷味、湯品",
+        "title": "芒果雙拼(截切)",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0845130.jpg",
+        "Protein": "",
+        "Carb": "",
+        "Calories": "",
+        "Fat": "",
+        "Description": "熱量91.4大卡，本包裝含1份"
+    },
+    {
+        "category": "小菜、滷味、湯品",
         "title": "芒起來吃（超值盒）",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.0864310.jpg",
         "Protein": "",
@@ -2911,7 +2921,7 @@
     },
     {
         "category": "小菜、滷味、湯品",
-        "title": "（選）翡翠海帶絲３５０ｇ",
+        "title": "翡翠海帶絲350g",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1142012.jpg",
         "Protein": "",
         "Carb": "",
@@ -2921,7 +2931,7 @@
     },
     {
         "category": "小菜、滷味、湯品",
-        "title": "（選）經典高麗菜",
+        "title": "經典高麗菜",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1142030.jpg",
         "Protein": "",
         "Carb": "",
@@ -2931,7 +2941,7 @@
     },
     {
         "category": "小菜、滷味、湯品",
-        "title": "（選）柚香水蘿蔔",
+        "title": "柚香水蘿蔔",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1142044.jpg",
         "Protein": "",
         "Carb": "",
@@ -3361,16 +3371,6 @@
     },
     {
         "category": "蛋糕甜品",
-        "title": "抹茶冰心乳酪條",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1057089.jpg",
-        "Protein": "",
-        "Carb": "",
-        "Calories": "",
-        "Fat": "",
-        "Description": "熱量314.8大卡，本包裝含1份"
-    },
-    {
-        "category": "蛋糕甜品",
         "title": "可可脆皮泡芙",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1071237.jpg",
         "Protein": "",
@@ -3378,16 +3378,6 @@
         "Calories": "",
         "Fat": "",
         "Description": "熱量336.3大卡，本包裝含1份"
-    },
-    {
-        "category": "蛋糕甜品",
-        "title": "焦糖烤布蕾塔",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1071287.jpg",
-        "Protein": "",
-        "Carb": "",
-        "Calories": "",
-        "Fat": "",
-        "Description": "熱量311大卡，本包裝含1份"
     },
     {
         "category": "蛋糕甜品",
@@ -4118,16 +4108,6 @@
         "Calories": "",
         "Fat": "",
         "Description": "熱量238大卡，本包裝含1份"
-    },
-    {
-        "category": "麵包",
-        "title": "抹茶蜜桃乳酪貝果",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1049220.jpg",
-        "Protein": "",
-        "Carb": "",
-        "Calories": "",
-        "Fat": "",
-        "Description": "熱量230大卡，本包裝含1份"
     },
     {
         "category": "麵包",
@@ -16221,7 +16201,7 @@
     },
     {
         "category": "點心零食",
-        "title": "區—椒鹽雞柳條",
+        "title": "椒鹽雞柳條",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1152996.jpg",
         "Protein": "",
         "Carb": "",
@@ -16231,7 +16211,7 @@
     },
     {
         "category": "點心零食",
-        "title": "區—乖乖玉米脆條咖啡蘭姆酒風味",
+        "title": "乖乖玉米脆條咖啡蘭姆酒風味",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1155312.jpg",
         "Protein": "",
         "Carb": "",
