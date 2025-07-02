@@ -44,7 +44,7 @@ jobs:
         git checkout -b github-page 2>/dev/null || git checkout github-page
         
         # 拉取最新變更
-        git pull origin github-page || true
+        git pull --rebase origin github-page
 
         git add docs/assets/seven_eleven_products.json docs/assets/family_mart_stores.json docs/assets/family_mart_products.json
         git diff --cached --exit-code || git commit -m "CI: 爬蟲靜態資源更新 - $(date '+%Y-%m-%d %H:%M:%S')"
