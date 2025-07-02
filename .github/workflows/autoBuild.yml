@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - cloudflare-page
 
 permissions:
   contents: write
