@@ -1241,6 +1241,26 @@
     },
     {
         "category": "主餐麵食",
+        "title": "日式擔擔冷麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1117039.jpg",
+        "Protein": "",
+        "Carb": "",
+        "Calories": "",
+        "Fat": "",
+        "Description": "熱量547大卡，本包裝含1份"
+    },
+    {
+        "category": "主餐麵食",
+        "title": "屯京日式胡麻雞絲冷麵",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1117075.jpg",
+        "Protein": "",
+        "Carb": "",
+        "Calories": "",
+        "Fat": "",
+        "Description": "熱量477大卡，本包裝含1份"
+    },
+    {
+        "category": "主餐麵食",
         "title": "日式蕎麥沾麵",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1117302.jpg",
         "Protein": "",
@@ -1318,6 +1338,16 @@
         "Calories": "",
         "Fat": "",
         "Description": "熱量535大卡，本包裝含1份"
+    },
+    {
+        "category": "主餐麵食",
+        "title": "多穀紫米飯",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1135104.jpg",
+        "Protein": "",
+        "Carb": "",
+        "Calories": "",
+        "Fat": "",
+        "Description": "熱量318大卡，本包裝含1份"
     },
     {
         "category": "主餐麵食",
@@ -3571,6 +3601,16 @@
     },
     {
         "category": "蛋糕甜品",
+        "title": "芋泥布丁雲朵蛋糕",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1158560.jpg",
+        "Protein": "",
+        "Carb": "",
+        "Calories": "",
+        "Fat": "",
+        "Description": "熱量262.6大卡，本包裝含1份"
+    },
+    {
+        "category": "蛋糕甜品",
         "title": "芋泥蒙布朗布丁",
         "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1158697.jpg",
         "Protein": "",
@@ -4338,6 +4378,26 @@
         "Calories": "",
         "Fat": "",
         "Description": "熱量274大卡，本包裝含1份"
+    },
+    {
+        "category": "麵包",
+        "title": "一配草莓風味皇冠布里歐",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1133920.jpg",
+        "Protein": "",
+        "Carb": "",
+        "Calories": "",
+        "Fat": "",
+        "Description": "熱量444大卡，本包裝含1份"
+    },
+    {
+        "category": "麵包",
+        "title": "一配芋頭ＱＱ麻糬可頌",
+        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1133934.jpg",
+        "Protein": "",
+        "Carb": "",
+        "Calories": "",
+        "Fat": "",
+        "Description": "熱量258大卡，本包裝含1份"
     },
     {
         "category": "麵包",
@@ -10868,16 +10928,6 @@
         "Calories": "",
         "Fat": "",
         "Description": "熱量272大卡，本包裝含1份"
-    },
-    {
-        "category": "一般飲料",
-        "title": "春水良品白桃芒芒鮮果茶",
-        "picture_url": "https://foodsafety.family.com.tw/product_img/003004.1071750.jpg",
-        "Protein": "",
-        "Carb": "",
-        "Calories": "",
-        "Fat": "",
-        "Description": "熱量171.2大卡，本包裝含1份"
     },
     {
         "category": "一般飲料",
