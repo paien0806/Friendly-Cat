@@ -42,6 +42,6 @@ jobs:
 
         git add docs/assets/seven_eleven_products.json docs/assets/family_mart_stores.json docs/assets/family_mart_products.json
         git diff --cached --exit-code || git commit -m "CI: 爬蟲靜態資源更新 - $(date '+%Y-%m-%d %H:%M:%S')"
-        git push origin HEAD:main
+        git push origin HEAD:github-page
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token 来认证
