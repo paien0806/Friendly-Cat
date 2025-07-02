@@ -57,9 +57,6 @@ jobs:
           # 如果有變更就提交
           git diff --cached --exit-code || git commit -m "CI: 爬蟲靜態資源更新 - $(date '+%Y-%m-%d %H:%M:%S')"
         
-          # 這時工作目錄已乾淨，可以安全 pull
-          git pull --rebase origin github-page
-        
           # 然後 push
           git push --force origin github-page
         env:
