@@ -1,14 +1,15 @@
 # 🔧 設定區（請只改這裡）
 CHANNEL_ACCESS_TOKEN = "DED64eRi0GLeout3sWtkebzadMdiAydomXvXcYW4sxQTRepbcVaK7tlyckXLJRF8Rm2+dVjTLGNUXFBK6IswVpCYqwvPio52blUsMmv+GZSfG87uUBV7dgty9H4/bCRKPbSZm19K7YyWkjHO5cbxtQdB04t89/1O/w1cDnyilFU="
 CHANNEL_SECRET = "f6ad0906db1caa0a57bea1cf0f66d7f0"
-SPREADSHEET_ID = '12WyIQo-DBfqMaP-hv4Y6_QuhxSM6-EoqRkRqwdfmvSU'
-SERVICE_ACCOUNT_FILE = 'service_account.json'
+SPREADSHEET_ID = '12WyIQo-DBfqMaP-hv4Y6_QuhxSM6-EoqRkRqwdfmvSU
 
 # ======================================
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import JSONResponse
 import httpx
 import math
+import os
+import json
 import gspread
 from google.oauth2.service_account import Credentials
 from collections import defaultdict
@@ -22,11 +23,12 @@ def haversine(lat1, lng1, lat2, lng2):
     d_phi = math.radians(lat2 - lat1)
     d_lambda = math.radians(lng2 - lng1)
     a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
-    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))  # 回傳距離（公里）
+    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))  # 公里
 
 def read_items_from_sheets():
     scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-    creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)
+    info = json.loads(os.environ['GOOGLE_SERVICE_ACCOUNT_JSON'])
+    creds = Credentials.from_service_account_info(info, scopes=scopes)
     client = gspread.authorize(creds)
     sheet = client.open_by_key(SPREADSHEET_ID).sheet1
     return sheet.get_all_records()
@@ -47,11 +49,10 @@ def get_items(lat: float = Query(None), lng: float = Query(None), radius: int = 
         try:
             item_lat = float(item["lat"])
             item_lng = float(item["lng"])
-            dist = haversine(lat, lng, item_lat, item_lng) * 1000  # 公尺
+            dist = haversine(lat, lng, item_lat, item_lng) * 1000
             if dist <= radius:
-                new_item = item.copy()
-                new_item["distance"] = round(dist)
-                result.append(new_item)
+                item["distance"] = round(dist)
+                result.append(item)
         except:
             continue
 
@@ -62,8 +63,8 @@ def get_items(lat: float = Query(None), lng: float = Query(None), radius: int = 
 @app.get("/debug-items")
 def debug_items():
     try:
-        raw_items = read_items_from_sheets()
-        return {"status": "success", "count": len(raw_items), "items": raw_items}
+        data = read_items_from_sheets()
+        return {"status": "success", "count": len(data), "items": data}
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
@@ -82,7 +83,7 @@ async def webhook(req: Request):
             try:
                 all_items = read_items_from_sheets()
             except Exception as e:
-                await send_reply(reply_token, [{"type": "text", "text": "⚠️ 無法讀取資料，請稍後再試"}])
+                await send_reply(reply_token, [{"type": "text", "text": "⚠️ 無法讀取商品資料，請稍後再試"}])
                 return JSONResponse({"status": "error", "detail": str(e)})
 
             filtered = []
