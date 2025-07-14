@@ -44,4 +44,11 @@ def get_items(lat: float = Query(...), lng: float = Query(...)):
 
     nearby_items.sort(key=lambda x: x['distance'])
     return {"items": nearby_items}
-
+  
+@router.get("/debug-items")
+def debug_items():
+    try:
+        raw_items = read_items_from_sheets()
+        return {"status": "success", "count": len(raw_items), "items": raw_items}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
