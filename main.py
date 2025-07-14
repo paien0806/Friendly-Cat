@@ -1,50 +1,71 @@
 # 🔧 設定區（請只改這裡）
 CHANNEL_ACCESS_TOKEN = "DED64eRi0GLeout3sWtkebzadMdiAydomXvXcYW4sxQTRepbcVaK7tlyckXLJRF8Rm2+dVjTLGNUXFBK6IswVpCYqwvPio52blUsMmv+GZSfG87uUBV7dgty9H4/bCRKPbSZm19K7YyWkjHO5cbxtQdB04t89/1O/w1cDnyilFU="
 CHANNEL_SECRET = "f6ad0906db1caa0a57bea1cf0f66d7f0"
+SPREADSHEET_ID = '12WyIQo-DBfqMaP-hv4Y6_QuhxSM6-EoqRkRqwdfmvSU'
+SERVICE_ACCOUNT_FILE = 'service_account.json'
 
 # ======================================
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Query
 from fastapi.responses import JSONResponse
 import httpx
 import math
+import gspread
+from google.oauth2.service_account import Credentials
 from collections import defaultdict
 
 app = FastAPI()
 
-# ✅ 模擬資料來源
-EXPIRED_ITEMS = [
-    {"name": "7-11 焗烤雞腿飯", "price": 79, "lat": 25.033, "lng": 121.5654, "image": "https://i.imgur.com/example1.jpg"},
-    {"name": "全家 照燒雞三明治", "price": 49, "lat": 25.0325, "lng": 121.566, "image": "https://i.imgur.com/example2.jpg"},
-    {"name": "全聯 草莓牛奶", "price": 32, "lat": 22.6273, "lng": 120.3014, "image": "https://i.imgur.com/example3.jpg"},
-    {"name": "OK 超商 鮪魚飯糰", "price": 35, "lat": 24.1477, "lng": 120.6736, "image": "https://i.imgur.com/example4.jpg"},
-    {"name": "7-11 日式炸雞便當", "price": 85, "lat": 25.034, "lng": 121.5644, "image": "https://i.imgur.com/example5.jpg"},
-    {"name": "全家 起司蛋堡", "price": 42, "lat": 22.6255, "lng": 120.2995, "image": "https://i.imgur.com/example6.jpg"}
-]
-
+# ======================================
 def haversine(lat1, lng1, lat2, lng2):
     R = 6371
     phi1, phi2 = math.radians(lat1), math.radians(lat2)
     d_phi = math.radians(lat2 - lat1)
     d_lambda = math.radians(lng2 - lng1)
     a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
-    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))  # 回傳距離（公里）
+
+def read_items_from_sheets():
+    scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+    creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)
+    client = gspread.authorize(creds)
+    sheet = client.open_by_key(SPREADSHEET_ID).sheet1
+    return sheet.get_all_records()
 
 # ======================================
 @app.get("/items")
-def get_items(lat: float = None, lng: float = None, radius: int = 1000):
+def get_items(lat: float = Query(None), lng: float = Query(None), radius: int = 1000):
+    try:
+        all_items = read_items_from_sheets()
+    except Exception as e:
+        return {"error": f"讀取 Google Sheets 失敗: {str(e)}"}
+
     if lat is None or lng is None:
-        return {"items": EXPIRED_ITEMS}
+        return {"items": all_items}
 
     result = []
-    for item in EXPIRED_ITEMS:
-        dist = haversine(lat, lng, item["lat"], item["lng"]) * 1000
-        if dist <= radius:
-            new_item = item.copy()
-            new_item["distance"] = round(dist)
-            result.append(new_item)
+    for item in all_items:
+        try:
+            item_lat = float(item["lat"])
+            item_lng = float(item["lng"])
+            dist = haversine(lat, lng, item_lat, item_lng) * 1000  # 公尺
+            if dist <= radius:
+                new_item = item.copy()
+                new_item["distance"] = round(dist)
+                result.append(new_item)
+        except:
+            continue
 
     result.sort(key=lambda x: x["distance"])
     return {"items": result}
+
+# ======================================
+@app.get("/debug-items")
+def debug_items():
+    try:
+        raw_items = read_items_from_sheets()
+        return {"status": "success", "count": len(raw_items), "items": raw_items}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
 
 # ======================================
 @app.post("/webhook")
@@ -58,23 +79,35 @@ async def webhook(req: Request):
             lng = event["message"]["longitude"]
             reply_token = event["replyToken"]
 
-            # 找出 1 公里內的商品
+            try:
+                all_items = read_items_from_sheets()
+            except Exception as e:
+                await send_reply(reply_token, [{"type": "text", "text": "⚠️ 無法讀取資料，請稍後再試"}])
+                return JSONResponse({"status": "error", "detail": str(e)})
+
             filtered = []
-            for item in EXPIRED_ITEMS:
-                d = haversine(lat, lng, item["lat"], item["lng"]) * 1000
-                if d <= 1000:
-                    filtered.append({
-                        "name": item["name"],
-                        "price": item["price"],
-                        "distance": round(d),
-                        "image": item["image"]
-                    })
+            for item in all_items:
+                try:
+                    item_lat = float(item["lat"])
+                    item_lng = float(item["lng"])
+                    d = haversine(lat, lng, item_lat, item_lng) * 1000
+                    if d <= 1000:
+                        filtered.append({
+                            "name": item["name"],
+                            "price": item["price"],
+                            "distance": round(d),
+                            "image": item["image"],
+                            "lat": item_lat,
+                            "lng": item_lng
+                        })
+                except:
+                    continue
+
             filtered.sort(key=lambda x: x["distance"])
 
             if not filtered:
                 await send_reply(reply_token, [{"type": "text", "text": "🚫 1公里內查無即期商品"}])
             else:
-                # 分類（依據超商名稱）
                 brand_map = defaultdict(list)
                 for f in filtered:
                     if "7-11" in f["name"]:
@@ -88,11 +121,10 @@ async def webhook(req: Request):
                     else:
                         brand_map["其他"].append(f)
 
-                # 每品牌產出一則 Flex Carousel
                 all_messages = []
                 for brand, items in brand_map.items():
                     bubbles = []
-                    for item in items[:10]:  # 最多10筆
+                    for item in items[:10]:
                         bubbles.append({
                             "type": "bubble",
                             "hero": {
@@ -109,6 +141,20 @@ async def webhook(req: Request):
                                     {"type": "text", "text": item["name"], "weight": "bold", "size": "md"},
                                     {"type": "text", "text": f"💰{item['price']} 元", "size": "sm", "color": "#555555"},
                                     {"type": "text", "text": f"📍{item['distance']} 公尺", "size": "sm", "color": "#aaaaaa"}
+                                ]
+                            },
+                            "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                    {
+                                        "type": "button",
+                                        "action": {
+                                            "type": "uri",
+                                            "label": "地圖導航",
+                                            "uri": f"https://www.google.com/maps?q={item['lat']},{item['lng']}"
+                                        }
+                                    }
                                 ]
                             }
                         })
