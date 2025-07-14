@@ -1,14 +1,17 @@
-from fastapi import FastAPI, Request, Query
+# 🔧 設定區（請只改這裡）
+CHANNEL_ACCESS_TOKEN = "DED64eRi0GLeout3sWtkebzadMdiAydomXvXcYW4sxQTRepbcVaK7tlyckXLJRF8Rm2+dVjTLGNUXFBK6IswVpCYqwvPio52blUsMmv+GZSfG87uUBV7dgty9H4/bCRKPbSZm19K7YyWkjHO5cbxtQdB04t89/1O/w1cDnyilFU="
+CHANNEL_SECRET = "f6ad0906db1caa0a57bea1cf0f66d7f0"
+
+# =============================
+# 🚀 主程式開始
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 import httpx
 import math
-import os
 
 app = FastAPI()
 
-# ===============================
-# 商品資料（內建地點與圖片）
-# ===============================
+# ✅ 即期品項資料（未來可換成資料庫或 API）
 EXPIRED_ITEMS = [
     {"name": "7-11 焗烤雞腿飯", "price": 79, "lat": 25.033, "lng": 121.5654, "image": "https://i.imgur.com/example1.jpg"},
     {"name": "全家 照燒雞三明治", "price": 49, "lat": 25.0325, "lng": 121.566, "image": "https://i.imgur.com/example2.jpg"},
@@ -18,44 +21,33 @@ EXPIRED_ITEMS = [
     {"name": "全家 起司蛋堡", "price": 42, "lat": 22.6255, "lng": 120.2995, "image": "https://i.imgur.com/example6.jpg"}
 ]
 
-# ===============================
-# 計算兩點之間距離（公里）
-# ===============================
-def haversine(lat1, lng1, lat2, lng2):
-    R = 6371
-    phi1, phi2 = math.radians(lat1), math.radians(lat2)
-    d_phi = math.radians(lat2 - lat1)
-    d_lambda = math.radians(lng2 - lng1)
-    a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
-    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-
-# ===============================
-# /items API：支援距離排序與範圍過濾
-# ===============================
+# =============================
+# ✅ /items API：可用經緯度篩選附近商品
 @app.get("/items")
-def get_items(
-    lat: float = Query(None),
-    lng: float = Query(None),
-    radius: float = Query(1000)  # 公尺
-):
+def get_items(lat: float = None, lng: float = None, radius: int = 1000):
+    def haversine(lat1, lng1, lat2, lng2):
+        R = 6371
+        phi1, phi2 = math.radians(lat1), math.radians(lat2)
+        d_phi = math.radians(lat2 - lat1)
+        d_lambda = math.radians(lng2 - lng1)
+        a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
+        return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
     if lat is not None and lng is not None:
-        nearby = []
+        results = []
         for item in EXPIRED_ITEMS:
-            dist = haversine(lat, lng, item["lat"], item["lng"]) * 1000  # 公尺
+            dist = haversine(lat, lng, item["lat"], item["lng"]) * 1000
             if dist <= radius:
-                item_copy = item.copy()
-                item_copy["distance"] = round(dist)
-                nearby.append(item_copy)
-        nearby.sort(key=lambda x: x["distance"])
-        return {"items": nearby}
-    return {"items": EXPIRED_ITEMS}
+                item_with_distance = item.copy()
+                item_with_distance["distance"] = round(dist)
+                results.append(item_with_distance)
+        results.sort(key=lambda x: x["distance"])
+        return {"items": results}
+    else:
+        return {"items": EXPIRED_ITEMS}
 
-# ===============================
-# LINE Webhook 處理程式
-# ===============================
-CHANNEL_ACCESS_TOKEN = os.getenv("DED64eRi0GLeout3sWtkebzadMdiAydomXvXcYW4sxQTRepbcVaK7tlyckXLJRF8Rm2+dVjTLGNUXFBK6IswVpCYqwvPio52blUsMmv+GZSfG87uUBV7dgty9H4/bCRKPbSZm19K7YyWkjHO5cbxtQdB04t89/1O/w1cDnyilFU=", "")
-REPLY_ENDPOINT = "https://api.line.me/v2/bot/message/reply"
-
+# =============================
+# ✅ /webhook：接收 LINE 地點並回傳附近品項
 @app.post("/webhook")
 async def webhook(req: Request):
     body = await req.json()
@@ -70,30 +62,38 @@ async def webhook(req: Request):
                 user_lat = msg["latitude"]
                 user_lng = msg["longitude"]
 
-                # 篩選 1 公里內
+                # 計算距離內的品項
+                def haversine(lat1, lng1, lat2, lng2):
+                    R = 6371
+                    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+                    d_phi = math.radians(lat2 - lat1)
+                    d_lambda = math.radians(lng2 - lng1)
+                    a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
+                    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
                 near_items = []
                 for item in EXPIRED_ITEMS:
-                    dist_km = haversine(user_lat, user_lng, item["lat"], item["lng"])
-                    if dist_km <= 1:
+                    dist = haversine(user_lat, user_lng, item["lat"], item["lng"]) * 1000
+                    if dist <= 1000:
                         near_items.append({
                             "name": item["name"],
                             "price": item["price"],
-                            "distance": round(dist_km * 1000),
+                            "distance": round(dist),
                             "image": item["image"]
                         })
 
                 if not near_items:
                     reply = {"type": "text", "text": "🚫 1公里內查無即期商品"}
                 else:
-                    item = near_items[0]
+                    first = near_items[0]
                     reply = {
                         "type": "template",
                         "altText": "即期商品",
                         "template": {
                             "type": "buttons",
-                            "thumbnailImageUrl": item["image"],
-                            "title": item["name"],
-                            "text": f"💰{item['price']} 元\n📍{item['distance']} 公尺內",
+                            "thumbnailImageUrl": first["image"],
+                            "title": first["name"],
+                            "text": f"💰{first['price']} 元\n📍{first['distance']} 公尺內",
                             "actions": [
                                 {"type": "message", "label": "查看更多", "text": "我要看更多"}
                             ]
@@ -104,73 +104,16 @@ async def webhook(req: Request):
 
     return JSONResponse({"status": "ok"})
 
+# =============================
+# ✅ 傳送訊息給 LINE
 async def send_reply(token, messages):
     headers = {
         "Authorization": f"Bearer {CHANNEL_ACCESS_TOKEN}",
         "Content-Type": "application/json"
     }
-    data = {"replyToken": token, "messages": messages}
-    async with httpx.AsyncClient() as client:
-        await client.post(REPLY_ENDPOINT, headers=headers, json=data)
-
-    d_lambda = math.radians(lng2 - lng1)
-    a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
-    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-
-@app.post("/webhook")
-async def webhook(req: Request):
-    body = await req.json()
-    events = body.get("events", [])
-
-    for event in events:
-        if event["type"] == "message":
-            msg = event["message"]
-            reply_token = event["replyToken"]
-
-            if msg["type"] == "location":
-                user_lat = msg["latitude"]
-                user_lng = msg["longitude"]
-
-                # 過濾距離 1 公里內的商品
-                near_items = []
-                for item in EXPIRED_ITEMS:
-                    dist_km = haversine(user_lat, user_lng, item["lat"], item["lng"])
-                    if dist_km <= 1:
-                        near_items.append({
-                            "name": item["name"],
-                            "price": item["price"],
-                            "distance": round(dist_km * 1000),  # 公尺
-                            "image": item["image"]
-                        })
-
-                if not near_items:
-                    reply = {"type": "text", "text": "🚫 1公里內查無即期商品"}
-                else:
-                    # 回傳第一個品項（可擴充成 carousel）
-                    item = near_items[0]
-                    reply = {
-                        "type": "template",
-                        "altText": "即期商品",
-                        "template": {
-                            "type": "buttons",
-                            "thumbnailImageUrl": item["image"],
-                            "title": item["name"],
-                            "text": f"💰{item['price']} 元\n📍{item['distance']} 公尺內",
-                            "actions": [
-                                {"type": "message", "label": "查看更多", "text": "我要看更多"}
-                            ]
-                        }
-                    }
-
-                await send_reply(reply_token, [reply])
-
-    return JSONResponse({"status": "ok"})
-
-async def send_reply(token, messages):
-    headers = {
-        "Authorization": f"Bearer {CHANNEL_ACCESS_TOKEN}",
-        "Content-Type": "application/json"
+    payload = {
+        "replyToken": token,
+        "messages": messages
     }
-    data = {"replyToken": token, "messages": messages}
     async with httpx.AsyncClient() as client:
-        await client.post(REPLY_ENDPOINT, headers=headers, json=data)
+        await client.post("https://api.line.me/v2/bot/message/reply", headers=headers, json=payload)
