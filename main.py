@@ -1,9 +1,9 @@
 from fastapi import FastAPI, Query
 from fastapi.responses import JSONResponse
 import uvicorn
-from app import friendlycat
+#from app import friendlycat
+import friendlycat
 from math import radians, sin, cos, sqrt, atan2
-
 app = FastAPI()
 
 # 計算兩點距離（公尺）
