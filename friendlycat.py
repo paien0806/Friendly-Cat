@@ -1,10 +1,7 @@
-import pandas as pd
-
 def get_items():
-    data = {
-        "items": [
-            {"name": "即期雞蛋", "price": 25, "store": "全家台北店"},
-            {"name": "優格", "price": 10, "store": "7-11 忠孝店"},
-        ]
-    }
-    return data
+    return [
+        {"name": "7-11 焗烤雞腿飯", "price": 79},
+        {"name": "全家 照燒雞三明治", "price": 49},
+        {"name": "全聯 草莓牛奶", "price": 32},
+        {"name": "OK 超商 鮪魚飯糰", "price": 35}
+    ]
