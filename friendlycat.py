@@ -26,17 +26,22 @@ def calculate_distance(lat1, lng1, lat2, lng2):
     return R * c * 1000  # 回傳公尺
 
 @router.get("/items")
-for item in all_items:
-    try:
-        # ✅ 將 lat/lng 從字串轉成浮點數
-        item_lat = float(item['lat'])
-        item_lng = float(item['lng'])
+def get_items(lat: float = Query(...), lng: float = Query(...)):
+    all_items = read_items_from_sheets()
+    nearby_items = []
 
-        dist = calculate_distance(lat, lng, item_lat, item_lng)
-        if dist <= 1000:
-            item['distance'] = int(dist)
-            nearby_items.append(item)
-    except Exception as e:
-        print("資料處理錯誤:", e)
-        continue
+    for item in all_items:
+        try:
+            item_lat = float(item['lat'])
+            item_lng = float(item['lng'])
+            dist = calculate_distance(lat, lng, item_lat, item_lng)
+            if dist <= 1000:
+                item['distance'] = int(dist)
+                nearby_items.append(item)
+        except Exception as e:
+            print("資料處理錯誤:", e)
+            continue
+
+    nearby_items.sort(key=lambda x: x['distance'])
+    return {"items": nearby_items}
 
