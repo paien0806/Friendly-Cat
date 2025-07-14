@@ -1,41 +1,43 @@
-# friendlycat.py
 from fastapi import APIRouter, Query
-from typing import Optional
-import math
+from typing import List
+import gspread
+from google.oauth2.service_account import Credentials
+from math import radians, cos, sin, sqrt, atan2
 
 router = APIRouter()
 
-ITEMS = [
-    {"name": "7-11 焗烤雞腿飯", "price": 79, "lat": 25.033, "lng": 121.5654, "image": "https://i.imgur.com/example1.jpg"},
-    {"name": "全家 照燒雞三明治", "price": 49, "lat": 25.0325, "lng": 121.566, "image": "https://i.imgur.com/example2.jpg"},
-    {"name": "全聯 草莓牛奶", "price": 32, "lat": 22.6273, "lng": 120.3014, "image": "https://i.imgur.com/example3.jpg"},
-    {"name": "OK 超商 鮪魚飯糰", "price": 35, "lat": 24.1477, "lng": 120.6736, "image": "https://i.imgur.com/example4.jpg"},
-    {"name": "7-11 日式炸雞便當", "price": 85, "lat": 25.034, "lng": 121.5644, "image": "https://i.imgur.com/example5.jpg"},
-    {"name": "全家 起司蛋堡", "price": 42, "lat": 22.6255, "lng": 120.2995, "image": "https://i.imgur.com/example6.jpg"}
-]
+# Google Sheets 設定
+SPREADSHEET_ID = '12WyIQo-DBfqMaP-hv4Y6_QuhxSM6-EoqRkRqwdfmvSU'
+SERVICE_ACCOUNT_FILE = 'service_account.json'
 
-def haversine(lat1, lng1, lat2, lng2):
-    R = 6371
-    phi1, phi2 = math.radians(lat1), math.radians(lat2)
-    d_phi = math.radians(lat2 - lat1)
-    d_lambda = math.radians(lng2 - lng1)
-    a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
-    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+def read_items_from_sheets():
+    scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+    creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)
+    client = gspread.authorize(creds)
+    sheet = client.open_by_key(SPREADSHEET_ID).sheet1
+    return sheet.get_all_records()
+
+def calculate_distance(lat1, lng1, lat2, lng2):
+    R = 6371  # 地球半徑，公里
+    dlat = radians(lat2 - lat1)
+    dlng = radians(lng2 - lng1)
+    a = sin(dlat / 2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlng / 2)**2
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+    return R * c * 1000  # 回傳公尺
 
 @router.get("/items")
-def get_items(
-    lat: Optional[float] = Query(None),
-    lng: Optional[float] = Query(None),
-    radius: float = Query(1000)
-):
-    if lat is not None and lng is not None:
-        nearby = []
-        for item in ITEMS:
-            dist = haversine(lat, lng, item["lat"], item["lng"]) * 1000  # 公尺
-            if dist <= radius:
-                item_copy = item.copy()
-                item_copy["distance"] = round(dist)
-                nearby.append(item_copy)
-        nearby.sort(key=lambda x: x["distance"])
-        return {"items": nearby}
-    return {"items": ITEMS}
+def get_items(lat: float = Query(...), lng: float = Query(...)):
+    all_items = read_items_from_sheets()
+    nearby_items = []
+
+    for item in all_items:
+        try:
+            dist = calculate_distance(lat, lng, item['lat'], item['lng'])
+            if dist <= 1000:
+                item['distance'] = int(dist)
+                nearby_items.append(item)
+        except Exception as e:
+            continue
+
+    nearby_items.sort(key=lambda x: x['distance'])
+    return nearby_items
