@@ -1,10 +1,10 @@
+# friendlycat.py
 from fastapi import APIRouter, Query
-from typing import List, Optional
+from typing import Optional
 import math
 
 router = APIRouter()
 
-# 即期品項資料
 ITEMS = [
     {"name": "7-11 焗烤雞腿飯", "price": 79, "lat": 25.033, "lng": 121.5654, "image": "https://i.imgur.com/example1.jpg"},
     {"name": "全家 照燒雞三明治", "price": 49, "lat": 25.0325, "lng": 121.566, "image": "https://i.imgur.com/example2.jpg"},
