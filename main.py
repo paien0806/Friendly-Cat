@@ -6,7 +6,7 @@ import os
 
 app = FastAPI()
 
-CHANNEL_ACCESS_TOKEN = "在這裡貼上你的 long-lived token"  # ← 請填入你自己的
+CHANNEL_ACCESS_TOKEN = "DED64eRi0GLeout3sWtkebzadMdiAydomXvXcYW4sxQTRepbcVaK7tlyckXLJRF8Rm2+dVjTLGNUXFBK6IswVpCYqwvPio52blUsMmv+GZSfG87uUBV7dgty9H4/bCRKPbSZm19K7YyWkjHO5cbxtQdB04t89/1O/w1cDnyilFU="  # ← 請填入你自己的
 REPLY_ENDPOINT = "https://api.line.me/v2/bot/message/reply"
 
 # 範例即期資料（你之後會改成抓資料庫或 API）
