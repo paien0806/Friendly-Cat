@@ -1,7 +1,7 @@
 # 🔧 設定區（請只改這裡）
 CHANNEL_ACCESS_TOKEN = "DED64eRi0GLeout3sWtkebzadMdiAydomXvXcYW4sxQTRepbcVaK7tlyckXLJRF8Rm2+dVjTLGNUXFBK6IswVpCYqwvPio52blUsMmv+GZSfG87uUBV7dgty9H4/bCRKPbSZm19K7YyWkjHO5cbxtQdB04t89/1O/w1cDnyilFU="
 CHANNEL_SECRET = "f6ad0906db1caa0a57bea1cf0f66d7f0"
-SPREADSHEET_ID = '12WyIQo-DBfqMaP-hv4Y6_QuhxSM6-EoqRkRqwdfmvSU
+SPREADSHEET_ID = '12WyIQo-DBfqMaP-hv4Y6_QuhxSM6-EoqRkRqwdfmvSU'
 
 # ======================================
 from fastapi import FastAPI, Request, Query
