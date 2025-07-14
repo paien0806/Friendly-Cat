@@ -4,7 +4,7 @@ import httpx
 from fastapi import APIRouter, Request, Header
 from fastapi.responses import PlainTextResponse
 
-LINE_CHANNEL_ACCESS_TOKEN = "你的 Channel Access Token"
+LINE_CHANNEL_ACCESS_TOKEN = "DED64eRi0GLeout3sWtkebzadMdiAydomXvXcYW4sxQTRepbcVaK7tlyckXLJRF8Rm2+dVjTLGNUXFBK6IswVpCYqwvPio52blUsMmv+GZSfG87uUBV7dgty9H4/bCRKPbSZm19K7YyWkjHO5cbxtQdB04t89/1O/w1cDnyilFU="
 
 router = APIRouter()
 
