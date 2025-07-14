@@ -1,11 +1,16 @@
-from fastapi import FastAPI, Query
-from typing import List, Optional
-from math import radians, cos, sin, asin, sqrt
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+import httpx
+import math
+import os
 
 app = FastAPI()
 
-# 範例資料（可替換為動態擷取）
-DATA = [
+CHANNEL_ACCESS_TOKEN = "在這裡貼上你的 long-lived token"  # ← 請填入你自己的
+REPLY_ENDPOINT = "https://api.line.me/v2/bot/message/reply"
+
+# 範例即期資料（你之後會改成抓資料庫或 API）
+EXPIRED_ITEMS = [
     {"name": "7-11 焗烤雞腿飯", "price": 79, "lat": 25.033, "lng": 121.5654, "image": "https://i.imgur.com/example1.jpg"},
     {"name": "全家 照燒雞三明治", "price": 49, "lat": 25.0325, "lng": 121.566, "image": "https://i.imgur.com/example2.jpg"},
     {"name": "全聯 草莓牛奶", "price": 32, "lat": 22.6273, "lng": 120.3014, "image": "https://i.imgur.com/example3.jpg"},
@@ -14,29 +19,69 @@ DATA = [
     {"name": "全家 起司蛋堡", "price": 42, "lat": 22.6255, "lng": 120.2995, "image": "https://i.imgur.com/example6.jpg"}
 ]
 
-# 計算兩座標距離（單位：公里）
 def haversine(lat1, lng1, lat2, lng2):
-    R = 6371  # 地球半徑 km
-    dlat = radians(lat2 - lat1)
-    dlng = radians(lng2 - lng1)
-    a = sin(dlat / 2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlng / 2)**2
-    c = 2 * asin(sqrt(a))
-    return R * c
+    # 計算距離（公里）
+    R = 6371
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    d_phi = math.radians(lat2 - lat1)
+    d_lambda = math.radians(lng2 - lng1)
+    a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
+    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
-@app.get("/items")
-def get_items(
-    lat: float = Query(..., description="使用者目前緯度"),
-    lng: float = Query(..., description="使用者目前經度"),
-    max_distance: Optional[float] = Query(None, description="最大距離範圍，單位公里，例如 0.5")
-):
-    results = []
-    for item in DATA:
-        dist = haversine(lat, lng, item["lat"], item["lng"])
-        if (max_distance is None) or (dist <= max_distance):
-            new_item = item.copy()
-            new_item["distance_km"] = round(dist, 3)
-            results.append(new_item)
+@app.post("/webhook")
+async def webhook(req: Request):
+    body = await req.json()
+    events = body.get("events", [])
 
-    # 距離由近到遠排序
-    sorted_items = sorted(results, key=lambda x: x["distance_km"])
-    return {"items": sorted_items}
+    for event in events:
+        if event["type"] == "message":
+            msg = event["message"]
+            reply_token = event["replyToken"]
+
+            if msg["type"] == "location":
+                user_lat = msg["latitude"]
+                user_lng = msg["longitude"]
+
+                # 過濾距離 1 公里內的商品
+                near_items = []
+                for item in EXPIRED_ITEMS:
+                    dist_km = haversine(user_lat, user_lng, item["lat"], item["lng"])
+                    if dist_km <= 1:
+                        near_items.append({
+                            "name": item["name"],
+                            "price": item["price"],
+                            "distance": round(dist_km * 1000),  # 公尺
+                            "image": item["image"]
+                        })
+
+                if not near_items:
+                    reply = {"type": "text", "text": "🚫 1公里內查無即期商品"}
+                else:
+                    # 回傳第一個品項（可擴充成 carousel）
+                    item = near_items[0]
+                    reply = {
+                        "type": "template",
+                        "altText": "即期商品",
+                        "template": {
+                            "type": "buttons",
+                            "thumbnailImageUrl": item["image"],
+                            "title": item["name"],
+                            "text": f"💰{item['price']} 元\n📍{item['distance']} 公尺內",
+                            "actions": [
+                                {"type": "message", "label": "查看更多", "text": "我要看更多"}
+                            ]
+                        }
+                    }
+
+                await send_reply(reply_token, [reply])
+
+    return JSONResponse({"status": "ok"})
+
+async def send_reply(token, messages):
+    headers = {
+        "Authorization": f"Bearer {CHANNEL_ACCESS_TOKEN}",
+        "Content-Type": "application/json"
+    }
+    data = {"replyToken": token, "messages": messages}
+    async with httpx.AsyncClient() as client:
+        await client.post(REPLY_ENDPOINT, headers=headers, json=data)
